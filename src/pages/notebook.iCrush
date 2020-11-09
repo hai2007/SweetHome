@@ -1,0 +1,12 @@
+<template>
+    <div>
+        笔记
+    </div>
+</template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-1', 'notebook');
+        }
+    };
+</script>

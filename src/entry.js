@@ -3,8 +3,13 @@ import iCrush from 'icrush';
 // 启动界面
 import App from './App.iCrush';
 
-// 引入基础样式
+// 引入样式
 import "@yelloxing/normalize.css";
+import './styles/common.css';
+
+// 引入路由
+import routers from './routers/index.js';
+iCrush.use(routers);
 
 window.icrush = new iCrush({
 

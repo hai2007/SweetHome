@@ -1,0 +1,12 @@
+<template>
+    <div>
+        实验室
+    </div>
+</template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-1', 'laboratory');
+        }
+    };
+</script>
