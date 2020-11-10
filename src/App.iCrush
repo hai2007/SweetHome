@@ -85,14 +85,18 @@
 
   /* 内容 */
   div.page>div {
+    padding: 0 50px;
     padding-top: 58px;
     min-height: calc(100vh - 92px);
+    width: 1100px;
+    margin: auto;
   }
 
-  /* 页眉 */
+  /* 页脚 */
   div.page>footer {
     text-align: center;
     padding: 10px 0;
+    min-width: 1100px;
   }
 
   div.page>footer>p {

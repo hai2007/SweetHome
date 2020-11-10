@@ -1,6 +1,26 @@
 <template>
-    <div>
-        首页
+    <div class='page'>
+        <div class="left">
+            <div class="title">
+                你好2007
+                <span>@hai2007</span>
+            </div>
+            <div class="belief">
+                走一步，再走一步。
+            </div>
+            <a class="fork" href='https://github.com/hai2007/SweetHome' target="_blank">
+                Fork me on Github
+            </a>
+            <div class="link">
+                <a href="https://github.com/hai2007" class='github' target="_blank">Github</a>
+                <a href="https://www.npmjs.com/~hai2007" class='npm' target="_blank">NPM</a>
+                <a href="https://my.oschina.net/u/4252568" class='oschina' target="_blank">OSCHINA</a>
+                <a href="https://segmentfault.com/u/nihao2007/articles" class='sf' target="_blank">思否</a>
+            </div>
+        </div>
+        <div class="right">
+            右边的内容
+        </div>
     </div>
 </template>
 <script>
@@ -10,3 +30,90 @@
         }
     };
 </script>
+<style>
+    /* 主体划分 */
+    div.page>div {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    div.page>div.left {
+        text-align: center;
+        width: 300px;
+    }
+
+    div.page>div.right {
+        background-color: red;
+    }
+
+    /* 左边样式 */
+    div.page>div.left>.title {
+        padding-top: 200px;
+        background-image: url('../assets/girl-hai2007.png');
+        background-repeat: no-repeat;
+        background-position: center 30px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    div.page>div.left>.title>span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 2em;
+    }
+
+    div.page>div.left>.belief {
+        line-height: 2em;
+        color: gray;
+    }
+
+    div.page>div.left>.fork {
+        color: rgb(90, 86, 86);
+        border: 1px solid rgb(202, 199, 199);
+        padding: 5px 10px;
+        display: inline-block;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    div.page>div.left>.fork:hover {
+        text-decoration: underline;
+        color: rgb(245, 12, 12);
+        border-color: rgb(236, 49, 49);
+    }
+
+    div.page>div.left>.link {
+        padding-top: 30px;
+    }
+
+    div.page>div.left>.link>a {
+        background-image: url('../assets/link-icon.png');
+        padding-top: inherit;
+        background-repeat: no-repeat;
+        width: 50px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    div.page>div.left>.link>a.github {
+        background-position-x: 6px;
+    }
+
+    div.page>div.left>.link>a.npm {
+        background-position-x: -124px;
+    }
+
+    div.page>div.left>.link>a.oschina {
+        background-position-x: -242px;
+    }
+
+    div.page>div.left>.link>a.sf {
+        background-position-x: -390px;
+    }
+
+    /* 右边样式 */
+    div.page>div.right {
+        width: 700px;
+    }
+</style>
