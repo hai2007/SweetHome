@@ -18,9 +18,7 @@
                 <a href="https://segmentfault.com/u/nihao2007/articles" class='sf' target="_blank">思否</a>
             </div>
         </div>
-        <div class="right">
-            右边的内容
-        </div>
+        <div class="right"></div>
     </div>
 </template>
 <script>
@@ -40,10 +38,6 @@
     div.page>div.left {
         text-align: center;
         width: 300px;
-    }
-
-    div.page>div.right {
-        background-color: red;
     }
 
     /* 左边样式 */
@@ -94,6 +88,8 @@
         width: 50px;
         font-size: 12px;
         display: inline-block;
+        color: rgb(0, 0, 0);
+        font-weight: 800;
     }
 
     div.page>div.left>.link>a.github {
