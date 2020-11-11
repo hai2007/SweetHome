@@ -17,8 +17,51 @@
                 <a href="https://my.oschina.net/u/4252568" class='oschina' target="_blank">OSCHINA</a>
                 <a href="https://segmentfault.com/u/nihao2007/articles" class='sf' target="_blank">思否</a>
             </div>
+            <div class="cat">
+                一只陪伴了我十六年的猫
+            </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <div class="stepbystep">
+                <h2>
+                    What I Believe
+                </h2>
+                <p>
+                    我还惊讶地意识到，在我生命中有很多时刻，每当我遇到一个遥不可及、令人害怕的情境，
+                    并感到惊慌失措时，我都能够应付——因为我回想起了很久以前自己上过的那一课。
+                </p>
+                <p>
+                    我提醒自己不要看下面遥远的岩石，而是注意相对轻松、容易的第一小步，迈出一小步、再
+                    一小步，就这样体会每一步带来的成就感，直到完成了自己想要完成的，达到了自己的目标，然
+                    后再回头看时，不禁对自己走过的这段漫漫长路感到惊讶和自豪。
+                </p>
+                <p class="right">
+                    ———— 摘自 莫顿·亨特《走一步，再走一步》
+                </p>
+            </div>
+            <ul class='footer-link'>
+                <li>
+                    <h2>关于我们</h2>
+                    <a href="https://yelloxing.gitee.io/image2d/#/Sponsors" target="_blank">捐款</a>
+                </li>
+                <li>
+                    <h2>友情链接</h2>
+                    <a href="https://yelloxing.gitee.io/image2d/" target="_blank">Image2D</a>
+                    <a href="https://github.com/yelloxing/Web-Studio-Code" target="_blank">Web Studio Code</a>
+                    <a href="https://github.com/yelloxing/xhtml-engine" target="_blank">XHTML Engine</a>
+                </li>
+                <li>
+                    <h2>资源</h2>
+                    <a href="https://emojipedia.org/" target="_blank">表情文字</a>
+                    <a href="https://yelloxing.gitee.io/notebook/" target="_blank">在线小笔记</a>
+                </li>
+                <li>
+                    <h2>官方地址</h2>
+                    <a href="https://www.w3.org/" target="_blank">万维网联盟(w3c)</a>
+                    <a href="https://www.khronos.org/webgl/" target="_blank">WebGL</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 <script>
@@ -38,6 +81,10 @@
     div.page>div.left {
         text-align: center;
         width: 300px;
+    }
+
+    div.page>div.right {
+        width: 700px;
     }
 
     /* 左边样式 */
@@ -69,6 +116,7 @@
         display: inline-block;
         cursor: pointer;
         user-select: none;
+        margin-top: 10px;
     }
 
     div.page>div.left>.fork:hover {
@@ -78,13 +126,14 @@
     }
 
     div.page>div.left>.link {
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
     div.page>div.left>.link>a {
         background-image: url('../assets/link-icon.png');
         padding-top: inherit;
         background-repeat: no-repeat;
+        background-position-y: -9px;
         width: 50px;
         font-size: 12px;
         display: inline-block;
@@ -108,8 +157,60 @@
         background-position-x: -390px;
     }
 
-    /* 右边样式 */
-    div.page>div.right {
-        width: 700px;
+    div.page>div.left>.cat {
+        background-image: url('../assets/cat.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 260px;
+        background-size: 100% auto;
+        font-size: 0;
+    }
+
+    /* 右边顶部说明 */
+
+    div.page>div.right>.stepbystep>h2 {
+        line-height: 3em;
+    }
+
+    div.page>div.right>.stepbystep>p {
+        text-indent: 2em;
+        padding: 5px;
+        line-height: 1.4em;
+    }
+
+    div.page>div.right>.stepbystep>p.right {
+        text-align: right;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    /* 右边底部链接 */
+    div.page>div.right>.footer-link {
+        border-top: 1px solid rgb(187, 183, 183);
+        margin-top: 10px;
+    }
+
+    div.page>div.right>.footer-link>li {
+        display: inline-block;
+        vertical-align: top;
+        width: 175px;
+        padding: 10px;
+    }
+
+    div.page>div.right>.footer-link>li>h2 {
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+    div.page>div.right>.footer-link>li>a {
+        display: block;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        margin-bottom: 7px;
+        font-family: fangsong;
+    }
+
+    div.page>div.right>.footer-link>li>a:hover {
+        text-decoration: underline;
     }
 </style>
