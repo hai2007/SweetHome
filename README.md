@@ -20,4 +20,4 @@
 ---------------------------------------
 [Apache-2.0](https://github.com/hai2007/SweetHome/blob/master/LICENSE)
 
-Copyright (c) 2020 hai2007
+Copyright (c) 2020 hai2007 走一步，再走一步。

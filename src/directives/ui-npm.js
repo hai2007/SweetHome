@@ -42,26 +42,38 @@ export default {
         // 目前单日最高下载设置为300
         let maxValue = 200;
 
-        binding.value.forEach((item, index) => {
-            get("https://api.npmjs.org/downloads/range/" + dateString + "/" + item.package.name, data => {
-
-                let downloads = JSON.parse(data).downloads;
-                let painter = $$(canvas[index]).painter().config({
-                    strokeStyle: "#ed0b0b"
-                });
-
-                // height: 50px;
-                // width:200px;
-
-                let perWidth = 200 / 366;
-
-                painter.beginPath();
-                downloads.forEach((dayItem, dayIndex) => {
-                    painter.lineTo(dayIndex * perWidth, (maxValue - dayItem.downloads) / maxValue * 50);
-                });
-                painter.stroke();
-
+        let doit = (index, data) => {
+            let downloads = JSON.parse(data).downloads;
+            let painter = $$(canvas[index]).painter().config({
+                strokeStyle: "#ed0b0b"
             });
+
+            // height: 50px;
+            // width:200px;
+
+            let perWidth = 200 / 366;
+
+            painter.beginPath();
+            downloads.forEach((dayItem, dayIndex) => {
+                painter.lineTo(dayIndex * perWidth, (maxValue - dayItem.downloads) / maxValue * 50);
+            });
+            painter.stroke();
+        };
+
+        binding.value.forEach((item, index) => {
+
+            if (sessionStorage.getItem('npms-downloads-hai2007')) {
+                doit(index, sessionStorage.getItem('npms-downloads-hai2007'));
+            } else {
+
+                get("https://api.npmjs.org/downloads/range/" + dateString + "/" + item.package.name, data => {
+
+                    doit(index, data);
+                    sessionStorage.setItem('npms-downloads-hai2007', data);
+
+                });
+
+            }
         });
 
 

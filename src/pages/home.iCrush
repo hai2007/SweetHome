@@ -80,9 +80,14 @@
         },
         mounted() {
             this.changeActive('menu-1', 'home');
-            get('https://api.npms.io/v2/search?q=hai2007&from=0&size=25', data => {
-                this.basicNodes = JSON.parse(data).results;
-            });
+            if (sessionStorage.getItem('npms-hai2007')) {
+                this.basicNodes = JSON.parse(sessionStorage.getItem('npms-hai2007')).results;
+            } else {
+                get('https://api.npms.io/v2/search?q=hai2007&from=0&size=25', data => {
+                    this.basicNodes = JSON.parse(data).results;
+                    sessionStorage.setItem('npms-hai2007', data);
+                });
+            }
         },
         directive: {
             uiNpm

@@ -4,7 +4,7 @@ import iCrush from 'icrush';
 import App from './App.iCrush';
 
 // 引入样式
-import "@yelloxing/normalize.css";
+import "@hai2007/style/normalize.css";
 import './styles/common.css';
 import './styles/npm.css';
 
