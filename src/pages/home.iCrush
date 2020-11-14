@@ -20,6 +20,9 @@
             <div class="cat">
                 一只陪伴了我十六年的猫
             </div>
+            <a href="https://info.flagcounter.com/bdd0" target="_blank">
+                <img :src="counterUrl">
+            </a>
         </div>
         <div class="right">
             <div class="stepbystep">
@@ -39,6 +42,7 @@
                     ———— 摘自 莫顿·亨特《走一步，再走一步》
                 </p>
             </div>
+            <ul ui-npm='basicNodes'></ul>
             <ul class='footer-link'>
                 <li>
                     <h2>关于我们</h2>
@@ -65,9 +69,23 @@
     </div>
 </template>
 <script>
+    import { get } from '../services/xhr';
+    import uiNpm from '../directives/ui-npm';
     export default {
+        data() {
+            return {
+                basicNodes: [],
+                counterUrl: "https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/"
+            };
+        },
         mounted() {
             this.changeActive('menu-1', 'home');
+            get('https://api.npms.io/v2/search?q=hai2007&from=0&size=25', data => {
+                this.basicNodes = JSON.parse(data).results;
+            });
+        },
+        directive: {
+            uiNpm
         }
     };
 </script>
@@ -204,10 +222,9 @@
 
     div.page>div.right>.footer-link>li>a {
         display: block;
-        color: rgb(0, 0, 0);
+        color: rgb(140, 145, 146);
         font-weight: 400;
         margin-bottom: 7px;
-        font-family: fangsong;
     }
 
     div.page>div.right>.footer-link>li>a:hover {
