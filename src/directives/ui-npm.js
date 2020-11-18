@@ -23,7 +23,7 @@ export default {
                     <a href='${item.package.links.repository}' target="_blank">代码</a>
                     <a href='${item.package.links.npm}' target="_blank">NPM</a>
                 </div>
-                <canvas onclick=' window.location.href="https://yelloxing.gitee.io/npm-downloads/index.html?interval=7&packages=${item.package.name}"'>非常抱歉，您的浏览器不支持canvas!</canvas>
+                <canvas title='点击查看下载统计详情' onclick=' window.location.href="https://yelloxing.gitee.io/npm-downloads/index.html?interval=7&packages=${item.package.name}"'>非常抱歉，您的浏览器不支持canvas!</canvas>
             <li>`;
         });
 
@@ -45,7 +45,7 @@ export default {
         let doit = (index, data) => {
             let downloads = JSON.parse(data).downloads;
             let painter = $$(canvas[index]).painter().config({
-                strokeStyle: "#ed0b0b"
+                strokeStyle: "#000"
             });
 
             // height: 50px;

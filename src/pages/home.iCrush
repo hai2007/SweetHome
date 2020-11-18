@@ -42,6 +42,9 @@
                     ———— 摘自 莫顿·亨特《走一步，再走一步》
                 </p>
             </div>
+            <h2>
+                基础依赖包
+            </h2>
             <ul ui-npm='basicNodes'></ul>
             <ul class='footer-link'>
                 <li>
@@ -51,6 +54,7 @@
                 <li>
                     <h2>友情链接</h2>
                     <a href="https://yelloxing.gitee.io/image2d/" target="_blank">Image2D</a>
+                    <a href="https://github.com/yelloxing/debug.console.js" target="_blank">手机调试工具</a>
                     <a href="https://github.com/yelloxing/Web-Studio-Code" target="_blank">Web Studio Code</a>
                     <a href="https://github.com/yelloxing/xhtml-engine" target="_blank">XHTML Engine</a>
                 </li>
@@ -211,6 +215,7 @@
     div.page>div.right>.footer-link {
         border-top: 1px solid rgb(187, 183, 183);
         margin-top: 10px;
+        font-family: monospace;
     }
 
     div.page>div.right>.footer-link>li {
@@ -227,12 +232,18 @@
 
     div.page>div.right>.footer-link>li>a {
         display: block;
-        color: rgb(140, 145, 146);
-        font-weight: 400;
-        margin-bottom: 7px;
+        color: rgb(70, 73, 73);
+        font-weight: 200;
+        margin-bottom: 20px;
+
     }
 
     div.page>div.right>.footer-link>li>a:hover {
         text-decoration: underline;
+    }
+
+    /* 其它 */
+    div.page>div.right>h2 {
+        margin-top: 30px;
     }
 </style>

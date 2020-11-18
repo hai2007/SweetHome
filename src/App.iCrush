@@ -1,117 +1,121 @@
 <template>
-  <div class='page'>
-    <header>
-      <h2>
-        🏠 甜蜜的家
-      </h2>
-      <ul>
-        <li @click='openRouter("home")' class='menu-1 home'>首页</li>
-        <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
-        <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
-        <li @click='openRouter("laboratory")' class='menu-1 laboratory'>实验室</li>
-      </ul>
-    </header>
-    <div>
-      <component :is='page'></component>
+    <div class='page'>
+        <header>
+            <h2>
+                🏠 甜蜜的家
+            </h2>
+            <ul>
+                <li @click='openRouter("home")' class='menu-1 home'>首页</li>
+                <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
+                <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
+                <li @click='openRouter("laboratory")' class='menu-1 laboratory'>实验室</li>
+            </ul>
+        </header>
+        <div>
+            <component :is='page'></component>
+        </div>
+        <footer>
+            <p>
+                Copyright©2020 hai2007 All Rights Reserved 你好2007
+            </p>
+            <span>
+                走一步，再走一步。
+            </span>
+        </footer>
     </div>
-    <footer>
-      <p>
-        Copyright©2020 hai2007 All Rights Reserved 你好2007
-      </p>
-      <span>
-        走一步，再走一步。
-      </span>
-    </footer>
-  </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        page: null
-      };
-    },
-    methods: {
-      openRouter(pagename) {
-        this.goRouter(page => this.page = page, [pagename]);
-      }
-    },
-    mounted() {
-      this.loadRouter(page => this.page = page, 1);
-    }
-  };
+    export default {
+        data() {
+            return {
+                page: null
+            };
+        },
+        methods: {
+            openRouter(pagename) {
+                this.goRouter(page => this.page = page, [pagename]);
+            }
+        },
+        mounted() {
+            this.loadRouter(page => this.page = page, 1);
+        }
+    };
 </script>
 <style>
-  /* 页头 */
-  div.page>header {
-    line-height: 58px;
-    height: 58px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
-    padding: 0 30px;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    user-select: none;
-  }
+    /* 页头 */
+    div.page>header {
+        line-height: 58px;
+        height: 58px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+        padding: 0 30px;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        user-select: none;
+    }
 
-  div.page>header>h2 {
-    color: #5a1508;
-  }
+    div.page>header>h2 {
+        color: #5a1508;
+    }
 
-  div.page>header>h2,
-  div.page>header>ul,
-  div.page>header>ul>li {
-    display: inline-block;
-  }
+    div.page>header>h2,
+    div.page>header>ul,
+    div.page>header>ul>li {
+        display: inline-block;
+    }
 
-  div.page>header>ul>li[active='yes'] {
-    border-bottom: 2px solid red;
-    color: red;
-  }
+    div.page>header>ul>li[active='yes'] {
+        border-bottom: 2px solid red;
+        color: red;
+    }
 
-  div.page>header>ul>li {
-    padding: 0 10px;
-    font-weight: 800;
-  }
+    div.page>header>ul>li {
+        padding: 0 10px;
+        font-weight: 800;
+    }
 
-  div.page>header>ul {
-    position: absolute;
-    right: 30px;
-    top: 0;
-  }
+    div.page>header>ul {
+        position: absolute;
+        right: 30px;
+        top: 0;
+    }
 
-  /* 内容 */
-  div.page>div {
-    padding: 0 50px;
-    padding-top: 58px;
-    min-height: calc(100vh - 92px);
-    width: 1100px;
-    margin: auto;
-  }
+    /* 内容 */
+    div.page>div {
+        padding: 0 50px;
+        padding-top: 58px;
+        min-height: calc(100vh - 92px);
+        width: 1100px;
+        margin: auto;
+    }
 
-  /* 页脚 */
-  div.page>footer {
-    text-align: center;
-    padding: 10px 0;
-    min-width: 1100px;
-  }
+    /* 页脚 */
+    div.page>footer {
+        text-align: center;
+        padding: 10px 0;
+        min-width: 1100px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px -5px 2px;
+        margin: 10px 0;
+    }
 
-  div.page>footer>p {
-    line-height: 40px;
-    height: 40px;
-  }
+    div.page>footer>p {
+        line-height: 40px;
+        height: 40px;
+        color: gray;
+        font-size: 14px;
+    }
 
-  div.page>footer>span {
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 30px;
-    height: 30px;
-    color: #999999;
-    font-size: 12px;
-    border: 1px solid #E3E3E5;
-    border-radius: 45px;
-  }
+    div.page>footer>span {
+        display: inline-block;
+        padding: 0 15px;
+        line-height: 30px;
+        height: 30px;
+        color: #999999;
+        font-size: 12px;
+        border: 1px solid #E3E3E5;
+        border-radius: 45px;
+    }
 </style>
