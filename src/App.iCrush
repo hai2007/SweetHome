@@ -55,6 +55,7 @@
         left: 0;
         cursor: pointer;
         user-select: none;
+        z-index: 1;
     }
 
     div.page>header>h2 {
