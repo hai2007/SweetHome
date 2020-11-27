@@ -1,6 +1,41 @@
 <template>
-    <div>
-        笔记
+    <div class="page">
+        <div class="notebook">
+            <a href="#/cssSelector" target="_blank" class='css'>
+                <span>CSS选择器</span>
+                <span>常用的选择器快速查询手册</span>
+            </a>
+            <a href="#/scss" target="_blank" class='scss'>
+                <span>scss使用文档</span>
+                <span>预处理语言sass的快速使用手册</span>
+            </a>
+            <a href="#/RegExp" target="_blank" class='js'>
+                <span>RegExp</span>
+                <span>常用方法和规则整理</span>
+            </a>
+            <a href="#/npm" target="_blank" class='npm'>
+                <span>npm命令</span>
+                <span>一些常用的命令和地址</span>
+            </a>
+            <a href="#/terminal" target="_blank" class='terminal'>
+                <span>终端命令</span>
+                <span>常用的脚本命令</span>
+            </a>
+        </div>
+        <h2 class='in-depth'>深入理解</h2>
+        <ul class='book-list'>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="blank"></li>
+            <li class="blank"></li>
+            <li class="blank"></li>
+            <li class="blank"></li>
+        </ul>
     </div>
 </template>
 <script>
@@ -10,3 +45,96 @@
         }
     };
 </script>
+<style>
+    /* 笔记 */
+    .page>.notebook {
+        background-color: rgb(236, 236, 236);
+        margin: 0 50px;
+        margin-top: 20px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .page>.notebook>a {
+        background-color: #fff;
+        display: inline-block;
+        height: 96px;
+        width: 33.33333333%;
+        background-repeat: no-repeat;
+        background-size: 60px;
+        background-position: 8px center;
+        padding-left: 76px;
+        border: 10px solid rgb(236, 236, 236);
+        vertical-align: top;
+    }
+
+    .page>.notebook>a>span {
+        display: block;
+    }
+
+    .page>.notebook>a>span:first-child {
+        color: #43515a;
+        font-size: 18px;
+        line-height: 20px;
+        padding-top: 16px;
+    }
+
+    .page>.notebook>a>span:last-child {
+        color: #435159;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .page>.notebook>a.css {
+        background-image: url('../assets/css.png');
+    }
+
+    .page>.notebook>a.scss {
+        background-image: url('../assets/scss.png');
+    }
+
+    .page>.notebook>a.js {
+        background-image: url('../assets/js.png');
+    }
+
+    .page>.notebook>a.terminal {
+        background-image: url('../assets/terminal.png');
+    }
+
+    .page>.notebook>a.npm {
+        background-image: url('../assets/npm.png');
+    }
+
+    /* 深入了解 */
+    .page>.in-depth {
+        height: 110px;
+        line-height: 110px;
+        text-align: center;
+        font-size: 42px;
+        background-image: url('../assets/in-depth.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #030303a3;
+    }
+
+    .page>ul.book-list {
+        text-align: center;
+    }
+
+    .page>ul.book-list>li {
+        margin: 10px;
+        display: inline-block;
+        width: 200px;
+        height: 260px;
+        box-shadow: 0px 0px 10px #999;
+        vertical-align: top;
+    }
+
+    .page>ul.book-list>li.blank {
+        height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 0;
+    }
+</style>

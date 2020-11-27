@@ -6,7 +6,6 @@ import App from './App.iCrush';
 // 引入样式
 import "@hai2007/style/normalize.css";
 import './styles/common.css';
-import './styles/npm.css';
 
 // 引入路由
 import routers from './routers/index.js';

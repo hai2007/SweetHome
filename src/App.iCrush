@@ -7,7 +7,7 @@
             <ul>
                 <li @click='openRouter("home")' class='menu-1 home'>首页</li>
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
-                <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
+                <li @click='openRouter("deepInMemory")' class='menu-1 deepInMemory'>记忆深处</li>
                 <li @click='openRouter("laboratory")' class='menu-1 laboratory'>实验室</li>
             </ul>
         </header>

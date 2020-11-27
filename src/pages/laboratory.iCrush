@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='page'>
         实验室
     </div>
 </template>

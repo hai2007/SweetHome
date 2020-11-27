@@ -1,12 +1,12 @@
 <template>
-    <div>
-        开源项目
+    <div class='page'>
+        记忆深处
     </div>
 </template>
 <script>
     export default {
         mounted() {
-            this.changeActive('menu-1', 'opensource');
+            this.changeActive('menu-1', 'deepInMemory');
         }
     };
 </script>

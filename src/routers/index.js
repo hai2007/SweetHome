@@ -1,18 +1,42 @@
 import $$ from 'image2d';
 
 let pages = {
+
+    // 主体路由
+
     home: {
         content: () => import('../pages/home.iCrush')
     },
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    opensource: {
-        content: () => import('../pages/opensource.iCrush')
+    deepInMemory: {
+        content: () => import('../pages/deep-in-memory.iCrush')
     },
     laboratory: {
         content: () => import('../pages/laboratory.iCrush')
     },
+
+    // 查询笔记
+
+    cssSelector: {
+        content: () => import('../pages/notebook/css-selector.iCrush')
+    },
+    npm: {
+        content: () => import('../pages/notebook/npm.iCrush')
+    },
+    RegExp: {
+        content: () => import('../pages/notebook/RegExp.iCrush')
+    },
+    scss: {
+        content: () => import('../pages/notebook/scss.iCrush')
+    },
+    terminal: {
+        content: () => import('../pages/notebook/terminal.iCrush')
+    },
+
+    // 默认一级路由
+
     _default_: "home"
 };
 

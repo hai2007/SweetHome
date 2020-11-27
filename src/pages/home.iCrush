@@ -42,26 +42,18 @@
                     ———— 摘自 莫顿·亨特《走一步，再走一步》
                 </p>
             </div>
-            <h2>
-                基础依赖包
-            </h2>
-            <ul ui-npm='basicNodes'></ul>
             <ul class='footer-link'>
                 <li>
                     <h2>关于我们</h2>
                     <a href="https://yelloxing.gitee.io/image2d/#/Sponsors" target="_blank">捐款</a>
                 </li>
                 <li>
-                    <h2>友情链接</h2>
-                    <a href="https://yelloxing.gitee.io/image2d/" target="_blank">Image2D</a>
-                    <a href="https://github.com/yelloxing/debug.console.js" target="_blank">手机调试工具</a>
-                    <a href="https://github.com/yelloxing/Web-Studio-Code" target="_blank">Web Studio Code</a>
-                    <a href="https://github.com/yelloxing/xhtml-engine" target="_blank">XHTML Engine</a>
+                    <h2>开源项目</h2>
+                    <a href="https://hai2007.gitee.io/clunch/" target="_blank">图形框架(Clunch)</a>
                 </li>
                 <li>
-                    <h2>资源</h2>
+                    <h2>资源或工具</h2>
                     <a href="https://emojipedia.org/" target="_blank">表情文字</a>
-                    <a href="https://yelloxing.gitee.io/notebook/" target="_blank">在线小笔记</a>
                 </li>
                 <li>
                     <h2>官方地址</h2>
@@ -74,7 +66,6 @@
 </template>
 <script>
     import { get } from '../services/xhr';
-    import uiNpm from '../directives/ui-npm';
     export default {
         data() {
             return {
@@ -92,9 +83,6 @@
                     sessionStorage.setItem('npms-hai2007', data);
                 });
             }
-        },
-        directive: {
-            uiNpm
         }
     };
 </script>
