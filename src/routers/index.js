@@ -10,9 +10,6 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    deepInMemory: {
-        content: () => import('../pages/deep-in-memory.iCrush')
-    },
     laboratory: {
         content: () => import('../pages/laboratory.iCrush')
     },
