@@ -23,19 +23,13 @@
             </a>
         </div>
         <h2 class='in-depth'>深入理解</h2>
-        <ul class='book-list'>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li class="blank"></li>
-            <li class="blank"></li>
-            <li class="blank"></li>
-            <li class="blank"></li>
-        </ul>
+        <div class='book-list'>
+            <a class='webgl' href="#/webgl" target="_blank"></a>
+            <a class="blank"></a>
+            <a class="blank"></a>
+            <a class="blank"></a>
+            <a class="blank"></a>
+        </div>
     </div>
 </template>
 <script>
@@ -118,11 +112,11 @@
         color: #030303a3;
     }
 
-    .page>ul.book-list {
+    .page>.book-list {
         text-align: center;
     }
 
-    .page>ul.book-list>li {
+    .page>.book-list>a {
         margin: 10px;
         display: inline-block;
         width: 200px;
@@ -131,10 +125,14 @@
         vertical-align: top;
     }
 
-    .page>ul.book-list>li.blank {
+    .page>.book-list>a.blank {
         height: 0;
         margin-top: 0;
         margin-bottom: 0;
         line-height: 0;
+    }
+
+    .page>.book-list>a.webgl {
+        background-image: url('../assets/book/webgl.jpg');
     }
 </style>

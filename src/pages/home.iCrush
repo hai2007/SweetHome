@@ -90,9 +90,9 @@
                 </p>
                 <p class="mark">
                     当我仰望星空的时候、当我疲于工作或学习的时候、当我此刻在灯光下记录这一切的时候，那些令我感动的东西，我一直与你们同在。
-                    <div>
-                        -------- 后记
-                    </div>
+                <div>
+                    -------- 后记
+                </div>
                 </p>
             </div>
             <ul class='footer-link'>
@@ -289,7 +289,9 @@
 
     /* 猫 */
     .cat-page {
-        padding: 30px 50px 0 50px;
+        background: #d0c1c1;
+        margin: 30px 50px 50px 50px;
+        padding: 30px;
     }
 
     .cat-page>h4 {
@@ -299,15 +301,14 @@
 
     .cat-page>p {
         text-indent: 2em;
-        line-height: 2em;
+        line-height: 1.6em;
         font-size: 14px;
-        color: rgb(108, 105, 105);
+        color: rgb(16, 15, 15);
     }
 
     .cat-page>p.mark {
         text-indent: 0;
         margin: 20px 0;
-        color: rgb(74, 70, 70);
     }
 
     .cat-page>p.mark>div {

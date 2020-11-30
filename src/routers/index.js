@@ -10,8 +10,8 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    opensource: {
-        content: () => import('../pages/opensource.iCrush')
+    laboratory: {
+        content: () => import('../pages/laboratory.iCrush')
     },
 
     // 查询笔记
@@ -30,6 +30,12 @@ let pages = {
     },
     terminal: {
         content: () => import('../pages/notebook/terminal.iCrush')
+    },
+
+    // 深入了解
+
+    webgl: {
+        content: () => import('../pages/books/webgl.iCrush')
     },
 
     // 默认一级路由

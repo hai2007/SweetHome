@@ -1,12 +1,12 @@
 <template>
     <div>
-        开源项目
+        实验页面
     </div>
 </template>
 <script>
     export default {
         mounted() {
-            this.changeActive('menu-1', 'opensource');
+            this.changeActive('menu-1', 'laboratory');
         }
     };
 </script>
