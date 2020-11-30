@@ -10,8 +10,8 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    laboratory: {
-        content: () => import('../pages/laboratory.iCrush')
+    opensource: {
+        content: () => import('../pages/opensource.iCrush')
     },
 
     // 查询笔记
