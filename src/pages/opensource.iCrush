@@ -3,3 +3,10 @@
         开源项目
     </div>
 </template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-1', 'opensource');
+        }
+    };
+</script>
