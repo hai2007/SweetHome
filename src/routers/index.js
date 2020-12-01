@@ -17,6 +17,11 @@ let pages = {
         content: () => import('../pages/game.iCrush')
     },
 
+    // 捐款
+    Sponsors: {
+        content: () => import('../pages/Sponsors.iCrush')
+    },
+
     // 查询笔记
 
     cssSelector: {

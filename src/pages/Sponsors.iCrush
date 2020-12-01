@@ -1,0 +1,14 @@
+<template>
+    <div class='page'>捐款支持我们！</div>
+</template>
+<style>
+    .page {
+        font-size: 0;
+        height: calc(100vh - 155px);
+        min-height: 500px;
+        background-image: url('../assets/zfb.jpg');
+        background-size: 30% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+</style>

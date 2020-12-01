@@ -23,6 +23,12 @@
             <a href="https://info.flagcounter.com/bdd0" target="_blank">
                 <img :src="counterUrl">
             </a>
+            <a href="https://github.com/yelloxing?tab=repositories" target="_blank" class="yelloxing">
+                <span>
+                    点击回到过去
+                    <i>（曾用账号）</i>
+                </span>
+            </a>
         </div>
         <div class="right">
             <div class="stepbystep">
@@ -107,7 +113,7 @@
                 </li>
                 <li>
                     <h2>其它</h2>
-                    <a href="https://yelloxing.gitee.io/image2d/#/Sponsors" target="_blank">捐款支持我们</a>
+                    <a href="#/Sponsors" target="_blank">捐款支持我们</a>
                 </li>
             </ul>
         </div>
@@ -228,6 +234,33 @@
         height: 260px;
         background-size: 100% auto;
         font-size: 0;
+    }
+
+    div.page>div.left>.yelloxing {
+        display: block;
+        margin: auto;
+        margin-top: 100px;
+        height: 160px;
+        width: 160px;
+        background-image: url('../assets/yelloxing.jpg');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center center;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    div.page>div.left>.yelloxing>span {
+        color: rgb(56, 55, 55);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 110px;
+    }
+
+    div.page>div.left>.yelloxing>span>i {
+        display: block;
+        font-style: normal;
     }
 
     /* 右边顶部说明 */
