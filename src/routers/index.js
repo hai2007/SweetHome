@@ -10,8 +10,11 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    laboratory: {
-        content: () => import('../pages/laboratory.iCrush')
+    tool: {
+        content: () => import('../pages/tool.iCrush')
+    },
+    game: {
+        content: () => import('../pages/game.iCrush')
     },
 
     // 查询笔记

@@ -97,20 +97,17 @@
             </div>
             <ul class='footer-link'>
                 <li>
-                    <h2>关于我们</h2>
-                    <a href="https://yelloxing.gitee.io/image2d/#/Sponsors" target="_blank">捐款</a>
-                </li>
-                <li>
-                    <h2>在线工具</h2>
+                    <h2>官方地址</h2>
+                    <a href="https://www.w3.org/" target="_blank">万维网联盟(w3c)</a>
+                    <a href="https://www.khronos.org/webgl/" target="_blank">WebGL</a>
                 </li>
                 <li>
                     <h2>有用的资源</h2>
                     <a href="https://emojipedia.org/" target="_blank">表情文字</a>
                 </li>
                 <li>
-                    <h2>官方地址</h2>
-                    <a href="https://www.w3.org/" target="_blank">万维网联盟(w3c)</a>
-                    <a href="https://www.khronos.org/webgl/" target="_blank">WebGL</a>
+                    <h2>其它</h2>
+                    <a href="https://yelloxing.gitee.io/image2d/#/Sponsors" target="_blank">捐款支持我们</a>
                 </li>
             </ul>
         </div>
@@ -256,13 +253,15 @@
         border-top: 1px solid rgb(187, 183, 183);
         margin-top: 10px;
         font-family: monospace;
+        text-align: center;
     }
 
     div.page>div.right>.footer-link>li {
         display: inline-block;
         vertical-align: top;
-        width: 175px;
+        width: 233px;
         padding: 10px;
+        text-align: left;
     }
 
     div.page>div.right>.footer-link>li>h2 {

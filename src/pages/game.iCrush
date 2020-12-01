@@ -1,12 +1,12 @@
 <template>
     <div>
-        实验页面
+        game
     </div>
 </template>
 <script>
     export default {
         mounted() {
-            this.changeActive('menu-1', 'laboratory');
+            this.changeActive('menu-1', 'game');
         }
     };
 </script>
