@@ -2,6 +2,18 @@
     margin-bottom: 30px;
 }
 
+/* 特殊的自由样式 */
+.doc-view .important {
+    color: red;
+    font-weight: 800;
+}
+
+.doc-view .warn {
+    font-size: 12px;
+    color: #dac305;
+    font-weight: 400;
+}
+
 /* 复制按钮 */
 .doc-view .copy-btn {
     background-color: #f8f8f8;
@@ -10,92 +22,4 @@
 .doc-view .copy-btn:hover {
     background-color: #0a0a0a;
     color: white;
-}
-
-/* 文章标题 */
-.doc-view>h2 {
-    font-size: 30px;
-    padding: 30px 0 20px 0;
-}
-
-/* 一级标题 */
-.doc-view>h3 {
-    font-size: 15px;
-    line-height: 2em;
-    margin-top: 20px;
-}
-
-.doc-view>h3::before {
-    content: "#";
-    color: #711e32;
-}
-
-/* 二级标题 */
-.doc-view>h4 {
-    font-size: 14px;
-    line-height: 2em;
-    margin-top: 20px;
-}
-
-/* 段落 */
-.doc-view>p {
-    line-height: 1.6em;
-    text-indent: 2em;
-    color: #3c3939;
-    font-weight: 400;
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-.doc-view>p.warn {
-    font-size: 12px;
-    color: #dac305;
-    font-weight: 400;
-}
-
-/* 序列 */
-.doc-view>ul {
-    margin-left: 20px;
-    font-size: 13px;
-    line-height: 2.4em;
-}
-
-/* 表格 */
-.doc-view>table {
-    width: 100%;
-    line-height: 30px;
-}
-
-.doc-view>table>tbody>tr:not(:first-child)>* {
-    border-width: 0 1px 1px 0;
-    border-style: solid;
-    border-color: #c1bcbc;
-}
-
-.doc-view>table>tbody>tr>* {
-    padding-left: 1em;
-}
-
-.doc-view>table>tbody>tr>*:first-child {
-    border-width: 0 1px 1px 1px;
-}
-
-.doc-view>table>tbody>tr:nth-child(2n+1) {
-    background-color: #F5F5F5;
-}
-
-.doc-view>table>tbody>tr:nth-child(2n) {
-    background-color: #fff;
-}
-
-.doc-view>table>tbody>tr:first-child {
-    background-color: #c1bcbc;
-    border: 1px solid #c1bcbc;
-    color: #fff;
-}
-
-/* 特殊的自由样式 */
-.doc-view .important {
-    color: red;
-    font-weight: 800;
 }

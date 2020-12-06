@@ -6,14 +6,15 @@
         </h2>
 
         <table>
-            <tbody>
+            <thead>
                 <tr>
                     <th>选择器</th>
                     <th>例子</th>
                     <th>例子描述</th>
                     <th>CSS</th>
                 </tr>
-
+            </thead>
+            <tbody>
                 <tr>
                     <td>
                         <a title="CSS .class 选择器">.
