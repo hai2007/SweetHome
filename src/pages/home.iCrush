@@ -120,24 +120,14 @@
     </div>
 </template>
 <script>
-    import { get } from '../services/xhr';
     export default {
         data() {
             return {
-                basicNodes: [],
                 counterUrl: "https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/"
             };
         },
         mounted() {
             this.changeActive('menu-1', 'home');
-            if (sessionStorage.getItem('npms-hai2007')) {
-                this.basicNodes = JSON.parse(sessionStorage.getItem('npms-hai2007')).results;
-            } else {
-                get('https://api.npms.io/v2/search?q=hai2007&from=0&size=25', data => {
-                    this.basicNodes = JSON.parse(data).results;
-                    sessionStorage.setItem('npms-hai2007', data);
-                });
-            }
         }
     };
 </script>
