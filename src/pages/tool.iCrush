@@ -1,8 +1,14 @@
 <template>
     <div>
-        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
-        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
-        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
+        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank">
+            <h2>npm-downloads</h2>
+            <div>
+                包下载量比较，可以帮助你查看不同的npm包的下载热度，并自定义对比的统计间隔。
+            </div>
+            <i>
+                录入时间：2020年12月22日
+            </i>
+        </a>
     </div>
 </template>
 <script>
@@ -13,18 +19,40 @@
     };
 </script>
 <style>
+    div {
+        padding: 20px 0;
+        color: black;
+    }
+
     div>a {
-        display: inline-block;
-        width: 400px;
-        height: 220px;
-        margin: 20px 50px 0 50px;
-        background-size: 100% auto;
+        display: block;
+        height: 230px;
+        padding-left: 400px;
+        padding-top: 10px;
+        margin: 0px 50px 0 50px;
+        background-size: auto 90%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: left center;
+    }
+
+    div>a>h2 {
+        margin-top: 30px;
+        font-size: 30px;
+        color: red;
+    }
+
+    div>a>div {
+        padding: 0;
+        text-indent: 2em;
+        padding: 10px 0;
+        font-weight: 800;
+    }
+
+    div>a>i {
+        font-style: normal;
     }
 
     div>a:nth-child(1) {
-        background-color: #332929;
         background-image: url('../assets/tool/npm-downloads.png');
     }
 </style>
