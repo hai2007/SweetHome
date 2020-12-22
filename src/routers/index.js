@@ -13,9 +13,6 @@ let pages = {
     tool: {
         content: () => import('../pages/tool.iCrush')
     },
-    game: {
-        content: () => import('../pages/game.iCrush')
-    },
 
     // 捐款
     Sponsors: {

@@ -8,7 +8,6 @@
                 <li @click='openRouter("home")' class='menu-1 home'>首页</li>
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
                 <li @click='openRouter("tool")' class='menu-1 tool'>在线工具</li>
-                <li @click='openRouter("game")' class='menu-1 game'>小游戏</li>
             </ul>
         </header>
         <div>

@@ -25,7 +25,7 @@
             </a>
             <a href="https://github.com/yelloxing?tab=repositories" target="_blank" class="yelloxing">
                 <span>
-                    点击回到过去
+                    <i>心叶</i>
                     <i>（练习账号）</i>
                 </span>
             </a>
@@ -251,6 +251,12 @@
     div.page>div.left>.yelloxing>span>i {
         display: block;
         font-style: normal;
+        color: rgb(175, 169, 169);
+    }
+
+    div.page>div.left>.yelloxing>span>i:first-child {
+        color: rgb(0, 0, 0);
+        font-weight: 800;
     }
 
     /* 右边顶部说明 */

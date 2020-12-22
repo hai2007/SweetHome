@@ -1,6 +1,8 @@
 <template>
     <div>
-        tool
+        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
+        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
+        <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank"></a>
     </div>
 </template>
 <script>
@@ -10,3 +12,19 @@
         }
     };
 </script>
+<style>
+    div>a {
+        display: inline-block;
+        width: 400px;
+        height: 220px;
+        margin: 20px 50px 0 50px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    div>a:nth-child(1) {
+        background-color: #332929;
+        background-image: url('../assets/tool/npm-downloads.png');
+    }
+</style>
