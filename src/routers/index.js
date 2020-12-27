@@ -10,9 +10,6 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.iCrush')
     },
-    tool: {
-        content: () => import('../pages/tool.iCrush')
-    },
 
     // 捐款
     Sponsors: {
