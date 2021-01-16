@@ -8,7 +8,7 @@
         <h3>
             正则对象方法
         </h3>
-        <pre ui-code>
+        <pre q-code>
             RegExpObject.exec(string)
         </pre>
         <p>
@@ -18,7 +18,7 @@
         <p class="warn">
             重要事项：完成了一次模式匹配之后检索新的字符串前应该手动地把正则对象的lastIndex属性重置为 0。
         </p>
-        <pre ui-code>
+        <pre q-code>
             RegExpObject.test(string)
         </pre>
         <p>
@@ -28,20 +28,20 @@
         <h3>
             字符串对象方法
         </h3>
-        <pre ui-code>
+        <pre q-code>
             stringObject.search(regexp)
         </pre>
         <p>
             检索与正则表达式相匹配的值，返回stringObject中第一个与regexp相匹配的子串的起始位置，如果没有找到返回-1；search()方法不执行全局匹配，它将忽略标志
             g。它同时忽略regexp的lastIndex属性，并且总是从字符串的开始进行检索，这意味着它总是返回stringObject的第一个匹配的位置。
         </p>
-        <pre ui-code>
+        <pre q-code>
             stringObject.match(searchvalue|regexp)
         </pre>
         <p>
             找到一个或多个正则表达式的匹配，返回匹配的字符串数组。
         </p>
-        <pre ui-code>
+        <pre q-code>
             stringObject.replace(regexp|substr,replacement|function)
         </pre>
         <p>
@@ -50,7 +50,7 @@
         <p class="warn">
             温馨提示：其中function传递进去的是匹配的字符串，return返回的是最后替换成的，类似管道的写法。
         </p>
-        <pre ui-code>
+        <pre q-code>
             stringObject.split(separator[,howmany])
         </pre>
         <p>
@@ -69,7 +69,7 @@
         <p>
             比如现在需要匹配一个单词是以ing结尾的，但是结尾的ing不捕获，可以这样使用：
         </p>
-        <pre ui-code>
+        <pre q-code>
             "name-doing-text-heeeing".match(/([a-z]+(?=ing))/g)
         </pre>
         <p>
@@ -81,7 +81,7 @@
         <p>
             比如现在需要在一个单词里面寻找一些字母，这些字母的下一个字母不可以是e，可以这样使用：
         </p>
-        <pre ui-code>
+        <pre q-code>
             "dream".match(/([a-z]{1}(?!e))/g)
         </pre>
         <p>

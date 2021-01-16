@@ -1,11 +1,11 @@
 {
   "name": "sweethome",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "🏠 我的编程世界：开源项目或文档主站，包括一些心得笔记和有益的资料链接等。",
   "scripts": {
     "start": "npm install && npm run dev",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "cuf -d ./dist && webpack --config webpack.prod.js"
+    "build": "hai2007_nodejs -d ./dist && webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "hai2007",
     "sweethome"
   ],
-  "author": "hai2007",
+  "author": "你好2007",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/hai2007/SweetHome/issues"
@@ -25,29 +25,24 @@
   "dependencies": {
     "@hai2007/style": "^0.2.1",
     "clunch": "^0.2.2",
-    "icrush": "^2.1.0",
-    "image2d": "^1.12.4"
+    "image2d": "^1.12.4",
+    "quick-paper": "^0.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
+    "@hai2007/nodejs": "^0.1.0",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "css-loader": "^2.1.1",
-    "cuf": "^1.2.0",
     "file-loader": "^4.2.0",
-    "icrush-loader": "^0.4.2",
-    "icrush-loader-plug": "^0.2.1",
-    "icrush-style-loader": "^1.0.4",
     "postcss": "^7.0.21",
     "postcss-loader": "^3.0.0",
     "url-loader": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2",
-    "wscode": "^2.1.1",
-    "wscode-prettify": "^0.1.0"
+    "webpack-merge": "^4.2.2"
   }
 }

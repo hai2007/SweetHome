@@ -5,39 +5,39 @@ let pages = {
     // 主体路由
 
     home: {
-        content: () => import('../pages/home.iCrush')
+        content: () => import('../pages/home.paper')
     },
     notebook: {
-        content: () => import('../pages/notebook.iCrush')
+        content: () => import('../pages/notebook.paper')
     },
 
     // 捐款
     Sponsors: {
-        content: () => import('../pages/Sponsors.iCrush')
+        content: () => import('../pages/Sponsors.paper')
     },
 
     // 查询笔记
 
     cssSelector: {
-        content: () => import('../pages/notebook/css-selector.iCrush')
+        content: () => import('../pages/notebook/css-selector.paper')
     },
     npm: {
-        content: () => import('../pages/notebook/npm.iCrush')
+        content: () => import('../pages/notebook/npm.paper')
     },
     RegExp: {
-        content: () => import('../pages/notebook/RegExp.iCrush')
+        content: () => import('../pages/notebook/RegExp.paper')
     },
     scss: {
-        content: () => import('../pages/notebook/scss.iCrush')
+        content: () => import('../pages/notebook/scss.paper')
     },
     terminal: {
-        content: () => import('../pages/notebook/terminal.iCrush')
+        content: () => import('../pages/notebook/terminal.paper')
     },
 
     // 深入了解
 
     webgl: {
-        content: () => import('../pages/books/webgl.iCrush')
+        content: () => import('../pages/books/webgl.paper')
     },
 
     // 默认一级路由
@@ -46,8 +46,8 @@ let pages = {
 };
 
 export default {
-    install(iCrush) {
-        iCrush.prototype.loadRouter = (doback, deep) => {
+    install(QuickPaper) {
+        QuickPaper.prototype.loadRouter = (doback, deep) => {
 
             let routers = (window.location.href + "#").split("#")[1].replace(/\?.{0,}$/, '').replace(/^\//, '').replace(/\/$/, '').split('/'), page = pages;
             for (let i = 0; i < deep; i++) {
@@ -59,7 +59,7 @@ export default {
 
         };
 
-        iCrush.prototype.goRouter = (doback, keyArray) => {
+        QuickPaper.prototype.goRouter = (doback, keyArray) => {
 
             let page = pages, router = "#";
             for (let i = 0; i < keyArray.length; i++) {
@@ -74,7 +74,7 @@ export default {
             window.location.href = router;
         };
 
-        iCrush.prototype.changeActive = (className, tagetClass) => {
+        QuickPaper.prototype.changeActive = (className, tagetClass) => {
             $$('.' + className).attr('active', 'no');
             $$('.' + className + "." + tagetClass).attr('active', 'yes');
         };
