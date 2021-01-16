@@ -10,6 +10,9 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.paper')
     },
+    opensource: {
+        content: () => import('../pages/opensource.paper')
+    },
 
     // 捐款
     Sponsors: {

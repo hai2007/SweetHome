@@ -1,0 +1,402 @@
+<template class='page doc-view'>
+
+    <a class="Sponsors" target="_blank" href="https://hai2007.gitee.io/sweethome/#/Sponsors">
+        点击我支持一下开源项目
+    </a>
+
+    <!-- clunch -->
+    <div class="clunch item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/clunch" target="_blank">Clunch.js</a>
+            <div class="sub-title">
+                渐进的前端交互式图形框架
+            </div>
+        </header>
+        <div class='content'>
+            使用此框架你可以快速的绘制你想要的前端交互图形：
+            <ol>
+                <li>数据驱动绘图</li>
+                <li>复杂图形的区域管理</li>
+                <li>内置差异对比和过渡动画</li>
+            </ol>
+        </div>
+        <div class="link">
+            <a href="https://github.com/hai2007/clunch" target="_blank">
+                代码
+            </a>
+            <a href="https://hai2007.gitee.io/clunch/" target="_blank">
+                文档
+            </a>
+            <a href="https://hai2007.gitee.io/clunch/#/examples" target="_blank">
+                用例
+            </a>
+        </div>
+    </div>
+
+    <!-- npm-downloads -->
+    <div class="npm-downloads item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/npm-downloads" target="_blank">npm-downloads</a>
+            <div class="sub-title">
+                npm包下载量比较
+            </div>
+        </header>
+        <div class='content'></div>
+        <div class="link">
+            <a href="https://github.com/hai2007/npm-downloads" target="_blank">
+                代码
+            </a>
+            <a href="https://hai2007.gitee.io/npm-downloads/?interval=7&packages=clunch" target="_blank">
+                在线地址
+            </a>
+        </div>
+    </div>
+
+    <!-- image3D.js -->
+    <div class="image3d item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/image3D" target="_blank">image3D.js</a>
+            <div class="sub-title">
+                使用webGL绘制三维图片
+            </div>
+        </header>
+        <div class="link">
+            <a href="https://github.com/hai2007/image3D" target="_blank">
+                代码
+            </a>
+            <a href="http://hai2007.gitee.io/image3d/" target="_blank">
+                文档
+            </a>
+        </div>
+    </div>
+
+    <!-- image2D.js -->
+    <div class="image2d item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/image2D" target="_blank">image2D.js</a>
+            <div class="sub-title">
+                使用ECMAScript绘制二维图片
+            </div>
+        </header>
+        <div class='content'>
+            你可以快速的实现基于Canvas或SVG画布绘制兼容各种浏览器的前端交互图形。
+        </div>
+        <div class="link">
+            <a href="https://github.com/hai2007/image2D" target="_blank">
+                代码
+            </a>
+            <a href="https://hai2007.gitee.io/image2d/" target="_blank">
+                文档
+            </a>
+            <a href="https://hai2007.gitee.io/image2d/examples/index.html" target="_blank">
+                用例
+            </a>
+        </div>
+    </div>
+
+    <!-- algorithm.js -->
+    <div class="algorithm item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/algorithm.js" target="_blank">algorithm.js</a>
+            <div class="sub-title">
+                前端常用的算法实现合集
+            </div>
+        </header>
+        <div class="link">
+            <a href="https://github.com/hai2007/algorithm.js" target="_blank">
+                代码
+            </a>
+            <a href="https://github.com/hai2007/algorithm.js/blob/master/README.md" target="_blank">
+                文档
+            </a>
+        </div>
+    </div>
+
+    <!-- tool.js -->
+    <div class="tool item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/tool.js" target="_blank">tool.js</a>
+            <div class="sub-title">
+                前端常用的工具类方法汇总
+            </div>
+        </header>
+        <div class="link">
+            <a href="https://github.com/hai2007/tool.js" target="_blank">
+                代码
+            </a>
+            <a href="https://github.com/hai2007/tool.js/blob/master/README.md" target="_blank">
+                文档
+            </a>
+        </div>
+    </div>
+
+    <!-- Open Web Editor -->
+    <div class="owe item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/Open-Web-Editor" target="_blank">Open Web Editor</a>
+            <div class="sub-title">
+                Web版的可扩展代码编辑器
+            </div>
+        </header>
+        <div class='content'>
+            兼容Chrome、Safari、Edge、Firefox、Opera和IE(9+)等常见浏览器！
+        </div>
+        <div class="link">
+            <a href="https://github.com/hai2007/Open-Web-Editor" target="_blank">
+                代码
+            </a>
+            <a href="https://github.com/hai2007/Open-Web-Editor/blob/master/README.md" target="_blank">
+                文档
+            </a>
+            <a href="https://hai2007.gitee.io/open-web-editor/test/index.html" target="_blank">
+                用例
+            </a>
+        </div>
+    </div>
+
+    <!-- debug-phone -->
+    <div class="debug-phone item">
+        <header>
+            <a class="title" href="https://github.com/hai2007/Debug-Phone" target="_blank">Debug For Phone</a>
+            <div class="sub-title">
+                一个可用于调试手机的调试工具
+            </div>
+        </header>
+        <div class='content'></div>
+        <div class="link">
+            <a href="https://github.com/hai2007/Debug-Phone" target="_blank">
+                代码
+            </a>
+            <a href="http://hai2007.gitee.io/debug-phone/test/index.html" target="_blank">
+                在线地址
+            </a>
+        </div>
+    </div>
+
+</template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-1', 'opensource');
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        height: 845px;
+        position: relative;
+    }
+
+    .Sponsors {
+        position: absolute;
+        color: rgb(97, 55, 47);
+        right: 140px;
+        top: 10px;
+        width: 40px;
+        text-align: center;
+        font-size: 20px;
+        background-color: #e8e8ef;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .Sponsors:hover {
+        color: rgb(31, 7, 3);
+        font-weight: 800;
+    }
+
+    .item {
+        display: inline-block;
+        box-shadow: 0 0 2px #838390;
+        border-radius: 5px;
+        width: 250px;
+        position: absolute;
+        border-top: 3px solid #bfbfc7;
+    }
+
+    .item:hover {
+        box-shadow: 0 0 2px #000000;
+    }
+
+    .item>header {
+        padding: 10px;
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 70px;
+    }
+
+    .item>header>.title {
+        line-height: 2em;
+        font-style: 20px;
+        font-weight: 800;
+        color: rgb(247, 0, 0);
+    }
+
+    .item>header>.sub-title {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .item>.content {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        font-size: 14px;
+        line-height: 1.6em;
+        padding: 10px;
+        border-top: 1px solid #f3e6e6;
+        border-bottom: 1px solid #f3e6e6;
+    }
+
+    .item>.link {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .item>.link>a {
+        display: inline-block;
+        text-decoration: underline;
+        color: rgb(7, 159, 219);
+        font-weight: 800;
+    }
+
+
+    /* clunch */
+
+    .item.clunch {
+        left: 10px;
+        top: 10px;
+    }
+
+    .item.clunch>header {
+        background-image: url('../assets/opensource/clunch.png');
+    }
+
+    .item.clunch>.content {
+        background-image: url('../assets/opensource/examples-of-clunch.png');
+        padding-top: 110px;
+    }
+
+    .item.clunch>.link>a {
+        width: 33%;
+    }
+
+    /* npm-downloads */
+    .item.npm-downloads {
+        left: 280px;
+        top: 10px;
+    }
+
+    .item.npm-downloads>header {
+        padding-left: 10px;
+    }
+
+    .item.npm-downloads>.content {
+        background-image: url('../assets/opensource/npm-downloads.png');
+        padding-top: 140px;
+    }
+
+    .item.npm-downloads>.link>a {
+        width: 50%;
+    }
+
+    /* image3D.js */
+    .item.image3d {
+        left: 10px;
+        top: 645px;
+    }
+
+    .item.image3d>.link>a {
+        width: 50%;
+    }
+
+    .item.image3d>header {
+        background-image: url('../assets/opensource/image3D.png');
+    }
+
+    /* image2D.js */
+    .item.image2d {
+        left: 550px;
+        top: 10px;
+    }
+
+    .item.image2d>header {
+        background-image: url('../assets/opensource/image2D.png');
+    }
+
+    .item.image2d>.content {
+        background-image: url('../assets/opensource/examples-of-image2d.png');
+        padding-top: 90px;
+    }
+
+    .item.image2d>.link>a {
+        width: 33%;
+    }
+
+    /* algorithm.js */
+    .item.algorithm {
+        left: 10px;
+        top: 395px;
+    }
+
+    .item.algorithm>.link>a {
+        width: 50%;
+    }
+
+    .item.algorithm>header {
+        background-image: url('../assets/opensource/algorithm.png');
+    }
+
+    /* tool.js */
+    .item.tool {
+        left: 10px;
+        top: 520px;
+    }
+
+    .item.tool>.link>a {
+        width: 50%;
+    }
+
+    .item.tool>header {
+        background-image: url('../assets/opensource/tool.png');
+    }
+
+    /* Open Web Editor */
+    .item.owe {
+        left: 280px;
+        top: 290px;
+    }
+
+    .item.owe>header {
+        background-image: url('../assets/opensource/owe.png');
+    }
+
+    .item.owe>.link>a {
+        width: 33%;
+    }
+
+    .item.owe>.content {
+        background-image: url('../assets/opensource/examples-of-owe.png');
+        padding-top: 135px;
+    }
+
+    /* debug-phone */
+    .item.debug-phone {
+        left: 550px;
+        top: 320px;
+    }
+
+    .item.debug-phone>header {
+        padding-left: 10px;
+    }
+
+    .item.debug-phone>.content {
+        background-image: url('../assets/opensource/debug-phone.png');
+        padding-top: 415px;
+    }
+
+    .item.debug-phone>.link>a {
+        width: 50%;
+    }
+</style>
