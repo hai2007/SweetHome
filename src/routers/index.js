@@ -13,6 +13,9 @@ let pages = {
     opensource: {
         content: () => import('../pages/opensource.paper')
     },
+    blog: {
+        content: () => import('../pages/blog.paper')
+    },
 
     // 捐款
     Sponsors: {

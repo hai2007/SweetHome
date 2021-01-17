@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/hai2007/SweetHome#readme",
   "dependencies": {
-    "@hai2007/style": "^0.2.1",
+    "@hai2007/style": "^0.2.3",
     "clunch": "^0.2.2",
     "image2d": "^1.12.4",
     "quick-paper": "^0.2.1"

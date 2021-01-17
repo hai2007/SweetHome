@@ -3,10 +3,6 @@
 }
 
 /* 特殊的自由样式 */
-.doc-view .important {
-    color: red;
-    font-weight: 800;
-}
 
 .doc-view .warn {
     font-size: 12px;

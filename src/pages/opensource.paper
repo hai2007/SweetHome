@@ -190,7 +190,7 @@
     .Sponsors {
         position: absolute;
         color: rgb(97, 55, 47);
-        right: 140px;
+        right: 90px;
         top: 10px;
         width: 40px;
         text-align: center;
@@ -265,7 +265,7 @@
     /* clunch */
 
     .item.clunch {
-        left: 10px;
+        left: 60px;
         top: 10px;
     }
 
@@ -284,7 +284,7 @@
 
     /* npm-downloads */
     .item.npm-downloads {
-        left: 280px;
+        left: 330px;
         top: 10px;
     }
 
@@ -303,7 +303,7 @@
 
     /* image3D.js */
     .item.image3d {
-        left: 10px;
+        left: 60px;
         top: 645px;
     }
 
@@ -317,7 +317,7 @@
 
     /* image2D.js */
     .item.image2d {
-        left: 550px;
+        left: 600px;
         top: 10px;
     }
 
@@ -336,7 +336,7 @@
 
     /* algorithm.js */
     .item.algorithm {
-        left: 10px;
+        left: 60px;
         top: 395px;
     }
 
@@ -350,7 +350,7 @@
 
     /* tool.js */
     .item.tool {
-        left: 10px;
+        left: 60px;
         top: 520px;
     }
 
@@ -364,7 +364,7 @@
 
     /* Open Web Editor */
     .item.owe {
-        left: 280px;
+        left: 330px;
         top: 290px;
     }
 
@@ -383,7 +383,7 @@
 
     /* debug-phone */
     .item.debug-phone {
-        left: 550px;
+        left: 600px;
         top: 320px;
     }
 
