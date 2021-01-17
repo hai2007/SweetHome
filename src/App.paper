@@ -22,13 +22,17 @@
                 走一步，再走一步。
             </span>
         </footer>
+        <div class="helpCounterUrl">
+            <img :src="counterUrl">
+        </div>
     </div>
 </template>
 <script>
     export default {
         data() {
             return {
-                page: null
+                page: null,
+                counterUrl: window.hai2007_sweethome_counterUrl
             };
         },
         methods: {
@@ -42,6 +46,12 @@
     };
 </script>
 <style>
+    .helpCounterUrl {
+        position: fixed;
+        left: -300px;
+        top: 0;
+    }
+
     /* 页头 */
     div.page>header {
         line-height: 50px;
