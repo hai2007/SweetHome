@@ -9,6 +9,7 @@
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
                 <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
                 <li @click='openRouter("blog")' class='menu-1 blog'>小博客</li>
+                <li @click='openRouter("game")' class='menu-1 game'>H5游戏</li>
             </ul>
         </header>
         <div>

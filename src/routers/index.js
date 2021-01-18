@@ -16,6 +16,9 @@ let pages = {
     blog: {
         content: () => import('../pages/blog.paper')
     },
+    game: {
+        content: () => import('../pages/game.paper')
+    },
 
     // 捐款
     Sponsors: {
@@ -42,8 +45,8 @@ let pages = {
 
     // 深入了解
 
-    webgl: {
-        content: () => import('../pages/books/webgl.paper')
+    webpack: {
+        content: () => import('../pages/books/webpack/index.paper')
     },
 
     // 默认一级路由

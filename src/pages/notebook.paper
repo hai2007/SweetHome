@@ -24,7 +24,7 @@
         </div>
         <h2 class='in-depth'>系统学习</h2>
         <div class='book-list'>
-            <a class='webgl' href="#/webgl" target="_blank"></a>
+            <a class='webpack' href="#/webpack" target="_blank"></a>
             <a class="blank"></a>
             <a class="blank"></a>
             <a class="blank"></a>
@@ -132,7 +132,7 @@
         line-height: 0;
     }
 
-    .page>.book-list>a.webgl {
-        background-image: url('../assets/book/webgl.jpg');
+    .page>.book-list>a.webpack {
+        background-image: url('../assets/book/webpack.jpg');
     }
 </style>

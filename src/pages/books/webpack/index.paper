@@ -1,0 +1,54 @@
+<template>
+    <header>
+        从vue-loader开始理解webpack的一些设计思想
+    </header>
+    <div>
+        <div class="menu">
+
+        </div>
+        <div class="content doc-view">
+            <components :is='page'></components>
+        </div>
+    </div>
+</template>
+<script>
+    export default {
+        methods: {
+            openRouter(pagename) {
+                this.goRouter(page => this.page = page, ['webpack', pagename]);
+            }
+        },
+        mounted() {
+            // this.loadRouter(page => this.page = page, 2);
+        }
+    };
+</script>
+<style>
+    [quickpaper]>header {
+        font-size: 30px;
+        padding: 30px 10px;
+        font-weight: 800;
+        border-bottom: 1px solid rgb(173, 168, 168);
+    }
+
+    [quickpaper]>div {
+        font-size: 0;
+        white-space: nowrap;
+    }
+
+    [quickpaper]>div>div {
+        white-space: normal;
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .menu {
+        width: 260px;
+        padding: 10px;
+    }
+
+    .content {
+        width: 740px;
+    }
+</style>
