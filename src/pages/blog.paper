@@ -6,9 +6,6 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/overflow-hidden.md'>
                 关于CSS中设置overflow属性的值为hidden的相关理解
             </a>
-            <span class="time">
-                2018-04-18
-            </span>
         </li>
         <li>
             <span class='index'>2</span>
@@ -16,9 +13,6 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/vertical-align.md'>
                 vertical-align:垂直对齐方式相关说明
             </a>
-            <span class="time">
-                2018-04-28
-            </span>
         </li>
         <li>
             <span class='index'>3</span>
@@ -26,9 +20,13 @@
                 href='https://github.com/hai2007/tool.js/blob/master/notebook/prototype.md'>
                 理解prototype和__proto__（继承与原型链）
             </a>
-            <span class="time">
-                2018-07-11
-            </span>
+        </li>
+        <li>
+            <span class='index'>4</span>
+            <a class="content" target="_blank"
+                href='https://github.com/hai2007/style.css/blob/master/notebook/z-index.md'>
+                z-index 层叠上下文和层叠水平
+            </a>
         </li>
     </ul>
 </template>
@@ -75,11 +73,6 @@
         cursor: pointer;
         color: #5a1508;
         display: inline-block;
-        width: 800px;
         cursor: pointer;
-    }
-
-    .time {
-        float: right;
     }
 </style>
