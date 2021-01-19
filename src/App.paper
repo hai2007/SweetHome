@@ -10,6 +10,8 @@
                 <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
                 <li @click='openRouter("blog")' class='menu-1 blog'>小博客</li>
                 <li @click='openRouter("game")' class='menu-1 game'>H5游戏</li>
+                <li @click='openRouter("tool")' class='menu-1 tool'>在线工具</li>
+                <li @click='openRouter("laboratory")' class='menu-1 laboratory'>实验室</li>
             </ul>
         </header>
         <div>

@@ -1,4 +1,4 @@
-import $$ from 'image2d';
+import xhtml from '@hai2007/tool/xhtml.js';
 
 let pages = {
 
@@ -18,6 +18,12 @@ let pages = {
     },
     game: {
         content: () => import('../pages/game.paper')
+    },
+    tool: {
+        content: () => import('../pages/tool.paper')
+    },
+    laboratory: {
+        content: () => import('../pages/laboratory.paper')
     },
 
     // 捐款
@@ -84,8 +90,19 @@ export default {
         };
 
         QuickPaper.prototype.changeActive = (className, tagetClass) => {
-            $$('.' + className).attr('active', 'no');
-            $$('.' + className + "." + tagetClass).attr('active', 'yes');
+
+            // 恢复
+            let menus = xhtml.find(document.body, el => {
+                return xhtml.hasClass(el, className);
+            });
+            for (let i = 0; i < menus.length; i++) menus[i].setAttribute('active', 'no');
+
+            // 设置
+            let menu = xhtml.find(document.body, el => {
+                return xhtml.hasClass(el, [className, tagetClass]);
+            });
+            menu[0].setAttribute('active', 'yes');
+
         };
     }
 };
