@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "🏠 我的编程世界：开源项目或文档主站，包括一些心得笔记和有益的资料链接等。",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -26,7 +26,7 @@
     "@hai2007/style": "^0.2.3",
     "@hai2007/tool": "^0.6.1",
     "clunch": "^1.2.0",
-    "quick-paper": "^0.2.1"
+    "quick-paper": "^0.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

@@ -11,11 +11,7 @@
 }
 
 /* 复制按钮 */
-.doc-view .copy-btn {
-    background-color: #f8f8f8;
-}
 
 .doc-view .copy-btn:hover {
-    background-color: #0a0a0a;
-    color: white;
+    color: rgb(233, 2, 2);
 }
