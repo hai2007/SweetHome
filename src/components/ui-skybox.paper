@@ -1,0 +1,142 @@
+<template>
+    <canvas id='skybox' width='300px' height='300px' title='点击我查看image3D文档' @click='openlink()' @mouseover='doStop()'
+        @mouseout='doRestart()'></canvas>
+</template>
+<script>
+    let flag = true;
+    import image3D from 'image3d';
+    export default {
+        methods: {
+            openlink() {
+                window.location.href = 'https://hai2007.gitee.io/image3d/';
+            },
+            doRestart() {
+                flag = true;
+            },
+            doStop() {
+                flag = false;
+            }
+        },
+        mounted() {
+            // 创建3D对象并配置好画布和着色器
+            let image3d = new image3D(document.getElementById('skybox'), {
+
+                // 传递着色器
+                "vertex-shader":
+                    `attribute vec4 a_position;
+            varying vec3 v_normal;
+            uniform mat4 u_matrix;
+            void main(){
+                gl_Position=u_matrix * a_position;
+                // 因为位置是以几何中心为原点的,可以用顶点坐标作为法向量
+                v_normal=normalize(a_position.xyz);
+            }`,
+                "fragment-shader":
+                    `precision mediump float;
+            varying vec3 v_normal;
+            uniform samplerCube u_texture;
+            void main(){
+                gl_FragColor=textureCube(u_texture,normalize(v_normal));
+            }`,
+
+                // 开启深度计算
+                "depth": true
+
+            });
+
+            // 数据
+            let data = new Float32Array([
+                0.5, 0.5, 0.5,
+                0.5, -0.5, 0.5,
+                -0.5, -0.5, 0.5,
+                -0.5, 0.5, 0.5,
+                0.5, 0.5, -0.5,
+                0.5, -0.5, -0.5,
+                -0.5, -0.5, -0.5,
+                -0.5, 0.5, -0.5,
+                0.0, 0.0, 0.8,
+                0.0, 0.0, -0.8,
+                0.8, 0.0, 0.0,
+                -0.8, 0.0, 0.0,
+                0.0, 0.8, 0.0,
+                0.0, -0.8, 0.0
+            ]);
+
+            // 顶点索引数组
+            let indexes = new Uint8Array([
+
+                0, 1, 8, 1, 2, 8, 2, 3, 8, 0, 3, 8,
+                4, 5, 9, 5, 6, 9, 6, 7, 9, 4, 7, 9,
+                0, 1, 10, 1, 5, 10, 4, 5, 10, 0, 4, 10,
+                2, 6, 11, 6, 7, 11, 3, 7, 11, 2, 3, 11,
+                0, 3, 12, 3, 7, 12, 4, 7, 12, 4, 0, 12,
+                1, 2, 13, 1, 5, 13, 5, 6, 13, 2, 6, 13
+
+            ]);
+
+            image3d.Buffer().write(data).use('a_position', 3, 3, 0);
+            image3d.Buffer(true).write(indexes);
+
+            // 创建纹理对象
+            let texture = image3d.TextureCube(500, 500);
+
+            let image1 = new Image();
+            image1.onload = function () {
+                let image2 = new Image();
+                image2.onload = function () {
+                    let image3 = new Image();
+                    image3.onload = function () {
+                        let image4 = new Image();
+                        image4.onload = function () {
+                            let image5 = new Image();
+                            image5.onload = function () {
+                                let image6 = new Image();
+                                image6.onload = function () {
+
+                                    texture.write(image1, image2, image3, image4, image5, image6);
+                                    image3d.setUniformInt('u_texture', texture);
+
+                                    let camera = image3d.Camera();
+                                    let painter = image3d.Painter();
+
+                                    let count = 0, xIndex, yIndex, zIndex;
+
+                                    setInterval(function () {
+                                        let val;
+                                        if (flag == false) {
+                                            val = 50;
+                                        } else {
+                                            val = 15;
+                                        }
+
+                                        if (count == 0) {
+                                            xIndex = Math.random() * 100;
+                                            yIndex = Math.random() * 30;
+                                            zIndex = Math.random() * 10;
+                                            count = 5;
+                                        } else {
+                                            count -= 1;
+                                        }
+
+                                        camera.rotateBody(Math.PI / val, xIndex, -1 * yIndex, zIndex, -1 * xIndex, yIndex, -1 * zIndex);
+                                        image3d.setUniformMatrix("u_matrix", camera.value());
+
+                                        painter.elemTriangle(0, 72);
+
+                                    }, 50);
+
+                                };
+                                image6.src = "src/assets/skybox/front.jpg";
+                            };
+                            image5.src = "src/assets/skybox/back.jpg";
+                        };
+                        image4.src = "src/assets/skybox/bottom.jpg";
+                    };
+                    image3.src = "src/assets/skybox/top.jpg";
+                };
+                image2.src = "src/assets/skybox/left.jpg";
+            };
+            image1.src = "src/assets/skybox/right.jpg";
+        }
+    };
+</script>
