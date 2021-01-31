@@ -1,4 +1,6 @@
 import xhtml from '@hai2007/tool/xhtml.js';
+import book from './book';
+import notebook from './notebook';
 
 let pages = {
 
@@ -25,6 +27,9 @@ let pages = {
     laboratory: {
         content: () => import('../pages/laboratory.paper')
     },
+    "about-us": {
+        content: () => import('../pages/aboutUS.paper')
+    },
 
     // 捐款
     Sponsors: {
@@ -32,28 +37,10 @@ let pages = {
     },
 
     // 查询笔记
-
-    cssSelector: {
-        content: () => import('../pages/notebook/css-selector.paper')
-    },
-    npm: {
-        content: () => import('../pages/notebook/npm.paper')
-    },
-    RegExp: {
-        content: () => import('../pages/notebook/RegExp.paper')
-    },
-    scss: {
-        content: () => import('../pages/notebook/scss.paper')
-    },
-    terminal: {
-        content: () => import('../pages/notebook/terminal.paper')
-    },
+    ...notebook,
 
     // 深入了解
-
-    webpack: {
-        content: () => import('../pages/books/webpack/index.paper')
-    },
+    ...book,
 
     // 默认一级路由
 
