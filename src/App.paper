@@ -15,6 +15,11 @@
             </ul>
         </header>
         <div>
+            <div class='warn'>
+                温馨提示：本网站目前处于建设开发中，你可以通过
+                <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此次进入issue</a>
+                给我们提意见！
+            </div>
             <component :is='page'></component>
         </div>
         <footer>
@@ -106,6 +111,22 @@
         min-height: calc(100vh - 92px);
         width: 1100px;
         margin: auto;
+    }
+
+    div.page>div>div.warn {
+        text-align: center;
+        padding: 10px;
+        background-color: #f9b602;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    div.page>div>div.warn>a {
+        color: #03a9f4;
+        text-decoration: underline;
+        padding: 0 1em;
+        font-weight: 800;
     }
 
     /* 页脚 */

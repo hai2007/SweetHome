@@ -229,6 +229,11 @@
 
     div.page>div.right>.stepbystep>h2 {
         line-height: 3em;
+        background-image: url('../assets/dream.png');
+        background-position: 350px center;
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        color: red;
     }
 
     div.page>div.right>.stepbystep>p {
