@@ -4,22 +4,29 @@
     </header>
     <div>
         <div class="menu">
-
+            <div @click='openRouter("before")' class='menu-2 before'>写在前面</div>
+            <div @click='openRouter("plug")' class='menu-2 plug'>插件的作用和一些技巧</div>
+            <div @click='openRouter("loader")' class='menu-2 loader'>Loader和执行顺序</div>
         </div>
-        <div class="content doc-view">
-            <components :is='page'></components>
+        <div class="content">
+            <component :is='page'></component>
         </div>
     </div>
 </template>
 <script>
     export default {
+        data() {
+            return {
+                page: null
+            };
+        },
         methods: {
             openRouter(pagename) {
                 this.goRouter(page => this.page = page, ['webpack', pagename]);
             }
         },
         mounted() {
-            // this.loadRouter(page => this.page = page, 2);
+            this.loadRouter(page => this.page = page, 2);
         }
     };
 </script>
@@ -46,6 +53,15 @@
     .menu {
         width: 260px;
         padding: 10px;
+    }
+
+    .menu>div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu>div[active='yes'] {
+        color: red;
     }
 
     .content {

@@ -1,0 +1,12 @@
+<template class='doc-view'>
+    <h2>
+        插件的作用和一些技巧
+    </h2>
+</template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-2', 'plug');
+        }
+    };
+</script>
