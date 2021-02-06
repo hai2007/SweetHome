@@ -8,7 +8,7 @@
         <li>
             <h2>Clunch.js</h2>
             <p>
-                一个渐进的前端交互式图形框架，作为一个基础普通，你可以像用DIV绘制页面一样绘制图表。
+                一个渐进的前端交互式图形框架，作为一个基础平台，你可以像用DIV绘制页面一样绘制图表。
             </p>
             <div class="link">
                 <a href="https://github.com/hai2007/clunch" target="_blank">代码仓库</a>
@@ -19,7 +19,7 @@
         <li>
             <h2>Open Web Editor</h2>
             <p>
-                浏览器版本的可扩展代码仓库编辑器，功能在不断加强，可以定制化修改。
+                浏览器版本的可扩展代码编辑器，功能在不断加强，可以定制化修改。
             </p>
             <div class="link">
                 <a href="https://github.com/hai2007/Open-Web-Editor" target="_blank">代码仓库</a>
@@ -49,7 +49,7 @@
         <li>
             <h2>Debug For Phone</h2>
             <p>
-                一个可用于调试手机的调试工具，主要用于混合开发调试H5界面。
+                一个可用于调试手机的调试工具，主要用于混合开发时调试H5界面。
             </p>
             <div class="link">
                 <a href="https://github.com/hai2007/Debug-Phone" target="_blank">代码仓库</a>
