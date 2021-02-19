@@ -1,12 +1,12 @@
 <template>
     <header>
-        从vue-loader开始理解webpack的一些设计思想
+        《从vue-loader开始理解webpack的一些设计思想》
     </header>
     <div>
         <div class="menu">
             <div @click='openRouter("before")' class='menu-2 before'>写在前面</div>
-            <div @click='openRouter("plug")' class='menu-2 plug'>插件的作用和一些技巧</div>
             <div @click='openRouter("loader")' class='menu-2 loader'>Loader和执行顺序</div>
+            <div @click='openRouter("plug")' class='menu-2 plug'>插件的作用和一些技巧</div>
         </div>
         <div class="content">
             <component :is='page'></component>

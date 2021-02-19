@@ -15,3 +15,53 @@
 .doc-view .copy-btn:hover {
     color: rgb(233, 2, 2);
 }
+
+/* 校对已有样式 */
+
+.doc-view .link {
+    padding: 0 10px;
+}
+
+
+/* 树目录 */
+
+.tree-type1 span {
+    position: relative;
+}
+
+.tree-type1 span::before {
+    display: inline-block;
+    content: " ";
+    width: 30px;
+    height: 30px;
+    border-width: 0px 0 1px 1px;
+    border-style: solid;
+    border-color: #c5baba;
+    position: absolute;
+    left: -33px;
+    top: -20px;
+}
+
+.tree-type1 li {
+    position: relative;
+}
+
+.tree-type1 li::before {
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #c5baba;
+    position: absolute;
+    left: -33px;
+    top: -15px;
+}
+
+.tree-type1>li>span::before {
+    border-left-width: 0;
+}
+
+.tree-type1>li:first-child::before {
+    height: calc(100% - 33px);
+    top: 18px;
+}

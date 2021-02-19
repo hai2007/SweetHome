@@ -2,6 +2,119 @@
     <h2>
         写在前面
     </h2>
+    <p>
+        为了更好的说明，我们模仿
+        <a href="https://cn.vuejs.org/" target="_blank" class='link'>Vue.js</a>
+        开发了一个类似的简化版本的前端框架
+        <a href="https://github.com/hai2007/quick-paper" target="_blank" class='link'>Quick Paper</a>
+        (
+        <a href="https://hai2007.gitee.io/quick-paper/" target="_blank" class='link' style='padding:0;'>文档</a>
+        )
+        来帮助你理解一些细节。因此在开始之前，让我们先大致了解一下此项目的结构，方便后续描述。
+    </p>
+    <p class="warn">
+        温馨提示：我们推荐你在开始之前去
+        <a href="https://github.com/hai2007/quick-paper" target="_blank" class='link'>Github</a>
+        上把此项目clone下来后，对照着源码进行学习！
+    </p>
+    <h3>
+        目录结构
+    </h3>
+    <p>
+        其实你只需要关注下面四个文件夹：
+    </p>
+    <ol>
+        <li>
+            <span class="important">src</span>
+            ：框架源码；
+        </li>
+        <li>
+            <span class="important">loader</span>
+            ：类似vue-loader，用来解析.paper文件的loader；
+        </li>
+        <li>
+            <span class="important">style-loader</span>
+            ：和上面的一样，只不过这个是用来解析样式文件的（包括.css文件和.paper文件中的style标签部分）；
+        </li>
+        <li>
+            <span class="important">loader-plug</span>
+            ：一些辅助功能，比如校对webpack的一些配置。
+        </li>
+    </ol>
+    <h3>
+        框架源码
+    </h3>
+    <p>
+        接着，我们对源码src部分的目录结构再稍微展开一下（因为我们这里的重点不是源码部分，而是那些loader或plug是如何配置完成一系列解析工作的，因此源码部分就在下面简单的说明就点到为止）。
+    </p>
+    <ul class='tree-type1'>
+        <li>
+            <span class="important">
+                core
+            </span>
+            ：框架对象的基础代码
+            <ul>
+                <li>
+                    <span class="important">global-api</span>
+                    ：给框架对象挂载的全局方法
+                </li>
+                <li>
+                    <span class="important">instance</span>
+                    ：框架对象
+                    <ul>
+                        <li>
+                            <span class="important">index.js</span>
+                            ：框架对象运行入口
+                        </li>
+                        <li>
+                            <span class="important">init.js</span>
+                            ：负责对象的初始化相关工作
+                        </li>
+                        <li>
+                            <span class="important">lifecycle.js</span>
+                            ：负责对象的生命周期管理
+                        </li>
+                        <li>
+                            <span class="important">render.js</span>
+                            ：对象的渲染启动等方面的任务
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="important">observe</span>
+                    ：监听数据改变方法（被框架对象使用）
+                </li>
+                <li>
+                    <span class="important">vnode</span>
+                    ：虚拟DOM相关代码（被框架对象使用）
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="important">module</span>
+            ：为框架对象扩展内置指令，组件等的地方
+        </li>
+        <li>
+            <span class="important">tools</span>
+            ：一些工具方法，因为复用性和方便管理，集中写在一起
+        </li>
+        <li>
+            <span class="important">index.js</span>
+            ：打包入口文件，也就是这份文件把所有的资源整合成一个完整的框架
+        </li>
+    </ul>
+    <p>
+        所以从上面的代码就可以看出来，文件
+        <a class="important">
+            src/core/instance/index.js
+        </a>
+        是对象本身，从这个文件开始开即可！
+    </p>
+    <p>
+        如果有什么不清楚的，可以去
+        <a href="https://github.com/hai2007/quick-paper/issues" class='link' target="_blank">issue</a>
+        给我们留言。
+    </p>
 </template>
 <script>
     export default {
@@ -10,3 +123,7 @@
         }
     };
 </script>
+<style>
+
+
+</style>
