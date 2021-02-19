@@ -1,5 +1,17 @@
 # [🏠 我的编程世界](https://hai2007.gitee.io/sweethome/)
 
+<p align="center">
+    <a href="https://github.com/hai2007/SweetHome/graphs/code-frequency" target='_blank'>
+        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/hai2007/SweetHome">
+    </a>
+    <a href="https://github.com/hai2007/SweetHome/graphs/commit-activity" target='_blank'>
+        <img alt="GitHub repo commit" src="https://img.shields.io/github/last-commit/hai2007/SweetHome">
+    </a>
+    <a href="https://github.com/hai2007/SweetHome" target='_blank'>
+        <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/hai2007/SweetHome?style=social">
+    </a>
+</p >
+
 ```
 我还惊讶地意识到， 在我生命中有很多时刻， 每当我遇到一个遥不
 可及、令人害怕的情境，并感到惊慌失措时， 我都能够应付——因为我
