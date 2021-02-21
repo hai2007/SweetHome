@@ -49,7 +49,7 @@
             特殊发布
         </h3>
         <p>
-            发布带@的包（就是包名类似：@yelloxing/core.js的包）需要添加一些额外的参数:
+            发布带@的包（就是包名类似：@hai2007/tool.js的包）需要添加一些额外的参数:
         </p>
         <pre q-code>
             npm publish --access public
