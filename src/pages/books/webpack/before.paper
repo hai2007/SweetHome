@@ -108,7 +108,7 @@
         <a class="important">
             src/core/instance/index.js
         </a>
-        是对象本身，从这个文件开始开即可！
+        是对象本身，从这个文件开始看即可！
     </p>
     <p>
         如果有什么不清楚的，可以去
