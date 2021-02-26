@@ -5,20 +5,36 @@
                 🏠 我的编程世界
             </h2>
             <ul>
-                <li @click='openRouter("home")' class='menu-1 home'>首页</li>
-                <li @click='openRouter("notebook")' class='menu-1 notebook'>笔记</li>
-                <li @click='openRouter("opensource")' class='menu-1 opensource'>开源项目</li>
-                <li @click='openRouter("blog")' class='menu-1 blog'>小博客</li>
-                <li @click='openRouter("game")' class='menu-1 game'>H5游戏</li>
-                <li @click='openRouter("tool")' class='menu-1 tool'>在线工具</li>
-                <li @click='openRouter("laboratory")' class='menu-1 laboratory'>实验室</li>
-                <li @click='openRouter("about-us")' class='menu-1 about-us'>关于我们</li>
+                <li @click='openRouter("home")' class='menu-1 home'>
+                    <span>首页</span>
+                </li>
+                <li @click='openRouter("notebook")' class='menu-1 notebook'>
+                    <span>笔记</span>
+                </li>
+                <li @click='openRouter("opensource")' class='menu-1 opensource'>
+                    <span>开源项目</span>
+                </li>
+                <li @click='openRouter("blog")' class='menu-1 blog'>
+                    <span>小博客</span>
+                </li>
+                <li @click='openRouter("game")' class='menu-1 game'>
+                    <span>H5游戏</span>
+                </li>
+                <li @click='openRouter("tool")' class='menu-1 tool'>
+                    <span>在线工具</span>
+                </li>
+                <li @click='openRouter("laboratory")' class='menu-1 laboratory'>
+                    <span>实验室</span>
+                </li>
+                <li @click='openRouter("about-us")' class='menu-1 about-us'>
+                    <span>关于我们</span>
+                </li>
             </ul>
         </header>
         <div>
             <div class='warn'>
                 温馨提示：本网站目前处于建设开发中，你可以通过
-                <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此次进入issue</a>
+                <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此处进入issue</a>
                 给我们提意见！
             </div>
             <component :is='page'></component>
@@ -80,7 +96,7 @@
     }
 
     div.page>header>h2 {
-        color: #5a1508;
+        color: #c5ac7c;
     }
 
     div.page>header>h2,
@@ -90,8 +106,13 @@
     }
 
     div.page>header>ul>li[active='yes'] {
-        border-bottom: 2px solid red;
-        color: red;
+        border-bottom: 3px solid red;
+    }
+
+    div.page>header>ul>li[active='yes']>span {
+        background-color: red;
+        color: white;
+        padding: 5px 7px;
     }
 
     div.page>header>ul>li {
@@ -117,7 +138,7 @@
     div.page>div>div.warn {
         text-align: center;
         padding: 10px;
-        background-color: #f9b602;
+        background-color: #000000;
         color: white;
         margin-top: 20px;
         margin-bottom: 10px;

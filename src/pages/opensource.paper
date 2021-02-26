@@ -1,9 +1,5 @@
 <template class='page'>
 
-    <a class="Sponsors" target="_blank" href="https://hai2007.gitee.io/sweethome/#/Sponsors">
-        点击我支持一下开源项目
-    </a>
-
     <ul>
         <li>
             <h2>Clunch.js</h2>
@@ -85,16 +81,15 @@
         position: relative;
     }
 
-    ul {
-        margin-right: 150px;
-        margin-left: 50px;
-    }
-
     ul>li {
-        margin: 20px 0;
-        background-color: rgb(246 243 233);
+        margin: 20px 0 0 20px;
+        background-color: rgb(246, 243, 233);
         padding: 10px;
         position: relative;
+        display: inline-block;
+        width: 300px;
+        vertical-align: top;
+        height: 100px;
     }
 
     ul>li>h2 {
@@ -118,8 +113,8 @@
         background-color: rgb(144, 158, 164);
         font-weight: 800;
         color: white;
-        margin: 5px;
-        padding: 3px;
+        margin: 3px;
+        padding: 2px;
         font-size: 12px;
     }
 
@@ -130,29 +125,12 @@
     ul>li.more {
         background-color: transparent;
         color: #607d8b;
+        width: 100%;
     }
 
     ul>li.more>a {
         text-decoration: underline;
         padding: 0 10px;
         color: rgb(17, 17, 192);
-    }
-
-    .Sponsors {
-        position: absolute;
-        color: rgb(97, 55, 47);
-        right: 90px;
-        top: 10px;
-        width: 40px;
-        text-align: center;
-        font-size: 20px;
-        background-color: #e8e8ef;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    .Sponsors:hover {
-        color: rgb(31, 7, 3);
-        font-weight: 800;
     }
 </style>
