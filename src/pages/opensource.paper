@@ -61,12 +61,12 @@
                 <a href="https://github.com/hai2007/algorithm.js" target="_blank">代码仓库</a>
             </div>
         </li>
-        <li class='more'>
-            更多项目请直接访问
-            <a href="https://github.com/hai2007" target="_blank">Github代码仓库</a>
-            进行查看！
-        </li>
     </ul>
+    <div class='more'>
+        更多项目请直接访问
+        <a href="https://github.com/hai2007" target="_blank">Github代码仓库</a>
+        进行查看！
+    </div>
 
 </template>
 <script>
@@ -83,13 +83,20 @@
 
     ul>li {
         margin: 20px 0 0 20px;
-        background-color: rgb(246, 243, 233);
+        background-color: #ffffff;
         padding: 10px;
         position: relative;
         display: inline-block;
         width: 300px;
         vertical-align: top;
         height: 100px;
+        box-shadow: 0 0 4px 0px #d1c3c3;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    ul>li:hover {
+        box-shadow: 0 0 4px 0px #817c7c;
     }
 
     ul>li>h2 {
@@ -122,13 +129,14 @@
         background-color: rgb(89, 95, 97);
     }
 
-    ul>li.more {
+    div.more {
         background-color: transparent;
         color: #607d8b;
         width: 100%;
+        line-height: 90px;
     }
 
-    ul>li.more>a {
+    div.more>a {
         text-decoration: underline;
         padding: 0 10px;
         color: rgb(17, 17, 192);
