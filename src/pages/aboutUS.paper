@@ -1,5 +1,5 @@
 <template>
-
+    温馨提示：关于我们设计中，敬请期待！
 </template>
 <script>
     export default {
@@ -8,3 +8,10 @@
         }
     };
 </script>
+<style>
+    [quickpaper]{
+        text-align: center;
+        line-height: 300px;
+        font-size: 20px;
+    }
+</style>
