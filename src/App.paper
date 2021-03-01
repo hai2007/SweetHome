@@ -8,26 +8,11 @@
                 <li @click='openRouter("home")' class='menu-1 home'>
                     <span>首页</span>
                 </li>
-                <li @click='openRouter("notebook")' class='menu-1 notebook'>
-                    <span>笔记</span>
-                </li>
-                <li @click='openRouter("opensource")' class='menu-1 opensource'>
-                    <span>开源项目</span>
-                </li>
                 <li @click='openRouter("blog")' class='menu-1 blog'>
-                    <span>小博客</span>
+                    <span>博客精选</span>
                 </li>
-                <li @click='openRouter("game")' class='menu-1 game'>
-                    <span>H5游戏</span>
-                </li>
-                <li @click='openRouter("tool")' class='menu-1 tool'>
-                    <span>在线工具</span>
-                </li>
-                <li @click='openRouter("laboratory")' class='menu-1 laboratory'>
-                    <span>实验室</span>
-                </li>
-                <li @click='openRouter("about-us")' class='menu-1 about-us'>
-                    <span>关于我们</span>
+                <li @click='openRouter("notebook")' class='menu-1 notebook'>
+                    <span>小笔记</span>
                 </li>
             </ul>
         </header>

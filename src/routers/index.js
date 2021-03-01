@@ -12,23 +12,8 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.paper')
     },
-    opensource: {
-        content: () => import('../pages/opensource.paper')
-    },
     blog: {
         content: () => import('../pages/blog.paper')
-    },
-    game: {
-        content: () => import('../pages/game.paper')
-    },
-    tool: {
-        content: () => import('../pages/tool.paper')
-    },
-    laboratory: {
-        content: () => import('../pages/laboratory.paper')
-    },
-    "about-us": {
-        content: () => import('../pages/aboutUS.paper')
     },
 
     // 捐款
