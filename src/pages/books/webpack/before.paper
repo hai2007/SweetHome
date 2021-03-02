@@ -1,6 +1,6 @@
 <template class='doc-view'>
-    <h2>
-        写在前面
+    <h2 id='fixed-top'>
+        一、写在前面
     </h2>
     <p>
         为了更好的说明，我们模仿
@@ -17,7 +17,7 @@
         <a href="https://github.com/hai2007/quick-paper" target="_blank" class='link'>Github</a>
         上把此项目clone下来后，对照着源码进行学习！
     </p>
-    <h3>
+    <h3 id='fixed-menu'>
         目录结构
     </h3>
     <p>
@@ -41,13 +41,13 @@
             ：一些辅助功能，比如校对webpack的一些配置。
         </li>
     </ol>
-    <h3>
+    <h3 id='fixed-source'>
         框架源码
     </h3>
     <p>
         接着，我们对源码src部分的目录结构再稍微展开一下（因为我们这里的重点不是源码部分，而是那些loader或plug是如何配置完成一系列解析工作的，因此源码部分就在下面简单的说明就点到为止）。
     </p>
-    <ul class='tree-type1'>
+    <ul>
         <li>
             <span class="important">
                 core
@@ -124,6 +124,7 @@
     };
 </script>
 <style>
-
-
+    ul>li {
+        list-style-type: inherit;
+    }
 </style>

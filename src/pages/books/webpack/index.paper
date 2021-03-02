@@ -4,9 +4,44 @@
     </header>
     <div>
         <div class="menu">
-            <div @click='openRouter("before")' class='menu-2 before'>写在前面</div>
-            <div @click='openRouter("loader")' class='menu-2 loader'>Loader和执行顺序</div>
-            <div @click='openRouter("plug")' class='menu-2 plug'>插件的作用和一些技巧</div>
+            <div @click='openRouter("before","top")' class='menu-2 before'>一、写在前面</div>
+            <ul>
+                <li>
+                    <span @click='openRouter("before","menu")'>目录结构</span>
+                </li>
+                <li>
+                    <span @click='openRouter("before","source")'>框架源码</span>
+                </li>
+            </ul>
+            <div @click='openRouter("loader","top")' class='menu-2 loader'>二、Loader和执行顺序</div>
+            <ul>
+                <li>
+                    <span @click='openRouter("loader","loader")'>loader</span>
+                </li>
+                <li>
+                    <span @click='openRouter("loader","style-loader")'>style-loader</span>
+                    <ul>
+                        <li>
+                            <span @click='openRouter("loader","style-loader-why")'>为什么样式loader比较特殊？</span>
+                        </li>
+                        <li>
+                            <span @click='openRouter("loader","style-loader-picth")'>执行顺序（loader和picth）</span>
+                        </li>
+                        <li>
+                            <span @click='openRouter("loader","style-loader-how")'>如何实现？</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div @click='openRouter("plug","top")' class='menu-2 plug'>三、插件的作用和一些技巧</div>
+            <ul>
+                <li>
+                    <span @click='openRouter("plug","time")'>插件的执行时机</span>
+                </li>
+                <li>
+                    <span @click='openRouter("plug","how")'>如何实现？</span>
+                </li>
+            </ul>
         </div>
         <div class="content">
             <component :is='page'></component>
@@ -14,6 +49,7 @@
     </div>
 </template>
 <script>
+    import fixedScroll from '../../../services/fixedScroll.js';
     export default {
         data() {
             return {
@@ -21,8 +57,13 @@
             };
         },
         methods: {
-            openRouter(pagename) {
-                this.goRouter(page => this.page = page, ['webpack', pagename]);
+            openRouter(pagename, fixedName) {
+                this.goRouter(page => {
+                    this.page = page;
+                    window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                    fixedScroll(document.getElementById('root'), 44);
+                }, ['webpack', pagename]);
+
             }
         },
         mounted() {
@@ -45,7 +86,7 @@
 
     [quickpaper]>div>div {
         white-space: normal;
-        font-size: 16px;
+        font-size: 14px;
         display: inline-block;
         vertical-align: top;
     }
@@ -56,7 +97,7 @@
     }
 
     .menu>div {
-        padding: 10px;
+        padding: 10px 0 3px 0;
         cursor: pointer;
     }
 
@@ -66,5 +107,14 @@
 
     .content {
         width: 740px;
+    }
+
+    ul {
+        margin-left: 20px;
+        line-height: 2em;
+    }
+
+    li {
+        cursor: pointer;
     }
 </style>
