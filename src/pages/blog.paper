@@ -131,20 +131,22 @@
         color: white;
         position: absolute;
         display: inline-block;
-        width: 80px;
+        width: 60px;
         text-align: center;
-        height: 20px;
+        height: 24px;
         font-size: 12px;
-        line-height: 20px;
-        right: 9px;
-        top: 9px;
+        line-height: 24px;
+        right: 7px;
+        top: 7px;
     }
 
+    /* web前端 */
     .tag.web {
-        background-color: rgb(25, 114, 155);
+        background-color: #c6eafa;
     }
 
+    /* tool工具 */
     .tag.tool {
-        background-color: rgb(63, 58, 56);
+        background-color: #dfdfdf;
     }
 </style>
