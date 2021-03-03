@@ -185,9 +185,11 @@ module.exports = loaderApi;
     </p>
 </template>
 <script>
+     import fixedScroll from '../../../services/fixedScroll.js';
     export default {
         mounted() {
             this.changeActive('menu-2', 'loader');
+            fixedScroll(document.getElementById('root'), 44);
         }
     };
 </script>

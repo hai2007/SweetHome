@@ -6,6 +6,7 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/overflow-hidden.md'>
                 关于CSS中设置overflow属性的值为hidden的相关理解
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>2</span>
@@ -13,6 +14,7 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/vertical-align.md'>
                 vertical-align:垂直对齐方式相关说明
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>3</span>
@@ -20,6 +22,7 @@
                 href='https://github.com/hai2007/tool.js/blob/master/notebook/prototype.md'>
                 理解prototype和__proto__（继承与原型链）
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>4</span>
@@ -27,6 +30,7 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/z-index.md'>
                 z-index 层叠上下文和层叠水平
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>5</span>
@@ -34,6 +38,7 @@
                 href='https://github.com/hai2007/tool.js/blob/master/notebook/ArrayBuffer-TypedArray-DataView.md'>
                 二进制数据（ArrayBuffer + TypedArray + DataView）
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>6</span>
@@ -41,6 +46,7 @@
                 href='https://github.com/hai2007/tool.js/blob/master/notebook/Symbol-Generator-Promise.md'>
                 Symbol + Generator函数 + Promise
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>7</span>
@@ -48,6 +54,7 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/Transform-Transitions-Animation.md'>
                 Transform + Transitions + Animation
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>8</span>
@@ -55,18 +62,21 @@
                 href='https://github.com/hai2007/style.css/blob/master/notebook/margin.md'>
                 margin 外边距
             </a>
+            <span class='tag web'>web前端</span>
         </li>
         <li>
             <span class='index'>9</span>
             <a class="content" target="_blank" href='https://segmentfault.com/a/1190000039242714'>
                 Git版本管理工具常用命令整理和说明
             </a>
+            <span class='tag tool'>tool工具</span>
         </li>
         <li>
             <span class='index'>10</span>
             <a class="content" target="_blank" href='https://segmentfault.com/a/1190000039242698'>
                 input或textarea中关于光标移动问题
             </a>
+            <span class='tag web'>web前端</span>
         </li>
     </ul>
 </template>
@@ -93,6 +103,7 @@
     li {
         line-height: 36px;
         border-bottom: 1px solid #eee;
+        position: relative;
     }
 
     .index {
@@ -114,5 +125,26 @@
         color: #5a1508;
         display: inline-block;
         cursor: pointer;
+    }
+
+    .tag {
+        color: white;
+        position: absolute;
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        right: 9px;
+        top: 9px;
+    }
+
+    .tag.web {
+        background-color: rgb(25, 114, 155);
+    }
+
+    .tag.tool {
+        background-color: rgb(63, 58, 56);
     }
 </style>

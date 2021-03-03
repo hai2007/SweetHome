@@ -15,6 +15,9 @@ let pages = {
     blog: {
         content: () => import('../pages/blog.paper')
     },
+    code: {
+        content: () => import('../pages/code.paper')
+    },
 
     // 捐款
     Sponsors: {
