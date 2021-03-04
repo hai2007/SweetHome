@@ -45,11 +45,6 @@ npm run dev
 npm run build
 ```
 
-## 联系我们
-
-- QQ: 2501482523
-- Email: 2501482523@qq.com
-
 开源协议
 ---------------------------------------
 [Apache-2.0](https://github.com/hai2007/SweetHome/blob/master/LICENSE)

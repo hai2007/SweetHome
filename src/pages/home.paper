@@ -17,10 +17,6 @@
                 <a href="https://my.oschina.net/u/4252568" class='oschina' target="_blank">OSCHINA</a>
                 <a href="https://segmentfault.com/u/hai2007/articles" class='sf' target="_blank">思否</a>
             </div>
-            <ul class="contact">
-                <li>QQ:2501482523</li>
-                <li>Email:2501482523@qq.com</li>
-            </ul>
             <div class="cat">
                 一只陪伴了我十六年的猫
             </div>
@@ -170,18 +166,6 @@
     div.page>div.left>.belief {
         line-height: 2em;
         color: gray;
-    }
-
-    div.page>div.left>.contact {
-        padding: 10px 40px;
-        background: #e7f2f5;
-        margin-top: 20px;
-        color: #2196f3;
-    }
-
-    div.page>div.left>.contact>li {
-        line-height: 1.6em;
-        text-align: left;
     }
 
     div.page>div.left>.fork {
