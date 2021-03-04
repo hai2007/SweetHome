@@ -2,14 +2,14 @@
     <div class='page'>
         <header>
             <h2>
-                🏠 我的编程世界
+                🏠 今天，你写代码了吗？
             </h2>
             <ul>
                 <li @click='openRouter("home")' class='menu-1 home'>
                     <span>首页</span>
                 </li>
                 <li @click='openRouter("blog")' class='menu-1 blog'>
-                    <span>文章索引</span>
+                    <span>快速查看</span>
                 </li>
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小笔记&理解</span>
@@ -84,7 +84,9 @@
     }
 
     div.page>header>h2 {
-        color: #c5ac7c;
+        color: #607d8b;
+        font-weight: 400;
+        font-family: monospace;
     }
 
     div.page>header>h2,

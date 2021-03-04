@@ -1,7 +1,7 @@
 {
   "name": "sweethome",
-  "version": "1.7.2",
-  "description": "🏠 我的编程世界：开源项目或文档主站，包括一些心得笔记和有益的资料链接等。",
+  "version": "1.7.3",
+  "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
     "dev": "webpack-dev-server --config webpack.dev.js",
