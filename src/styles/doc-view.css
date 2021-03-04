@@ -21,3 +21,19 @@
 .doc-view .link {
     padding: 0 10px;
 }
+
+
+/* 下载按钮 */
+.doc-view .download {
+    line-height: 1.6em;
+    display: inline-block;
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-left: 1.6em;
+    font-size: 14px;
+    cursor: pointer;
+    color: #53c1ec;
+    background-image: url(../assets/download.png);
+    cursor: pointer;
+}

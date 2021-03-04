@@ -1,6 +1,7 @@
 import xhtml from '@hai2007/tool/xhtml.js';
 import book from './book';
 import notebook from './notebook';
+import blog from './blog';
 
 let pages = {
 
@@ -23,6 +24,9 @@ let pages = {
     Sponsors: {
         content: () => import('../pages/Sponsors.paper')
     },
+
+    // 内置文章
+    ...blog,
 
     // 查询笔记
     ...notebook,

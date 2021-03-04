@@ -78,6 +78,13 @@
             </a>
             <span class='tag web'>web前端</span>
         </li>
+        <li>
+            <span class='index'>11</span>
+            <a class="content" target="_blank" href='#/blog_nginx'>
+                nginx基本配置和常见问题
+            </a>
+            <span class='tag tool'>tool工具</span>
+        </li>
     </ul>
 </template>
 <script>
@@ -145,8 +152,16 @@
         background-color: #c6eafa;
     }
 
+    li:hover .tag.web {
+        background-color: #21afec;
+    }
+
     /* tool工具 */
     .tag.tool {
         background-color: #dfdfdf;
+    }
+
+    li:hover .tag.tool {
+        background-color: #333030;
     }
 </style>
