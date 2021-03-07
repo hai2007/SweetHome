@@ -1,0 +1,53 @@
+<template class='doc-view'>
+    <h2>
+        SVN版本控制
+    </h2>
+    <h3>
+        初始化
+    </h3>
+    <p>
+        把uri指定的仓库代码检出到本地来：
+    </p>
+    <pre q-code>svn checkout url</pre>
+    <p>
+        更新代码：
+    </p>
+    <pre q-code>svn up</pre>
+    <p>
+        清理：
+    </p>
+    <pre q-code>svn cleanup</pre>
+    <h3>
+        状态查询
+    </h3>
+    <p>
+        查看当前工作区的状态：
+    </p>
+    <pre q-code>svn status</pre>
+    <p>
+        查看svn信息：
+    </p>
+    <pre q-code>svn info</pre>
+    <h3>
+        提交
+    </h3>
+    <p>
+        添加新文件到版本库：
+    </p>
+    <pre q-code>svn add filename</pre>
+    <p>
+        递归添加当前目录下的所有新文件：
+    </p>
+    <pre q-code>svn add . --no-ignore --force</pre>
+    <p>
+        提交代码（只有新文件需要add,修改文件可以直接提交）：
+    </p>
+    <pre q-code>svn commit -m "提交描述"</pre>
+    <h3>
+        忽略或删除
+    </h3>
+    <p>
+        已经通过add添加到仓库的文件，如果想删除，需要执行下面命令回退到unversioned状态：
+    </p>
+    <pre q-code>svn revert file --depth infinity</pre>
+</template>

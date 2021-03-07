@@ -36,3 +36,9 @@ body {
     /*滚动条轨道颜色*/
     scrollbar-track-color: #fff;
 }
+
+/* 标记可以点击 */
+.canlink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

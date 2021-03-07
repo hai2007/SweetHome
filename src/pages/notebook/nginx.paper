@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2>
-        nginx基本配置和常见问题
+        Nginx服务器
     </h2>
     <h3>
         session丢失问题

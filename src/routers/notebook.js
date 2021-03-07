@@ -13,5 +13,14 @@ export default {
     },
     terminal: {
         content: () => import('../pages/notebook/terminal.paper')
+    },
+    nginx: {
+        content: () => import('../pages/notebook/nginx.paper'),
+    },
+    git: {
+        content: () => import('../pages/notebook/git.paper'),
+    },
+    svn: {
+        content: () => import('../pages/notebook/svn.paper'),
     }
 };

@@ -8,11 +8,8 @@
                 <li @click='openRouter("home")' class='menu-1 home'>
                     <span>首页</span>
                 </li>
-                <li @click='openRouter("blog")' class='menu-1 blog'>
-                    <span>快速查看</span>
-                </li>
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
-                    <span>小笔记&理解</span>
+                    <span>小文档&理解</span>
                 </li>
                 <li @click='openRouter("code")' class='menu-1 code'>
                     <span>代码片段</span>

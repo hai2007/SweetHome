@@ -21,8 +21,78 @@
                 <span>终端命令</span>
                 <span>常用的脚本命令</span>
             </a>
+            <a href="#/nginx" target="_blank" class='nginx'>
+                <span>Nginx服务器</span>
+                <span>常见问题和基本配置</span>
+            </a>
+            <a href="#/git" target="_blank" class='git'>
+                <span>Git版本控制</span>
+                <span>一些常用的命令快速查询</span>
+            </a>
+            <a href="#/svn" target="_blank" class='svn'>
+                <span>SVN版本控制</span>
+                <span>一些常用的命令快速查询</span>
+            </a>
         </div>
-        <h2 class='in-depth'>系统学习</h2>
+        <div class="blog-view">
+            <h2 class='blog canlink' id='fixed-blog' @click='doScroll("blog")'>
+                小文章
+                <span title='下列内容为本站索引，点击会跳转到第三方网站进行查看，请知悉！'>
+                    外部链接
+                </span>
+            </h2>
+            <div class="blog-list">
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/overflow-hidden.md" target="_blank">
+                    <span>CSS</span>
+                    <span>1</span>
+                    关于CSS中设置overflow属性的值为hidden的相关理解
+                </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/vertical-align.md" target="_blank">
+                    <span>CSS</span>
+                    <span>2</span>
+                    vertical-align:垂直对齐方式相关说明
+                </a>
+                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/prototype.md" target="_blank">
+                    <span>ES</span>
+                    <span>3</span>
+                    理解prototype和__proto__（继承与原型链）
+                </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/z-index.md" target="_blank">
+                    <span>CSS</span>
+                    <span>4</span>
+                    z-index 层叠上下文和层叠水平
+                </a>
+                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/ArrayBuffer-TypedArray-DataView.md"
+                    target="_blank">
+                    <span>ES</span>
+                    <span>5</span>
+                    二进制数据（ArrayBuffer + TypedArray + DataView）
+                </a>
+                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/Symbol-Generator-Promise.md"
+                    target="_blank">
+                    <span>ES</span>
+                    <span>6</span>
+                    Symbol + Generator函数 + Promise
+                </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/Transform-Transitions-Animation.md"
+                    target="_blank">
+                    <span>CSS</span>
+                    <span>7</span>
+                    Transform + Transitions + Animation
+                </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/margin.md" target="_blank">
+                    <span>CSS</span>
+                    <span>8</span>
+                    margin 外边距
+                </a>
+                <a href="https://segmentfault.com/a/1190000039242698" target="_blank">
+                    <span>HTML</span>
+                    <span>9</span>
+                    input或textarea中关于光标移动问题
+                </a>
+            </div>
+        </div>
+        <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>系统学习</h2>
         <div class='book-list'>
             <a class='webpack' href="#/webpack" target="_blank"></a>
             <a class="blank"></a>
@@ -33,9 +103,17 @@
     </div>
 </template>
 <script>
+    import fixedScroll from '../services/fixedScroll.js';
     export default {
         mounted() {
             this.changeActive('menu-1', 'notebook');
+            fixedScroll(document.getElementById('root'), 56);
+        },
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 56);
+            }
         }
     };
 </script>
@@ -100,6 +178,18 @@
         background-image: url('../assets/npm.png');
     }
 
+    .page>.notebook>a.nginx {
+        background-image: url('../assets/nginx.png');
+    }
+
+    .page>.notebook>a.git {
+        background-image: url('../assets/git.png');
+    }
+
+    .page>.notebook>a.svn {
+        background-image: url('../assets/SVN.png');
+    }
+
     /* 深入了解 */
     .page>.in-depth {
         height: 110px;
@@ -134,5 +224,67 @@
 
     .page>.book-list>a.webpack {
         background-image: url('../assets/book/webpack.jpg');
+    }
+
+    /* 小文章 */
+    .blog-view {
+        border: 1px solid #dddddd;
+        margin: 30px 50px;
+    }
+
+    .blog-view>.blog {
+        color: #333;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #dddddd;
+        font-size: 20px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .blog-view>.blog>span {
+        position: absolute;
+        background-color: red;
+        font-size: 12px;
+        right: 10px;
+        color: white;
+        padding: 6px;
+    }
+
+    .blog-view>.blog-list {
+        padding: 10px;
+    }
+
+    .blog-view>.blog-list>a {
+        display: block;
+        padding: 10px 0;
+        color: rgb(0, 0, 0);
+    }
+
+    .blog-view>.blog-list>a:hover {
+        text-decoration: underline;
+    }
+
+    .blog-view>.blog-list>a:not(:last-child) {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .blog-view>.blog-list>a>span {
+        display: inline-block;
+        width: 55px;
+        line-height: 26px;
+        font-size: 13px;
+        padding: 0;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .blog-view>.blog-list>a>span:nth-child(1) {
+        color: rgb(214, 205, 205);
+    }
+
+    .blog-view>.blog-list>a>span:nth-child(2) {
+        background-color: #FCF8E3;
+        color: #8A6D3B;
+        margin: 0 10px;
     }
 </style>
