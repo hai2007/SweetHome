@@ -1,5 +1,8 @@
 import QuickPaper from 'quick-paper';
 
+// 兼容文件
+import 'promise-polyfill/src/polyfill';
+
 // 启动界面
 import App from './App.paper';
 

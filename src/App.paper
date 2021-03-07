@@ -109,7 +109,7 @@
     }
 
     div.page>header>h2 {
-        color: #607d8b;
+        color: #bce05d;
         font-weight: 400;
         font-family: monospace;
     }
@@ -201,7 +201,7 @@
         width: 100vw;
         height: 100vh;
         z-index: 7;
-        background-color: #000000c9;
+        background-color: rgba(0, 0, 0, 0.767);
     }
 
     #dialog[is-open='no'] {

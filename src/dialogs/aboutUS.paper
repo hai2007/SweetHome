@@ -1,7 +1,7 @@
 <template class='root'>
     <header>
         关于我们
-        <input type="button" value="X" @click='$closeDialog()'>
+        <input type="button" value="X" @click='$closeDialog()' title='点击关闭窗口'>
     </header>
     <p>
         本站的初衷是作为笔记存在，在日常编程中快速查询的一个笔记汇总。
@@ -29,6 +29,7 @@
         background-image: url('../assets/cry.png');
         background-position: right bottom;
         background-repeat: no-repeat;
+        box-shadow: 0 0 16px 2px #bce05d;
     }
 
     a {
@@ -66,7 +67,7 @@
     }
 
     header>input:hover {
-        color: rgb(206, 229, 250);
+        font-size: 20px;
     }
 
     p {
