@@ -1,0 +1,75 @@
+<template class='root'>
+    <header>
+        关于我们
+        <input type="button" value="X" @click='$closeDialog()'>
+    </header>
+    <p>
+        本站的初衷是作为笔记存在，在日常编程中快速查询的一个笔记汇总。
+    </p>
+    <p>
+        不过随着时间的推移，会慢慢加入更多编程相关的内容，敬请期待。
+    </p>
+    <p>
+        同时，也欢迎你加入我们！
+    </p>
+    <p>
+        加入我们可以去
+        <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">issue</a>
+        上给我们留言哦。
+    </p>
+</template>
+<style>
+    .root {
+        text-align: center;
+        width: 400px;
+        margin: auto;
+        background-color: white;
+        margin-top: 160px;
+        padding-bottom: 10px;
+        background-image: url('../assets/cry.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+    }
+
+    a {
+        text-decoration: underline;
+        padding: 0 3px;
+        color: #2196f3;
+    }
+
+    p {
+        text-indent: 2em;
+        line-height: 1.4em;
+        margin: 10px;
+    }
+
+    header {
+        position: relative;
+        background: #bce05d;
+        line-height: 36px;
+        color: white;
+        font-weight: 800;
+        height: 36px;
+        cursor: pointer;
+    }
+
+    header>input {
+        position: absolute;
+        right: 0;
+        width: 36px;
+        height: 36px;
+        outline: none;
+        border: none;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+    }
+
+    header>input:hover {
+        color: rgb(206, 229, 250);
+    }
+
+    p {
+        text-align: left;
+    }
+</style>

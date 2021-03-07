@@ -1,6 +1,7 @@
 <template>
     <div class='page'>
         <header>
+            <div></div>
             <h2>
                 🏠 今天，你写代码了吗？
             </h2>
@@ -13,6 +14,9 @@
                 </li>
                 <li @click='openRouter("code")' class='menu-1 code'>
                     <span>代码片段</span>
+                </li>
+                <li @click='$openDialog("aboutUS")'>
+                    <span>关于我们</span>
                 </li>
             </ul>
         </header>
@@ -36,18 +40,31 @@
             <img :src="counterUrl">
         </span>
     </div>
+    <div id="dialog" is-open='no'>
+        <input type="button" value="弹框辅助按钮" @click='helpDialog' id='dialog_help_button'>
+        <component :is='dialog'></component>
+    </div>
 </template>
 <script>
     export default {
         data() {
             return {
                 page: null,
+                dialog: null,
                 counterUrl: window.hai2007_sweethome_counterUrl
             };
         },
         methods: {
             openRouter(pagename) {
                 this.goRouter(page => this.page = page, [pagename]);
+            },
+            helpDialog() {
+                this.dialog = window.sweethome_dialog;
+                if (this.dialog == null) {
+                    document.getElementById('dialog').setAttribute('is-open', 'no');
+                } else {
+                    document.getElementById('dialog').setAttribute('is-open', 'yes');
+                }
             }
         },
         mounted() {
@@ -78,6 +95,17 @@
         cursor: pointer;
         user-select: none;
         z-index: 2;
+    }
+
+    div.page>header>div {
+        height: 70px;
+        width: 70px;
+        display: inline-block;
+        position: fixed;
+        background-image: url('./assets/read.png');
+        background-repeat: no-repeat;
+        left: 300px;
+        top: 2px;
     }
 
     div.page>header>h2 {
@@ -125,7 +153,7 @@
     div.page>div>div.warn {
         text-align: center;
         padding: 10px;
-        background-color: #000000;
+        background-color: #bce05d;
         color: white;
         margin-top: 20px;
         margin-bottom: 10px;
@@ -163,5 +191,24 @@
         font-size: 12px;
         border: 1px solid #E3E3E5;
         border-radius: 45px;
+    }
+
+    /* 弹框 */
+    #dialog {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 7;
+        background-color: #000000c9;
+    }
+
+    #dialog[is-open='no'] {
+        display: none;
+    }
+
+    #dialog_help_button {
+        display: none;
     }
 </style>
