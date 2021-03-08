@@ -15,9 +15,6 @@
                 <li @click='openRouter("code")' class='menu-1 code'>
                     <span>代码片段</span>
                 </li>
-                <li @click='$openDialog("aboutUS")'>
-                    <span>关于我们</span>
-                </li>
             </ul>
         </header>
         <div>
@@ -39,10 +36,6 @@
         <span class="helpCounterUrl">
             <img :src="counterUrl">
         </span>
-    </div>
-    <div id="dialog" is-open='no'>
-        <input type="button" value="弹框辅助按钮" @click='helpDialog' id='dialog_help_button'>
-        <component :is='dialog'></component>
     </div>
 </template>
 <script>
@@ -110,7 +103,7 @@
 
     div.page>header>h2 {
         color: #bce05d;
-        font-weight: 400;
+        font-weight: 800;
         font-family: monospace;
     }
 
@@ -172,7 +165,10 @@
         padding: 10px 0;
         min-width: 1100px;
         box-shadow: rgba(0, 0, 0, 0.1) 1px -5px 2px;
-        margin: 10px 0;
+        background-image: url('./assets/sleep.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 70px auto;
     }
 
     div.page>footer>p {
@@ -191,24 +187,5 @@
         font-size: 12px;
         border: 1px solid #E3E3E5;
         border-radius: 45px;
-    }
-
-    /* 弹框 */
-    #dialog {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 7;
-        background-color: rgba(0, 0, 0, 0.767);
-    }
-
-    #dialog[is-open='no'] {
-        display: none;
-    }
-
-    #dialog_help_button {
-        display: none;
     }
 </style>

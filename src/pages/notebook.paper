@@ -252,6 +252,9 @@
 
     .blog-view>.blog-list {
         padding: 10px;
+        background-image: url('../assets/cry.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
     }
 
     .blog-view>.blog-list>a {

@@ -131,6 +131,12 @@
     };
 </script>
 <style>
+    div.page {
+        background-image: url('../assets/stand.png');
+        background-repeat: no-repeat;
+        background-position: 100px bottom;
+    }
+
     /* 主体划分 */
     div.page>div {
         display: inline-block;
