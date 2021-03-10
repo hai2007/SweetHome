@@ -1,7 +1,7 @@
 import QuickPaper from 'quick-paper';
 
 // 兼容文件
-import 'promise-polyfill/src/polyfill';
+import '@hai2007/polyfill/Promise.js';
 
 // 启动界面
 import App from './App.paper';
