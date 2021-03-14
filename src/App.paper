@@ -1,8 +1,11 @@
-<template>
+<template :class='flag'>
+    <div class="top-hidden" @dblclick='changeView("page-view")'>
+        <ui-guider></ui-guider>
+    </div>
     <div class='page'>
         <header>
             <div></div>
-            <h2>
+            <h2 title='编程学习指导界面~' @click='changeView("top-hidden-view")'>
                 🏠 今天，你写代码了吗？
             </h2>
             <ul>
@@ -39,12 +42,17 @@
     </div>
 </template>
 <script>
+    import uiGuider from './pages/guider/index.paper';
     export default {
         data() {
             return {
                 page: null,
                 dialog: null,
-                counterUrl: window.hai2007_sweethome_counterUrl
+                counterUrl: window.hai2007_sweethome_counterUrl,
+
+                // home表示显示主界面
+                // top-hidden表示显示顶部隐藏内容
+                flag: "home"
             };
         },
         methods: {
@@ -58,10 +66,16 @@
                 } else {
                     document.getElementById('dialog').setAttribute('is-open', 'yes');
                 }
+            },
+            changeView(flag) {
+                this.flag = flag;
             }
         },
         mounted() {
             this.loadRouter(page => this.page = page, 1);
+        },
+        component: {
+            uiGuider
         }
     };
 </script>
@@ -72,6 +86,59 @@
         top: 0;
         width: 190px;
         height: 103px;
+    }
+
+    /* 显示隐藏界面 */
+    div.top-hidden-view>.top-hidden {
+        height: 100vh;
+    }
+
+    div.top-hidden-view {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    div.top-hidden-view>.page>header {
+        top: 100vh;
+    }
+
+    div.top-hidden-view>.page>header>div {
+        top: 100vh;
+    }
+
+    /* 显示主界面 */
+    div.page-view {
+        overflow: auto;
+    }
+
+
+    /* 设置动画 */
+    div.page {
+        transition-property: margin-top;
+        transition-duration: 2s;
+    }
+
+    div.top-hidden {
+        transition-property: height;
+        transition-duration: 2s;
+    }
+
+    div>.page>header {
+        transition-property: top;
+        transition-duration: 2s;
+    }
+
+    div>.page>header>div {
+        transition-property: top;
+        transition-duration: 2s;
+    }
+
+    /* 顶部隐藏内容 */
+    div.top-hidden {
+        overflow: auto;
+        width: 100vw;
+        height: 0;
+        background-color: #000000;
     }
 
     /* 页头 */
@@ -85,7 +152,6 @@
         width: 100vw;
         top: 0;
         left: 0;
-        cursor: pointer;
         user-select: none;
         z-index: 2;
     }
@@ -105,12 +171,14 @@
         color: #bce05d;
         font-weight: 800;
         font-family: monospace;
+        cursor: pointer;
     }
 
     div.page>header>h2,
     div.page>header>ul,
     div.page>header>ul>li {
         display: inline-block;
+        cursor: pointer;
     }
 
     div.page>header>ul>li[active='yes'] {

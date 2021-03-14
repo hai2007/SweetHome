@@ -1,0 +1,20 @@
+<template id='guider-painter'></template>
+<script>
+    import Clunch from 'clunch';
+    import image from './index.clunch';
+    export default {
+        mounted() {
+            new Clunch({
+                el: document.getElementById('guider-painter'),
+                render: image
+            });
+        }
+    };
+</script>
+<style>
+    div {
+        height: 100vh;
+        width: 100vw;
+        line-height: 100vh;
+    }
+</style>

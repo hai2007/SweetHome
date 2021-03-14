@@ -13,6 +13,10 @@ module.exports = {
             test: /\.paper$/,
             loader: ['quick-paper/loader/index.js'],
             exclude: /node_modules/
+        },{
+            test: /\.clunch$/,
+            loader: ['clunch/loader.js'],
+            exclude: /node_modules/
         }, {
             test: /\.css$/,
             loader: ['quick-paper/style-loader/index.js', 'css-loader', 'postcss-loader']

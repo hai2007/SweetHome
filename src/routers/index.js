@@ -36,7 +36,7 @@ export default {
     install(QuickPaper) {
         QuickPaper.prototype.loadRouter = (doback, deep) => {
 
-            let routers = (window.location.href + "#").split("#")[1].replace(/\?.{0,}$/, '').replace(/^\//, '').replace(/\/$/, '').split('/'), page = pages;
+            let routers = QuickPaper.urlFormat(window.location.href).router, page = pages;
             for (let i = 0; i < deep; i++) {
                 page = page[routers[i]] || page[page['_default_']];
             }

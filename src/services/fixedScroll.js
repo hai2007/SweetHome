@@ -1,5 +1,5 @@
 import animation from '@hai2007/tool/animation';
-import getUrlParam from './getUrlParam';
+import QuickPaper from 'quick-paper';
 
 export default function (element, overValue) {
 
@@ -7,7 +7,7 @@ export default function (element, overValue) {
 
     element = element || document.documentElement;
 
-    let fixed = getUrlParam().fixed;
+    let fixed = QuickPaper.urlFormat(window.location.href).params.fixed;
     if (fixed) {
 
         // 获取滚动调整结点

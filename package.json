@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/hai2007/SweetHome#readme",
   "dependencies": {
-    "@hai2007/polyfill": "0.1.0",
+    "@hai2007/polyfill": "0.1.1",
     "@hai2007/style": "^0.2.3",
-    "@hai2007/tool": "^0.6.2",
+    "@hai2007/tool": "^0.6.3",
     "clunch": "^1.4.4",
     "image3d": "^2.1.0",
-    "quick-paper": "^0.3.1"
+    "quick-paper": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
