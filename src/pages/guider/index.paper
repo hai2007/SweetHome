@@ -1,4 +1,45 @@
-<template id='guider-painter'></template>
+<template class="doc-view">
+    <div id='guider-painter'></div>
+    <p class='tips'>
+        一次偶然，不代表一生，重要的是，坚持学习，开阔视野。
+        <span>
+            ----题记
+        </span>
+    </p>
+    <p>
+        回首年少时光，会时常想起07年读了《钢铁是怎样练成的》的那个盛夏，第一次看到宫爷爷的《龙猫》后突然明白活着是多么美好的事情，还有初三下晚自习回去路上骑自行车被横在路上的树撞倒的自己，在朴素的笔下寻找物理学的美感。
+    </p>
+    <p>
+        那三年，应该是迄今为止，最开心的三年，记忆中每天都是拼尽全力在认真的活；我想这一生都感激那时的故事，那里的人和那时的自己，他们终将温暖我一生！
+    </p>
+    <p>
+        然而，许多年过去了，现实的我并没能在物理学上走下去，也没有从事和绘画相关的工作，而是在大学毕业后开始了作为一名前端开发人员的职业生涯。
+    </p>
+    <p>
+        人生就是一种很奇妙的东西，你永远不会知道余生一定会怎样，也许正因如此，才能让我如此热爱生活，有了可能，才会有到达彼岸的梦。
+    </p>
+    <p>
+        这是很长很美好的一生！
+    </p>
+    <p>
+        随着人工智能、新能源、激光技术和量子通信等新领域地发展，表明这是一个变革前的时代，世界的明天充满了无限可能，也面临诸多挑战，一定会有有趣的事情发生！
+    </p>
+    <p>
+        我渴望永远怀揣着对未知的好奇去寻找和体会新的未知的乐趣，并沉迷其中。为什么会如此执着，这便是原因吧！
+    </p>
+    <p>
+        最后，我想用《花开物语》中的一句话来表达我的情怀：
+    </p>
+    <p>
+        “青春就是这么一回事，尽管受挫或踌躇不前，也能不畏惧挑战新鲜事，打造崭新的创意！”
+    </p>
+    <p class='tips'>
+        我闯过了十七层地狱，十八层的时候，使者对我说：欢迎来到人间。
+        <span>
+            ----后记
+        </span>
+    </p>
+</template>
 <script>
     import Clunch from 'clunch';
     import image from './index.clunch';
@@ -6,15 +47,37 @@
         mounted() {
             new Clunch({
                 el: document.getElementById('guider-painter'),
-                render: image
+                render: image,
+                methods: {
+
+                }
             });
         }
     };
 </script>
 <style>
-    div {
+    [quickpaper] {
         height: 100vh;
         width: 100vw;
-        line-height: 100vh;
+        user-select: none;
+    }
+
+    [quickpaper]>#guider-painter {
+        height: 100px;
+    }
+
+    [quickpaper]>p {
+        color: white;
+        padding: 0 100px;
+    }
+
+    [quickpaper]>p.tips {
+        text-indent: 0;
+        margin: 30px 0;
+    }
+
+    [quickpaper]>p.tips>span {
+        display: block;
+        text-align: right;
     }
 </style>

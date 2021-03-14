@@ -1,11 +1,11 @@
 <template :class='flag'>
-    <div class="top-hidden" @dblclick='changeView("page-view")'>
+    <div class="top-hidden" @click='changeView("page-view")'>
         <ui-guider></ui-guider>
     </div>
     <div class='page'>
         <header>
             <div></div>
-            <h2 title='编程学习指导界面~' @click='changeView("top-hidden-view")'>
+            <h2 @click='changeView("top-hidden-view")'>
                 🏠 今天，你写代码了吗？
             </h2>
             <ul>
@@ -171,14 +171,13 @@
         color: #bce05d;
         font-weight: 800;
         font-family: monospace;
-        cursor: pointer;
+        display: inline-block;
     }
 
-    div.page>header>h2,
     div.page>header>ul,
     div.page>header>ul>li {
-        display: inline-block;
         cursor: pointer;
+        display: inline-block;
     }
 
     div.page>header>ul>li[active='yes'] {
