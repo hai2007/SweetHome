@@ -36,9 +36,6 @@
                 走一步，再走一步。
             </span>
         </footer>
-        <span class="helpCounterUrl">
-            <img :src="counterUrl">
-        </span>
     </div>
 </template>
 <script>
@@ -48,7 +45,6 @@
             return {
                 page: null,
                 dialog: null,
-                counterUrl: window.hai2007_sweethome_counterUrl,
 
                 // home表示显示主界面
                 // top-hidden表示显示顶部隐藏内容
@@ -80,13 +76,6 @@
     };
 </script>
 <style>
-    [quickpaper]>div.page>.helpCounterUrl {
-        position: fixed;
-        left: -300px;
-        top: 0;
-        width: 190px;
-        height: 103px;
-    }
 
     /* 显示隐藏界面 */
     div.top-hidden-view>.top-hidden {

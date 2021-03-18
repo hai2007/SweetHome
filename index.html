@@ -7,11 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>🏠 今天，你写代码了吗？</title>
     <link rel="shortcut icon" href="./src/assets/girl-hai2007.png">
+    <script>
+        window.hai2007_sweethome_counterUrl = "https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/";
+    </script>
     <style>
         #root {
             width: 100vw;
             height: 100vh;
             overflow: auto;
+        }
+
+        div#helpcounterdiv {
+            position: fixed;
+            left: -300px;
+            top: 0;
+            width: 190px;
+            height: 103px;
         }
     </style>
 </head>
@@ -22,7 +33,16 @@
     <div id="root"></div>
 
     <!-- 引入打包文件 -->
-    <script src="./dist/sweethome@v1.10.1.js"></script>
+    <script src="./dist/sweethome@v1.11.0.js"></script>
+
+    <!-- 辅助统计 -->
+    <div id="helpcounterdiv"></div>
+    <script>
+        var helpcounterdiv = document.getElementById('helpcounterdiv');
+        var imgDom = document.createElement('img');
+        imgDom.setAttribute('src', window.hai2007_sweethome_counterUrl);
+        helpcounterdiv.appendChild(imgDom);
+    </script>
 
 </body>
 

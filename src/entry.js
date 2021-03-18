@@ -4,7 +4,10 @@ import QuickPaper from 'quick-paper';
 import '@hai2007/polyfill/Promise.js';
 
 // 启动界面
-import App from './App.paper';
+let pages = {
+    app: () => import('./App.paper'),
+    editor: () => import('./pages/editor.paper')
+};
 
 // 引入样式
 import "@hai2007/style/normalize.css";
@@ -16,14 +19,21 @@ import './styles/doc-view.css';
 import routers from './routers/index.js';
 QuickPaper.use(routers);
 
-window.hai2007_sweethome_counterUrl = "https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/";
+// 获取启动页面名称
+let pagename = QuickPaper.urlFormat(window.location.href).router[0];
 
-window.quickPaper = new QuickPaper({
+// 请求页面
+(pagename in pages ? pages[pagename] : pages.app)().then(data => {
 
-    // 挂载点
-    el: document.getElementById('root'),
+    // 创建对象
+    window.quickPaper = new QuickPaper({
 
-    // 启动组件
-    render: createElement => createElement(App)
+        // 挂载点
+        el: document.getElementById('root'),
+
+        // 启动组件
+        render: createElement => createElement(data.default)
+
+    });
 
 });

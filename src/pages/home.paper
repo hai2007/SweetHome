@@ -91,9 +91,9 @@
                 </p>
                 <p class="mark">
                     当我仰望星空的时候、当我疲于工作或学习的时候、当我此刻在灯光下记录这一切的时候，那些令我感动的东西，我一直与你们同在。
-                <div>
-                    -------- 后记
-                </div>
+                    <div>
+                        -------- 后记
+                    </div>
                 </p>
             </div>
             <ul class='footer-link'>
@@ -105,6 +105,10 @@
                 <li>
                     <h2>有用的资源</h2>
                     <a href="https://emojipedia.org/" target="_blank">表情文字</a>
+                </li>
+                <li>
+                    <h2>在线工具</h2>
+                    <a href="#/editor" target="_blank">在线代码演示</a>
                 </li>
                 <li>
                     <h2>其它</h2>
@@ -265,7 +269,7 @@
     div.page>div.right>.footer-link>li {
         display: inline-block;
         vertical-align: top;
-        width: 233px;
+        width: 25%;
         padding: 10px;
         text-align: left;
     }
