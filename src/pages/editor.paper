@@ -95,6 +95,25 @@
             }
         },
         mounted() {
+
+            // 判断是否有传递的
+            /**
+             * 非跨域的页面如果想控制打开页面编辑器内容，
+             * 只需要在打开前主动修改localStorage的「hai2007-sweethome-editor-html-code」条目内容即可！
+             */
+            let postCode = sessionStorage.getItem('hai2007-sweethome-editor-html-code');
+            if (postCode == null) {
+                postCode = localStorage.getItem('hai2007-sweethome-editor-html-code');
+                if (postCode != null) {
+                    sessionStorage.setItem('hai2007-sweethome-editor-html-code', postCode);
+                    localStorage.removeItem('hai2007-sweethome-editor-html-code');
+                    defaultHtml = postCode;
+                }
+            } else {
+                defaultHtml = postCode;
+            }
+
+            // 创建编辑器对象
             owe = new this.__OpenWebEditor({
                 el: document.getElementById('editor-view'),
                 color: {
