@@ -1,6 +1,9 @@
 <template>
     <header>
         在线代码演示
+        <a href="https://github.com/hai2007/SweetHome" target="_blank">
+            Fork Me On Github
+        </a>
     </header>
     <div>
         <div>
@@ -152,6 +155,13 @@
         position: relative;
     }
 
+    header>a {
+        float: right;
+        padding-right: 50px;
+        color:rgb(255, 255, 255);
+        text-decoration: underline;
+    }
+
     /* 内容 */
     [quickpaper]>div {
         height: calc(100vh - 157px);
@@ -184,6 +194,7 @@
         right: 10px;
         top: 10px;
         height: 35px;
+        line-height: 35px;
         padding: 0 20px;
         background-color: #856f48;
         border: none;
