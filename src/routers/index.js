@@ -2,6 +2,10 @@ import xhtml from '@hai2007/tool/xhtml.js';
 import book from './book';
 import notebook from './notebook';
 
+/**
+ * 温馨提示：此次只记录主站的路由，别的路由各自管理
+ */
+
 let pages = {
 
     // 主体路由

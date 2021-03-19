@@ -10,10 +10,14 @@ module.exports = {
     },
     module: {
         rules: [{
+            test: /\.html$/,
+            exclude: /node_modules/,
+            loader: ['./build/normal-loader.js']
+        }, {
             test: /\.paper$/,
             loader: ['quick-paper/loader/index.js'],
             exclude: /node_modules/
-        },{
+        }, {
             test: /\.clunch$/,
             loader: ['clunch/loader.js'],
             exclude: /node_modules/

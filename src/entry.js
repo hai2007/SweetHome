@@ -6,7 +6,8 @@ import '@hai2007/polyfill/Promise.js';
 // 启动界面
 let pages = {
     app: () => import('./App.paper'),
-    editor: () => import('./pages/editor.paper')
+    editor: () => import('./pages/editor/index.paper'),
+    learning: () => import('./pages/learning/index.paper')
 };
 
 // 引入样式
@@ -15,9 +16,8 @@ import '@hai2007/style/doc-view.css';
 import './styles/common.css';
 import './styles/doc-view.css';
 
-// 引入路由
-import routers from './routers/index.js';
-QuickPaper.use(routers);
+// 引入公共组件
+import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFooter', uiFooter);
 
 // 获取启动页面名称
 let pagename = QuickPaper.urlFormat(window.location.href).router[0];

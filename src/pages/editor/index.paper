@@ -1,0 +1,272 @@
+<template>
+    <header>
+        在线代码演示
+        <a href="#/home" target="_blank">
+            <span>返回主站</span>
+        </a>
+    </header>
+    <div>
+        <div>
+            <div class="title">
+                源代码
+                <button title='点击运行代码' @click='doRun()'>
+                    运行
+                </button>
+            </div>
+            <div class="content" id='editor-view'>
+
+            </div>
+        </div>
+        <div>
+            <div class="title">
+                运行结果
+            </div>
+            <div class="content">
+                <iframe id='run-view'></iframe>
+            </div>
+        </div>
+    </div>
+    <ui-footer></ui-footer>
+</template>
+<script>
+
+    import '../../styles/pages/editor.css';
+    import QuickPaper from 'quick-paper';
+    import lazyLoad from './examples/lazy-load.js';
+
+    let owe = null, lang = 'html';
+
+    let css_shader = {
+        "annotation": "#6a9955",/*注释颜色*/
+        "insign": "#555",/*符号颜色*/
+        "selector": "#1e50b3",/*选择器*/
+        "attrKey": "#1e83b1",/*属性名称颜色*/
+        "attrValue": "#ac4c1e"/*属性值颜色*/
+    };
+
+    let js_shader = {
+        "text": "#000000",/*文本颜色*/
+        "annotation": "#6a9955",/*注释颜色*/
+        "insign": "#555",/*符号颜色*/
+        "key": "#ff0000",/*关键字颜色*/
+        "string": "#ac4c1e",/*字符串颜色*/
+        "funName": "#1e50b3",/*函数名称颜色*/
+        "execName": "#1e83b1"/*执行方法颜色*/
+    };
+
+    let html_shader = {
+        "text": "#000000",/*文本颜色*/
+        "annotation": "#6a9955",/*注释颜色*/
+        "insign": "#555",/*符号颜色*/
+        "node": "#1e50b3",/*结点颜色*/
+        "attrKey": "#1e83b1",/*属性名称颜色*/
+        "attrValue": "#ac4c1e",/*属性值颜色*/
+        "css": css_shader,
+        "javascript": js_shader
+    };
+
+    let defaultHtml = `<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>在线代码演示</title>
+        <style>
+            button{
+                color: white;
+                background-color: #161618;
+                border: none;
+                padding: 10px 20px;
+            }
+        </style>
+        <script>
+            function doit(){
+                alert('你好，世界！');
+            }
+        <\/script>
+    </head>
+    <body>
+        <button onclick='doit()'>点击我</button>
+    </body>
+</html>`;
+
+    export default {
+        methods: {
+            doRun() {
+                let iframeDocument = document.getElementById('run-view').contentWindow.document;
+                iframeDocument.open();
+                iframeDocument.write(owe.valueOf());
+                iframeDocument.close();
+            },
+            doRender(code) {
+                // 创建编辑器对象
+                owe = new this.__OpenWebEditor({
+                    el: document.getElementById('editor-view'),
+                    color: {
+                        background: "#ffffff", /*编辑器背景*/
+                        text: "#170", /*文本颜色*/
+                        number: "#888484", /*行号颜色*/
+                        edit: "#eaeaf1", /*编辑行背景色*/
+                        cursor: "#ff0000", /*光标颜色*/
+                        select: "#6c6cf1", /*选择背景*/
+                    },
+                    content: code,
+                    shader: [lang, {
+                        "html": html_shader,
+                        "css": css_shader,
+                        "javascript": js_shader
+                    }[lang]]
+                });
+
+                // 初始化主动运行
+                this.doRun();
+            }
+        },
+        mounted() {
+
+            // 判断是否有通过Storage传递的
+
+            let postCode = sessionStorage.getItem('hai2007-sweethome-editor-html-code');
+            if (postCode == null) postCode = localStorage.getItem('hai2007-sweethome-editor-html-code');
+            if (postCode != null) {
+
+                /**
+                 * 第一种：
+                 * 非跨域的页面如果想控制打开页面编辑器内容，
+                 * 只需要在打开前主动修改localStorage的「hai2007-sweethome-editor-html-code」条目内容即可！
+                 */
+
+                sessionStorage.setItem('hai2007-sweethome-editor-html-code', postCode);
+                localStorage.removeItem('hai2007-sweethome-editor-html-code');
+                this.doRender(postCode);
+            } else {
+
+                // 判断是否有通过url传递的
+
+                let urlParams = QuickPaper.urlFormat(window.location.href).params;
+
+                /**
+                 * 第二种：
+                 * 任意页面打开此页面的时候，如何想选择提前定义好的某个内容作为编辑器内容，
+                 * 可以通过参数告知，语法：?file=xxx
+                 * 当然，页面需要提前在 examples/lazy-load.js 中懒加载注册好
+                 */
+
+                if ('file' in urlParams) {
+                    let contentLazy = lazyLoad[urlParams.file];
+                    if (contentLazy) {
+                        contentLazy().then(data => {
+                            this.doRender(data.default);
+                        });
+                    } else {
+                        console.error('读取文件地址错误：（404）' + urlParams.file);
+                        this.doRender(defaultHtml);
+                    }
+                }
+
+                /**
+                 * 第三种：
+                 * 任意页面打开此页面的时候，如何想直接传递某个内容作为编辑器内容，
+                 * 可以通过参数告知，语法：?content=xxx
+                 * 此方法的缺点是，内容不可以过多，
+                 * 其次，如果没有特别说明，传递的内容需要经过 encodeURIComponent  处理，
+                 * 如果没有经过处理，语法：?content=xxx&decode=no
+                 */
+                else if ('content' in urlParams) {
+                    this.doRender(urlParams.decode == 'no' ? urlParams.content : decodeURIComponent(urlParams.content));
+                }
+
+                // 默认
+                else {
+                    this.doRender(defaultHtml);
+                }
+
+            }
+
+        }
+    };
+</script>
+<style>
+    /* 页头 */
+    header {
+        height: 60px;
+        line-height: 60px;
+        background-color: rgb(82, 91, 0);
+        background-image: url('../../assets/keep-study.png');
+        background-position: 30px center;
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        padding-left: 100px;
+        color: white;
+        position: relative;
+    }
+
+    header>a {
+        float: right;
+        padding-right: 15px;
+    }
+
+    header>a>span {
+        color: rgb(4, 0, 0);
+        font-size: 12px;
+        background-color: rgb(255, 255, 255);
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    header>a>span:hover {
+        text-decoration: underline;
+    }
+
+    /* 内容 */
+    [quickpaper]>div {
+        height: calc(100vh - 157px);
+        padding: 10px;
+        white-space: nowrap;
+        font-size: 0;
+    }
+
+    [quickpaper]>div>div {
+        outline: 1px solid #8c9da5;
+        margin: 10px;
+        display: inline-block;
+        white-space: normal;
+        font-size: 16px;
+        width: calc(50vw - 30px);
+        height: calc(100vh - 197px);
+        vertical-align: top;
+    }
+
+    [quickpaper]>div>div>.title {
+        border-bottom: 1px solid #8c9da5;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    [quickpaper]>div>div>.title>button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 20px;
+        background-color: #856f48;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    [quickpaper]>div>div>.content {
+        width: 100%;
+        height: calc(100% - 55px);
+    }
+
+    [quickpaper]>div>div>.content>iframe {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+    }
+</style>

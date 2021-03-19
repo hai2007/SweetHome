@@ -18,6 +18,9 @@
                 <li @click='openRouter("code")' class='menu-1 code'>
                     <span>代码片段</span>
                 </li>
+                <li class='menu-1'>
+                    <a href='#/learning' target="_blank">入门小教程</a>
+                </li>
             </ul>
         </header>
         <div>
@@ -39,7 +42,15 @@
     </div>
 </template>
 <script>
+
+    import QuickPaper from 'quick-paper';
+
     import uiGuider from './pages/guider/index.paper';
+
+    // 引入路由
+    import routers from './routers/index.js';
+    QuickPaper.use(routers);
+
     export default {
         data() {
             return {
@@ -76,7 +87,6 @@
     };
 </script>
 <style>
-
     /* 显示隐藏界面 */
     div.top-hidden-view>.top-hidden {
         height: 100vh;
@@ -171,6 +181,15 @@
 
     div.page>header>ul>li[active='yes'] {
         border-bottom: 3px solid red;
+    }
+
+    div.page>header>ul>li>span,
+    div.page>header>ul>li>a {
+        color: black;
+    }
+
+    div.page>header>ul>li[active='no']:hover {
+        text-decoration: underline;
     }
 
     div.page>header>ul>li[active='yes']>span {

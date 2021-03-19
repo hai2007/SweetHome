@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -36,7 +36,6 @@
     "@hai2007/nodejs": "^1.0.0",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
-    "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "css-loader": "^2.1.1",
     "file-loader": "^4.2.0",
     "postcss": "^7.0.21",

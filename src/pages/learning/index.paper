@@ -1,0 +1,122 @@
+<template>
+    <header>
+        入门小教程
+        <a href="#/home" target="_blank">
+            <span>返回主站</span>
+        </a>
+    </header>
+    <nav>
+        <span @click='goto("home")' :active='pagename=="home"?"yes":"no"'>首页</span>
+        <span @click='goto("html")' :active='pagename=="html"?"yes":"no"'>HTML</span>
+        <span @click='goto("css")' :active='pagename=="css"?"yes":"no"'>CSS</span>
+        <span @click='goto("javascript")' :active='pagename=="javascript"?"yes":"no"'>JavaScript</span>
+        <span @click='goto("bookmark")' :active='pagename=="bookmark"?"yes":"no"'>书签</span>
+    </nav>
+    <div>
+        <component :is='page'></component>
+    </div>
+    <ui-footer></ui-footer>
+</template>
+<script>
+
+    import QuickPaper from 'quick-paper';
+
+    let pages = {
+        home: () => import('./home.paper'),
+        bookmark: () => import('./bookmark.paper'),
+        html: () => import('./html/index.paper'),
+        css: () => import('./css/index.paper'),
+        javascript: () => import('./javascript/index.paper')
+    };
+
+    export default {
+        data() {
+            return {
+                page: null,
+                pagename: ""
+            };
+        },
+        methods: {
+            goto(pagename) {
+                this.pagename = pagename;
+                window.location.href = '#/learning/' + pagename;
+                this.loadPage();
+            },
+            loadPage() {
+                pages[this.pagename]().then(data => {
+                    this.page = data.default;
+                });
+            }
+        },
+        mounted() {
+            let routers = QuickPaper.urlFormat(window.location.href);
+            this.pagename = routers[1] in pages ? routers[1] : 'home';
+            this.loadPage();
+        }
+    };
+</script>
+<style>
+    /* 页头 */
+    [quickpaper]>header {
+        font-size: 30px;
+        font-weight: 800;
+        color: #82af07;
+        background-image: url('../../assets/read.png');
+        background-repeat: no-repeat;
+        background-position: 60px center;
+        padding-left: 140px;
+        padding-right: 15px;
+        line-height: 74px;
+        height: 74px;
+    }
+
+    header>a {
+        float: right;
+        font-size: 30px;
+    }
+
+    header>a>span {
+        color: #ffffff;
+        font-size: 12px;
+        background-color: #000000;
+        padding: 10px;
+        vertical-align: top;
+    }
+
+    header>a>span:hover {
+        text-decoration: underline;
+    }
+
+    /* 顶部导航 */
+
+    [quickpaper]>nav {
+        line-height: 34px;
+        background-color: #60810b;
+        color: white;
+        padding-left: 50px;
+    }
+
+    [quickpaper]>nav>span {
+        margin: 0 10px;
+        padding: 3px 5px;
+    }
+
+    [quickpaper]>nav>span[active='no'] {
+        cursor: pointer;
+    }
+
+    [quickpaper]>nav>span[active='no']:hover {
+        text-decoration: underline;
+    }
+
+    [quickpaper]>nav>span[active='yes'] {
+        background-color: white;
+        color: #60810b;
+    }
+
+    /* 内容 */
+    [quickpaper]>div {
+        min-height: calc(100vh - 210px);
+        padding: 0 50px;
+    }
+</style>

@@ -1,0 +1,10 @@
+@media screen and (max-width: 800px) {
+    [quickpaper]>div>div {
+        width: calc(100vw - 40px) !important;
+    }
+
+    [quickpaper]>div {
+        height: calc(200vh - 334px) !important;
+        white-space: normal !important;
+    }
+}
