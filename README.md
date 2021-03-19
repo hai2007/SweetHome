@@ -45,6 +45,28 @@ npm run dev
 npm run build
 ```
 
+## 在线代码演示
+
+为了更好的演示代码，我们提供了一个前端代码在线可编辑运行工具，访问地址：
+
+```
+https://hai2007.gitee.io/sweethome/#/editor
+```
+
+如果你希望打开的时候使用你设定的初始化代码，有下列三种方式：
+
+- 第一种：通过共享storage的方式
+
+非跨域的页面如果想控制打开页面编辑器内容，只需要在打开前主动修改```localStorage```的```hai2007-sweethome-editor-html-code```条目内容即可。
+
+- 第二种：通过URL参数提供代码地址
+
+任意页面打开此页面的时候，如何想选择提前定义好的某个内容作为编辑器内容，可以通过参数告知，语法：```?file=xxx```。当然，页面需要提前在```examples/lazy-load.js```中懒加载注册好。
+
+- 第三种：通过URL参数提供代码内容
+
+任意页面打开此页面的时候，如何想直接传递某个内容作为编辑器内容，可以通过参数告知，语法：```?content=xxx```。此方法的缺点是，内容不可以过多，其次，如果没有特别说明，传递的内容需要经过```encodeURIComponent```处理，如果没有经过处理，语法：```?content=xxx&decode=no```。
+
 开源协议
 ---------------------------------------
 [Apache-2.0](https://github.com/hai2007/SweetHome/blob/master/LICENSE)
