@@ -123,6 +123,8 @@
         },
         mounted() {
 
+            this.setTitle('在线代码演示');
+
             // 判断是否有通过Storage传递的
 
             let postCode = sessionStorage.getItem('hai2007-sweethome-editor-html-code');

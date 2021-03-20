@@ -1,9 +1,5 @@
 # [🏠 今天，你写代码了吗？](https://hai2007.gitee.io/sweethome/)
 
-<p align='center'>
-    <img src="https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/">
-</p>
-
 <p align="center">
     <a href="https://github.com/hai2007/SweetHome/graphs/code-frequency" target='_blank'>
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/hai2007/SweetHome">
@@ -28,6 +24,10 @@
 
                ———— 摘自 莫顿·亨特《走一步，再走一步》
 ```
+
+<p align='center'>
+    <img src="https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/">
+</p>
 
 ## 如何启动本地编辑？
 

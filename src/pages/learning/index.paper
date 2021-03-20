@@ -49,6 +49,7 @@
             }
         },
         mounted() {
+            this.setTitle('入门小教程');
             let routers = QuickPaper.urlFormat(window.location.href).router;
             this.pagename = routers[1] in pages ? routers[1] : 'home';
             this.loadPage();
