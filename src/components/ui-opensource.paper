@@ -1,0 +1,10 @@
+<template>
+    设计开发中，敬请期待！
+</template>
+<style>
+    [quickpaper] {
+        color: white;
+        text-align: center;
+        line-height: 50vh;
+    }
+</style>

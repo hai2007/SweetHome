@@ -1,4 +1,4 @@
-<template :class='flag'>
+<template :class='flag' @click.stop='setOpensourceFlag("no")'>
     <div class="top-hidden" @click='changeView("page-view")'>
         <ui-guider></ui-guider>
     </div>
@@ -18,8 +18,23 @@
                 <li @click='openRouter("code")' class='menu-1 code'>
                     <span>代码片段</span>
                 </li>
-                <li class='menu-1'>
-                    <a href='#/learning' target="_blank">入门小教程</a>
+                <li class='menu-1 website'>
+                    <span>小网站</span>
+                    <div>
+                        <a href="#/editor" target="_blank">在线代码演示</a>
+                        <a href="#/learning" target="_blank">入门小教程</a>
+                    </div>
+                </li>
+                <li @click.stop='setOpensourceFlag("yes")' class='menu-1 opensource'>
+                    <span>开源项目</span>
+                    <div :is-open='opensourceFlag' @click.stop='setOpensourceFlag("no")'>
+                        <div class='list'>
+                            <ui-open-source></ui-open-source>
+                        </div>
+                        <div class='btn'>
+                            <input type="button" value="关闭">
+                        </div>
+                    </div>
                 </li>
             </ul>
         </header>
@@ -46,6 +61,7 @@
     import QuickPaper from 'quick-paper';
 
     import uiGuider from './pages/guider/index.paper';
+    import uiOpenSource from './components/ui-opensource.paper';
 
     // 引入路由
     import routers from './routers/index.js';
@@ -59,10 +75,15 @@
 
                 // home表示显示主界面
                 // top-hidden表示显示顶部隐藏内容
-                flag: "home"
+                flag: "home",
+
+                opensourceFlag: "no"
             };
         },
         methods: {
+            setOpensourceFlag(flag) {
+                this.opensourceFlag = flag;
+            },
             openRouter(pagename) {
                 this.goRouter(page => this.page = page, [pagename]);
             },
@@ -82,7 +103,8 @@
             this.loadRouter(page => this.page = page, 1);
         },
         component: {
-            uiGuider
+            uiGuider,
+            uiOpenSource
         }
     };
 </script>
@@ -183,11 +205,6 @@
         border-bottom: 3px solid red;
     }
 
-    div.page>header>ul>li>span,
-    div.page>header>ul>li>a {
-        color: black;
-    }
-
     div.page>header>ul>li[active='no']:hover {
         text-decoration: underline;
     }
@@ -201,12 +218,96 @@
     div.page>header>ul>li {
         padding: 0 10px;
         font-weight: 800;
+        position: relative;
     }
 
     div.page>header>ul {
         position: absolute;
         right: 30px;
         top: 0;
+    }
+
+    /* 页头 - 小网站 */
+    div.page>header>ul>li.website:hover>div {
+        display: block;
+    }
+
+    div.page>header>ul>li.website:hover {
+        text-decoration: none;
+    }
+
+    div.page>header>ul>li.website>div>a:hover {
+        text-decoration: underline;
+    }
+
+    div.page>header>ul>li.website>div {
+        display: none;
+        position: absolute;
+        width: 140px;
+        background-color: #ffffff;
+        margin-top: -6px;
+        margin-left: -46px;
+        padding: 15px 10px;
+        border: 2px solid gray;
+    }
+
+    div.page>header>ul>li.website>div::before {
+        content: " ";
+        position: absolute;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        transform: rotate(45deg);
+        background-color: #ffffff;
+        left: 61px;
+        top: -9px;
+        border-width: 2px 0 0 2px;
+        border-style: solid;
+        border-color: gray;
+    }
+
+    div.page>header>ul>li.website>div>a {
+        display: block;
+        line-height: 1.8em;
+        color: rgb(0, 0, 0);
+    }
+
+    /* 页头 - 开源项目 */
+    div.page>header>ul>li.opensource>div {
+        position: fixed;
+        right: -350px;
+        top: 0;
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.705);
+        transition-property: right;
+        transition-duration: 500ms;
+        cursor: default;
+        box-shadow: -3px 0px 12px 2px #464545;
+    }
+
+    div.page>header>ul>li.opensource>div[is-open='yes'] {
+        right: 0;
+    }
+
+    div.page>header>ul>li.opensource>div>.list {
+        height: calc(100vh - 50px);
+        overflow: auto;
+    }
+
+    div.page>header>ul>li.opensource>div>.btn {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    div.page>header>ul>li.opensource>div>.btn>input {
+        padding: 5px 20px;
+        outline: none;
+        border: none;
+        color: #f7f7f7;
+        background-color: black;
+        cursor: pointer;
     }
 
     /* 内容 */
