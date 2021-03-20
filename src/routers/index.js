@@ -3,7 +3,7 @@ import book from './book';
 import notebook from './notebook';
 
 /**
- * 温馨提示：此次只记录主站的路由，别的路由各自管理
+ * 温馨提示：此处只记录主站的路由，别的路由各自管理
  */
 
 let pages = {
@@ -23,6 +23,11 @@ let pages = {
     // 捐款
     Sponsors: {
         content: () => import('../pages/Sponsors.paper')
+    },
+
+    // 协议
+    license: {
+        content: () => import('../pages/license.paper')
     },
 
     // 查询笔记

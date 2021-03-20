@@ -20,8 +20,9 @@
             <div class="cat">
                 一只陪伴了我十六年的猫
             </div>
+            <a class='license' href="#/license" target="_blank" title='查看开源协议权限规则'></a>
             <ui-skybox />
-            <a href="https://info.flagcounter.com/bdd0" target="_blank">
+            <a class='counter' href="https://info.flagcounter.com/bdd0" target="_blank">
                 <img :src="counterUrl">
             </a>
         </div>
@@ -91,9 +92,9 @@
                 </p>
                 <p class="mark">
                     当我仰望星空的时候、当我疲于工作或学习的时候、当我此刻在灯光下记录这一切的时候，那些令我感动的东西，我一直与你们同在。
-                    <div>
-                        -------- 后记
-                    </div>
+                <div>
+                    -------- 后记
+                </div>
                 </p>
             </div>
             <ul class='footer-link'>
@@ -233,6 +234,19 @@
         height: 260px;
         background-size: 100% auto;
         font-size: 0;
+    }
+
+    div.page>div.left>.license {
+        background-image: url('../assets/license.png');
+        height: 80px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: 30px;
+    }
+
+    div.page>div.left>.counter>img {
+        margin-top: 20px;
     }
 
     /* 右边顶部说明 */

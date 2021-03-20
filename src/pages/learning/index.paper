@@ -49,7 +49,7 @@
             }
         },
         mounted() {
-            let routers = QuickPaper.urlFormat(window.location.href);
+            let routers = QuickPaper.urlFormat(window.location.href).router;
             this.pagename = routers[1] in pages ? routers[1] : 'home';
             this.loadPage();
         }

@@ -1,0 +1,12 @@
+<template></template>
+<style>
+    [quickpaper] {
+        font-size: 0;
+        height: calc(100vh - 155px);
+        min-height: 500px;
+        background-image: url('../assets/license-tree.jpg');
+        background-size: auto 350px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+</style>
