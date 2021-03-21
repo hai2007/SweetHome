@@ -113,6 +113,7 @@
                 </li>
                 <li>
                     <h2>其它</h2>
+                    <a href="#/aboutUS" target="_blank">关于我们</a>
                     <a href="#/Sponsors" target="_blank">捐款支持我们</a>
                 </li>
             </ul>

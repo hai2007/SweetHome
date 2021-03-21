@@ -36,6 +36,9 @@
                         </div>
                     </div>
                 </li>
+                <li @click='openRouter("aboutUS")' class='menu-1 aboutUS'>
+                    <span>关于我们</span>
+                </li>
             </ul>
         </header>
         <div>
