@@ -18,13 +18,20 @@
                 {{github_issue}}
             </a>
         </li>
+        <li>
+            发邮件给我们：
+            <a :href="'mailto:'+email" target="_blank" class='important link'>
+                {{email}}
+            </a>
+        </li>
     </ul>
 </template>
 <script>
     export default {
         data() {
             return {
-                github_issue: "https://github.com/hai2007/SweetHome/issues"
+                github_issue: "https://github.com/hai2007/SweetHome/issues",
+                email: "2501482523@qq.com"
             };
         },
         mounted() {

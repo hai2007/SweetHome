@@ -28,12 +28,7 @@
                 <li @click.stop='setOpensourceFlag("yes")' class='menu-1 opensource'>
                     <span>开源项目</span>
                     <div :is-open='opensourceFlag' @click.stop='setOpensourceFlag("no")'>
-                        <div class='list'>
-                            <ui-open-source></ui-open-source>
-                        </div>
-                        <div class='btn'>
-                            <input type="button" value="关闭">
-                        </div>
+                        <ui-open-source></ui-open-source>
                     </div>
                 </li>
                 <li @click='openRouter("aboutUS")' class='menu-1 aboutUS'>
@@ -278,40 +273,21 @@
     /* 页头 - 开源项目 */
     div.page>header>ul>li.opensource>div {
         position: fixed;
-        right: -350px;
+        right: -400px;
         top: 0;
         height: 100vh;
-        width: 300px;
-        background-color: rgba(0, 0, 0, 0.705);
+        width: 350px;
+        background-color: rgba(0, 0, 0, 0.85);
         transition-property: right;
         transition-duration: 500ms;
         cursor: default;
         box-shadow: -3px 0px 12px 2px #464545;
         z-index: 1;
+        overflow: auto;
     }
 
     div.page>header>ul>li.opensource>div[is-open='yes'] {
         right: 0;
-    }
-
-    div.page>header>ul>li.opensource>div>.list {
-        height: calc(100vh - 50px);
-        overflow: auto;
-    }
-
-    div.page>header>ul>li.opensource>div>.btn {
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-    }
-
-    div.page>header>ul>li.opensource>div>.btn>input {
-        padding: 5px 20px;
-        outline: none;
-        border: none;
-        color: #f7f7f7;
-        background-color: black;
-        cursor: pointer;
     }
 
     /* 内容 */

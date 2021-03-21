@@ -1,10 +1,70 @@
 <template>
-    设计开发中，敬请期待！
+    <h2>
+        《推荐项目列表》
+    </h2>
+    <a href="https://hai2007.gitee.io/clunch/" target="_blank">
+        <span>1. clunch.js</span>
+        <div>渐进的前端交互式图形框架</div>
+    </a>
+    <a href="https://www.npmjs.com/package/vue-input-check" target="_blank">
+        <span>2. vue-input-check</span>
+        <div>为vue.js设计的表单校验插件</div>
+    </a>
+    <a href="https://www.npmjs.com/package/open-web-editor" target="_blank">
+        <span>3. Open-Web-Editor</span>
+        <div>可扩展Web端代码编辑器</div>
+    </a>
+    <a href="https://www.npmjs.com/package/debug-phone" target="_blank">
+        <span>4. Debug-Phone</span>
+        <div>手机端Web代码调试工具</div>
+    </a>
+    <h2>
+        《基础库列表》
+    </h2>
+    <a href="https://www.npmjs.com/package/@hai2007/tool" target="_blank">
+        <span>1. tool.js</span>
+        <div>前端常用的工具类方法汇总</div>
+    </a>
+    <a href="https://www.npmjs.com/package/@hai2007/style" target="_blank">
+        <span>2. style.css</span>
+        <div>浏览器兼容样式和一些基础样式</div>
+    </a>
+    <a href="https://www.npmjs.com/package/@hai2007/nodejs" target="_blank">
+        <span>3. node.js</span>
+        <div>node.js常用的基础方法汇总</div>
+    </a>
+    <a href="https://www.npmjs.com/package/@hai2007/algorithm" target="_blank">
+        <span>4. algorithm.js</span>
+        <div>一些前端常用的算法实现合集</div>
+    </a>
+    <a href="https://www.npmjs.com/package/@hai2007/polyfill" target="_blank">
+        <span>5. polyfill.js</span>
+        <div>为旧浏览器提供一些常用的原生新功能支持</div>
+    </a>
 </template>
 <style>
     [quickpaper] {
-        color: white;
+        line-height: 1.4em;
+    }
+
+    [quickpaper]>h2 {
         text-align: center;
-        line-height: 50vh;
+        color: rgb(208, 202, 202);
+        line-height: 2em;
+    }
+
+    [quickpaper]>a {
+        color: white;
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    [quickpaper]>a>span {
+        display: block;
+    }
+
+    [quickpaper]>a:hover {
+        text-decoration: underline;
     }
 </style>
