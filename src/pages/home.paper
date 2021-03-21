@@ -152,6 +152,7 @@
     div.page>div.left {
         text-align: center;
         width: 300px;
+        padding-bottom: 120px;
     }
 
     div.page>div.right {
