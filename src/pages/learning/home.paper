@@ -1,11 +1,12 @@
 <template>
     <div class="menu">
         <span>菜单</span>
-        <button>网页开发基础</button>
+        <button @click='doScroll("web-basic")'>网页开发基础</button>
+        <button @click='doScroll("painter")'>绘图相关</button>
     </div>
     <div class="content">
         <div class="item">
-            <h2>
+            <h2 id='fixed-web-basic'>
                 网页开发基础
             </h2>
             <a class='html' href='#/learning/html' target="_blank">
@@ -25,12 +26,34 @@
                 <span>定义了访问和操作HTML文档的方法</span>
             </a>
         </div>
+        <div class="item">
+            <h2 id='fixed-painter'>
+                绘图相关
+            </h2>
+            <a class='svg' href='#/learning/svg' target="_blank">
+                <span>SVG</span>
+                <span>使用XML定义的可缩放矢量图形</span>
+            </a>
+            <a class='html' href='#/learning/canvas' target="_blank">
+                <span>Canvas</span>
+                <span>标签定义的位图图片</span>
+            </a>
+        </div>
     </div>
 </template>
 <script>
     import '../../styles/pages/learning.css';
+    import fixedScroll from '../../services/fixedScroll.js';
     export default {
-
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 44);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 44);
+        }
     };
 </script>
 <style>
@@ -50,7 +73,7 @@
         background-image: url('../../assets/will-sleep.png');
         background-position: center bottom;
         background-repeat: no-repeat;
-        padding-bottom: 100px;
+        padding-bottom: 230px;
         background-color: #eaeaea;
     }
 
@@ -62,6 +85,7 @@
         background-color: transparent;
         padding: 10px;
         border-bottom: 1px solid #fafafa;
+        cursor: pointer;
     }
 
     [quickpaper]>div.menu>span {
@@ -131,5 +155,9 @@
 
     [quickpaper]>div.content>.item>a.js {
         background-image: url('../../assets/js.png');
+    }
+
+    [quickpaper]>div.content>.item>a.svg {
+        background-image: url('../../assets/svg.png');
     }
 </style>
