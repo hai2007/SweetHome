@@ -7,7 +7,6 @@
     </header>
     <nav>
         <span @click='goto("home")' :active='pagename=="home"?"yes":"no"'>首页</span>
-        <span @click='goto("bookmark")' :active='pagename=="bookmark"?"yes":"no"'>书签</span>
     </nav>
     <div>
         <component :is='page'></component>
@@ -16,11 +15,11 @@
 </template>
 <script>
 
+    import '../../styles/pages/learning.css';
     import QuickPaper from 'quick-paper';
 
     let pages = {
         home: () => import('./home.paper'),
-        bookmark: () => import('./bookmark.paper'),
 
         // 内容页面
         html: () => import('./pages/html.paper'),

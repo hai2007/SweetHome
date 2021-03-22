@@ -1,4 +1,4 @@
-<template>
+<template class='learning-home-view'>
     <div class="menu">
         <span>菜单</span>
         <button @click='doScroll("web-basic")'>网页开发基础</button>
@@ -42,7 +42,6 @@
     </div>
 </template>
 <script>
-    import '../../styles/pages/learning.css';
     import fixedScroll from '../../services/fixedScroll.js';
     export default {
         methods: {
