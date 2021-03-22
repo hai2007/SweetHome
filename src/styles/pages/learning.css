@@ -1,0 +1,11 @@
+@media screen and (max-width: 1300px) {
+    [quickpaper]>div.content>.item>a {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    [quickpaper]>div.content>.item>a {
+        width: 100% !important;
+    }
+}

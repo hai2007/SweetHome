@@ -1,3 +1,135 @@
 <template>
-
+    <div class="menu">
+        <span>菜单</span>
+        <button>网页开发基础</button>
+    </div>
+    <div class="content">
+        <div class="item">
+            <h2>
+                网页开发基础
+            </h2>
+            <a class='html' href='#/learning/html' target="_blank">
+                <span>HTML</span>
+                <span>超文本标记语言</span>
+            </a>
+            <a class='css' href='#/learning/css' target="_blank">
+                <span>CSS</span>
+                <span>层叠样式表</span>
+            </a>
+            <a class='js' href='#/learning/javascript' target="_blank">
+                <span>JavaScript</span>
+                <span>一门Web端编程语言</span>
+            </a>
+            <a class='html' href='#/learning/dom' target="_blank">
+                <span>HTML DOM</span>
+                <span>定义了访问和操作HTML文档的方法</span>
+            </a>
+        </div>
+    </div>
 </template>
+<script>
+    import '../../styles/pages/learning.css';
+    export default {
+
+    };
+</script>
+<style>
+    [quickpaper] {
+        white-space: nowrap;
+    }
+
+    [quickpaper]>div {
+        display: inline-block;
+        white-space: normal;
+        vertical-align: top;
+        margin: 20px 10px;
+    }
+
+    [quickpaper]>div.menu {
+        width: 160px;
+        background-image: url('../../assets/will-sleep.png');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        padding-bottom: 100px;
+        background-color: #eaeaea;
+    }
+
+    [quickpaper]>div.menu>button {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 10px;
+        border-bottom: 1px solid #fafafa;
+    }
+
+    [quickpaper]>div.menu>span {
+        display: block;
+        text-align: center;
+        background-color: #60810b;
+        padding: 5px;
+        color: white;
+    }
+
+    [quickpaper]>div.content {
+        width: calc(100% - 210px);
+    }
+
+    [quickpaper]>div.content>.item {
+        background-color: #eaeaea;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    [quickpaper]>div.content>.item>h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    [quickpaper]>div.content>.item>a {
+        display: inline-block;
+        background-color: #fff;
+        display: inline-block;
+        height: 96px;
+        width: 33.33333333%;
+        background-repeat: no-repeat;
+        background-size: 60px;
+        background-position: 8px center;
+        padding-left: 76px;
+        border: 10px solid rgb(236, 236, 236);
+        vertical-align: top;
+    }
+
+    [quickpaper]>div.content>.item>a>span {
+        display: block;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    [quickpaper]>div.content>.item>a>span:first-child {
+        color: #43515a;
+        font-size: 18px;
+        line-height: 20px;
+        padding-top: 16px;
+    }
+
+    [quickpaper]>div.content>.item>a>span:last-child {
+        color: #435159;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    [quickpaper]>div.content>.item>a.html {
+        background-image: url('../../assets/html.png');
+    }
+
+    [quickpaper]>div.content>.item>a.css {
+        background-image: url('../../assets/css.png');
+    }
+
+    [quickpaper]>div.content>.item>a.js {
+        background-image: url('../../assets/js.png');
+    }
+</style>
