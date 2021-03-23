@@ -1,3 +1,151 @@
-<template>
-    javascript
+<template class='learning-page-view'>
+    <ul>
+        <li>
+            <span @click='doScroll("environment")'>
+                运行环境
+            </span>
+        </li>
+        <li>
+            <span @click='doScroll("grammar")'>
+                语法
+            </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("grammar-var")'>
+                        变量和数据类型
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("grammar-line")'>
+                        语句
+                    </span>
+                    <ul>
+                        <li>
+                            <span @click='doScroll("grammar-line-run")'>
+                                运算符
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("grammar-line-if")'>
+                                条件语句
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("grammar-line-switch")'>
+                                switch语句
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("grammar-line-for")'>
+                                for循环
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("grammar-line-while")'>
+                                while循环
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("grammar-line-break-continue")'>
+                                break和continue
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span @click='doScroll("grammar-function")'>
+                        函数
+                    </span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="doc-view">
+        <h2>
+            JavaScript:一门Web端编程语言
+        </h2>
+        <p>
+
+        </p>
+        <h3 id='fixed-environment'>
+            运行环境
+        </h3>
+        <p>
+
+        </p>
+        <h3 id='fixed-grammar'>
+            语法
+        </h3>
+        <p>
+
+        </p>
+        <h4 id='fixed-grammar-var'>
+            变量和数据类型
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-grammar-line'>
+            语句
+        </h4>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-run'>
+            运算符
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-if'>
+            条件语句
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-switch'>
+            switch语句
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-for'>
+            for循环
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-while'>
+            while循环
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-grammar-line-break-continue'>
+            break和continue
+        </h5>
+        <p>
+
+        </p>
+        <h4 id='fixed-grammar-function'>
+            函数
+        </h4>
+        <p>
+
+        </p>
+    </div>
 </template>
+<script>
+    import fixedScroll from '../../../services/fixedScroll.js';
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 0);
+        }
+    };
+</script>

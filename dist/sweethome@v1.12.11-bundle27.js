@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{24:function(e,t,r){(function(e){
+(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{24:function(e,t,r){(function(e){
 /*!
  * clunch.js - 🎨 The Progressive JavaScript Interactive Picture Framework.
  * git+https://github.com/hai2007/clunch.git

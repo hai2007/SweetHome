@@ -1,3 +1,48 @@
-<template>
-    html
+<template class='learning-page-view'>
+    <ul>
+        <li>
+            <span @click='doScroll("frame")'>
+                页面结构
+            </span>
+        </li>
+        <li>
+            <span @click='doScroll("label")'>
+                标签分类和说明
+            </span>
+        </li>
+    </ul>
+    <div class="doc-view">
+        <h2>
+            HTML:超文本标记语言
+        </h2>
+        <p>
+
+        </p>
+        <h3 id='fixed-frame'>
+            页面结构
+        </h3>
+        <p>
+
+        </p>
+        <h3 id='fixed-label'>
+            标签分类和说明
+        </h3>
+        <p>
+
+        </p>
+    </div>
 </template>
+<script>
+    import fixedScroll from '../../../services/fixedScroll.js';
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 0);
+        }
+    };
+</script>

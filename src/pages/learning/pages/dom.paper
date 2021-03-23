@@ -1,3 +1,94 @@
-<template>
-    dom
+<template class='learning-page-view'>
+    <ul>
+        <li>
+            <span @click='doScroll("html-to-dom")'>
+                从HTML到DOM树
+            </span>
+        </li>
+        <li>
+            <span @click='doScroll("dom-tree")'>
+                访问DOM树
+            </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("dom-tree-search")'>
+                        查找结点
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("dom-tree-modify")'>
+                        新增和删除
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("dom-tree-attr")'>
+                        结点属性
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("dom-tree-event")'>
+                        事件
+                    </span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="doc-view">
+        <h2>
+            HTML DOM:定义了访问和操作HTML文档的方法
+        </h2>
+        <p>
+
+        </p>
+        <h3 id='fixed-html-to-dom'>
+            从HTML到DOM树
+        </h3>
+        <p>
+
+        </p>
+        <h3 id='fixed-dom-tree'>
+            访问DOM树
+        </h3>
+        <p>
+
+        </p>
+        <h4 id='fixed-dom-tree-search'>
+            查找结点
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-dom-tree-modify'>
+            新增和删除
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-dom-tree-attr'>
+            结点属性
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-dom-tree-event'>
+            事件
+        </h4>
+        <p>
+
+        </p>
+    </div>
 </template>
+<script>
+    import fixedScroll from '../../../services/fixedScroll.js';
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 0);
+        }
+    };
+</script>

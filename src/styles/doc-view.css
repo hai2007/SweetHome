@@ -37,3 +37,16 @@
     background-image: url(../assets/download.png);
     cursor: pointer;
 }
+
+/* 标题 */
+
+.doc-view>h5 {
+    font-size: 12px;
+    line-height: 2em;
+    padding: 15px 0;
+}
+
+.doc-view>h5::before {
+    content: "·";
+    color: #711e32;
+}

@@ -1,10 +1,14 @@
 <template class='learning-page-view'>
     <ul>
         <li>
-            <span @click='doScroll("guider")'>CSS简介</span>
+            <span @click='doScroll("guider")'>
+                CSS简介
+            </span>
         </li>
         <li>
-            <span @click='doScroll("selector")'>选择器</span>
+            <span @click='doScroll("selector")'>
+                选择器
+            </span>
             <ul>
                 <li>
                     <span @click='doScroll("selector-grammar")'>
@@ -19,10 +23,9 @@
             </ul>
         </li>
         <li>
-            <span @click='doScroll("attribute")'>样式属性</span>
-        </li>
-        <li>
-            <span @click='doScroll("artifice")'>小技巧</span>
+            <span @click='doScroll("attribute")'>
+                样式属性举例
+            </span>
         </li>
     </ul>
     <div class="doc-view">
@@ -44,18 +47,27 @@
         <h3 id='fixed-selector'>
             选择器
         </h3>
+        <p>
+
+        </p>
         <h4 id='fixed-selector-grammar'>
             基本写法
         </h4>
+        <p>
+
+        </p>
         <h4 id='fixed-selector-priority'>
             如何判定优先级？
         </h4>
+        <p>
+
+        </p>
         <h3 id='fixed-attribute'>
-            样式属性
+            样式属性举例
         </h3>
-        <h3 id='fixed-artifice'>
-            小技巧
-        </h3>
+        <p>
+
+        </p>
     </div>
 </template>
 <script>

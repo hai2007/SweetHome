@@ -2,7 +2,6 @@
     <div class="menu">
         <span>菜单</span>
         <button @click='doScroll("web-basic")'>网页开发基础</button>
-        <button @click='doScroll("painter")'>绘图相关</button>
     </div>
     <div class="content">
         <div class="item">
@@ -24,19 +23,6 @@
             <a class='html' href='#/learning/dom' target="_blank">
                 <span>HTML DOM</span>
                 <span>定义了访问和操作HTML文档的方法</span>
-            </a>
-        </div>
-        <div class="item">
-            <h2 id='fixed-painter'>
-                绘图相关
-            </h2>
-            <a class='svg' href='#/learning/svg' target="_blank">
-                <span>SVG</span>
-                <span>使用XML定义的可缩放矢量图形</span>
-            </a>
-            <a class='html' href='#/learning/canvas' target="_blank">
-                <span>Canvas</span>
-                <span>标签定义的位图图片</span>
             </a>
         </div>
     </div>
@@ -154,7 +140,4 @@
         background-image: url('../../assets/js.png');
     }
 
-    [quickpaper]>div.content>.item>a.svg {
-        background-image: url('../../assets/svg.png');
-    }
 </style>
