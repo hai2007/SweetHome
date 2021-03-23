@@ -123,7 +123,7 @@
         },
         mounted() {
 
-            this.setTitle('在线代码演示');
+            this.setTitle('在线代码演示', './src/assets/keep-study.png');
 
             // 判断是否有通过Storage传递的
 

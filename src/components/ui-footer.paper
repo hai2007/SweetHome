@@ -4,7 +4,7 @@
         <a href="https://hai2007.gitee.io/sweethome/" target="_blank">hai2007 走一步，再走一步。</a>
         All rights reserved.
         <br />
-        本项目由“你好2007”设计、开发和维护
+        本网站由“你好2007”设计、开发和维护
     </footer>
 </template>
 <style>
@@ -21,9 +21,11 @@
     footer a {
         padding: 0 5px;
         color: rgb(5, 100, 117);
+        text-decoration: underline;
     }
 
     footer a:hover {
-        text-decoration: underline;
+        color: rgb(3, 61, 71);
+        font-weight: 800;
     }
 </style>

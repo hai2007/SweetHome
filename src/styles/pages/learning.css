@@ -1,13 +1,60 @@
+.learning-home-view>div.content>.item>a {
+    width: 25%;
+}
+
+@media screen and (max-width: 1600px) {
+    .learning-home-view>div.content>.item>a {
+        width: 33.33333333%;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .learning-home-view>div.content>.item>a {
-        width: 50% !important;
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .learning-home-view>div.content>.item>a {
-        width: 100% !important;
+        width: 100%;
     }
 }
 
 /* 下面是具体内容页面的UI设计 */
+
+.learning-page-view {
+    white-space: nowrap;
+}
+
+.learning-page-view>ul,
+.learning-page-view>div {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.learning-page-view>ul {
+    width: 210px;
+    margin: 30px 0;
+}
+
+.learning-page-view>ul li {
+    padding-left: 1em;
+}
+
+.learning-page-view>ul li>span {
+    line-height: 2em;
+    font-weight: 800;
+}
+
+.learning-page-view>ul li>span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.learning-page-view>div {
+    width: calc(100% - 250px);
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 0 3px #60821d;
+}

@@ -50,7 +50,7 @@
             }
         },
         mounted() {
-            this.setTitle('入门小教程');
+            this.setTitle('入门小教程', './src/assets/read.png');
             let routers = QuickPaper.urlFormat(window.location.href).router;
             this.pagename = routers[1] in pages ? routers[1] : 'home';
             this.loadPage();
@@ -59,7 +59,7 @@
 </script>
 <style>
     [quickpaper] {
-        background-color: #fafafa;
+        background-color: #f5f5f5;
     }
 
     /* 页头 */

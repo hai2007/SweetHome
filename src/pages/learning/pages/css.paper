@@ -1,3 +1,74 @@
-<template>
-    css
+<template class='learning-page-view'>
+    <ul>
+        <li>
+            <span @click='doScroll("guider")'>CSS简介</span>
+        </li>
+        <li>
+            <span @click='doScroll("selector")'>选择器</span>
+            <ul>
+                <li>
+                    <span @click='doScroll("selector-grammar")'>
+                        基本写法
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("selector-priority")'>
+                        如何判定优先级？
+                    </span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span @click='doScroll("attribute")'>样式属性</span>
+        </li>
+        <li>
+            <span @click='doScroll("artifice")'>小技巧</span>
+        </li>
+    </ul>
+    <div class="doc-view">
+        <h2>
+            CSS:层叠样式表
+        </h2>
+        <p>
+            与其说CSS是一门编程语言，不如说CSS是一门配置语言，通过配置的方式来控制页面内容应该长什么样子。不过，这并不意味着这是一门很容易的语言，相反，配置项之间存在的相互影响恰恰导致了上手容易却很难真正掌握的窘境。
+        </p>
+        <p>
+            幸运的是，也恰恰是这一层微妙的关系，或许可以为你理解什么是编程语言带来不一样的思考。
+        </p>
+        <h3 id='fixed-guider'>
+            CSS简介
+        </h3>
+        <p>
+
+        </p>
+        <h3 id='fixed-selector'>
+            选择器
+        </h3>
+        <h4 id='fixed-selector-grammar'>
+            基本写法
+        </h4>
+        <h4 id='fixed-selector-priority'>
+            如何判定优先级？
+        </h4>
+        <h3 id='fixed-attribute'>
+            样式属性
+        </h3>
+        <h3 id='fixed-artifice'>
+            小技巧
+        </h3>
+    </div>
 </template>
+<script>
+    import fixedScroll from '../../../services/fixedScroll.js';
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 0);
+        }
+    };
+</script>

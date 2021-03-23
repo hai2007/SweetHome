@@ -22,8 +22,14 @@ import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFoo
 // 获取启动页面名称
 let pagename = QuickPaper.urlFormat(window.location.href).router[0];
 
-// 设置标题方法
-QuickPaper.prototype.setTitle = title => { document.getElementsByTagName('title')[0].innerHTML = title; };
+QuickPaper.prototype.setTitle = (title, logo) => {
+
+    // 设置标题
+    document.getElementsByTagName('title')[0].innerHTML = title;
+
+    // 设置logo
+    document.getElementById('favicon').setAttribute('href', logo);
+};
 
 // 请求页面
 (pagename in pages ? pages[pagename] : pages.app)().then(data => {
