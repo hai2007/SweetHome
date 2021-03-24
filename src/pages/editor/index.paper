@@ -1,6 +1,6 @@
 <template>
     <header>
-        在线代码演示
+        在线代码编辑器
         <a href="#/home" target="_blank">
             <span>返回主站</span>
         </a>
@@ -123,7 +123,7 @@
         },
         mounted() {
 
-            this.setTitle('在线代码演示', './src/assets/keep-study.png');
+            this.setTitle('在线代码编辑器', './src/assets/keep-study.png');
 
             // 判断是否有通过Storage传递的
 
