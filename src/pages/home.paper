@@ -108,10 +108,6 @@
                     <a href="https://emojipedia.org/" target="_blank">表情文字</a>
                 </li>
                 <li>
-                    <h2>在线工具</h2>
-                    <a href="#/editor" target="_blank">在线代码演示</a>
-                </li>
-                <li>
                     <h2>其它</h2>
                     <a href="#/aboutUS" target="_blank">关于我们</a>
                     <a href="#/Sponsors" target="_blank">捐款支持我们</a>
@@ -285,7 +281,7 @@
     div.page>div.right>.footer-link>li {
         display: inline-block;
         vertical-align: top;
-        width: 25%;
+        width: 33.33%;
         padding: 10px;
         text-align: left;
     }

@@ -30,6 +30,11 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
+    // 在线工具
+    tool: {
+        content: () => import('../pages/tool.paper')
+    },
+
     // 关于我们
     aboutUS: {
         content: () => import('../pages/aboutUS.paper')

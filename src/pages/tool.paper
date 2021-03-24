@@ -1,0 +1,56 @@
+<template>
+
+    <!-- 备注：截图大小为 330px x 200px -->
+
+    <a href="#/editor" target="_blank">
+        <div class='editor'></div>
+        在线代码编辑器
+    </a>
+
+    <!-- 辅助定位的，不要删除 -->
+    <span></span>
+    <span></span>
+
+</template>
+<script>
+    export default {
+        mounted() {
+            this.changeActive('menu-1', 'tool');
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        text-align: center;
+    }
+
+    [quickpaper]>a,
+    [quickpaper]>span {
+        display: inline-block;
+        width: 33.33%;
+    }
+
+    [quickpaper]>a {
+        margin: 20px 0;
+        line-height: 2em;
+        color: #000000;
+    }
+
+    [quickpaper]>a>div {
+        height: 176px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        margin: 0 20px;
+        border: 1px solid #a19f9f;
+        background-position: center center;
+    }
+
+    [quickpaper]>a:hover {
+        text-decoration: underline;
+        font-weight: 800;
+    }
+
+    [quickpaper]>a>div {
+        background-image: url('../assets/tool/editor.png');
+    }
+</style>
