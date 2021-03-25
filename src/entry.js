@@ -16,6 +16,9 @@ import '@hai2007/style/doc-view.css';
 import './styles/common.css';
 import './styles/doc-view.css';
 
+// 引入公共指令
+import './directives/ui-goto-example';
+
 // 引入公共组件
 import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFooter', uiFooter);
 

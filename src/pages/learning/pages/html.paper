@@ -9,6 +9,33 @@
             <span @click='doScroll("label")'>
                 标签分类和说明
             </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("label-config")'>
+                        配置标签
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("label-lang")'>
+                        语言型标签
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("label-layout")'>
+                        内容或布局元素
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("label-replace")'>
+                        替换元素
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("label-extend")'>
+                        扩展元素
+                    </span>
+                </li>
+            </ul>
         </li>
     </ul>
     <div class="doc-view">
@@ -16,17 +43,164 @@
             HTML:超文本标记语言
         </h2>
         <p>
-
+            这是一种用来组织网页内容的标记语言（或数据格式），你可以通过它来配置网页的基本结构（配置和内容），后续的所有操作几乎全部是基于此进行的。
         </p>
         <h3 id='fixed-frame'>
             页面结构
         </h3>
-        <p>
+        <pre q-code='html' id='examples1'>
+<!DOCTYPE html>
+<html lang="zh-cn">
 
+    <!-- 页面配置 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>学习HTML</title>
+    </head>
+
+    <!-- 页面内容 -->
+    <body>
+        今天，我们来一起学习HTML!
+    </body>
+
+</html>
+        </pre>
+        <button ui-goto-example:editor='examples1'></button>
+        <p>
+            上面是页面基本结构，在
+            <span class="important">head标签</span>
+            中对页面进行配置，在
+            <span class='important'>body标签</span>
+            中编辑显示内容。我们建议你记住上面这段代码，这有助于你后续的学习！
         </p>
         <h3 id='fixed-label'>
             标签分类和说明
         </h3>
+        <p>
+            从上面的基本结构你就可以看到，不同的标签有不同的功能划分，下面，按照我们的理解对标签进行分类并举一些常用的例子。
+        </p>
+        <h4 id='fixed-label-config'>
+            配置标签
+        </h4>
+        <p>
+            比如开头说明的标签中大部分都是配置标签，这一部分目前对你不是特别重要，你需要记住下面几个常用的即可：
+        </p>
+        <h5>
+            设置网页编码：
+        </h5>
+        <pre q-code='html'>
+            <meta charset="UTF-8">
+        </pre>
+        <h5>
+            设置网页标题：
+        </h5>
+        <pre q-code='html'>
+            <title>标题</title>
+        </pre>
+        <p class="warn">
+            温馨提示：一定要注意这些标签的位置，下同！
+        </p>
+        <h4 id='fixed-label-lang'>
+            语言型标签
+        </h4>
+        <p>
+            也就是可以内嵌别的语言的标签，最典型的就是
+            <span class="important">sytle标签</span>
+            和
+            <span class="important">script标签</span>
+            了，一个和css相关，一个和js相关。
+        </p>
+        <h5>
+            sytle标签
+        </h5>
+        <p>
+            css用于控制页面的样子（当然是在原有的HTML基础上进行改造，关于css知识后续可以去对应章节学习，这里不用太在意），代码需要写在
+            <span class="important">sytle标签</span>
+            规定的区域。比如我们想让所有的div标签里面的文字变成红色：
+        </p>
+        <pre q-code='html'>
+<style>
+    div{
+        color:red;
+    }
+</style>
+        </pre>
+        <button ui-goto-example:lazy='learning_html-style'></button>
+        <p>
+            当然，我们也可以把style标签之间的内容写到一个独立的文件中，比如
+            <span class="important">style.css</span>
+            ，然后引入：
+        </p>
+        <pre q-code='html'>
+            <link rel="stylesheet" href="style.css">
+        </pre>
+        <h5>
+            script标签
+        </h5>
+        <p>
+            js用于提供页面和用户的交互，代码需要写在
+            <span class="important">script标签</span>
+            规定的区域（关于js部分的代码，你可以先不用太关心）。假设我们现在希望给用户一个弹框提示，代码如下：
+        </p>
+        <pre q-code='html'>
+<script>
+    alert('温馨提示：你好呀！');
+</script>
+        </pre>
+        <button ui-goto-example:lazy='learning_html-script'></button>
+        <p>
+            同样的，我们也可以把script标签之间的内容写入到一个独立的文件中，比如
+            <span class="important">script.js</span>
+            ，然后引入：
+        </p>
+        <pre q-code='html'>
+            <script src="script.js"></script>
+        </pre>
+        <h4 id='fixed-label-layout'>
+            内容或布局元素
+        </h4>
+        <p>
+            这一类标签虽然很多，其实都是一样的，差异主要是由于不同标签的默认样式（比如上面说的文字颜色
+            <span class="important">color : red</span>
+            就是样式）不同导致的，还有就是部分标签有一定的特殊意义，我们来分别说明。
+        </p>
+        <h5>
+            盒子模型
+        </h5>
+        <p>
+            在正式开始说明之前，我们有必要简单的说明一下盒子模型。
+        </p>
+        <div class='box-sizing'></div>
+        <p>
+
+        </p>
+        <h5>
+            div + span + p
+        </h5>
+        <p>
+
+        </p>
+        <h5>
+            ul + ol + li
+        </h5>
+        <p>
+
+        </p>
+        <h5>
+            h1 + h2 + h3 + h4 + h5 + h6
+        </h5>
+        <p>
+
+        </p>
+        <h4 id='fixed-label-replace'>
+            替换元素
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-label-extend'>
+            扩展元素
+        </h4>
         <p>
 
         </p>
@@ -46,3 +220,12 @@
         }
     };
 </script>
+<style>
+    .box-sizing {
+        height: 300px;
+        background-image: url('../../../assets/box-sizing.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+</style>
