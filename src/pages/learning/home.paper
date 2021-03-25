@@ -11,18 +11,24 @@
             <a class='html' href='#/learning/html' target="_blank">
                 <span>HTML</span>
                 <span>超文本标记语言</span>
+                <i :class='flag.html?"red":"gray"' :title='flag.html?unStar:toStar'
+                    @click.prevent='doTogger("html")'></i>
             </a>
             <a class='css' href='#/learning/css' target="_blank">
                 <span>CSS</span>
                 <span>层叠样式表</span>
+                <i :class='flag.css?"red":"gray"' :title='flag.css?unStar:toStar' @click.prevent='doTogger("css")'></i>
             </a>
             <a class='js' href='#/learning/javascript' target="_blank">
                 <span>JavaScript</span>
                 <span>一门Web端编程语言</span>
+                <i :class='flag.javascript?"red":"gray"' :title='flag.javascript?unStar:toStar'
+                    @click.prevent='doTogger("javascript")'></i>
             </a>
             <a class='html' href='#/learning/dom' target="_blank">
                 <span>HTML DOM</span>
                 <span>定义了访问和操作HTML文档的方法</span>
+                <i :class='flag.dom?"red":"gray"' :title='flag.dom?unStar:toStar' @click.prevent='doTogger("dom")'></i>
             </a>
         </div>
     </div>
@@ -30,14 +36,28 @@
 <script>
     import fixedScroll from '../../services/fixedScroll.js';
     export default {
+        data() {
+            return {
+                unStar: "点击我取消收藏",
+                toStar: "点击我收藏到顶部导航",
+                flag: {},
+                help: -1
+            };
+        },
         methods: {
             doScroll(fixedName) {
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 16);
+            },
+            doTogger(flag) {
+                this.flag[flag] = !this.flag[flag];
+                this.help = new Date().valueOf();
+                localStorage.setItem('learning-top-menu', JSON.stringify(this.flag));
             }
         },
         mounted() {
             fixedScroll(document.getElementById('root'), 16);
+            this.flag = JSON.parse(localStorage.getItem('learning-top-menu') || "{}");
         }
     };
 </script>
@@ -107,6 +127,7 @@
         padding-left: 76px;
         border: 10px solid rgb(236, 236, 236);
         vertical-align: top;
+        position: relative;
     }
 
     [quickpaper]>div.content>.item>a>span {
@@ -121,11 +142,32 @@
         padding-top: 16px;
     }
 
-    [quickpaper]>div.content>.item>a>span:last-child {
+    [quickpaper]>div.content>.item>a>span:nth-child(2) {
         color: #435159;
         font-weight: 200;
         font-size: 14px;
         line-height: 40px;
+    }
+
+    [quickpaper]>div.content>.item>a>i {
+        display: inline-block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        z-index: 1;
+        right: 5px;
+        top: 5px;
+    }
+
+    [quickpaper]>div.content>.item>a>i.gray {
+        background-image: url('../../assets/star-gray.png');
+    }
+
+    [quickpaper]>div.content>.item>a>i.red {
+        background-image: url('../../assets/star-red.png');
     }
 
     [quickpaper]>div.content>.item>a.html {
@@ -139,5 +181,4 @@
     [quickpaper]>div.content>.item>a.js {
         background-image: url('../../assets/js.png');
     }
-
 </style>

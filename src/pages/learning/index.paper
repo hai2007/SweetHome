@@ -1,13 +1,11 @@
-<template>
+<template class='learning-index-view'>
     <header>
         入门小教程
         <a href="#/home" target="_blank">
             <span>返回主站</span>
         </a>
     </header>
-    <nav>
-        <span @click='goto("home")' :active='pagename=="home"?"yes":"no"'>首页</span>
-    </nav>
+    <nav id='top-menu'></nav>
     <div>
         <component :is='page'></component>
     </div>
@@ -17,6 +15,7 @@
 
     import '../../styles/pages/learning.css';
     import QuickPaper from 'quick-paper';
+    import xhtml from '@hai2007/tool/xhtml';
 
     let pages = {
         home: () => import('./home.paper'),
@@ -40,10 +39,29 @@
                 this.pagename = pagename;
                 window.location.href = '#/learning/' + pagename;
                 this.loadPage();
+                this.updateTopMenu();
             },
             loadPage() {
                 pages[this.pagename]().then(data => {
                     this.page = data.default;
+                });
+            },
+            updateTopMenu() {
+                let template = "<span target='home' active='" + (this.pagename == 'home' ? "yes" : "no") + "'>首页</span>";
+
+                // 开始拼接
+                let flag = JSON.parse(localStorage.getItem('learning-top-menu'));
+                for (let key in flag) {
+                    if (flag[key]) {
+                        template += "<span target='" + key + "' active='" + (this.pagename == key ? "yes" : "no") + "'>" + key + "</span>";
+                    }
+                }
+
+                document.getElementById('top-menu').innerHTML = template;
+
+                // 绑定点击事件
+                xhtml.bind(document.getElementById('top-menu').getElementsByTagName('span'), 'click', event => {
+                    this.goto(event.target.getAttribute('target'));
                 });
             }
         },
@@ -52,6 +70,18 @@
             let routers = QuickPaper.urlFormat(window.location.href).router;
             this.pagename = routers[1] in pages ? routers[1] : 'home';
             this.loadPage();
+
+            // 初始化顶部菜单
+            let flag = JSON.parse(localStorage.getItem('learning-top-menu') || JSON.stringify({
+                html: true,
+                css: true,
+                javascript: true,
+                dom: true
+            }));
+
+            localStorage.setItem('learning-top-menu', JSON.stringify(flag));
+
+            this.updateTopMenu();
         }
     };
 </script>
@@ -98,24 +128,6 @@
         background-color: #60810b;
         color: white;
         padding-left: 50px;
-    }
-
-    [quickpaper]>nav>span {
-        margin: 0 10px;
-        padding: 3px 5px;
-    }
-
-    [quickpaper]>nav>span[active='no'] {
-        cursor: pointer;
-    }
-
-    [quickpaper]>nav>span[active='no']:hover {
-        text-decoration: underline;
-    }
-
-    [quickpaper]>nav>span[active='yes'] {
-        background-color: white;
-        color: #60810b;
     }
 
     /* 内容 */

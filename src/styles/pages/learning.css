@@ -20,7 +20,27 @@
     }
 }
 
-/* 下面是具体内容页面的UI设计 */
+/* 顶部样式 */
+
+.learning-index-view>nav>span {
+    margin: 0 10px;
+    padding: 3px 5px;
+}
+
+.learning-index-view>nav>span[active='no'] {
+    cursor: pointer;
+}
+
+.learning-index-view>nav>span[active='no']:hover {
+    text-decoration: underline;
+}
+
+.learning-index-view>nav>span[active='yes'] {
+    background-color: white;
+    color: #60810b;
+}
+
+/* 具体内容页面的UI设计 */
 
 .learning-page-view {
     white-space: nowrap;
