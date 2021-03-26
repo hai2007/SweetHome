@@ -53,6 +53,7 @@
                 this.flag[flag] = !this.flag[flag];
                 this.help = new Date().valueOf();
                 localStorage.setItem('learning-top-menu', JSON.stringify(this.flag));
+                document.getElementById('top-menu').getElementsByTagName('span')[0].click();
             }
         },
         mounted() {

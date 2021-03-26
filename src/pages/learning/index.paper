@@ -53,7 +53,12 @@
                 let flag = JSON.parse(localStorage.getItem('learning-top-menu'));
                 for (let key in flag) {
                     if (flag[key]) {
-                        template += "<span target='" + key + "' active='" + (this.pagename == key ? "yes" : "no") + "'>" + key + "</span>";
+                        template += "<span target='" + key + "' active='" + (this.pagename == key ? "yes" : "no") + "'>" + ({
+
+                            // 需要转义的菜单
+                            dom: "html-dom"
+
+                        }[key] || key) + "</span>";
                     }
                 }
 
@@ -73,10 +78,13 @@
 
             // 初始化顶部菜单
             let flag = JSON.parse(localStorage.getItem('learning-top-menu') || JSON.stringify({
+
+                // 默认菜单
                 html: true,
                 css: true,
                 javascript: true,
                 dom: true
+
             }));
 
             localStorage.setItem('learning-top-menu', JSON.stringify(flag));
