@@ -1,0 +1,55 @@
+<template class='book-menu-view'>
+    <div>
+        <div class="menu">
+            <div @click='openRouter("angular1","top")' class='menu-2 angular1'>一、Angular1</div>
+            <ul>
+                <li>
+                    <span @click='openRouter("angular1","view-model")'>视图和model之间的数据格式化</span>
+                </li>
+                <li>
+                    <span @click='openRouter("angular1","nosync")'>视图和model数据不同步问题</span>
+                </li>
+                <li>
+                    <span @click='openRouter("angular1","form-validate")'>表单控制</span>
+                </li>
+            </ul>
+            <div @click='openRouter("vue2","top")' class='menu-2 vue2'>二、Vue2</div>
+            <ul>
+                <li>
+                    <span @click='openRouter("vue2","components")'>动态组件</span>
+                </li>
+                <li>
+                    <span @click='openRouter("vue2","nosync")'>视图和model数据不同步问题</span>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <component :is='page'></component>
+        </div>
+    </div>
+</template>
+<script>
+    import '../../styles/pages/book.css';
+    import fixedScroll from '../../services/fixedScroll.js';
+    export default {
+        data() {
+            return {
+                page: null
+            };
+        },
+        methods: {
+            openRouter(pagename, fixedName) {
+                this.goRouter(page => {
+                    this.page = page;
+                    window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                    fixedScroll(document.getElementById('root'), 44);
+                }, ['code', pagename]);
+
+            }
+        },
+        mounted() {
+            this.loadRouter(page => this.page = page, 2);
+            this.changeActive('menu-1', 'code');
+        }
+    };
+</script>

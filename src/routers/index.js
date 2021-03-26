@@ -1,4 +1,5 @@
 import xhtml from '@hai2007/tool/xhtml.js';
+import code from './code';
 import book from './book';
 import notebook from './notebook';
 
@@ -16,9 +17,9 @@ let pages = {
     notebook: {
         content: () => import('../pages/notebook.paper')
     },
-    code: {
-        content: () => import('../pages/code.paper')
-    },
+
+    // 代码片段
+    ...code,
 
     // 捐款
     Sponsors: {
