@@ -16,18 +16,8 @@
                     </span>
                 </li>
                 <li>
-                    <span @click='doScroll("dom-tree-modify")'>
-                        新增和删除
-                    </span>
-                </li>
-                <li>
                     <span @click='doScroll("dom-tree-attr")'>
-                        结点属性
-                    </span>
-                </li>
-                <li>
-                    <span @click='doScroll("dom-tree-event")'>
-                        事件
+                        结点属性和样式
                     </span>
                 </li>
             </ul>
@@ -37,45 +27,51 @@
         <h2>
             HTML DOM:定义了访问和操作HTML文档的方法
         </h2>
-        <p>
-
-        </p>
         <h3 id='fixed-html-to-dom'>
             从HTML到DOM树
         </h3>
         <p>
-
+            简单的理解，文档对象模型（DOM）是一个用于访问你写的页面中的HTML元素的一个模型对象，上面提供了很多方法，借助这些方法，你可以很容易的使用js操作页面（比如修改样式，添加或删除结点等）。
         </p>
         <h3 id='fixed-dom-tree'>
             访问DOM树
         </h3>
-        <p>
-
-        </p>
         <h4 id='fixed-dom-tree-search'>
             查找结点
         </h4>
         <p>
-
+            返回带有指定 ID 的元素引用（如果ID有相同的，返回第一个查找到的），其中node可以是document或页面中任意结点：
         </p>
-        <h4 id='fixed-dom-tree-modify'>
-            新增和删除
-        </h4>
+        <pre q-code>
+            node.getElementById("id");
+        </pre>
         <p>
-
+            返回带有指定标签名的所有元素，其中node可以是document或页面中任意结点：
         </p>
+        <pre q-code>
+            node.getElementsByTagName("tagname");
+        </pre>
+        <p>
+            返回所有name属性为指定值的所有元素：
+        </p>
+        <pre q-code>
+            document.getElementsByName("attrname");
+        </pre>
         <h4 id='fixed-dom-tree-attr'>
-            结点属性
+            结点属性和样式
         </h4>
         <p>
-
+            获取结点的样式：
         </p>
-        <h4 id='fixed-dom-tree-event'>
-            事件
-        </h4>
+        <pre q-code>
+            var styleValue = node.style.styleName;
+       </pre>
         <p>
-
+            设置结点的样式：
         </p>
+        <pre q-code>
+            node.style.styleName = styleValue;
+        </pre>
     </div>
 </template>
 <script>
