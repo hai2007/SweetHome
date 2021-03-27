@@ -1,11 +1,6 @@
 <template class='learning-page-view'>
     <ul>
         <li>
-            <span @click='doScroll("environment")'>
-                运行环境
-            </span>
-        </li>
-        <li>
             <span @click='doScroll("grammar")'>
                 语法
             </span>
@@ -20,11 +15,6 @@
                         语句
                     </span>
                     <ul>
-                        <li>
-                            <span @click='doScroll("grammar-line-run")'>
-                                运算符
-                            </span>
-                        </li>
                         <li>
                             <span @click='doScroll("grammar-line-if")'>
                                 条件语句
@@ -65,73 +55,140 @@
             JavaScript:一门Web端编程语言
         </h2>
         <p>
-
-        </p>
-        <h3 id='fixed-environment'>
-            运行环境
-        </h3>
-        <p>
-
+            这是ECMAScript语言在浏览器端的实现，理解这点很重要，前者是规范，后者是实现，这也就意味着除了浏览器端，别的地方理论上也可以写类似js的代码，不过，和浏览器相关的API可能无法使用。
         </p>
         <h3 id='fixed-grammar'>
             语法
         </h3>
-        <p>
-
-        </p>
         <h4 id='fixed-grammar-var'>
             变量和数据类型
         </h4>
+        定义一个变量非常简单，就像这样：
+        <pre q-code>
+            var temp;
+        </pre>
         <p>
-
+            由于js是弱类型语言，所以和别的语言不同的是，定义的变量可以被赋予任何值。
+        </p>
+        <p>
+            不过，这并不是说js的变量没有类型。js的类型可以分为两大类：基本类型和引用数据类型。
+        </p>
+        <ul>
+            <li>
+                <span class="important">
+                    基本类型
+                </span>
+                ：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol
+            </li>
+            <li>
+                <span class="important">
+                    引用数据类型
+                </span>
+                ：对象(Object)、数组(Array)、函数(Function)
+            </li>
+        </ul>
+        <p class="warn">
+            温馨提示：Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。
         </p>
         <h4 id='fixed-grammar-line'>
             语句
         </h4>
-        <p>
-
-        </p>
-        <h5 id='fixed-grammar-line-run'>
-            运算符
-        </h5>
-        <p>
-
-        </p>
         <h5 id='fixed-grammar-line-if'>
             条件语句
         </h5>
-        <p>
-
-        </p>
+        <ul>
+            <li>
+                <span class="important">
+                    if 语句
+                </span>
+                ：只有当指定条件为 true 时，使用该语句来执行代码
+            </li>
+            <li>
+                <span class="important">
+                    if...else 语句
+                </span>
+                ：当条件为 true 时执行代码，当条件为 false 时执行其他代码
+            </li>
+            <li>
+                <span class="important">
+                    if...else if....else 语句
+                </span>
+                ：使用该语句来选择多个代码块之一来执行
+            </li>
+        </ul>
         <h5 id='fixed-grammar-line-switch'>
             switch语句
         </h5>
+        <pre q-code>
+switch(n)
+{
+    case 1:
+        执行代码块 1
+        break;
+    case 2:
+        执行代码块 2
+        break;
+    default:
+        与 case 1 和 case 2 不同时执行的代码
+}
+        </pre>
         <p>
-
+            需要注意的是，switch中使用的是
+            <span class="important">===</span>
+            来判断的。
         </p>
         <h5 id='fixed-grammar-line-for'>
             for循环
         </h5>
-        <p>
-
-        </p>
+        <ul>
+            <li>
+                <span class="important">
+                    for
+                </span>
+                ：循环代码块一定的次数
+            </li>
+            <li>
+                <span class="important">
+                    for/in
+                </span>
+                ： 循环遍历对象的属性
+            </li>
+        </ul>
         <h5 id='fixed-grammar-line-while'>
             while循环
         </h5>
-        <p>
-
-        </p>
+        <ul>
+            <li>
+                <span class="important">
+                    while
+                </span>
+                ：当指定的条件为 true 时循环指定的代码块
+            </li>
+            <li>
+                <span class="important">
+                    do/while
+                </span>
+                ：同样当指定的条件为 true 时循环指定的代码块
+            </li>
+        </ul>
         <h5 id='fixed-grammar-line-break-continue'>
             break和continue
         </h5>
         <p>
-
+            break表示终止循环，continue表示结束本次循环。
         </p>
         <h4 id='fixed-grammar-function'>
             函数
         </h4>
+        <pre q-code>
+function 函数名称(参数){
+    // 里面写语句
+}
+        </pre>
         <p>
-
+            需要特别说明的是，对于用
+            <span class="important">var</span>
+            定义的变量，只有全局和函数会出现新的作用域，不存在块作用域。
         </p>
     </div>
 </template>
