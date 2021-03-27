@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2 id='fixed-top'>
-        Angular1
+        一、Angular1
     </h2>
     <h3 id='fixed-view-model'>
         视图和model之间的数据格式化

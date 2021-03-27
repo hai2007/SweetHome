@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2 id='fixed-top'>
-        Vue2
+        二、Vue2
     </h2>
     <h3 id='fixed-components'>
         动态组件
