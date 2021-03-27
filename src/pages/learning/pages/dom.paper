@@ -72,6 +72,18 @@
         <pre q-code>
             node.style.styleName = styleValue;
         </pre>
+        <p>
+            获取结点指定属性的值：
+        </p>
+        <pre q-code>
+            var value = node.getAttribute(key);
+        </pre>
+        <p>
+            设置结点指定属性的值：
+        </p>
+        <pre q-code>
+            node.setAttribute(key, value);
+        </pre>
     </div>
 </template>
 <script>
