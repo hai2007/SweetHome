@@ -26,6 +26,13 @@
             <span @click='doScroll("attribute")'>
                 样式属性举例
             </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("attribute-font")'>
+                        文字相关
+                    </span>
+                </li>
+            </ul>
         </li>
     </ul>
     <div class="doc-view">
@@ -42,32 +49,166 @@
             CSS简介
         </h3>
         <p>
-
+            简单的理解就是，等html把页面内容组织完成以后，css来控制他们如何显示。
         </p>
+        <p>
+            具体就牵扯到两方面：
+        </p>
+        <ol>
+            <li>
+                <span class="important">
+                    选择谁？
+                </span>
+                首先需要确定修改哪个标签的样式。
+            </li>
+            <li>
+                <span class="important">
+                    修改什么样式？
+                </span>
+                确定修改谁以后，需要进一步确定修改该标签的哪个样式。
+            </li>
+        </ol>
         <h3 id='fixed-selector'>
             选择器
         </h3>
         <p>
-
+            选择器的作用就是确定修改哪个标签的样式，你可以
+            <a href="#/cssSelector" target="_blank" class='link'>点击此处</a>
+            查看所有的选择器。
         </p>
         <h4 id='fixed-selector-grammar'>
             基本写法
         </h4>
+        <pre q-code='css'>
+选择器 {
+    样式属性1名：值1;
+    ......
+}
+        </pre>
         <p>
-
+            我们来举个例子：
+        </p>
+        <pre q-code='html' id='examples1'>
+<div>
+    我爱你，中国？
+</div>
+<style>
+    div{
+        color:red;
+        font-size:30px;
+    }
+</style>
+        </pre>
+        <button ui-goto-example:editor='examples1'></button>
+        <p>
+            上面，我们选中了div元素，并且设置了此标签的文字颜色为红色，文字大小为30px。
         </p>
         <h4 id='fixed-selector-priority'>
             如何判定优先级？
         </h4>
         <p>
-
+            选择的情况变了，稍微改造一下代码：
+        </p>
+        <pre q-code='html' id='examples2'>
+<div class='text'>
+    我爱你，中国？
+</div>
+<style>
+    .text{
+        color:green;
+    }
+    div{
+        color:red;
+        font-size:30px;
+    }
+</style>
+        </pre>
+        <button ui-goto-example:editor='examples2'></button>
+        <p>
+            我写了两组规则，其实都对文字颜色进行了设置，运行结果可以看到，文字最终显示为绿色。
+        </p>
+        <p>
+            那么，对于上面这种情况，在属性设置重复的情况下，谁会生效，就牵扯到选择器的优先级问题。
+        </p>
+        <p>
+            不同的选择器我们进行了5个等级的定义：
+        </p>
+        <ul>
+            <li>
+                <span class="important">
+                    第一等级
+                </span>
+                ：代表内联样式，如style=""，权值为 1000
+            </li>
+            <li>
+                <span class="important">
+                    第二等级
+                </span>
+                ：代表id选择器，如#content，权值为0100
+            </li>
+            <li>
+                <span class="important">
+                    第三等级
+                </span>
+                ：代表类，伪类和属性选择器，如.content，权值为0010
+            </li>
+            <li>
+                <span class="important">
+                    第四等级
+                </span>
+                ：代表标签选择器和伪元素选择器，如div、p，权值为0001
+            </li>
+            <li>
+                <span class="important">
+                    第五等级
+                </span>
+                ：通用选择器（*），子选择器（>），和相邻同胞选择器（+）等，权值为0000
+            </li>
+        </ul>
+        <p>
+            现在再来看看刚刚的两个选择器，
+            <span class="warn">.text</span>
+            是类选择器，第三等级，所以是0010，而
+            <span class="warn">div</span>
+            是标签选择器，第四等级，所以是0001，自然
+            <span class="warn">.text</span>优先级更高。
+        </p>
+        <p>
+            上面是单一的选择器，如果一个选择器是复合的，怎么计算权值？举个例子：
+        </p>
+        <pre q-code>
+            div.page-view.top
+        </pre>
+        <p>
+            可以看到，一个标签选择器和两个类选择器，也就是：
+        </p>
+        <pre q-code>
+            0001 + 0010 + 0010 = 0021
+        </pre>
+        <p>
+            最后，还要补充一点，如果两个选择器的优先级一样大，后出现的优先级更高。
         </p>
         <h3 id='fixed-attribute'>
             样式属性举例
         </h3>
-        <p>
-
-        </p>
+        <h4 id='fixed-attribute-font'>
+            文字相关
+        </h4>
+        <pre q-code='html' id='examples3'>
+<div>
+    我爱你，中国！
+</div>
+<style>
+    div{
+        font-size:60px; /*文字大小*/
+        font-family: cursive;/*字体*/
+        font-weight: 800;/*文字粗细程度*/
+        font-style: italic;/*文字类型*/
+        color:pink;/*文字颜色*/
+    }
+</style>
+        </pre>
+        <button ui-goto-example:editor='examples3'></button>
     </div>
 </template>
 <script>
