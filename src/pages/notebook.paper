@@ -90,6 +90,11 @@
                     <span>9</span>
                     input或textarea中关于光标移动问题
                 </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/percent.md" target="_blank">
+                    <span>CSS</span>
+                    <span>10</span>
+                    关于CSS单位%的一些总结
+                </a>
             </div>
         </div>
         <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>系统学习</h2>
