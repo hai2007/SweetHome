@@ -95,6 +95,11 @@
                     <span>10</span>
                     关于CSS单位%的一些总结
                 </a>
+                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/basic.md" target="_blank">
+                    <span>ES</span>
+                    <span>11</span>
+                    JavaScript一些基本的概念和说明
+                </a>
             </div>
         </div>
         <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>系统学习</h2>
