@@ -14,4 +14,7 @@ export default {
     "style_percent-height#absolute": () => import('./style.css/percent-height#absolute.html'),
     "style_percent-height#value+absolute": () => import('./style.css/percent-height#value+absolute.html'),
 
+    // clunch框架
+    "clunch_readme": () => import('./clunch/readme.html'),
+
 };

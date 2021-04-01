@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>readme | clunch.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/clunch/dist/clunch-template.min.js"></script>
+</head>
+
+<body>
+    <div id="root" style='width:350px;height:350px;'>
+        <path>
+            <move-to x="125" y="50"></move-to>
+            <line-to c-for="value in datalist" :x="value.x" :y="value.y"></line-to>
+        </path>
+    </div>
+    <script>
+        new Clunch({
+            el: document.getElementById('root'),
+            data() {
+                return {
+                    datalist: [{
+                        x: 50,
+                        y: 20
+                    },
+                    {
+                        x: 100,
+                        y: 200
+                    },
+                    {
+                        x: 250,
+                        y: 250
+                    }]
+                };
+            }
+        });
+    </script>
+</body>
+
+</html>
