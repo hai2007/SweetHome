@@ -5,7 +5,7 @@
     <div class='page'>
         <header>
             <div></div>
-            <h2 @click='changeView("top-hidden-view")'>
+            <h2 @click='changeView("top-hidden-view")' title='编程相关事宜入口主站（ 你好2007 / hai2007 ）'>
                 🏠 今天，你写代码了吗？
             </h2>
             <ul>
