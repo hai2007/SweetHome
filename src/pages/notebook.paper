@@ -36,7 +36,7 @@
         </div>
         <div class="blog-view">
             <h2 class='blog canlink' id='fixed-blog' @click='doScroll("blog")'>
-                小文章
+                精选小文章
                 <span title='下列内容为本站索引，点击会跳转到第三方网站进行查看，请知悉！'>
                     外部链接
                 </span>
@@ -62,43 +62,20 @@
                     <span>4</span>
                     z-index 层叠上下文和层叠水平
                 </a>
-                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/ArrayBuffer-TypedArray-DataView.md"
-                    target="_blank">
-                    <span>ES</span>
-                    <span>5</span>
-                    二进制数据（ArrayBuffer + TypedArray + DataView）
-                </a>
-                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/Symbol-Generator-Promise.md"
-                    target="_blank">
-                    <span>ES</span>
-                    <span>6</span>
-                    Symbol + Generator函数 + Promise
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/Transform-Transitions-Animation.md"
-                    target="_blank">
-                    <span>CSS</span>
-                    <span>7</span>
-                    Transform + Transitions + Animation
-                </a>
                 <a href="https://github.com/hai2007/style.css/blob/master/notebook/margin.md" target="_blank">
                     <span>CSS</span>
-                    <span>8</span>
+                    <span>5</span>
                     margin 外边距
-                </a>
-                <a href="https://segmentfault.com/a/1190000039242698" target="_blank">
-                    <span>HTML</span>
-                    <span>9</span>
-                    input或textarea中关于光标移动问题
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/percent.md" target="_blank">
-                    <span>CSS</span>
-                    <span>10</span>
-                    关于CSS单位%的一些总结
                 </a>
                 <a href="https://github.com/hai2007/tool.js/blob/master/notebook/basic.md" target="_blank">
                     <span>ES</span>
-                    <span>11</span>
+                    <span>6</span>
                     JavaScript一些基本的概念和说明
+                </a>
+                <a href="https://github.com/hai2007/style.css/blob/master/notebook/percent.md" target="_blank">
+                    <span>CSS</span>
+                    <span>7</span>
+                    关于CSS单位%的一些总结
                 </a>
             </div>
         </div>
