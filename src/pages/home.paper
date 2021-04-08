@@ -14,7 +14,6 @@
             <div class="link">
                 <a href="https://github.com/hai2007" class='github' target="_blank">Github</a>
                 <a href="https://www.npmjs.com/~hai2007" class='npm' target="_blank">NPM</a>
-                <a href="https://my.oschina.net/u/4252568" class='oschina' target="_blank">OSCHINA</a>
                 <a href="https://segmentfault.com/u/hai2007/articles" class='sf' target="_blank">思否</a>
             </div>
             <div class="cat">
@@ -217,12 +216,8 @@
         background-position-x: -124px;
     }
 
-    div.page>div.left>.link>a.oschina {
-        background-position-x: -242px;
-    }
-
     div.page>div.left>.link>a.sf {
-        background-position-x: -390px;
+        background-position-x: -242px;
     }
 
     div.page>div.left>.cat {
