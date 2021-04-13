@@ -73,6 +73,17 @@ https://hai2007.gitee.io/sweethome/#/editor
 
 任意页面打开此页面的时候，如何想直接传递某个内容作为编辑器内容，可以通过参数告知，语法：```?content=xxx```。此方法的缺点是，内容不可以过多，其次，如果没有特别说明，传递的内容需要经过```encodeURIComponent```处理，如果没有经过处理，语法：```?content=xxx&decode=no```。
 
+## 快速查询
+
+为了更方便日常工作或学习的时候快速查阅使用，除了在[主站](https://hai2007.gitee.io/sweethome/)中记录的内容外，对于一些重要的内容我们在对应的项目中进行了记录（
+[CSS学习笔记](https://github.com/hai2007/style.css#css%E7%AC%94%E8%AE%B0)
++
+[ES学习笔记](https://github.com/hai2007/tool.js#es%E7%AC%94%E8%AE%B0)
+）外，还有一些比较零碎的内容，直接在本项目中采用mardown文件的方式进行了记录，下面列出这些内容的地址：
+
+- vue2.js
+    - [v-solt 插槽（基础使用、具名插槽、作用域插槽等）](./notebook/vue2.js/slot.md)
+
 开源协议
 ---------------------------------------
 [Apache-2.0](https://github.com/hai2007/SweetHome/blob/master/LICENSE)

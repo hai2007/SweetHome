@@ -71,21 +71,18 @@
         <meta charset="utf-8">
         <title>在线代码演示</title>
         <style>
-            button{
-                color: white;
-                background-color: #161618;
-                border: none;
-                padding: 10px 20px;
+            body{
+                color:red;
+            }
+            body>a{
+                color:blue;
             }
         </style>
-        <script>
-            function doit(){
-                alert('你好，世界！');
-            }
-        <\/script>
     </head>
     <body>
-        <button onclick='doit()'>点击我</button>
+        Tips:欢迎使用在线代码演示工具，你可以
+        <a href='https://github.com/hai2007/SweetHome#%E5%9C%A8%E7%BA%BF%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA' target='_blank'>点击此处</a>
+        查看如何使用！
     </body>
 </html>`;
 
