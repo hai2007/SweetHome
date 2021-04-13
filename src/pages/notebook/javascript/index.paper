@@ -1,0 +1,14 @@
+<template>
+    <div class="blog-list">
+        <a href="#/blog_js_prototype" target="_blank">
+            <span>JavaScript</span>
+            <span>1</span>
+            理解prototype和__proto__（继承与原型链）
+        </a>
+        <a href="#/blog_js_var-up" target="_blank">
+            <span>JavaScript</span>
+            <span>2</span>
+            变量提升
+        </a>
+    </div>
+</template>

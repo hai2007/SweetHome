@@ -36,48 +36,14 @@
         </div>
         <div class="blog-view">
             <h2 class='blog canlink' id='fixed-blog' @click='doScroll("blog")'>
-                精选小文章
-                <span title='下列内容为本站索引，点击会跳转到第三方网站进行查看，请知悉！'>
-                    外部链接
-                </span>
+                快速使用
+                <ul>
+                    <li @click.stop='doSelectBlog("css")' :active='blogName=="css"?"yes":"no"'>CSS</li>
+                    <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"'>JavaScript</li>
+                    <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"'>Vue</li>
+                </ul>
             </h2>
-            <div class="blog-list">
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/overflow-hidden.md" target="_blank">
-                    <span>CSS</span>
-                    <span>1</span>
-                    关于CSS中设置overflow属性的值为hidden的相关理解
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/vertical-align.md" target="_blank">
-                    <span>CSS</span>
-                    <span>2</span>
-                    vertical-align:垂直对齐方式相关说明
-                </a>
-                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/prototype.md" target="_blank">
-                    <span>ES</span>
-                    <span>3</span>
-                    理解prototype和__proto__（继承与原型链）
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/z-index.md" target="_blank">
-                    <span>CSS</span>
-                    <span>4</span>
-                    z-index 层叠上下文和层叠水平
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/margin.md" target="_blank">
-                    <span>CSS</span>
-                    <span>5</span>
-                    margin 外边距
-                </a>
-                <a href="https://github.com/hai2007/tool.js/blob/master/notebook/basic.md" target="_blank">
-                    <span>ES</span>
-                    <span>6</span>
-                    JavaScript一些基本的概念和说明
-                </a>
-                <a href="https://github.com/hai2007/style.css/blob/master/notebook/percent.md" target="_blank">
-                    <span>CSS</span>
-                    <span>7</span>
-                    关于CSS单位%的一些总结
-                </a>
-            </div>
+            <component :is='blog'></component>
         </div>
         <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>系统学习</h2>
         <div class='book-list'>
@@ -91,15 +57,36 @@
 </template>
 <script>
     import fixedScroll from '../services/fixedScroll.js';
+    import '../styles/pages/notebook.css';
+
+    let blogs = {
+        css: () => import('./notebook/css/index.paper'),
+        js: () => import('./notebook/javascript/index.paper'),
+        vue: () => import('./notebook/vue/index.paper'),
+    };
+
     export default {
+        data() {
+            return {
+                blog: null,
+                blogName: ""
+            };
+        },
         mounted() {
             this.changeActive('menu-1', 'notebook');
             fixedScroll(document.getElementById('root'), 56);
+            this.doSelectBlog('css');
         },
         methods: {
             doScroll(fixedName) {
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 56);
+            },
+            doSelectBlog(pagename) {
+                blogs[pagename]().then(data => {
+                    this.blogName = pagename;
+                    this.blog = data.default;
+                });
             }
         }
     };
@@ -228,53 +215,22 @@
         position: relative;
     }
 
-    .blog-view>.blog>span {
-        position: absolute;
-        background-color: red;
-        font-size: 12px;
-        right: 10px;
-        color: white;
-        padding: 6px;
+    .blog-view>.blog>ul {
+        float: right;
     }
 
-    .blog-view>.blog-list {
-        padding: 10px;
-        background-image: url('../assets/cry.png');
-        background-repeat: no-repeat;
-        background-position: right bottom;
-    }
-
-    .blog-view>.blog-list>a {
-        display: block;
-        padding: 10px 0;
-        color: rgb(0, 0, 0);
-    }
-
-    .blog-view>.blog-list>a:hover {
-        text-decoration: underline;
-    }
-
-    .blog-view>.blog-list>a:not(:last-child) {
-        border-bottom: 1px solid #dddddd;
-    }
-
-    .blog-view>.blog-list>a>span {
+    .blog-view>.blog>ul>li {
         display: inline-block;
-        width: 55px;
-        line-height: 26px;
-        font-size: 13px;
-        padding: 0;
-        font-weight: 500;
-        text-align: center;
+        font-size: 12px;
+        margin: 0 3px;
+        background-color: #cbe295;
+        padding: 4px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-    .blog-view>.blog-list>a>span:nth-child(1) {
-        color: rgb(214, 205, 205);
-    }
-
-    .blog-view>.blog-list>a>span:nth-child(2) {
-        background-color: #FCF8E3;
-        color: #8A6D3B;
-        margin: 0 10px;
+    .blog-view>.blog>ul>li[active='yes'] {
+        background-color: #99d60c;
     }
 </style>

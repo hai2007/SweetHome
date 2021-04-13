@@ -1,0 +1,9 @@
+<template>
+    <div class="blog-list">
+        <a href="#/blog_vue2-slot" target="_blank">
+            <span>Vue2.js</span>
+            <span>1</span>
+            v-solt 插槽（基础使用、具名插槽、作用域插槽等）
+        </a>
+    </div>
+</template>

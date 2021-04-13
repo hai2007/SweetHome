@@ -2,6 +2,7 @@ import xhtml from '@hai2007/tool/xhtml.js';
 import code from './code';
 import book from './book';
 import notebook from './notebook';
+import blog from './blog';
 
 /**
  * 温馨提示：此处只记录主站的路由，别的路由各自管理
@@ -43,6 +44,9 @@ let pages = {
 
     // 查询笔记
     ...notebook,
+
+    // 博客
+    ...blog,
 
     // 深入了解
     ...book,
