@@ -1,0 +1,9 @@
+<template>
+    <div class="blog-list">
+        <a href="#/blog_angular1-useful" target="_blank">
+            <span>Angular1.js</span>
+            <span>1</span>
+            Angular1一些有用的笔记（数据格式化、同步问题和表单校验等）
+        </a>
+    </div>
+</template>

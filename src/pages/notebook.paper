@@ -5,32 +5,12 @@
                 <span>CSS选择器</span>
                 <span>常用的选择器快速查询手册</span>
             </a>
-            <a href="#/scss" target="_blank" class='scss'>
-                <span>scss使用文档</span>
-                <span>预处理语言sass的快速使用手册</span>
-            </a>
-            <a href="#/RegExp" target="_blank" class='js'>
-                <span>RegExp</span>
-                <span>常用方法和规则整理</span>
-            </a>
             <a href="#/npm" target="_blank" class='npm'>
                 <span>npm命令</span>
                 <span>一些常用的命令和地址</span>
             </a>
-            <a href="#/terminal" target="_blank" class='terminal'>
-                <span>终端命令</span>
-                <span>常用的脚本命令</span>
-            </a>
-            <a href="#/nginx" target="_blank" class='nginx'>
-                <span>Nginx服务器</span>
-                <span>常见问题和基本配置</span>
-            </a>
             <a href="#/git" target="_blank" class='git'>
                 <span>Git版本控制</span>
-                <span>一些常用的命令快速查询</span>
-            </a>
-            <a href="#/svn" target="_blank" class='svn'>
-                <span>SVN版本控制</span>
                 <span>一些常用的命令快速查询</span>
             </a>
         </div>
@@ -49,6 +29,9 @@
                     <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"' class='canlink'>
                         JavaScript
                     </li>
+                    <li @click.stop='doSelectBlog("angular")' :active='blogName=="angular"?"yes":"no"' class='canlink'>
+                        Angular
+                    </li>
                     <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"' class='canlink'>
                         Vue
                     </li>
@@ -56,7 +39,7 @@
             </h2>
             <component :is='blog'></component>
         </div>
-        <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>系统学习</h2>
+        <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>理解反思</h2>
         <div class='book-list'>
             <a class='webpack' href="#/webpack" target="_blank"></a>
             <a class="blank"></a>
@@ -75,6 +58,7 @@
         html: () => import('./notebook/html/index.paper'),
         css: () => import('./notebook/css/index.paper'),
         js: () => import('./notebook/javascript/index.paper'),
+        angular: () => import('./notebook/angular/index.paper'),
         vue: () => import('./notebook/vue/index.paper'),
     };
 
@@ -158,32 +142,16 @@
         background-image: url('../assets/css.png');
     }
 
-    .page>.notebook>a.scss {
-        background-image: url('../assets/scss.png');
-    }
-
     .page>.notebook>a.js {
         background-image: url('../assets/js.png');
-    }
-
-    .page>.notebook>a.terminal {
-        background-image: url('../assets/terminal.png');
     }
 
     .page>.notebook>a.npm {
         background-image: url('../assets/npm.png');
     }
 
-    .page>.notebook>a.nginx {
-        background-image: url('../assets/nginx.png');
-    }
-
     .page>.notebook>a.git {
         background-image: url('../assets/git.png');
-    }
-
-    .page>.notebook>a.svn {
-        background-image: url('../assets/SVN.png');
     }
 
     /* 深入了解 */

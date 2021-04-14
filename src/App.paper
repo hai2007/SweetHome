@@ -15,22 +15,10 @@
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
-                <li @click='openRouter("code")' class='menu-1 code'>
-                    <span>代码片段</span>
-                </li>
                 <li class='menu-1 website'>
                     <span>小网站</span>
                     <div>
                         <a href="#/learning" target="_blank">入门小教程</a>
-                    </div>
-                </li>
-                <li @click='openRouter("tool")' class='menu-1 tool'>
-                    <span>在线工具</span>
-                </li>
-                <li @click.stop='setOpensourceFlag("yes")' class='menu-1 opensource'>
-                    <span>开源项目</span>
-                    <div :is-open='opensourceFlag' @click.stop='setOpensourceFlag("no")'>
-                        <ui-open-source></ui-open-source>
                     </div>
                 </li>
                 <li @click='openRouter("aboutUS")' class='menu-1 aboutUS'>
@@ -40,9 +28,9 @@
         </header>
         <div>
             <div class='warn'>
-                温馨提示：本网站目前处于建设开发中，你可以通过
-                <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此处进入issue</a>
-                给我们提意见！
+                开源项目推荐：更友好的前端绘图框架clunch.js，你可以
+                <a href="https://hai2007.gitee.io/clunch/#/guide" target="_blank">点击此处</a>
+                进一步了解详情！
             </div>
             <component :is='page'></component>
         </div>
@@ -61,7 +49,6 @@
     import QuickPaper from 'quick-paper';
 
     import uiGuider from './pages/guider/index.paper';
-    import uiOpenSource from './components/ui-opensource.paper';
 
     // 引入路由
     import routers from './routers/index.js';
@@ -71,29 +58,15 @@
         data() {
             return {
                 page: null,
-                dialog: null,
 
                 // home表示显示主界面
                 // top-hidden表示显示顶部隐藏内容
-                flag: "home",
-
-                opensourceFlag: "no"
+                flag: "home"
             };
         },
         methods: {
-            setOpensourceFlag(flag) {
-                this.opensourceFlag = flag;
-            },
             openRouter(pagename) {
                 this.goRouter(page => this.page = page, [pagename]);
-            },
-            helpDialog() {
-                this.dialog = window.sweethome_dialog;
-                if (this.dialog == null) {
-                    document.getElementById('dialog').setAttribute('is-open', 'no');
-                } else {
-                    document.getElementById('dialog').setAttribute('is-open', 'yes');
-                }
             },
             changeView(flag) {
                 this.flag = flag;
@@ -103,8 +76,7 @@
             this.loadRouter(page => this.page = page, 1);
         },
         component: {
-            uiGuider,
-            uiOpenSource
+            uiGuider
         }
     };
 </script>
@@ -270,26 +242,6 @@
         display: block;
         line-height: 1.8em;
         color: rgb(0, 0, 0);
-    }
-
-    /* 页头 - 开源项目 */
-    div.page>header>ul>li.opensource>div {
-        position: fixed;
-        right: -400px;
-        top: 0;
-        height: 100vh;
-        width: 350px;
-        background-color: rgba(0, 0, 0, 0.85);
-        transition-property: right;
-        transition-duration: 500ms;
-        cursor: default;
-        box-shadow: -3px 0px 12px 2px #464545;
-        z-index: 1;
-        overflow: auto;
-    }
-
-    div.page>header>ul>li.opensource>div[is-open='yes'] {
-        right: 0;
     }
 
     /* 内容 */

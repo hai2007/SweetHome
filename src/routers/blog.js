@@ -30,6 +30,11 @@ export default {
         content: () => import('../pages/notebook/javascript/var-up.paper')
     },
 
+    // angular
+    "blog_angular1-useful": {
+        content: () => import('../pages/notebook/angular/angular1-useful.paper')
+    },
+
     // vue
     "blog_vue2-slot": {
         content: () => import('../pages/notebook/vue/vue2-slot.paper')
