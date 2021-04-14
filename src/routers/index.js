@@ -1,5 +1,4 @@
 import xhtml from '@hai2007/tool/xhtml.js';
-import book from './book';
 import notebook from './notebook';
 import blog from './blog';
 
@@ -28,11 +27,6 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
-    // 在线工具
-    tool: {
-        content: () => import('../pages/tool.paper')
-    },
-
     // 关于我们
     aboutUS: {
         content: () => import('../pages/aboutUS.paper')
@@ -43,9 +37,6 @@ let pages = {
 
     // 博客
     ...blog,
-
-    // 深入了解
-    ...book,
 
     // 默认一级路由
 

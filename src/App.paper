@@ -1,4 +1,4 @@
-<template :class='flag' @click.stop='setOpensourceFlag("no")'>
+<template :class='flag'>
     <div class="top-hidden" @click='changeView("page-view")'>
         <ui-guider></ui-guider>
     </div>

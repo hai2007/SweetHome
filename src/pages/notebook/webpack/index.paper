@@ -1,0 +1,9 @@
+<template>
+    <div class="blog-list">
+        <a href="#/blog_webpack_loader-plug" target="_blank">
+            <span>webpack</span>
+            <span>1</span>
+            关于webpack的loader和plug一些理解
+        </a>
+    </div>
+</template>

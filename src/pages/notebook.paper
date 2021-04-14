@@ -35,17 +35,12 @@
                     <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"' class='canlink'>
                         Vue
                     </li>
+                    <li @click.stop='doSelectBlog("webpack")' :active='blogName=="webpack"?"yes":"no"' class='canlink'>
+                        Webpack
+                    </li>
                 </ul>
             </h2>
             <component :is='blog'></component>
-        </div>
-        <h2 class='in-depth canlink' id='fixed-indepth' @click='doScroll("indepth")'>理解反思</h2>
-        <div class='book-list'>
-            <a class='webpack' href="#/webpack" target="_blank"></a>
-            <a class="blank"></a>
-            <a class="blank"></a>
-            <a class="blank"></a>
-            <a class="blank"></a>
         </div>
     </div>
 </template>
@@ -60,6 +55,7 @@
         js: () => import('./notebook/javascript/index.paper'),
         angular: () => import('./notebook/angular/index.paper'),
         vue: () => import('./notebook/vue/index.paper'),
+        webpack: () => import('./notebook/webpack/index.paper'),
     };
 
     export default {
@@ -152,42 +148,6 @@
 
     .page>.notebook>a.git {
         background-image: url('../assets/git.png');
-    }
-
-    /* 深入了解 */
-    .page>.in-depth {
-        height: 110px;
-        line-height: 110px;
-        text-align: center;
-        font-size: 42px;
-        background-image: url('../assets/in-depth.png');
-        background-position: center center;
-        background-repeat: no-repeat;
-        color: #030303a3;
-    }
-
-    .page>.book-list {
-        text-align: center;
-    }
-
-    .page>.book-list>a {
-        margin: 10px;
-        display: inline-block;
-        width: 200px;
-        height: 260px;
-        box-shadow: 0px 0px 10px #999;
-        vertical-align: top;
-    }
-
-    .page>.book-list>a.blank {
-        height: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 0;
-    }
-
-    .page>.book-list>a.webpack {
-        background-image: url('../assets/book/webpack.jpg');
     }
 
     /* 小文章 */

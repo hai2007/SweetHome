@@ -40,4 +40,9 @@ export default {
         content: () => import('../pages/notebook/vue/vue2-slot.paper')
     },
 
+    // webpack
+    "blog_webpack_loader-plug": {
+        content: () => import('../pages/notebook/webpack/loader-plug.paper')
+    },
+
 };
