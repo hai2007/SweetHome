@@ -5,6 +5,11 @@ export default {
     "learning_html-script": () => import('./learning/html-script.html'),
     "learning_html-canvas": () => import('./learning/html-canvas.html'),
 
+    // html
+    "html_dom-sync": () => import('./html/dom-sync.html'),
+    "html_dom-sync#setTimeout": () => import('./html/dom-sync#setTimeout.html'),
+    "html_dom-sync#no-dom": () => import('./html/dom-sync#no-dom.html'),
+
     // style.css
     "style_percent-padding": () => import('./style.css/percent-padding.html'),
     "style_percent-padding#absolute": () => import('./style.css/percent-padding#absolute.html'),

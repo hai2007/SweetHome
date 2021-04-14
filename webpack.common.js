@@ -26,7 +26,7 @@ module.exports = {
             loader: ['quick-paper/style-loader/index.js', 'css-loader', 'postcss-loader']
         }, {
             test: /\.js$/,
-            loader: 'babel-loader',
+            loader: ['babel-loader'],
             exclude: /node_modules/
         }, {
             test: /\.(png|jpg|jpeg|gif|bmp)$/,

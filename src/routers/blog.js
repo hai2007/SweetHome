@@ -1,5 +1,10 @@
 export default {
 
+    // html
+    "blog_html_dom-sync": {
+        content: () => import('../pages/notebook/html/dom-sync.paper')
+    },
+
     // css
     "blog_css_margin": {
         content: () => import('../pages/notebook/css/margin.paper')

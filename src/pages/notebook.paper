@@ -35,9 +35,12 @@
             </a>
         </div>
         <div class="blog-view">
-            <h2 class='blog canlink' id='fixed-blog' @click='doScroll("blog")'>
-                快速使用
+            <h2 class='blog' id='fixed-blog'>
+                <span @click='doScroll("blog")' class='canlink'>
+                    快速使用
+                </span>
                 <ul>
+                    <li @click.stop='doSelectBlog("html")' :active='blogName=="html"?"yes":"no"'>HTML</li>
                     <li @click.stop='doSelectBlog("css")' :active='blogName=="css"?"yes":"no"'>CSS</li>
                     <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"'>JavaScript</li>
                     <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"'>Vue</li>
@@ -56,10 +59,12 @@
     </div>
 </template>
 <script>
+    import QuickPaper from 'quick-paper';
     import fixedScroll from '../services/fixedScroll.js';
     import '../styles/pages/notebook.css';
 
     let blogs = {
+        html: () => import('./notebook/html/index.paper'),
         css: () => import('./notebook/css/index.paper'),
         js: () => import('./notebook/javascript/index.paper'),
         vue: () => import('./notebook/vue/index.paper'),
@@ -75,7 +80,10 @@
         mounted() {
             this.changeActive('menu-1', 'notebook');
             fixedScroll(document.getElementById('root'), 56);
-            this.doSelectBlog('css');
+
+            // 对于快速使用部分，选择默认显示
+            let routers = QuickPaper.urlFormat(window.location.href).router;
+            this.doSelectBlog(routers[1] in blogs ? routers[1] : 'html');
         },
         methods: {
             doScroll(fixedName) {
@@ -84,6 +92,12 @@
             },
             doSelectBlog(pagename) {
                 blogs[pagename]().then(data => {
+
+                    if (this.blogName != '') {
+                        // 修改url路由
+                        window.location.href = (window.location.href + "").replace('\/notebook\/' + this.blogName, '\/notebook\/' + pagename)
+                    }
+
                     this.blogName = pagename;
                     this.blog = data.default;
                 });

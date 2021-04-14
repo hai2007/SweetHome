@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作是异步还是同步</title>
+    <style>
+        canvas,
+        img {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='target'></div>
+    <canvas id='canvas'></canvas>
+    <script>
+
+        var template = '<img '
+            + 'id="img" '
+            + 'width="300" '
+            + 'height="150" '
+            + 'src="data:image/svg+xml;charset=utf-8,<svg xmlns=\'http://www.w3.org/2000/svg\'><foreignObject '
+            + 'width=\'120\' '
+            + 'height=\'50\' '
+            + '><body xmlns=\'http://www.w3.org/1999/xhtml\'>' +
+            '<p>这是一个例子</p>' +
+            '</body></foreignObject></svg>" />';
+
+        // 第一步，添加到页面
+        document.getElementById('target').innerHTML = template;
+
+        // 第二步：绘制到canvas上
+        setTimeout(function () {
+            document.getElementById('canvas')
+                .getContext('2d')
+                .drawImage(document.getElementById('img'), 0, 0);
+        }, 0);
+
+    </script>
+</body>
+
+</html>
