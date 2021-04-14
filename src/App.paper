@@ -15,11 +15,8 @@
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
-                <li class='menu-1 website'>
-                    <span>小网站</span>
-                    <div>
-                        <a href="#/learning" target="_blank">入门小教程</a>
-                    </div>
+                <li class='menu-1'>
+                    <a href="#/learning" target="_blank">入门小教程</a>
                 </li>
                 <li @click='openRouter("aboutUS")' class='menu-1 aboutUS'>
                     <span>关于我们</span>
@@ -177,7 +174,8 @@
         border-bottom: 3px solid red;
     }
 
-    div.page>header>ul>li[active='no']:hover {
+    div.page>header>ul>li[active='no']:hover,
+    div.page>header>ul>li[active='no']:hover>a {
         text-decoration: underline;
     }
 
@@ -185,6 +183,11 @@
         background-color: red;
         color: white;
         padding: 5px 7px;
+    }
+
+    div.page>header>ul>li,
+    div.page>header>ul>li>a {
+        color: black;
     }
 
     div.page>header>ul>li {
@@ -197,51 +200,6 @@
         position: absolute;
         right: 30px;
         top: 0;
-    }
-
-    /* 页头 - 小网站 */
-    div.page>header>ul>li.website:hover>div {
-        display: block;
-    }
-
-    div.page>header>ul>li.website:hover {
-        text-decoration: none;
-    }
-
-    div.page>header>ul>li.website>div>a:hover {
-        text-decoration: underline;
-    }
-
-    div.page>header>ul>li.website>div {
-        display: none;
-        position: absolute;
-        width: 140px;
-        background-color: #ffffff;
-        margin-top: -6px;
-        margin-left: -46px;
-        padding: 15px 10px;
-        border: 2px solid gray;
-    }
-
-    div.page>header>ul>li.website>div::before {
-        content: " ";
-        position: absolute;
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        transform: rotate(45deg);
-        background-color: #ffffff;
-        left: 61px;
-        top: -9px;
-        border-width: 2px 0 0 2px;
-        border-style: solid;
-        border-color: gray;
-    }
-
-    div.page>header>ul>li.website>div>a {
-        display: block;
-        line-height: 1.8em;
-        color: rgb(0, 0, 0);
     }
 
     /* 内容 */
