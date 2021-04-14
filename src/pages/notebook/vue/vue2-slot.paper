@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2>
-        v-solt 插槽（基础使用、具名插槽、作用域插槽等）
+        v-slot插槽使用和一些细节整理
     </h2>
     <h3>
         基本使用

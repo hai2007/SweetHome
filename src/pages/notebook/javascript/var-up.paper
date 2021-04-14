@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2>
-        变量提升
+        变量定义和赋值的时机相关理解
     </h2>
     <p class="warn">
         温馨提示：严格模式不允许使用未声明的变量。

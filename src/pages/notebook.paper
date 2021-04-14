@@ -40,10 +40,18 @@
                     快速使用
                 </span>
                 <ul>
-                    <li @click.stop='doSelectBlog("html")' :active='blogName=="html"?"yes":"no"'>HTML</li>
-                    <li @click.stop='doSelectBlog("css")' :active='blogName=="css"?"yes":"no"'>CSS</li>
-                    <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"'>JavaScript</li>
-                    <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"'>Vue</li>
+                    <li @click.stop='doSelectBlog("html")' :active='blogName=="html"?"yes":"no"' class='canlink'>
+                        HTML
+                    </li>
+                    <li @click.stop='doSelectBlog("css")' :active='blogName=="css"?"yes":"no"' class='canlink'>
+                        CSS
+                    </li>
+                    <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"' class='canlink'>
+                        JavaScript
+                    </li>
+                    <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"' class='canlink'>
+                        Vue
+                    </li>
                 </ul>
             </h2>
             <component :is='blog'></component>
@@ -93,10 +101,10 @@
             doSelectBlog(pagename) {
                 blogs[pagename]().then(data => {
 
-                    if (this.blogName != '') {
-                        // 修改url路由
-                        window.location.href = (window.location.href + "").replace('\/notebook\/' + this.blogName, '\/notebook\/' + pagename)
-                    }
+                    let params = QuickPaper.urlFormat(window.location.href).params;
+
+                    // 修改url路由
+                    window.location.href = '#/notebook/' + pagename + ('fixed' in params ? "?fixed=" + params.fixed : "");
 
                     this.blogName = pagename;
                     this.blog = data.default;

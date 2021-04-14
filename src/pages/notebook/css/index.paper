@@ -3,7 +3,7 @@
         <a href="#/blog_css_margin" target="_blank">
             <span>CSS</span>
             <span>1</span>
-            margin 外边距
+            margin外边距的重叠问题总结
         </a>
         <a href="#/blog_css_overflow-hidden" target="_blank">
             <span>CSS</span>
@@ -18,12 +18,12 @@
         <a href="#/blog_css_vertical-align" target="_blank">
             <span>CSS</span>
             <span>4</span>
-            vertical-align:垂直对齐方式相关说明
+            vertical-align垂直对齐方式相关说明
         </a>
         <a href="#/blog_css_z-index" target="_blank">
             <span>CSS</span>
             <span>5</span>
-            z-index 层叠上下文和层叠水平
+            z-index和层叠上下文和层叠水平的关系
         </a>
     </div>
 </template>

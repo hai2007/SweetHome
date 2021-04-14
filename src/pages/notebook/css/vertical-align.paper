@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2>
-        vertical-align:垂直对齐方式相关说明
+        vertical-align垂直对齐方式相关说明
     </h2>
     <h3>
         第一步：行内盒子模型。

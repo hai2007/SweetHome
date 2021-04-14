@@ -8,7 +8,7 @@
         <a href="#/blog_js_var-up" target="_blank">
             <span>JavaScript</span>
             <span>2</span>
-            变量提升
+            变量定义和赋值的时机相关理解
         </a>
     </div>
 </template>

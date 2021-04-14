@@ -1,6 +1,6 @@
 <template class='doc-view'>
     <h2>
-        z-index 层叠上下文和层叠水平
+        z-index和层叠上下文和层叠水平的关系
     </h2>
     <h3>
         第一步：基本概念。
