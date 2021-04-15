@@ -17,46 +17,17 @@
         <div class="blog-view">
             <h2 class='blog' id='fixed-blog'>
                 <span @click='doScroll("blog")' class='canlink'>
-                    快速使用
+                    笔记和一些理解
                 </span>
-                <ul>
-                    <li @click.stop='doSelectBlog("html")' :active='blogName=="html"?"yes":"no"' class='canlink'>
-                        HTML
-                    </li>
-                    <li @click.stop='doSelectBlog("css")' :active='blogName=="css"?"yes":"no"' class='canlink'>
-                        CSS
-                    </li>
-                    <li @click.stop='doSelectBlog("js")' :active='blogName=="js"?"yes":"no"' class='canlink'>
-                        JavaScript
-                    </li>
-                    <li @click.stop='doSelectBlog("angular")' :active='blogName=="angular"?"yes":"no"' class='canlink'>
-                        Angular
-                    </li>
-                    <li @click.stop='doSelectBlog("vue")' :active='blogName=="vue"?"yes":"no"' class='canlink'>
-                        Vue
-                    </li>
-                    <li @click.stop='doSelectBlog("webpack")' :active='blogName=="webpack"?"yes":"no"' class='canlink'>
-                        Webpack
-                    </li>
-                </ul>
             </h2>
-            <component :is='blog'></component>
+            <notebook-blog></notebook-blog>
         </div>
     </div>
 </template>
 <script>
-    import QuickPaper from 'quick-paper';
     import fixedScroll from '../services/fixedScroll.js';
     import '../styles/pages/notebook.css';
-
-    let blogs = {
-        html: () => import('./notebook/html/index.paper'),
-        css: () => import('./notebook/css/index.paper'),
-        js: () => import('./notebook/javascript/index.paper'),
-        angular: () => import('./notebook/angular/index.paper'),
-        vue: () => import('./notebook/vue/index.paper'),
-        webpack: () => import('./notebook/webpack/index.paper'),
-    };
+    import notebookBlog from './notebook/index.paper';
 
     export default {
         data() {
@@ -69,27 +40,15 @@
             this.changeActive('menu-1', 'notebook');
             fixedScroll(document.getElementById('root'), 56);
 
-            // 对于快速使用部分，选择默认显示
-            let routers = QuickPaper.urlFormat(window.location.href).router;
-            this.doSelectBlog(routers[1] in blogs ? routers[1] : 'html');
         },
         methods: {
             doScroll(fixedName) {
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 56);
-            },
-            doSelectBlog(pagename) {
-                blogs[pagename]().then(data => {
-
-                    let params = QuickPaper.urlFormat(window.location.href).params;
-
-                    // 修改url路由
-                    window.location.href = '#/notebook/' + pagename + ('fixed' in params ? "?fixed=" + params.fixed : "");
-
-                    this.blogName = pagename;
-                    this.blog = data.default;
-                });
             }
+        },
+        component: {
+            notebookBlog
         }
     };
 </script>

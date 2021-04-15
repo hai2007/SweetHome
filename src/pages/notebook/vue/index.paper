@@ -1,9 +1,0 @@
-<template>
-    <div class="blog-list">
-        <a href="#/blog_vue2-slot" target="_blank">
-            <span>Vue2.js</span>
-            <span>1</span>
-            v-slot插槽使用和一些细节整理
-        </a>
-    </div>
-</template>

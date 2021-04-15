@@ -1,9 +1,0 @@
-<template>
-    <div class="blog-list">
-        <a href="#/blog_html_dom-sync" target="_blank">
-            <span>HTML</span>
-            <span>1</span>
-            关于DOM操作是异步的还是同步的相关理解
-        </a>
-    </div>
-</template>

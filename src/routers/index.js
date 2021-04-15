@@ -27,11 +27,6 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
-    // 关于我们
-    aboutUS: {
-        content: () => import('../pages/aboutUS.paper')
-    },
-
     // 查询笔记
     ...notebook,
 

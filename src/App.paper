@@ -18,9 +18,6 @@
                 <li class='menu-1'>
                     <a href="#/learning" target="_blank">入门小教程</a>
                 </li>
-                <li @click='openRouter("aboutUS")' class='menu-1 aboutUS'>
-                    <span>关于我们</span>
-                </li>
             </ul>
         </header>
         <div>

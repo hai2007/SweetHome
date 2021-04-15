@@ -31,18 +31,18 @@ export default {
     },
 
     // angular
-    "blog_angular1-useful": {
-        content: () => import('../pages/notebook/angular/angular1-useful.paper')
+    "blog_angular1_useful": {
+        content: () => import('../pages/notebook/angular/angular1_useful.paper')
     },
 
     // vue
-    "blog_vue2-slot": {
-        content: () => import('../pages/notebook/vue/vue2-slot.paper')
+    "blog_vue2_slot": {
+        content: () => import('../pages/notebook/vue/vue2_slot.paper')
     },
 
     // webpack
-    "blog_webpack_loader-plug": {
-        content: () => import('../pages/notebook/webpack/loader-plug.paper')
+    "blog_webpack4_loader-plug": {
+        content: () => import('../pages/notebook/webpack/webpack4_loader-plug.paper')
     },
 
 };
