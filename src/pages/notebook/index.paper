@@ -10,10 +10,10 @@
             <span>2</span>
             关于CSS中设置overflow属性的值为hidden的相关理解
         </a>
-        <a href="#/blog_angular1_useful" target="_blank">
+        <a href="#/blog_angular1_directive" target="_blank">
             <span>Angular1</span>
             <span>3</span>
-            Angular1一些有用的笔记（数据格式化、同步问题和表单校验等）
+            自定义指令一些有价值的细节和技巧
         </a>
         <a href="#/blog_css_vertical-align" target="_blank">
             <span>CSS</span>

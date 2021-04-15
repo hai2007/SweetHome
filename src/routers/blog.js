@@ -31,8 +31,8 @@ export default {
     },
 
     // angular
-    "blog_angular1_useful": {
-        content: () => import('../pages/notebook/angular/angular1_useful.paper')
+    "blog_angular1_directive": {
+        content: () => import('../pages/notebook/angular/angular1_directive.paper')
     },
 
     // vue
