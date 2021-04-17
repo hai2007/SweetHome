@@ -35,7 +35,7 @@ let pages = {
 
     // 默认一级路由
 
-    _default_: "home"
+    _default_: "notebook"
 };
 
 export default {

@@ -1,5 +1,11 @@
 # [🏠 今天，你写代码了吗？](https://hai2007.gitee.io/sweethome/)
 
+<p align='center'>
+    <a href='https://hai2007.gitee.io/sweethome/' target='_blank'>
+        <img src="https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/">
+    </a>
+</p>
+
 <p align="center">
     <a href="https://github.com/hai2007/SweetHome/graphs/code-frequency" target='_blank'>
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/hai2007/SweetHome">
@@ -11,25 +17,6 @@
         <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/hai2007/SweetHome?style=social">
     </a>
 </p >
-
-```
-我还惊讶地意识到， 在我生命中有很多时刻， 每当我遇到一个遥不
-可及、令人害怕的情境，并感到惊慌失措时， 我都能够应付——因为我
-回想起了很久以前自己上过的那一课。
-
-我提醒自己不要看下面遥远的岩石， 而是注意相对轻松、容易的第一
-小步， 迈出一小步、再一小步，就这样体会每一步带来的成就感，
-直到完成了自己想要完成的， 达到了自己的目标，然后再回头看时，
-不禁对自己走过的这段漫漫长路感到惊讶和自豪。
-
-               ———— 摘自 莫顿·亨特《走一步，再走一步》
-```
-
-<p align='center'>
-    <a href='https://hai2007.gitee.io/sweethome/' target='_blank'>
-        <img src="https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/">
-    </a>
-</p>
 
 ## 如何启动本地编辑？
 
