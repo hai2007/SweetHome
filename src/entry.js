@@ -25,7 +25,9 @@ import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFoo
 // 调整并刷新
 QuickPaper.prototype.reloadPage = url => {
     window.location.href = url;
-    window.location.reload();
+    setTimeout(() => {
+        window.location.reload();
+    });
 };
 
 // 获取启动页面名称
