@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.15.8",
+  "version": "1.15.9",
   "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -26,7 +26,7 @@
     "@hai2007/polyfill": "0.1.1",
     "@hai2007/style": "^0.2.3",
     "@hai2007/tool": "^0.6.4",
-    "clunch": "^1.4.4",
+    "clunch": "^1.5.1",
     "image3d": "^2.1.0",
     "quick-paper": "^0.4.1"
   },

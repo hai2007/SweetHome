@@ -22,6 +22,12 @@ import './directives/ui-goto-example';
 // 引入公共组件
 import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFooter', uiFooter);
 
+// 调整并刷新
+QuickPaper.prototype.reloadPage = url => {
+    window.location.href = url;
+    window.location.reload();
+};
+
 // 获取启动页面名称
 let pagename = QuickPaper.urlFormat(window.location.href).router[0];
 

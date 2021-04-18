@@ -1,9 +1,7 @@
 <template class='learning-index-view'>
     <header>
         入门小教程
-        <a href="#/home" target="_blank">
-            <span>返回主站</span>
-        </a>
+        <span @click='reloadPage("#/notebook")'>返回主站</span>
     </header>
     <nav id='top-menu'></nav>
     <div>
@@ -112,20 +110,19 @@
         height: 74px;
     }
 
-    header>a {
+    header>span {
         float: right;
-        font-size: 30px;
-    }
-
-    header>a>span {
         color: #ffffff;
         font-size: 12px;
         background-color: #000000;
         padding: 10px;
         vertical-align: top;
+        line-height: 1em;
+        margin-top: 22px;
+        cursor: pointer;
     }
 
-    header>a>span:hover {
+    header>span:hover {
         text-decoration: underline;
     }
 

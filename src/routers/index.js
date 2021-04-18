@@ -40,6 +40,7 @@ let pages = {
 
 export default {
     install(QuickPaper) {
+
         QuickPaper.prototype.loadRouter = (doback, deep) => {
 
             let routers = QuickPaper.urlFormat(window.location.href).router, page = pages;

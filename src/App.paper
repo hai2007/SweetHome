@@ -12,8 +12,8 @@
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
-                <li class='menu-1'>
-                    <a href="#/learning" target="_blank">入门小教程</a>
+                <li class='menu-1' @click='reloadPage("/#/learning")'>
+                    入门小教程
                 </li>
             </ul>
         </header>
