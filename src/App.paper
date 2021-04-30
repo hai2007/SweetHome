@@ -9,18 +9,26 @@
                 <li @click='openRouter("home")' class='menu-1 home'>
                     <span>首页</span>
                 </li>
+
+                <!-- 备注：用于日常开发的时候快速查看 -->
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
+
                 <li class='split'>
                     右边的是非主站的内容
                 </li>
+
+                <!-- 备注：用于快速入门，包括给别人讲课之用 -->
                 <li class='menu-1' @click='reloadPage("#/learning")'>
                     入门小教程
                 </li>
+
+                <!-- 备注：系统的学习一样东西的笔札 -->
                 <li class='menu-1' @click='reloadPage("#/book")'>
                     读一本好书
                 </li>
+
             </ul>
         </header>
         <div>

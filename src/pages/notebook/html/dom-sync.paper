@@ -76,7 +76,7 @@ at <anonymous>:21:18
     <pre q-code>
 setTimeout(function() {
     console.log('异步执行了');
-    }, 0);
+}, 0);
 while(true);
     </pre>
     <p>

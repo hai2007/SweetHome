@@ -1,7 +1,9 @@
 <template class='book-index-view'>
     <header>
-        读一本好书
-        <span @click='reloadPage("#/notebook")'>返回主站</span>
+        <h2 @click='reloadPage("#/book")'>
+            读一本好书
+        </h2>
+        <span @click.prevent.stop='reloadPage("#/notebook")'>返回主站</span>
     </header>
     <div>
         <component :is='page'></component>
@@ -10,13 +12,14 @@
 </template>
 <script>
 
+    import '../../styles/pages/book.css';
     import QuickPaper from 'quick-paper';
 
     let pages = {
         home: () => import('./home.paper'),
 
         // 书本页面
-
+        algorithm: () => import('./algorithm/index.paper')
     };
 
     export default {
@@ -44,20 +47,26 @@
         padding: 0 50px;
     }
 
-    header {
-        line-height: 72px;
-        background-color: rgb(255, 255, 255);
-        width: 100vw;
-        box-shadow: rgb(0 0 0 / 10%) 0 1px 2px;
-        padding-left: 110px;
-        padding-right: 50px;
+    h2 {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 60px;
         background-image: url('../../assets/book.png');
         background-size: 50px auto;
         background-repeat: no-repeat;
-        background-position: 50px center;
+        background-position: left center;
         font-weight: 800;
         font-size: 30px;
         font-family: serif;
+        cursor: pointer;
+    }
+
+    header {
+        line-height: 72px;
+        padding: 0 50px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgb(0 0 0 / 10%) 0 1px 2px;
+        width: 100vw;
     }
 
     header>span {
