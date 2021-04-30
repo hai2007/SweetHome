@@ -12,8 +12,14 @@
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
+                <li class='split'>
+                    右边的是非主站的内容
+                </li>
                 <li class='menu-1' @click='reloadPage("#/learning")'>
                     入门小教程
+                </li>
+                <li class='menu-1' @click='reloadPage("#/book")'>
+                    读一本好书
                 </li>
             </ul>
         </header>
@@ -129,6 +135,14 @@
         position: absolute;
         right: 30px;
         top: 0;
+    }
+
+    div.page>header>ul>li.split {
+        cursor: auto;
+        background-image: url('./assets/split.png');
+        font-size: 0;
+        width: 50px;
+        vertical-align: top;
     }
 
     /* 内容 */

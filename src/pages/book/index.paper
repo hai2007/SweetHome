@@ -1,0 +1,14 @@
+<template class='book-index-view'>
+
+    <ui-footer></ui-footer>
+</template>
+<script>
+    export default {
+        mounted() {
+            this.setTitle('读一本好书', './src/assets/book.png');
+        }
+    };
+</script>
+<style>
+
+</style>

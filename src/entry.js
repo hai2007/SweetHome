@@ -1,4 +1,5 @@
 import QuickPaper from 'quick-paper';
+import xhtml from '@hai2007/tool/xhtml';
 
 // 兼容文件
 import '@hai2007/polyfill/Promise.js';
@@ -7,7 +8,8 @@ import '@hai2007/polyfill/Promise.js';
 let pages = {
     app: () => import('./App.paper'),
     editor: () => import('./pages/editor/index.paper'),
-    learning: () => import('./pages/learning/index.paper')
+    learning: () => import('./pages/learning/index.paper'),
+    book: () => import('./pages/book/index.paper')
 };
 
 // 引入样式
@@ -29,6 +31,14 @@ QuickPaper.prototype.reloadPage = url => {
         window.location.reload();
     });
 };
+
+// 监听浏览器点击了回退按钮
+if (window.addEventListener)
+    window.addEventListener("popstate", function (e) {
+        setTimeout(() => {
+            window.location.reload();
+        });
+    }, false);
 
 // 获取启动页面名称
 let pagename = QuickPaper.urlFormat(window.location.href).router[0];

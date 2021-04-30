@@ -1,6 +1,7 @@
 import xhtml from '@hai2007/tool/xhtml.js';
 import notebook from './notebook';
 import blog from './blog';
+import book from './book';
 
 /**
  * 温馨提示：此处只记录主站的路由，别的路由各自管理
