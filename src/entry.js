@@ -1,5 +1,4 @@
 import QuickPaper from 'quick-paper';
-import xhtml from '@hai2007/tool/xhtml';
 
 // 兼容文件
 import '@hai2007/polyfill/Promise.js';
@@ -36,7 +35,13 @@ QuickPaper.prototype.reloadPage = url => {
 if (window.addEventListener)
     window.addEventListener("popstate", function (e) {
         setTimeout(() => {
-            window.location.reload();
+
+            // 主动跳转的时候可以控制是否需要刷新
+            if (window.sweethome_noRefresh) {
+                window.sweethome_noRefresh = false;
+            } else {
+                window.location.reload();
+            }
         });
     }, false);
 
@@ -49,7 +54,8 @@ QuickPaper.prototype.setTitle = (title, logo) => {
     document.getElementsByTagName('title')[0].innerHTML = title;
 
     // 设置logo
-    document.getElementById('favicon').setAttribute('href', logo);
+    if (logo)
+        document.getElementById('favicon').setAttribute('href', logo);
 };
 
 // 请求页面

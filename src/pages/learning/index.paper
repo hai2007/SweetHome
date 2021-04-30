@@ -35,6 +35,7 @@
         methods: {
             goto(pagename) {
                 this.pagename = pagename;
+                window.sweethome_noRefresh = true;
                 window.location.href = '#/learning/' + pagename;
                 this.loadPage();
                 this.updateTopMenu();
