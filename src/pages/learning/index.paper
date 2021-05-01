@@ -138,7 +138,7 @@
 
     /* 内容 */
     [quickpaper]>div {
-        min-height: calc(100vh - 210px);
+        min-height: calc(100vh - 205px);
         padding: 0 50px;
     }
 </style>

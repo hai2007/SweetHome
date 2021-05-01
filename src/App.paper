@@ -24,11 +24,6 @@
                     入门小教程
                 </li>
 
-                <!-- 备注：系统的学习一样东西的笔札 -->
-                <li class='menu-1' @click='reloadPage("#/book")'>
-                    读一本好书
-                </li>
-
             </ul>
         </header>
         <div>
