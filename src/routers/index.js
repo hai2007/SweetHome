@@ -1,5 +1,5 @@
 import xhtml from '@hai2007/tool/xhtml.js';
-import notebook from './notebook';
+import api from './api';
 import blog from './blog';
 
 /**
@@ -27,10 +27,10 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
-    // 查询笔记
-    ...notebook,
+    // 查询文档
+    ...api,
 
-    // 博客
+    // 博客或笔记
     ...blog,
 
     // 默认一级路由

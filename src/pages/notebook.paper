@@ -1,33 +1,91 @@
 <template>
     <div class="page">
         <div class="notebook">
-            <a href="#/cssSelector" target="_blank" class='css'>
+            <a href="#/api_css_selector" target="_blank" class='css'>
                 <span>CSS选择器</span>
                 <span>常用的选择器快速查询手册</span>
             </a>
-            <a href="#/npm" target="_blank" class='npm'>
+            <a href="#/api_npm_terminal" target="_blank" class='npm'>
                 <span>npm命令</span>
                 <span>一些常用的命令和地址</span>
             </a>
-            <a href="#/git" target="_blank" class='git'>
+            <a href="#/api_git_terminal" target="_blank" class='git'>
                 <span>Git版本控制</span>
                 <span>一些常用的命令快速查询</span>
             </a>
         </div>
+        <div class="more">
+            <a href="javascript:void(0)" onclick='alert("暂无更多内容")'>查看更多&gt;&gt;</a>
+        </div>
         <div class="blog-view">
             <h2 class='blog' id='fixed-blog'>
                 <span @click='doScroll("blog")' class='canlink'>
-                    笔记和一些理解
+                    随笔小笔记
                 </span>
+                <a href="javascript:void(0)" onclick='alert("暂无更多内容")'>查看更多</a>
             </h2>
-            <notebook-blog></notebook-blog>
+            <div class="blog-list">
+                <a href="#/blog_html_dom-sync" target="_blank">
+                    <span>HTML</span>
+                    <span>1</span>
+                    关于DOM操作是异步的还是同步的相关理解
+                </a>
+                <a href="#/blog_css_overflow-hidden" target="_blank">
+                    <span>CSS</span>
+                    <span>2</span>
+                    关于CSS中设置overflow属性的值为hidden的相关理解
+                </a>
+                <a href="#/blog_angular1_directive" target="_blank">
+                    <span>Angular1</span>
+                    <span>3</span>
+                    自定义指令一些有价值的细节和技巧
+                </a>
+                <a href="#/blog_css_vertical-align" target="_blank">
+                    <span>CSS</span>
+                    <span>4</span>
+                    vertical-align垂直对齐方式相关说明
+                </a>
+                <a href="#/blog_css_z-index" target="_blank">
+                    <span>CSS</span>
+                    <span>5</span>
+                    z-index和层叠上下文和层叠水平的关系
+                </a>
+                <a href="#/blog_js_prototype" target="_blank">
+                    <span>JavaScript</span>
+                    <span>6</span>
+                    理解prototype和__proto__（继承与原型链）
+                </a>
+                <a href="#/blog_css_margin" target="_blank">
+                    <span>CSS</span>
+                    <span>7</span>
+                    margin外边距的重叠问题总结
+                </a>
+                <a href="#/blog_js_var-up" target="_blank">
+                    <span>JavaScript</span>
+                    <span>8</span>
+                    变量定义和赋值的时机相关理解
+                </a>
+                <a href="#/blog_vue2_slot" target="_blank">
+                    <span>Vue2</span>
+                    <span>9</span>
+                    v-slot插槽使用和一些细节整理
+                </a>
+                <a href="#/blog_webpack4_loader-plug" target="_blank">
+                    <span>Webpack4</span>
+                    <span>10</span>
+                    关于webpack的loader和plug一些理解
+                </a>
+                <a href="#/blog_css_percent" target="_blank">
+                    <span>CSS</span>
+                    <span>11</span>
+                    关于CSS单位%的一些总结
+                </a>
+            </div>
         </div>
     </div>
 </template>
 <script>
     import fixedScroll from '../services/fixedScroll.js';
-    import '../styles/pages/notebook.css';
-    import notebookBlog from './notebook/index.paper';
 
     export default {
         data() {
@@ -46,16 +104,12 @@
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 56);
             }
-        },
-        component: {
-            notebookBlog
         }
     };
 </script>
 <style>
     /* 笔记 */
     .page>.notebook {
-        background-color: rgb(236, 236, 236);
         margin: 0 50px;
         margin-top: 20px;
         border-radius: 5px;
@@ -63,7 +117,6 @@
     }
 
     .page>.notebook>a {
-        background-color: #fff;
         display: inline-block;
         height: 96px;
         width: 33.33333333%;
@@ -71,7 +124,7 @@
         background-size: 60px;
         background-position: 8px center;
         padding-left: 76px;
-        border: 10px solid rgb(236, 236, 236);
+        border: 10px solid transparent;
         vertical-align: top;
     }
 
@@ -109,6 +162,28 @@
         background-image: url('../assets/git.png');
     }
 
+    .page>.more {
+        text-align: center;
+        background-image: url('../assets/more-line.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        margin: 0px 52px;
+    }
+
+    .page>.more>a {
+        color: #6d757a;
+        font-size: 12px;
+        background-image: url('../assets/more.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        width: 94px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        position: relative;
+        bottom: 10px;
+    }
+
     /* 小文章 */
     .blog-view {
         border: 1px solid #dddddd;
@@ -124,22 +199,52 @@
         position: relative;
     }
 
-    .blog-view>.blog>ul {
+    .blog-view>.blog>a {
         float: right;
-    }
-
-    .blog-view>.blog>ul>li {
-        display: inline-block;
-        font-size: 12px;
-        margin: 0 3px;
-        background-color: #cbe295;
-        padding: 4px;
+        background-color: #f05036;
         color: white;
-        border-radius: 5px;
-        cursor: pointer;
+        font-size: 14px;
+        padding: 4px;
     }
 
-    .blog-view>.blog>ul>li[active='yes'] {
-        background-color: #99d60c;
+    .blog-list {
+        padding: 10px;
+        background-image: url('../assets/cry.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+
+    .blog-list>a {
+        display: block;
+        padding: 10px 0;
+        color: rgb(0, 0, 0);
+    }
+
+    .blog-list>a:hover {
+        text-decoration: underline;
+    }
+
+    .blog-list>a:not(:last-child) {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .blog-list>a>span {
+        display: inline-block;
+        width: 70px;
+        line-height: 26px;
+        font-size: 13px;
+        padding: 0;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .blog-list>a>span:nth-child(1) {
+        color: rgb(214, 205, 205);
+    }
+
+    .blog-list>a>span:nth-child(2) {
+        background-color: #FCF8E3;
+        color: #8A6D3B;
+        margin: 0 10px;
     }
 </style>
