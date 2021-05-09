@@ -1,8 +1,11 @@
-<template>
+<template :class='flag'>
+    <div class="top-hidden" @click='changeView("page-view")'>
+        <ui-guider></ui-guider>
+    </div>
     <div class='page'>
         <header>
             <div></div>
-            <h2>
+            <h2 @dblclick='changeView("top-hidden-view")'>
                 🏠 今天，你写代码了吗？
             </h2>
             <ul>
@@ -47,6 +50,7 @@
 <script>
 
     import QuickPaper from 'quick-paper';
+    import uiGuider from './pages/guider/index.paper';
 
     // 引入路由
     import routers from './routers/index.js';
@@ -55,21 +59,84 @@
     export default {
         data() {
             return {
-                page: null
+                page: null,
+
+                // home表示显示主界面
+                // top-hidden表示显示顶部隐藏内容
+                flag: "home"
             };
         },
         methods: {
             openRouter(pagename) {
                 window.sweethome_noRefresh = true;
                 this.goRouter(page => this.page = page, [pagename]);
+            },
+            changeView(flag) {
+                this.flag = flag;
             }
         },
         mounted() {
             this.loadRouter(page => this.page = page, 1);
+        },
+        component: {
+            uiGuider
         }
     };
 </script>
 <style>
+    /* 显示隐藏界面 */
+    div.top-hidden-view>.top-hidden {
+        height: 100vh;
+    }
+
+    div.top-hidden-view {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    div.top-hidden-view>.page>header {
+        top: 100vh;
+    }
+
+    div.top-hidden-view>.page>header>div {
+        top: 100vh;
+    }
+
+    /* 显示主界面 */
+    div.page-view {
+        overflow: auto;
+    }
+
+
+    /* 设置动画 */
+    div.page {
+        transition-property: margin-top;
+        transition-duration: 2s;
+    }
+
+    div.top-hidden {
+        transition-property: height;
+        transition-duration: 2s;
+    }
+
+    div>.page>header {
+        transition-property: top;
+        transition-duration: 2s;
+    }
+
+    div>.page>header>div {
+        transition-property: top;
+        transition-duration: 2s;
+    }
+
+    /* 顶部隐藏内容 */
+    div.top-hidden {
+        overflow: auto;
+        width: 100vw;
+        height: 0;
+        background-color: #000000;
+    }
+
     /* 页头 */
     div.page>header {
         line-height: 50px;
