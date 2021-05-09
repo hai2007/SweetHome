@@ -1,7 +1,7 @@
 <template>
     <header>
         在线代码编辑器
-        <a href="#/home" target="_blank">
+        <a href="#/notebook" target="_blank">
             <span>返回主站</span>
         </a>
     </header>

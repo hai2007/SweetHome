@@ -7,7 +7,8 @@ import '@hai2007/polyfill/Promise.js';
 let pages = {
     app: () => import('./App.paper'),
     editor: () => import('./pages/editor/index.paper'),
-    learning: () => import('./pages/learning/index.paper')
+    learning: () => import('./pages/learning/index.paper'),
+    "notebook-list": () => import('./pages/notebook-list.paper')
 };
 
 // 引入样式
