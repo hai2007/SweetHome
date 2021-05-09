@@ -7,7 +7,50 @@
     </header>
     <div>
         <div class="left">
-            温馨提示：缺乏灵感，设计中！
+            <ul>
+                <li @click='reloadPage("#/blog_css_overflow-hidden")' class='blog'>
+                    关于CSS中设置overflow属性的值为hidden的相关理解 | CSS
+                </li>
+                <li @click='reloadPage("#/blog_angular1_directive")' class='blog'>
+                    自定义指令一些有价值的细节和技巧 | Angular1
+                </li>
+                <li @click='reloadPage("#/blog_css_vertical-align")' class='blog'>
+                    vertical-align垂直对齐方式相关说明 | CSS
+                </li>
+                <li @click='reloadPage("#/api_npm_terminal")' class='api'>
+                    npm一些常用的命令和地址 | NPM
+                </li>
+                <li @click='reloadPage("#/api_git_terminal")' class='api'>
+                    Git一些常用的命令快速查询 | GIT
+                </li>
+                <li @click='reloadPage("#/blog_css_z-index")' class='blog'>
+                    z-index和层叠上下文和层叠水平的关系 | CSS
+                </li>
+                <li @click='reloadPage("#/blog_js_prototype")' class='blog'>
+                    理解prototype和__proto__（继承与原型链） | JavaScript
+                </li>
+                <li @click='reloadPage("#/blog_css_margin")' class='blog'>
+                    margin外边距的重叠问题总结 | CSS
+                </li>
+                <li @click='reloadPage("#/blog_js_var-up")' class='blog'>
+                    变量定义和赋值的时机相关理解 | JavaScript
+                </li>
+                <li @click='reloadPage("#/blog_vue2_slot")' class='blog'>
+                    v-slot插槽使用和一些细节整理 | Vue2
+                </li>
+                <li @click='reloadPage("#/blog_webpack4_loader-plug")' class='blog'>
+                    关于webpack的loader和plug一些理解 | Webpack4
+                </li>
+                <li @click='reloadPage("#/blog_css_percent")' class='blog'>
+                    关于CSS单位%的一些总结 | CSS
+                </li>
+                <li @click='reloadPage("#/api_css_selector")' class='api'>
+                    常用的CSS选择器快速查询手册 | CSS
+                </li>
+                <li @click='reloadPage("#/blog_html_dom-sync")' class='blog'>
+                    关于DOM操作是异步的还是同步的相关理解 | HTML
+                </li>
+            </ul>
         </div>
         <div class="right">
             <h4>
@@ -95,7 +138,49 @@
     }
 
     [quickpaper]>div>div.left {
-        width: calc(100% - 300px);
+        width: calc(100% - 315px);
+        background-color: #eaeaea;
+        margin: 30px 15px 30px 0;
+        min-height: calc(100vh - 229px);
+    }
+
+    [quickpaper]>div>div.left>ul {
+        padding: 5px;
+    }
+
+    [quickpaper]>div>div.left>ul>li {
+        font-size: 14px;
+        display: inline-block;
+        background-color: white;
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    [quickpaper]>div>div.left>ul>li::before {
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        width: 26px;
+        font-size: 12px;
+        line-height: 15px;
+        color: white;
+        top: -5px;
+    }
+
+    [quickpaper]>div>div.left>ul>li.api::before {
+        content: "文档";
+        background-color: #0ac7f7;
+    }
+
+    [quickpaper]>div>div.left>ul>li.blog::before {
+        content: "笔记";
+        background-color: #610de8;
+    }
+
+    [quickpaper]>div>div.left>ul>li:hover {
+        background-color: aliceblue;
     }
 
     [quickpaper]>div>div.right {
