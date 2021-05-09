@@ -147,7 +147,6 @@
         background-image: url('../assets/more-line.png');
         background-repeat: no-repeat;
         background-position: center top;
-        margin: 0px 52px;
     }
 
     .page>.more>a {

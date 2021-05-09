@@ -8,27 +8,26 @@
             <h2 id='fixed-web-basic'>
                 网页开发基础
             </h2>
-            <a class='html' href='#/learning/html' target="_blank">
+            <a class='html' href="javascript:void(0)" @click="reloadPage('#/learning/html')">
                 <span>HTML</span>
                 <span>超文本标记语言</span>
-                <i :class='flag.html?"red":"gray"' :title='flag.html?unStar:toStar'
-                    @click.prevent='doTogger("html")'></i>
+                <i :class='flag.html?"red":"gray"' :title='flag.html?unStar:toStar' @click.stop='doTogger("html")'></i>
             </a>
-            <a class='css' href='#/learning/css' target="_blank">
+            <a class='css' href="javascript:void(0)" @click="reloadPage('#/learning/css')">
                 <span>CSS</span>
                 <span>层叠样式表</span>
-                <i :class='flag.css?"red":"gray"' :title='flag.css?unStar:toStar' @click.prevent='doTogger("css")'></i>
+                <i :class='flag.css?"red":"gray"' :title='flag.css?unStar:toStar' @click.stop='doTogger("css")'></i>
             </a>
-            <a class='js' href='#/learning/javascript' target="_blank">
+            <a class='js' href="javascript:void(0)" @click="reloadPage('#/learning/javascript')">
                 <span>JavaScript</span>
                 <span>一门Web端编程语言</span>
                 <i :class='flag.javascript?"red":"gray"' :title='flag.javascript?unStar:toStar'
-                    @click.prevent='doTogger("javascript")'></i>
+                    @click.stop='doTogger("javascript")'></i>
             </a>
-            <a class='html' href='#/learning/dom' target="_blank">
+            <a class='html' href="javascript:void(0)" @click="reloadPage('#/learning/dom')">
                 <span>HTML DOM</span>
                 <span>定义了访问和操作HTML文档的方法</span>
-                <i :class='flag.dom?"red":"gray"' :title='flag.dom?unStar:toStar' @click.prevent='doTogger("dom")'></i>
+                <i :class='flag.dom?"red":"gray"' :title='flag.dom?unStar:toStar' @click.stop='doTogger("dom")'></i>
             </a>
         </div>
     </div>
