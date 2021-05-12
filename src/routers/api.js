@@ -7,5 +7,8 @@ export default {
     },
     api_git_terminal: {
         content: () => import('../pages/api/git/terminal.paper'),
+    },
+    api_http_status: {
+        content: () => import('../pages/api/http/status.paper'),
     }
 };
