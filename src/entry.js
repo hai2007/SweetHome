@@ -8,7 +8,7 @@ let pages = {
     app: () => import('./App.paper'),
     editor: () => import('./pages/editor/index.paper'),
     learning: () => import('./pages/learning/index.paper'),
-    "notebook-list": () => import('./pages/notebook-list.paper')
+    "notebook-list": () => import('./pages/notebook/index.paper')
 };
 
 // 引入样式

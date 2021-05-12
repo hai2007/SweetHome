@@ -1,15 +1,15 @@
 <template>
     <div class="page">
         <div class="notebook">
-            <a href="javascript:void(0)" @click='reloadPage("#/api_css_selector")' class='css'>
+            <a href="javascript:void(0)" @click='reloadPage("#/notebook_css_selector")' class='css'>
                 <span>CSS选择器</span>
                 <span>常用的选择器快速查询手册</span>
             </a>
-            <a href="javascript:void(0)" @click='reloadPage("#/api_npm_terminal")' class='npm'>
+            <a href="javascript:void(0)" @click='reloadPage("#/notebook_npm_terminal")' class='npm'>
                 <span>npm命令</span>
                 <span>一些常用的命令和地址</span>
             </a>
-            <a href="javascript:void(0)" @click='reloadPage("#/api_git_terminal")' class='git'>
+            <a href="javascript:void(0)" @click='reloadPage("#/notebook_git_terminal")' class='git'>
                 <span>Git版本控制</span>
                 <span>一些常用的命令快速查询</span>
             </a>
@@ -25,37 +25,37 @@
                 <a href="javascript:void(0)" @click='reloadPage("#/notebook-list")'>查看更多</a>
             </h2>
             <div class="blog-list">
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_html_dom-sync")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_html_dom-sync")'>
                     <span>HTML</span>
                     <span>1</span>
                     关于DOM操作是异步的还是同步的相关理解
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_css_overflow-hidden")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_css_overflow-hidden")'>
                     <span>CSS</span>
                     <span>2</span>
                     关于CSS中设置overflow属性的值为hidden的相关理解
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_css_vertical-align")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_css_vertical-align")'>
                     <span>CSS</span>
                     <span>3</span>
                     vertical-align垂直对齐方式相关说明
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_css_z-index")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_css_z-index")'>
                     <span>CSS</span>
                     <span>4</span>
                     z-index和层叠上下文和层叠水平的关系
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_js_var-up")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_js_var-up")'>
                     <span>JavaScript</span>
                     <span>5</span>
                     变量定义和赋值的时机相关理解
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_webpack4_loader-plug")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_webpack4_loader-plug")'>
                     <span>Webpack4</span>
                     <span>6</span>
                     关于webpack的loader和plug一些理解
                 </a>
-                <a href="javascript:void(0)" @click='reloadPage("#/blog_css_percent")'>
+                <a href="javascript:void(0)" @click='reloadPage("#/notebook_css_percent")'>
                     <span>CSS</span>
                     <span>7</span>
                     关于CSS单位%的一些总结

@@ -1,6 +1,5 @@
 import xhtml from '@hai2007/tool/xhtml.js';
-import api from './api';
-import blog from './blog';
+import notebook from './notebook';
 
 /**
  * 温馨提示：此处只记录主站的路由，别的路由各自管理
@@ -27,11 +26,8 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
-    // 查询文档
-    ...api,
-
-    // 博客或笔记
-    ...blog,
+    // 文档
+    ...notebook,
 
     // 默认一级路由
 
