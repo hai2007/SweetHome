@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.16.6",
+  "version": "1.16.7",
   "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -27,13 +27,13 @@
     "@hai2007/style": "^0.3.0",
     "@hai2007/tool": "^0.6.6",
     "clunch": "^1.5.2",
-    "image3d": "^2.1.0",
+    "image3d": "^3.0.0",
     "quick-paper": "^0.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
-    "@hai2007/nodejs": "^1.0.0",
+    "@hai2007/nodejs": "^1.0.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^2.1.1",
