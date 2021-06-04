@@ -108,7 +108,7 @@
         background-repeat: no-repeat;
         background-position: 60px center;
         padding-left: 140px;
-        padding-right: 15px;
+        padding-right: 20px;
         line-height: 74px;
         height: 74px;
         background-color: white;

@@ -201,7 +201,7 @@
 
     header>span {
         float: right;
-        padding-right: 15px;
+        padding-right: 10px;
     }
 
     /* 内容 */
