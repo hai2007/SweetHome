@@ -29,7 +29,7 @@ module.exports = {
             loader: ['babel-loader'],
             exclude: /node_modules/
         }, {
-            test: /\.(png|jpg|jpeg|gif|bmp)$/,
+            test: /\.(png|jpg|jpeg|gif|bmp|svg)$/,
             loader: [{
                 loader: "url-loader",
                 options: {

@@ -1,0 +1,122 @@
+<template>
+    <header>
+        <a href="#/notebook" target="_blank" class='home'>
+            今天，你写代码了吗？
+        </a>
+        <div class='search'>
+            <span class='input'>
+                <input type="text" @keydown='reLoad("input")' q-model='wd'>
+            </span>
+            <span class='btn' @click='reLoad("btn")'>
+                搜索一下
+            </span>
+        </div>
+    </header>
+    <div>
+
+    </div>
+    <ui-footer></ui-footer>
+</template>
+<script>
+    import QuickPaper from 'quick-paper';
+    export default {
+        data() {
+            return {
+                wd: ""
+            };
+        },
+        methods: {
+            reLoad(flag, event) {
+
+                // 如果是输入框里面的正常输入
+                if (flag == 'input' && event.keyCode != 13) return;
+
+                // 带着数据刷新界面
+                this.reloadPage("#/search?wd=" + this.wd);
+
+            },
+            doSearch(wd) {
+
+                setTimeout(() => {
+                    alert("你查询的关键字是[" + wd + "]，功能开发中，敬请期待！");
+                }, 100);
+
+            }
+        },
+        mounted() {
+
+            this.setTitle('搜索一下', './src/assets/search.svg');
+
+            // 获取值
+            this.wd = decodeURIComponent(QuickPaper.urlFormat(window.location.href).params.wd);
+
+            this.doSearch(this.wd);
+
+        }
+    };
+</script>
+<style>
+    /* 顶部 */
+
+    [quickpaper]>header {
+        position: fixed;
+        width: 100vw;
+        height: 70px;
+        left: 0;
+        top: 0;
+        box-shadow: 1px 2px 5px #e5e5f0;
+    }
+
+    [quickpaper]>header>.home {
+        height: 70px;
+        width: 100px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0;
+        background-image: url('../../assets/girl-hai2007.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 80%;
+    }
+
+    [quickpaper]>header>.search {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    [quickpaper]>header>.search>span {
+        height: 40px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    [quickpaper]>header>.search>span.btn {
+        line-height: 40px;
+        background-color: rgb(185 155 110);
+        color: white;
+        padding: 0 30px;
+        cursor: pointer;
+    }
+
+    [quickpaper]>header>.search>.input>input {
+        height: 100%;
+        width: 480px;
+        border: 2px solid rgb(185, 179, 179);
+        border-radius: 10px 0 0 10px;
+        outline: none;
+        border-right: none;
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    [quickpaper]>header>.search>.input>input:focus {
+        border-color: rgb(185 155 110);
+    }
+
+    /* 主体 */
+
+    [quickpaper]>div {
+        min-height: calc(100vh - 97px);
+        padding-top: 70px;
+    }
+</style>

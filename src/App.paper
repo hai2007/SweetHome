@@ -9,7 +9,8 @@
                 🏠 今天，你写代码了吗？
             </h2>
             <ul>
-                <li @click='openRouter("home")' class='menu-1 home'>
+                <ui-search></ui-search>
+                <li @click='openRouter("home")' class='menu-1 home first-child'>
                     <span>首页</span>
                 </li>
 
@@ -170,6 +171,10 @@
     div.page>header>ul>li {
         cursor: pointer;
         display: inline-block;
+    }
+
+    div.page>header>ul>li.first-child {
+        margin-left: 20px;
     }
 
     div.page>header>ul>li[active='yes'] {

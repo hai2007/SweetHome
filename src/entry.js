@@ -8,7 +8,8 @@ let pages = {
     app: () => import('./App.paper'),
     editor: () => import('./pages/editor/index.paper'),
     learning: () => import('./pages/learning/index.paper'),
-    "notebook-list": () => import('./pages/notebook/index.paper')
+    "notebook-list": () => import('./pages/notebook/index.paper'),
+    "search": () => import('./pages/search/index.paper')
 };
 
 // 引入样式
@@ -22,6 +23,7 @@ import './directives/ui-goto-example';
 
 // 引入公共组件
 import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFooter', uiFooter);
+import uiSearch from './components/ui-search.paper'; QuickPaper.component('uiSearch', uiSearch);
 
 // 调整并刷新
 QuickPaper.prototype.reloadPage = url => {

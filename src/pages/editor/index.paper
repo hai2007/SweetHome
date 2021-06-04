@@ -1,9 +1,9 @@
 <template>
     <header>
         在线代码编辑器
-        <a href="#/notebook" target="_blank">
-            <span>返回主站</span>
-        </a>
+        <span>
+            <ui-search></ui-search>
+        </span>
     </header>
     <div>
         <div>
@@ -199,21 +199,9 @@
         position: relative;
     }
 
-    header>a {
+    header>span {
         float: right;
         padding-right: 15px;
-    }
-
-    header>a>span {
-        color: rgb(4, 0, 0);
-        font-size: 12px;
-        background-color: rgb(255, 255, 255);
-        padding: 5px;
-        vertical-align: top;
-    }
-
-    header>a>span:hover {
-        text-decoration: underline;
     }
 
     /* 内容 */
