@@ -1,6 +1,6 @@
 <template class='learning-index-view'>
     <header>
-        入门小教程
+        小课堂
         <span>
             <ui-search></ui-search>
         </span>
@@ -24,7 +24,11 @@
         html: () => import('./pages/html.paper'),
         css: () => import('./pages/css.paper'),
         javascript: () => import('./pages/javascript.paper'),
-        dom: () => import('./pages/dom.paper')
+        dom: () => import('./pages/dom.paper'),
+        nodejs: () => import('./pages/nodejs.paper'),
+        vue: () => import('./pages/vue.paper'),
+        webpack: () => import('./pages/webpack.paper'),
+        npm: () => import('./pages/npm.paper')
     };
 
     export default {
@@ -72,7 +76,7 @@
             }
         },
         mounted() {
-            this.setTitle('入门小教程', './src/assets/read.png');
+            this.setTitle('小课堂', './src/assets/read.png');
             let routers = QuickPaper.urlFormat(window.location.href).router;
             this.pagename = routers[1] in pages ? routers[1] : 'home';
             this.loadPage();

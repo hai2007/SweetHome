@@ -2,6 +2,9 @@
     <div class="menu">
         <span>菜单</span>
         <button @click='doScroll("web-basic")'>网页开发基础</button>
+        <button @click='doScroll("other-lang")'>其它语言</button>
+        <button @click='doScroll("tool")'>工具类</button>
+        <button @click='doScroll("frame")'>框架或库</button>
     </div>
     <div class="content">
         <div class="item">
@@ -28,6 +31,43 @@
                 <span>HTML DOM</span>
                 <span>定义了访问和操作HTML文档的方法</span>
                 <i :class='flag.dom?"red":"gray"' :title='flag.dom?unStar:toStar' @click.stop='doTogger("dom")'></i>
+            </a>
+        </div>
+        <div class="item">
+            <h2 id='fixed-other-lang'>
+                其它语言
+            </h2>
+            <a class='nodejs' href="javascript:void(0)" @click="reloadPage('#/learning/nodejs')">
+                <span>Node.js</span>
+                <span>基于Chrome V8引擎的JavaScript运行环境</span>
+                <i :class='flag.nodejs?"red":"gray"' :title='flag.nodejs?unStar:toStar'
+                    @click.stop='doTogger("nodejs")'></i>
+            </a>
+        </div>
+        <div class="item">
+            <h2 id='fixed-tool'>
+                工具类
+            </h2>
+            <a class='npm' href="javascript:void(0)" @click="reloadPage('#/learning/npm')">
+                <span>NPM</span>
+                <span>Nodejs下的包管理器</span>
+                <i :class='flag.npm?"red":"gray"' :title='flag.npm?unStar:toStar' @click.stop='doTogger("npm")'></i>
+            </a>
+            <a class='webpack' href="javascript:void(0)" @click="reloadPage('#/learning/webpack')">
+                <span>Webpack</span>
+                <span>前端资源模块化管理和打包工具</span>
+                <i :class='flag.webpack?"red":"gray"' :title='flag.webpack?unStar:toStar'
+                    @click.stop='doTogger("webpack")'></i>
+            </a>
+        </div>
+        <div class="item">
+            <h2 id='fixed-frame'>
+                框架或库
+            </h2>
+            <a class='vue' href="javascript:void(0)" @click="reloadPage('#/learning/vue')">
+                <span>Vue</span>
+                <span>一套用于构建用户界面的渐进式框架</span>
+                <i :class='flag.vue?"red":"gray"' :title='flag.vue?unStar:toStar' @click.stop='doTogger("vue")'></i>
             </a>
         </div>
     </div>
@@ -78,8 +118,10 @@
         background-image: url('../../assets/will-sleep.png');
         background-position: center bottom;
         background-repeat: no-repeat;
-        padding-bottom: 230px;
+        padding-bottom: 130px;
         background-color: #eaeaea;
+        position: sticky;
+        top: 20px;
     }
 
     [quickpaper]>div.menu>button {
@@ -180,5 +222,21 @@
 
     [quickpaper]>div.content>.item>a.js {
         background-image: url('../../assets/js.png');
+    }
+
+    [quickpaper]>div.content>.item>a.vue {
+        background-image: url('../../assets/vue.png');
+    }
+
+    [quickpaper]>div.content>.item>a.webpack {
+        background-image: url('../../assets/webpack.png');
+    }
+
+    [quickpaper]>div.content>.item>a.npm {
+        background-image: url('../../assets/npm.png');
+    }
+
+    [quickpaper]>div.content>.item>a.nodejs {
+        background-image: url('../../assets/nodejs.png');
     }
 </style>

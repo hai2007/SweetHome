@@ -21,7 +21,7 @@
 
                 <!-- 备注：用于快速入门，包括给别人讲课之用 -->
                 <li class='menu-1' @click='reloadPage("#/learning")'>
-                    入门小教程
+                    小课堂
                 </li>
 
             </ul>

@@ -1,0 +1,26 @@
+<template class='learning-page-view'>
+    <ul>
+
+
+    </ul>
+    <div class="doc-view">
+        <h2>
+            NPM:Nodejs下的包管理器
+        </h2>
+
+    </div>
+</template>
+<script>
+    import fixedScroll from '../../../services/fixedScroll.js';
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
+                fixedScroll(document.getElementById('root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('root'), 0);
+        }
+    };
+</script>
