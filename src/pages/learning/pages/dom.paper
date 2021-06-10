@@ -91,6 +91,7 @@
     export default {
         methods: {
             doScroll(fixedName) {
+                window.sweethome_noRefresh = true;
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 0);
             }

@@ -39,7 +39,7 @@
             </h2>
             <a class='nodejs' href="javascript:void(0)" @click="reloadPage('#/learning/nodejs')">
                 <span>Node.js</span>
-                <span>基于Chrome V8引擎的JavaScript运行环境</span>
+                <span>基于Chrome V8引擎的JS运行环境</span>
                 <i :class='flag.nodejs?"red":"gray"' :title='flag.nodejs?unStar:toStar'
                     @click.stop='doTogger("nodejs")'></i>
             </a>

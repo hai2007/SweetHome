@@ -1,13 +1,88 @@
 <template class='learning-page-view'>
     <ul>
-
-
+        <li>
+            <span @click='doScroll("basic")'>
+                基本说明
+            </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("basic-environment")'>
+                        环境搭建和运行
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("basic-require")'>
+                        模块系统
+                    </span>
+                </li>
+            </ul>
+        </li>
     </ul>
     <div class="doc-view">
         <h2>
-            Node.js:基于Chrome V8引擎的JavaScript运行环境
+            Node.js:基于Chrome V8引擎的JS运行环境
         </h2>
-
+        <h3 id='fixed-basic'>
+            基本说明
+        </h3>
+        <p>
+            简单的理解就是：运行在服务端的JavaScript。
+        </p>
+        <p>
+            然而，JavaScript是
+            <span class="important">ECMAScript标准</span>
+            在浏览器端的实现，而nodejs是其在客户端的实现，由于环境的不同，他们之间还是存在着一些比较大的差异。
+        </p>
+        <h4 id='fixed-basic-environment'>
+            环境搭建和运行
+        </h4>
+        <p>
+            你只需要去官网下载对应系统的安装包以后，点击安装（<a href="https://nodejs.org/en/download/" target="_blank" class='link'>Node.js下载地址</a>）即可。
+        </p>
+        <p>
+            我们来演示如何开发一个最简单的打印语句：
+        </p>
+        <pre q-code>
+// index.js
+console.log('你好呀！');
+        </pre>
+        <p>
+            我们在index.js文件中写入上述代码，然后在当前路径打开命令行执行：
+        </p>
+        <pre q-code>
+            node ./index.js
+        </pre>
+        <p>
+            这样，你就可以看见控制台打印了一个语句：
+            <span class="warn">"你好呀！"</span>
+            。
+        </p>
+        <h4 id='fixed-basic-require'>
+            模块系统
+        </h4>
+        <p>
+            在实际使用中，我们不可能把所有代码都写在一个文件里面，比如，我们有一个
+            <span class="warn">tool.js</span>
+            用来提供打印上面这个语句的功能：
+        </p>
+        <pre q-code>
+// tool.js
+exports.doit = function() {
+    console.log('你好呀！');
+}
+        </pre>
+        <p>
+            那么，你在<span class="warn">index.js</span>
+            中如果想使用这个功能，只需要：
+        </p>
+        <pre q-code>
+// index.js
+var tool = require('./tool');
+tool.doit();
+        </pre>
+        <p>
+            可以看见，我们通过require方法获取tool这个模块，然后就可以很方便的调用这个模块提供的方法了。
+        </p>
     </div>
 </template>
 <script>
@@ -15,6 +90,7 @@
     export default {
         methods: {
             doScroll(fixedName) {
+                window.sweethome_noRefresh = true;
                 window.location.href = (window.location.href + "").replace(/\?fixed=.*$/, '') + "?fixed=" + fixedName;
                 fixedScroll(document.getElementById('root'), 0);
             }
