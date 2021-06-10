@@ -1,13 +1,91 @@
 <template class='learning-page-view'>
     <ul>
-
-
+        <li>
+            <span @click='doScroll("normal")'>
+                常规使用
+            </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("normal-environment")'>
+                        开发环境搭建
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("normal-basic")'>
+                        代码结构
+                    </span>
+                </li>
+                <li>
+                    <span @click='doScroll("normal-demo")'>
+                        举例子
+                    </span>
+                    <ul>
+                        <li>
+                            <span @click='doScroll("normal-demo-directive")'>
+                                指令
+                            </span>
+                        </li>
+                        <li>
+                            <span @click='doScroll("normal-demo-event")'>
+                                交互事件
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span @click='doScroll("webpack")'>
+                基于webpack开发
+            </span>
+        </li>
     </ul>
     <div class="doc-view">
         <h2>
             Vue:一套用于构建用户界面的渐进式框架
         </h2>
+        <h3 id='fixed-normal'>
+            常规使用
+        </h3>
+        <p>
 
+        </p>
+        <h4 id='fixed-normal-environment'>
+            开发环境搭建
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-normal-basic'>
+            代码结构
+        </h4>
+        <p>
+
+        </p>
+        <h4 id='fixed-normal-demo'>
+            举例子
+        </h4>
+        <p>
+
+        </p>
+        <h5 id='fixed-normal-demo-directive'>
+            指令
+        </h5>
+        <p>
+
+        </p>
+        <h5 id='fixed-normal-demo-event'>
+            交互事件
+        </h5>
+        <p>
+
+        </p>
+        <h3 id='fixed-webpack'>
+            基于webpack开发
+        </h3>
+        <p>
+
+        </p>
     </div>
 </template>
 <script>

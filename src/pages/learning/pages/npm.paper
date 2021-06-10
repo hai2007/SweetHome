@@ -2,7 +2,7 @@
     <ul>
         <li>
             <span @click='doScroll("basic")'>
-                基本说明
+                说明
             </span>
         </li>
         <li>
@@ -23,7 +23,7 @@
             NPM:Nodejs下的包管理器
         </h2>
         <h3 id='fixed-basic'>
-            基本说明
+            说明
         </h3>
         <p>
             当我们安装了Nodejs以后，npm工具就已经自动安装好了，如果后续希望主动升级版本，直接运行：

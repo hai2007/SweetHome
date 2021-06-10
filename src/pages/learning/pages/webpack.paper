@@ -1,13 +1,186 @@
 <template class='learning-page-view'>
     <ul>
-
-
+        <li>
+            <span @click='doScroll("basic")'>
+                介绍
+            </span>
+        </li>
+        <li>
+            <span @click='doScroll("config")'>
+                配置文件
+            </span>
+            <ul>
+                <li>
+                    <span @click='doScroll("config-loader")'>
+                        Loader
+                    </span>
+                </li>
+            </ul>
+        </li>
     </ul>
     <div class="doc-view">
         <h2>
             Webpack:前端资源模块化管理和打包工具
         </h2>
-
+        <p class="warn">
+            温馨提示：下面的内容是基于Webpack4进行测试的，如果有改变会进行说明。
+        </p>
+        <h3 id='fixed-basic'>
+            介绍
+        </h3>
+        <p>
+            在开始使用前，我们首先需要安装webpack：
+        </p>
+        <pre q-code>
+npm install webpack@4 webpack-cli@4
+        </pre>
+        <p>
+            安装完毕以后，就可以使用他帮助我们打包JS代码了。
+        </p>
+        <p>
+            比如我们现在有个tool.js文件：
+        </p>
+        <pre q-code>
+// tool.js
+export function doit() {
+    console.log('你好呀！');
+}
+        </pre>
+        <p>
+            我们的项目中希望使用这个tool模块提供的doit方法，我们可以这样写：
+        </p>
+        <pre q-code>
+// index.js
+import {doit} from './tool';
+doit();
+        </pre>
+        <p>
+            可是，浏览器是不支持
+            <span class="important">import</span>
+            这样引入JS的方式的，怎么办？我们就可以借助webpack把index.js和tool.js打包成一个文件来使用。执行下面命令：
+        </p>
+        <pre q-code>
+webpack --entry ./index.js
+        </pre>
+        <p>
+            运行完毕之后，你就可以看见一个新的js文件，默认位于
+            <span class="warn">
+                dist/main.js
+            </span>
+            。
+        </p>
+        <p>
+            我们可以把新生成的文件在一个空的index.html中引入后，使用浏览器打开运行，这样F12打开控制台看见一个打印语句：
+            <span class="warn">
+                "你好呀！"
+            </span>
+            。我们可以看见，webpack最大的好处是使得我们可以开发前端项目的时候可以模块化。
+        </p>
+        <h3 id='fixed-config'>
+            配置文件
+        </h3>
+        <p>
+            虽然上面通过命令行直接使用webpack也可以指定打包入口等，不过在实际开发中，更多的是使用配置文件的方式。
+        </p>
+        <pre q-code>
+// webpack.config.js
+module.exports = {
+    entry: ['./index.js'],
+    output: {
+        path: __dirname,
+        filename: 'build.js'
+    }
+};
+        </pre>
+        <p>
+            上面我们创建了一个配置文件
+            <span class="warn">
+                webpack.config.js
+            </span>
+            来配置打包入口和出口。然后，执行下面命令：
+        </p>
+        <pre q-code>
+            webpack
+        </pre>
+        <p>
+            运行完毕之后，你就可以看见一个新的js文件，默认位于
+            <span class="warn">
+                build.js
+            </span>
+            。
+        </p>
+        <h4 id='fixed-config-loader'>
+            Loader
+        </h4>
+        <p>
+            你有没有发现，我们目前为止模块开发中互相调用的文件都是
+            <span class="warn">JS文件</span>
+            ，如果是别的文件，比如
+            <span class="warn">CSS文件</span>
+            会怎么样？
+        </p>
+        <pre q-code='css'>
+/* index.css */
+body{
+    color:red;
+}
+        </pre>
+        <p>
+            然后，我们引入它：
+        </p>
+        <pre q-code>
+// index.js
+import './index.css';
+        </pre>
+        <p>
+            再次运行命令
+            <span class="warn">webpack</span>
+            执行打包后发现报错了：
+        </p>
+        <pre q-code>
+ERROR in ./index.css 1:4
+Module parse failed: Unexpected token (1:4)
+You may need an appropriate loader to handle this file type,
+currently no loaders are configured to process this file.
+See https://webpack.js.org/concepts#loaders
+> body{
+|   color:red;
+| }
+    @ ./index.js 1:0-21
+    @ multi ./index.js
+        </pre>
+        <p>
+            webpack提示我们，它不认识这个文件，怎么样让它认识？这就是loader的作用了。
+        </p>
+        <p>
+            首先，我们需要安装依赖的Loader，执行下面的命令：
+        </p>
+        <pre q-code>
+            npm install style-loader css-loader
+        </pre>
+        <p>
+            然后，我们需要在webpack配置文件中进行配置，指明如何"认识"css文件：
+        </p>
+        <pre q-code>
+module.exports = {
+    entry: ['./index.js'],
+    output: {
+        path: __dirname,
+        filename: 'build.js'
+    },
+    module: {
+        rules: [{
+            test: /\.css$/,
+            loader: ['style-loader', 'css-loader']
+        }]
+    }
+};
+        </pre>
+        <p>
+            然后，再次运行命令
+            <span class="warn">webpack</span>
+            执行打包后发现成功了，找一个写了文字的HTML文件引入后在浏览器中运行发现，页面的文字变成了红色。
+        </p>
     </div>
 </template>
 <script>

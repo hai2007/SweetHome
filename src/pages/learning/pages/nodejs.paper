@@ -2,7 +2,7 @@
     <ul>
         <li>
             <span @click='doScroll("basic")'>
-                基本说明
+                基础使用
             </span>
             <ul>
                 <li>
@@ -23,7 +23,7 @@
             Node.js:基于Chrome V8引擎的JS运行环境
         </h2>
         <h3 id='fixed-basic'>
-            基本说明
+            基础使用
         </h3>
         <p>
             简单的理解就是：运行在服务端的JavaScript。
@@ -37,7 +37,8 @@
             环境搭建和运行
         </h4>
         <p>
-            你只需要去官网下载对应系统的安装包以后，点击安装（<a href="https://nodejs.org/en/download/" target="_blank" class='link'>Node.js下载地址</a>）即可。
+            你只需要去官网下载对应系统的安装包以后，点击安装（<a href="https://nodejs.org/en/download/" target="_blank"
+                class='link'>Node.js下载地址</a>）即可。
         </p>
         <p>
             我们来演示如何开发一个最简单的打印语句：
