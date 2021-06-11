@@ -15,7 +15,7 @@ module.exports = {
             loader: ['./build/normal-loader.js']
         }, {
             test: /\.paper$/,
-            loader: ['quick-paper/loader/index.js'],
+            loader: ['quick-paper/loader/index.js', './build/log-loader.js'],
             exclude: /node_modules/
         }, {
             test: /\.clunch$/,

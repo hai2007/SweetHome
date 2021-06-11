@@ -14,23 +14,33 @@
                     <span>首页</span>
                 </li>
 
-                <!-- 备注：用于日常开发的时候快速查看 -->
+                <!-- 备注：日常开发的时候快速查看 -->
                 <li @click='openRouter("notebook")' class='menu-1 notebook'>
                     <span>小文档&理解</span>
                 </li>
 
-                <!-- 备注：用于快速入门，包括给别人讲课之用 -->
-                <li class='menu-1' @click='reloadPage("#/learning")'>
-                    小课堂
+                <!-- 备注：一些有用的辅助工具 -->
+                <li @click='openRouter("tool")' class='menu-1 tool'>
+                    <span>工具</span>
+                </li>
+
+                <!-- 备注：给别人讲课时用 -->
+                <li @click='reloadPage("#/learning")' class='menu-1 learning'>
+                    <span>小课堂</span>
+                </li>
+
+                <!-- 备注：无聊的时候放松心情的 -->
+                <li @click='openRouter("game")' class='menu-1 game'>
+                    <span>游戏</span>
                 </li>
 
             </ul>
         </header>
         <div>
             <div class='warn'>
-                开源项目推荐：更友好的前端绘图框架clunch.js，提供更友好的数据可视化解决方案，你可以
-                <a href="https://hai2007.gitee.io/clunch/#/guide" target="_blank">点击此处</a>
-                进一步了解详情！
+                温馨提示：本网站旨在提供一个在线编程辅助平台，欢迎您的反馈，你可以
+                <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此处</a>
+                给我们提建议！
             </div>
             <component :is='page'></component>
         </div>

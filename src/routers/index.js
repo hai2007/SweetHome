@@ -26,6 +26,16 @@ let pages = {
         content: () => import('../pages/license.paper')
     },
 
+    // 游戏
+    game: {
+        content: () => import('../pages/game/index.paper')
+    },
+
+    // 工具
+    tool: {
+        content: () => import('../pages/tool/index.paper')
+    },
+
     // 文档
     ...notebook,
 

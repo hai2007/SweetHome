@@ -110,9 +110,13 @@
                     <a href="https://emojipedia.org/" target="_blank">表情文字</a>
                 </li>
                 <li>
-                    <h2>其它</h2>
+                    <h2>关于我们</h2>
                     <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">联系我们</a>
                     <a href="#/Sponsors" target="_blank">捐款支持我们</a>
+                </li>
+                <li>
+                    <h2>其它</h2>
+                    <a href="#/interview" target="_blank">面试宝典</a>
                 </li>
             </ul>
         </div>
@@ -287,7 +291,7 @@
     div.page>div.right>.footer-link>li {
         display: inline-block;
         vertical-align: top;
-        width: 33.33%;
+        width: 25%;
         padding: 10px;
         text-align: left;
     }

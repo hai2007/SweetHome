@@ -9,7 +9,8 @@ let pages = {
     editor: () => import('./pages/editor/index.paper'),
     learning: () => import('./pages/learning/index.paper'),
     "notebook-list": () => import('./pages/notebook/index.paper'),
-    "search": () => import('./pages/search/index.paper')
+    search: () => import('./pages/search/index.paper'),
+    interview: () => import('./pages/interview/index.paper')
 };
 
 // 引入样式
