@@ -1,3 +1,9 @@
+<p align='center'>
+    <a href='https://hai2007.gitee.io/sweethome/' target='_blank'>
+        <img src="./snipping.png">
+    </a>
+</p>
+
 # [🏠 今天，你写代码了吗？](https://hai2007.gitee.io/sweethome/)
 
 <p align='center'>
