@@ -17,7 +17,7 @@ let pages = {
 import "@hai2007/style/normalize.css";
 import '@hai2007/style/doc-view.css';
 import './styles/common.css';
-import './styles/doc-view.css';
+import './styles/doc-view.scss';
 
 // 引入公共指令
 import './directives/ui-goto-example';

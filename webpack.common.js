@@ -22,8 +22,8 @@ module.exports = {
             loader: ['clunch/loader.js'],
             exclude: /node_modules/
         }, {
-            test: /\.css$/,
-            loader: ['quick-paper/style-loader/index.js', 'css-loader', 'postcss-loader']
+            test: /\.(scss|css)$/,
+            loader: ['quick-paper/style-loader/index.js', 'css-loader', 'postcss-loader', './build/scss-loader.js']
         }, {
             test: /\.js$/,
             loader: ['babel-loader'],

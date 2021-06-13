@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.17.0-alpha.5",
+  "version": "1.17.0-alpha.7",
   "description": "🏠 今天，你写代码了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
+    "@hai2007/algorithm": "^0.6.0",
     "@hai2007/nodejs": "^1.0.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
