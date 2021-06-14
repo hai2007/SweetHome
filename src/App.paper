@@ -91,186 +91,189 @@
     };
 </script>
 <style>
-    /* 显示隐藏界面 */
-    div.top-hidden-view>.top-hidden {
-        height: 100vh;
-    }
+    div {
 
-    div.top-hidden-view {
-        height: 100vh;
-        overflow: hidden;
-    }
+        /* 显示隐藏界面 */
+        &.top-hidden-view {
+            &>.top-hidden {
+                height: 100vh;
+            }
 
-    div.top-hidden-view>.page>header {
-        top: 100vh;
-    }
-
-    div.top-hidden-view>.page>header>div {
-        top: 100vh;
-    }
-
-    /* 显示主界面 */
-    div.page-view {
-        overflow: auto;
-    }
+            height: 100vh;
+            overflow: hidden;
 
 
-    /* 设置动画 */
-    div.page {
-        transition-property: margin-top;
-        transition-duration: 2s;
-    }
+            &>.page>header {
+                top: 100vh;
 
-    div.top-hidden {
-        transition-property: height;
-        transition-duration: 2s;
-    }
+                &>div {
+                    top: 100vh;
+                }
+            }
+        }
 
-    div>.page>header {
-        transition-property: top;
-        transition-duration: 2s;
-    }
+        /* 显示主界面 */
+        &.page-view {
+            overflow: auto;
+        }
 
-    div>.page>header>div {
-        transition-property: top;
-        transition-duration: 2s;
-    }
 
-    /* 顶部隐藏内容 */
-    div.top-hidden {
-        overflow: auto;
-        width: 100vw;
-        height: 0;
-        background-color: #000000;
-    }
+        /* 顶部隐藏内容 */
+        &.top-hidden {
+            transition-property: height;
+            transition-duration: 2s;
+            overflow: auto;
+            width: 100vw;
+            height: 0;
+            background-color: #000000;
+        }
 
-    /* 页头 */
-    div.page>header {
-        line-height: 50px;
-        height: 50px;
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
-        padding: 0 30px;
-        position: fixed;
-        width: 100vw;
-        top: 0;
-        left: 0;
-        user-select: none;
-        z-index: 2;
-    }
 
-    div.page>header>div {
-        height: 70px;
-        width: 70px;
-        display: inline-block;
-        position: fixed;
-        background-image: url('./assets/read.png');
-        background-repeat: no-repeat;
-        left: 300px;
-        top: 2px;
-    }
+        /* 设置动画 */
+        &.page {
+            transition-property: margin-top;
+            transition-duration: 2s;
 
-    div.page>header>h2 {
-        color: #bce05d;
-        font-weight: 800;
-        font-family: monospace;
-        display: inline-block;
-    }
+            &>header {
+                transition-property: top;
+                transition-duration: 2s;
+            }
 
-    div.page>header>ul,
-    div.page>header>ul>li {
-        cursor: pointer;
-        display: inline-block;
-    }
+            &>header>div {
+                transition-property: top;
+                transition-duration: 2s;
+            }
 
-    div.page>header>ul>li.first-child {
-        margin-left: 20px;
-    }
 
-    div.page>header>ul>li[active='yes'] {
-        border-bottom: 3px solid red;
-    }
+            /* 页头 */
+            &>header {
+                line-height: 50px;
+                height: 50px;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+                padding: 0 30px;
+                position: fixed;
+                width: 100vw;
+                top: 0;
+                left: 0;
+                user-select: none;
+                z-index: 2;
 
-    div.page>header>ul>li[active='no']:hover,
-    div.page>header>ul>li[active='no']:hover>a {
-        text-decoration: underline;
-    }
+                &>div {
+                    height: 70px;
+                    width: 70px;
+                    display: inline-block;
+                    position: fixed;
+                    background-image: url('./assets/read.png');
+                    background-repeat: no-repeat;
+                    left: 300px;
+                    top: 2px;
+                }
 
-    div.page>header>ul>li[active='yes']>span {
-        background-color: red;
-        color: white;
-        padding: 5px 7px;
-    }
+                &>h2 {
+                    color: #bce05d;
+                    font-weight: 800;
+                    font-family: monospace;
+                    display: inline-block;
+                }
 
-    div.page>header>ul>li,
-    div.page>header>ul>li>a {
-        color: black;
-    }
+                &>ul,
+                &>ul>li {
+                    cursor: pointer;
+                    display: inline-block;
+                }
 
-    div.page>header>ul>li {
-        padding: 0 10px;
-        font-weight: 800;
-        position: relative;
-    }
+                &>ul>li.first-child {
+                    margin-left: 20px;
+                }
 
-    div.page>header>ul {
-        position: absolute;
-        right: 30px;
-        top: 0;
-    }
+                &>ul>li[active='yes'] {
+                    border-bottom: 3px solid red;
 
-    /* 内容 */
-    div.page>div {
-        padding: 0 50px;
-        padding-top: 58px;
-        min-height: calc(100vh - 92px);
-        width: 1100px;
-        margin: auto;
-    }
+                    &>span {
+                        background-color: red;
+                        color: white;
+                        padding: 5px 7px;
+                    }
+                }
 
-    div.page>div>div.warn {
-        text-align: center;
-        padding: 10px;
-        background-color: #bce05d;
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+                &>ul>li[active='no']:hover,
+                &>ul>li[active='no']:hover>a {
+                    text-decoration: underline;
+                }
 
-    div.page>div>div.warn>a {
-        color: #03a9f4;
-        text-decoration: underline;
-        padding: 0 1em;
-        font-weight: 800;
-    }
+                &>ul>li,
+                &>ul>li>a {
+                    color: black;
+                }
 
-    /* 页脚 */
-    div.page>footer {
-        text-align: center;
-        padding: 10px 0 20px 0;
-        min-width: 1100px;
-        box-shadow: rgba(0, 0, 0, 0.1) 1px -5px 2px;
-        background-image: url('./assets/sleep.png');
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-size: 70px auto;
-    }
+                &>ul {
+                    position: absolute;
+                    right: 30px;
+                    top: 0;
 
-    div.page>footer>p {
-        line-height: 40px;
-        height: 40px;
-        color: gray;
-        font-size: 14px;
-    }
+                    &>li {
+                        padding: 0 10px;
+                        font-weight: 800;
+                        position: relative;
+                    }
+                }
+            }
 
-    div.page>footer>span {
-        display: inline-block;
-        padding: 0 15px;
-        line-height: 30px;
-        height: 30px;
-        color: #999999;
-        font-size: 12px;
-        border: 1px solid #E3E3E5;
-        border-radius: 45px;
+            /* 内容 */
+            &>div {
+                padding: 0 50px;
+                padding-top: 58px;
+                min-height: calc(100vh - 92px);
+                width: 1100px;
+                margin: auto;
+
+                &>div.warn {
+                    text-align: center;
+                    padding: 10px;
+                    background-color: #bce05d;
+                    color: white;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+
+                    &>a {
+                        color: #03a9f4;
+                        text-decoration: underline;
+                        padding: 0 1em;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            /* 页脚 */
+            &>footer {
+                text-align: center;
+                padding: 10px 0 20px 0;
+                min-width: 1100px;
+                box-shadow: rgba(0, 0, 0, 0.1) 1px -5px 2px;
+                background-image: url('./assets/sleep.png');
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: 70px auto;
+
+                &>p {
+                    line-height: 40px;
+                    height: 40px;
+                    color: gray;
+                    font-size: 14px;
+                }
+
+                &>span {
+                    display: inline-block;
+                    padding: 0 15px;
+                    line-height: 30px;
+                    height: 30px;
+                    color: #999999;
+                    font-size: 12px;
+                    border: 1px solid #E3E3E5;
+                    border-radius: 45px;
+                }
+            }
+        }
     }
 </style>
