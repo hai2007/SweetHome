@@ -1,4 +1,46 @@
 <template>
+    <div>
+        <div class="content">
 
+        </div>
+        <div class="menu">
+
+        </div>
+    </div>
     <ui-footer></ui-footer>
 </template>
+<script>
+    export default {
+        mounted() {
+            this.setTitle('常见面试题', './src/assets/file.png');
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        &>div {
+            min-width: 1030px;
+            text-align: center;
+            padding: 30px 0;
+
+            &>div {
+                height: 100px;
+                display: inline-block;
+                vertical-align: top;
+                text-align: left;
+                margin: 0 15px;
+                min-height: calc(100vh - 157px);
+
+                &.content {
+                    width: 700px;
+                    background-color: #fafafa;
+                }
+
+                &.menu {
+                    width: 240px;
+                    border-right: 2px solid #fafafa;
+                }
+            }
+        }
+    }
+</style>
