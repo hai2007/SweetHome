@@ -1,7 +1,7 @@
 <template>
     <header>
         <a href="#/notebook" target="_blank" class='home'>
-            今天，你写代码了吗？
+            今天，你学习了吗？
         </a>
         <div class='search'>
             <span class='input'>

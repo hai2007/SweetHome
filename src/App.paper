@@ -6,7 +6,7 @@
         <header>
             <div></div>
             <h2 @dblclick='changeView("top-hidden-view")'>
-                🏠 今天，你写代码了吗？
+                🏠 今天，你学习了吗？
             </h2>
             <ul>
                 <ui-search></ui-search>
@@ -38,7 +38,7 @@
         </header>
         <div>
             <div class='warn'>
-                温馨提示：本网站旨在提供一个在线编程辅助平台，欢迎您的反馈，你可以
+                温馨提示：本网站旨在提供一个在线笔记平台，欢迎您的反馈，你可以
                 <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此处</a>
                 给我们提建议！
             </div>

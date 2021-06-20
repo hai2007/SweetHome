@@ -1,7 +1,7 @@
 {
   "name": "sweethome",
-  "version": "1.17.0-alpha.8",
-  "description": "🏠 今天，你写代码了吗？",
+  "version": "1.17.0-alpha.9",
+  "description": "🏠 今天，你学习了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
     "dev": "webpack-dev-server --config webpack.dev.js",
