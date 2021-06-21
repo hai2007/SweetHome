@@ -32,6 +32,9 @@ export default {
     "notebook_js_var-up": {
         content: () => import('../pages/notebook/javascript/var-up.paper')
     },
+    "notebook_js_regexp": {
+        content: () => import('../pages/notebook/javascript/regexp.paper')
+    },
 
     // angular
     "notebook_angular1_directive": {

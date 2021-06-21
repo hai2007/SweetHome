@@ -52,6 +52,9 @@
                 <li @click='reloadPage("#/notebook_js_var-up")'>
                     变量定义和赋值的时机相关理解 | JavaScript
                 </li>
+                <li @click='reloadPage("#/notebook_js_regexp")'>
+                    正则表达式常用方法和规则整理 | JavaScript
+                </li>
             </ul>
             <h4>
                 工具类
