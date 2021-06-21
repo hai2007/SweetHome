@@ -1,11 +1,35 @@
 <template>
-
+    <ul>
+        <li @click='reloadPage("#/image-editor")' class='image-editor'>
+            图片编辑器
+        </li>
+    </ul>
 </template>
 <script>
     export default {
         mounted() {
             this.changeActive('menu-1', 'tool');
-
         }
     };
 </script>
+<style>
+    ul {
+        li {
+            display: inline-block;
+            width: calc(25% - 20px);
+            margin: 10px;
+            vertical-align: top;
+            height: 140px;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 120px;
+            line-height: 20px;
+            background-repeat: no-repeat;
+            backgorund-position: center top;
+
+            &.image-editor {
+                background-image: url('../../assets/image-editor@preview.jpg');
+            }
+        }
+    }
+</style>

@@ -10,7 +10,12 @@ let pages = {
     learning: () => import('./pages/learning/index.paper'),
     "notebook-list": () => import('./pages/notebook/index.paper'),
     search: () => import('./pages/search/index.paper'),
-    interview: () => import('./pages/interview/index.paper')
+    interview: () => import('./pages/interview/index.paper'),
+    game: () => import('./pages/game/index.paper'),
+
+    // 工具
+    "image-editor": () => import('./pages/tool/image-editor.paper')
+
 };
 
 // 引入样式

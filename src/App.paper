@@ -19,18 +19,18 @@
                     <span>小文档&理解</span>
                 </li>
 
-                <!-- 备注：一些有用的辅助工具 -->
-                <li @click='openRouter("tool")' class='menu-1 tool'>
-                    <span>工具</span>
-                </li>
-
                 <!-- 备注：给别人讲课时用 -->
                 <li @click='reloadPage("#/learning")' class='menu-1 learning'>
                     <span>小课堂</span>
                 </li>
 
+                <!-- 备注：一些有用的辅助工具 -->
+                <li @click='openRouter("tool")' class='menu-1 tool'>
+                    <span>工具</span>
+                </li>
+
                 <!-- 备注：无聊的时候放松心情的 -->
-                <li @click='openRouter("game")' class='menu-1 game'>
+                <li @click='reloadPage("#/game")' class='menu-1 game'>
                     <span>游戏</span>
                 </li>
 

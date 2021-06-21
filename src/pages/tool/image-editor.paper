@@ -5,7 +5,7 @@
 <script>
     export default {
         mounted() {
-            this.setTitle('游戏', './src/assets/game.png');
+            this.setTitle('图片编辑器 | 工具', './src/assets/image-editor.png');
         }
     };
 </script>
