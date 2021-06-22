@@ -13,7 +13,7 @@
         </div>
     </header>
     <div>
-        此功能目前处于研发阶段，敬请期待！
+
     </div>
     <ui-footer></ui-footer>
 </template>
@@ -117,10 +117,5 @@
     [quickpaper]>div {
         min-height: calc(100vh - 97px);
         padding-top: 70px;
-        line-height: calc(100vh - 97px);
-        text-align: center;
-        font-size: 40px;
-        color: red;
-        font-family: serif;
     }
 </style>
