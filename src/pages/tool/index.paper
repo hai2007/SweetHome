@@ -3,6 +3,9 @@
         <li @click='reloadPage("#/image-editor")' class='image-editor'>
             图片编辑器
         </li>
+        <li @click='reloadPage("#/regexper")' class='regexper'>
+            正则表达式可视化
+        </li>
     </ul>
 </template>
 <script>
@@ -22,13 +25,19 @@
             height: 140px;
             text-align: center;
             cursor: pointer;
-            padding-top: 120px;
-            line-height: 20px;
+            padding-top: 170px;
             background-repeat: no-repeat;
-            backgorund-position: center top;
+            background-position: center top;
+            background-color: black;
+            height: 200px;
+            color: white;
 
             &.image-editor {
-                background-image: url('../../assets/image-editor@preview.jpg');
+                background-image: url('../../assets/tool@null.jpg');
+            }
+
+            &.regexper {
+                background-image: url('../../assets/tool@null.jpg');
             }
         }
     }

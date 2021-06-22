@@ -14,8 +14,8 @@ let pages = {
     game: () => import('./pages/game/index.paper'),
 
     // 工具
-    "image-editor": () => import('./pages/tool/image-editor.paper')
-
+    "image-editor": () => import('./pages/tool/image-editor.paper'),
+    regexper: () => import('./pages/tool/regexper.paper')
 };
 
 // 引入样式
