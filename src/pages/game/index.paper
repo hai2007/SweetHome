@@ -7,6 +7,14 @@
                 <ui-search></ui-search>
             </span>
         </h2>
+        <h3>
+            经典小游戏
+        </h3>
+        <ul>
+            <li @click='reloadPage("#/snake-eating")' class='snake-eating'>
+                贪吃蛇
+            </li>
+        </ul>
     </div>
     <ui-footer></ui-footer>
 </template>
@@ -31,6 +39,7 @@
             background-image: url('../../assets/game-banner.jpg');
             background-repeat: no-repeat;
             padding-top: 179px;
+            padding-bottom: 20px;
 
             &>h2 {
                 border-bottom: 1px solid #d3d0d0;
@@ -54,6 +63,37 @@
                         float: right;
                         padding-right: 10px;
                         margin-top: -4px;
+                    }
+                }
+            }
+
+            &>h3 {
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+            &>ul {
+                padding: 0 4px;
+
+                &>li {
+                    display: inline-block;
+                    border: 1px solid gray;
+                    width: 100px;
+                    height: 100px;
+                    margin: 4px;
+                    padding-top: 100px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 14px;
+                    margin-bottom: 35px;
+                    cursor: pointer;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+                    background-position: center center;
+                    border-radius: 10px;
+
+                    &.snake-eating {
+                        background-image: url('../../assets/snake-eating.jpg');
                     }
                 }
             }

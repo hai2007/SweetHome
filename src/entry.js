@@ -11,11 +11,15 @@ let pages = {
     "notebook-list": () => import('./pages/notebook/index.paper'),
     search: () => import('./pages/search/index.paper'),
     interview: () => import('./pages/interview/index.paper'),
-    game: () => import('./pages/game/index.paper'),
 
     // 工具
     mspainter: () => import('./pages/tool/mspainter.paper'),
-    regexper: () => import('./pages/tool/regexper.paper')
+    regexper: () => import('./pages/tool/regexper.paper'),
+
+    // 游戏
+    game: () => import('./pages/game/index.paper'),
+    "snake-eating": () => import('./pages/game/snake-eating.paper')
+
 };
 
 // 引入样式

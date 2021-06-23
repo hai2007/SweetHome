@@ -22,22 +22,26 @@
             width: calc(25% - 20px);
             margin: 10px;
             vertical-align: top;
-            height: 140px;
             text-align: center;
             cursor: pointer;
             padding-top: 170px;
             background-repeat: no-repeat;
             background-position: center top;
-            background-color: black;
+            background-color: #cfcaca;
             height: 200px;
-            color: white;
+            color: black;
+            border: 2px solid #cfcaca;
+
+            &:hover {
+                text-decoration: underline;
+            }
 
             &.mspainter {
-                background-image: url('../../assets/tool@null.jpg');
+                background-image: url('../../assets/mspainter@review.jpg');
             }
 
             &.regexper {
-                background-image: url('../../assets/tool@null.jpg');
+                background-image: url('../../assets/regexper@review.jpg');
             }
         }
     }
