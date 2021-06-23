@@ -92,6 +92,10 @@
                     background-position: center center;
                     border-radius: 10px;
 
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
                     &.snake-eating {
                         background-image: url('../../assets/snake-eating.jpg');
                     }
