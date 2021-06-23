@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li @click='reloadPage("#/image-editor")' class='image-editor'>
+        <li @click='reloadPage("#/mspainter")' class='mspainter'>
             图片编辑器
         </li>
         <li @click='reloadPage("#/regexper")' class='regexper'>
@@ -32,7 +32,7 @@
             height: 200px;
             color: white;
 
-            &.image-editor {
+            &.mspainter {
                 background-image: url('../../assets/tool@null.jpg');
             }
 

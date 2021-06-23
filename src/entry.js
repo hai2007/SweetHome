@@ -14,7 +14,7 @@ let pages = {
     game: () => import('./pages/game/index.paper'),
 
     // 工具
-    "image-editor": () => import('./pages/tool/image-editor.paper'),
+    mspainter: () => import('./pages/tool/mspainter.paper'),
     regexper: () => import('./pages/tool/regexper.paper')
 };
 

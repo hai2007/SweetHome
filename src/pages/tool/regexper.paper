@@ -5,7 +5,7 @@
 <script>
     export default {
         mounted() {
-            this.setTitle('正则表达式可视化 | 工具', './src/assets/regexper@logo.png');
+            this.setTitle('正则表达式可视化', './src/assets/regexper@logo.png');
         }
     };
 </script>
