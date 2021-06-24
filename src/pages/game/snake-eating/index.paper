@@ -1,0 +1,55 @@
+<template>
+    <div>
+        <h2>
+            贪吃蛇
+            <div class="search">
+                <ui-search></ui-search>
+            </div>
+        </h2>
+        <div class="snake-eating">
+
+        </div>
+    </div>
+    <ui-footer></ui-footer>
+</template>
+<script>
+    export default {
+        mounted() {
+            this.setTitle('贪吃蛇', './src/assets/snake-eating.jpg');
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        &>div {
+            min-height: calc(100vh - 137px);
+            width: 500px;
+            margin: 20px auto;
+
+            &>h2 {
+                &>.search {
+                    float: right;
+                    margin-top: -1px;
+                    margin-right: 10px;
+                }
+
+                padding-left: 10px;
+                font-size: 18px;
+                background-color: #d3d0d0;
+                line-height: 50px;
+                background-image:url('../../../assets/snake-eating.jpg');
+                background-repeat: no-repeat;
+                background-size: auto 80%;
+                background-position: 5px center;
+                padding-left: 51px;
+                font-weight:200;
+            }
+
+            &>.snake-eating {
+                background-color: #fafafa;
+                border: 1px solid #d3d0d0;
+                height: 500px;
+            }
+        }
+    }
+</style>

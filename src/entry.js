@@ -13,12 +13,12 @@ let pages = {
     interview: () => import('./pages/interview/index.paper'),
 
     // 工具
-    mspainter: () => import('./pages/tool/mspainter.paper'),
-    regexper: () => import('./pages/tool/regexper.paper'),
+    mspainter: () => import('./pages/tool/mspainter/index.paper'),
+    regexper: () => import('./pages/tool/regexper/index.paper'),
 
     // 游戏
     game: () => import('./pages/game/index.paper'),
-    "snake-eating": () => import('./pages/game/snake-eating.paper')
+    "snake-eating": () => import('./pages/game/snake-eating/index.paper')
 
 };
 

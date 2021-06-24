@@ -46,7 +46,7 @@
             this.setTitle('搜索一下', './src/assets/search.svg');
 
             // 获取值
-            this.wd = decodeURIComponent(QuickPaper.urlFormat(window.location.href).params.wd);
+            this.wd = decodeURIComponent(QuickPaper.urlFormat(window.location.href).params.wd || "");
 
             this.doSearch(this.wd);
 
