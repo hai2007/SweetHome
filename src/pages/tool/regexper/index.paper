@@ -8,18 +8,24 @@
         </div>
     </header>
     <div class="input-view">
-        <input type="text" q-model='express'>
+        <input type="text" q-model='express' @keydown='reLoad("input")' id='input-express'>
         <span @click='reLoad()'>
             显示
         </span>
     </div>
     <div class="show-view">
-
+        <canvas id='regexper-show-view'></canvas>
     </div>
     <ui-footer></ui-footer>
 </template>
 <script>
+
     import QuickPaper from 'quick-paper';
+    import Image2D from 'image2d';
+
+    import toImageData from './toImageData.js';
+    import drawImage from './drawImage.js';
+
     export default {
         data() {
             return {
@@ -32,16 +38,31 @@
             // 获取值
             this.express = decodeURIComponent(QuickPaper.urlFormat(window.location.href).params.express || "");
 
-            this.doSearch(this.express);
+            this.doDraw(this.express);
 
+            document.getElementById('input-express').focus();
         },
         methods: {
-            reLoad() {
+            reLoad(flag, event) {
+
+                // 如果是输入框里面的正常输入
+                if (flag == 'input' && event.keyCode != 13) return;
+
                 this.reloadPage("#/regexper?express=" + this.express);
             },
-            doSearch(express) {
+            doDraw(express) {
 
+                // 获取绘制数据
+                let allImageData = toImageData(express);
 
+                // 获取画笔
+                let painter = Image2D('#regexper-show-view').attr({
+                    width: allImageData.width + "px",
+                    height: allImageData.height + "px"
+                }).painter();
+
+                // 绘制
+                drawImage(painter, allImageData.imageData);
 
             }
         }
@@ -105,6 +126,15 @@
 
             &.show-view {
                 height: calc(100vh - 248px);
+                text-align: center;
+                padding: 10px;
+                padding-top: 0;
+                background-color: #fafafa;
+                overflow: auto;
+
+                &>canvas {
+                    background-color: white;
+                }
             }
         }
     }
