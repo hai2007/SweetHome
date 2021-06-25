@@ -1,0 +1,32 @@
+<!--
+  格子
+  25 * 25 个格子
+  每个格子大小为 20 * 20
+ -->
+<path c-for='index in 25' stroke-color='white'>
+
+    <!-- 横线条 -->
+    <move-to x='0' :y='index*20' />
+    <line-to x='500' :y='index*20' />
+
+    <!-- 纵线条 -->
+    <move-to :x='index*20' y='0' />
+    <line-to :x='index*20' y='500'/>
+
+</path>
+
+<!-- 绘制小格子 -->
+<rect c-for='item in blocks' :x='item[0]*20' :y='item[1]*20' width='20' height='20' fill-color='white'/>
+
+<!-- 食物 -->
+<rect :x='foodBlock[0]*20' :y='foodBlock[1]*20' width='20' height='20' fill-color='red' />
+
+<!-- 开始游戏 -->
+<group c-if='!isRuning'>
+    <rect x='0' y='0' width='500' height='500'  fill-color='#0000005c' type='fill'/>
+     <rect x='250' y='250' width='100' height='30'  fill-color='red' align='center' baseline='middle' type='fill' c-on:click='beginGame'/>
+    <text x='250' y='250' content='开始游戏' align='center' fill-color='white' c-on:click='beginGame'/>
+</group>
+
+<!-- 提示 -->
+<text x='10' y='20' :content='tips' font-size='12' fill-color='white' />

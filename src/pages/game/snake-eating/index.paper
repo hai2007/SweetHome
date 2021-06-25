@@ -6,16 +6,159 @@
                 <ui-search></ui-search>
             </div>
         </h2>
-        <div class="snake-eating">
-
-        </div>
+        <div class="snake-eating" id='snake-eating'></div>
     </div>
     <ui-footer></ui-footer>
 </template>
 <script>
+    import Clunch from 'clunch';
+    import view from './view.clunch';
+    import getKeyString from '@hai2007/tool/getKeyString.js';
+    import xhtml from '@hai2007/tool/xhtml.js';
+
     export default {
         mounted() {
             this.setTitle('贪吃蛇', './src/assets/snake-eating.jpg');
+
+            let clunch = new Clunch({
+                el: document.getElementById('snake-eating'),
+                render: view,
+                animation: false,
+                data() {
+                    return {
+
+                        // 记录小蛇
+                        blocks: [],
+
+                        // 记录是否游戏中
+                        isRuning: false,
+
+                        // 提示内容
+                        tips: "温馨提示：点击「开始游戏」启动运行！",
+
+                        // 下一步走法
+                        mulpD: "",
+
+                        // 辅助刷新
+                        flag: "",
+
+                        // 食物
+                        foodBlock: []
+
+                    };
+                },
+                methods: {
+                    stopGame() {
+                        this.isRuning = false;
+                    },
+                    beginGame() {
+                        this.isRuning = true;
+                        this.mulpD = [0, -1];
+                        this.foodBlock = [20, 20];
+                        this.tips = "";
+                        this.blocks = [
+                            [10, 10],
+                            [10, 11],
+                            [10, 12],
+                            [10, 13],
+                            [11, 13],
+                            [12, 13],
+                            [13, 13],
+                            [14, 13]
+                        ];
+
+                        let interval = setInterval(() => {
+
+                            let newBlock = [
+                                this.blocks[0][0] + this.mulpD[0],
+                                this.blocks[0][1] + this.mulpD[1]
+                            ];
+
+                            // 判断是否合法
+                            if (!this.isValidBlock(newBlock)) {
+
+                                this.stopGame();
+
+                                clearInterval(interval);
+
+                                this.tips = "[分数：" + (this.blocks.length - 8) + "]小蛇出界或者撞到自己了。";
+                                return;
+                            }
+
+                            this.blocks.pop();
+                            this.blocks.unshift(newBlock);
+
+                            // 判断是否吃到食物了
+                            if (
+                                newBlock[0] + this.mulpD[0] == this.foodBlock[0] &&
+                                newBlock[1] + this.mulpD[1] == this.foodBlock[1]
+                            ) {
+
+                                this.blocks.unshift(this.foodBlock);
+                                this.foodBlock = this.newFood();
+                            }
+
+                            this.flag = new Date().valueOf();
+                        }, 200);
+
+                    },
+                    newFood() {
+                        let newFood, tryNum = 1;
+                        do {
+
+                            if (tryNum >= 10000) {
+                                this.stopGame();
+                                this.tips = '意外终止，系统内部错误。';
+                            }
+
+                            newFood = [
+                                +(Math.random() * 24).toFixed(0),
+                                +(Math.random() * 24).toFixed(0)
+                            ];
+                            tryNum += 1;
+                        } while (!this.isValidBlock(newFood));
+
+                        return newFood;
+                    },
+                    isValidBlock(block) {
+
+                        // 如果越界了
+                        if (block[0] < 0 || block[0] >= 25 || block[1] < 0 || block[1] >= 25) return false;
+
+                        for (let i = 0; i < this.blocks.length; i++) {
+
+                            // 如果撞到自己了
+                            if (this.blocks[i][0] == block[0] && this.blocks[i][1] == block[1]) return false;
+                        }
+
+                        return true;
+                    }
+                }
+            });
+
+            xhtml.bind(document.body, 'keydown', event => {
+
+                switch (getKeyString(event)) {
+                    case 'up': {
+                        clunch.mulpD = [0, -1];
+                        break;
+                    }
+                    case 'down': {
+                        clunch.mulpD = [0, 1];
+                        break;
+                    }
+                    case 'left': {
+                        clunch.mulpD = [-1, 0];
+                        break;
+                    }
+                    case 'right': {
+                        clunch.mulpD = [1, 0];
+                        break;
+                    }
+                }
+
+            });
+
         }
     };
 </script>
@@ -33,11 +176,10 @@
                     margin-right: 10px;
                 }
 
-                padding-left: 10px;
                 font-size: 18px;
-                background-color: #d3d0d0;
+                background-color: #98942e;
                 line-height: 50px;
-                background-image:url('../../../assets/snake-eating.jpg');
+                background-image:url("../../../assets/snake-eating.jpg");
                 background-repeat: no-repeat;
                 background-size: auto 80%;
                 background-position: 5px center;
@@ -46,8 +188,7 @@
             }
 
             &>.snake-eating {
-                background-color: #fafafa;
-                border: 1px solid #d3d0d0;
+                background-color: #d3d0d0;
                 height: 500px;
             }
         }

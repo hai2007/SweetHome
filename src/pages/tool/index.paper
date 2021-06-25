@@ -1,8 +1,5 @@
 <template>
     <ul>
-        <li @click='reloadPage("#/mspainter")' class='mspainter'>
-            图片编辑器
-        </li>
         <li @click='reloadPage("#/regexper")' class='regexper'>
             正则表达式可视化
         </li>
@@ -16,32 +13,32 @@
     };
 </script>
 <style>
-    ul {
-        li {
-            display: inline-block;
-            width: calc(25% - 20px);
-            margin: 10px;
-            vertical-align: top;
-            text-align: center;
-            cursor: pointer;
-            padding-top: 170px;
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-color: #cfcaca;
-            height: 200px;
-            color: black;
-            border: 2px solid #cfcaca;
+    [quickpaper] {
+        padding-top: 20px;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        ul {
+            li {
+                display: inline-block;
+                width: calc(25% - 20px);
+                margin: 10px;
+                vertical-align: top;
+                text-align: center;
+                cursor: pointer;
+                padding-top: 170px;
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-color: #69843b;
+                height: 200px;
+                color: #fefefe;
+                border: 2px solid #cfcaca;
 
-            &.mspainter {
-                background-image: url('../../assets/mspainter@review.jpg');
-            }
+                &:hover {
+                    text-decoration: underline;
+                }
 
-            &.regexper {
-                background-image: url('../../assets/regexper@review.jpg');
+                &.regexper {
+                    background-image: url('../../assets/regexper@review.jpg');
+                }
             }
         }
     }

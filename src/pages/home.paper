@@ -47,7 +47,7 @@
             </div>
             <div class='cat-page'>
                 <h4>
-                    由老猫的离世而引发的追忆
+                    《由老猫的离世而引发的追忆》
                 </h4>
                 <p>
                     去年冬天的一个周末，大学室友小孩出生，从南京出发刚到达合肥南，打算从这转车去淮南。由于离下一班车开还有一会，就打个电话回去，问问家里近来情况。
@@ -320,7 +320,7 @@
 
     /* 猫 */
     .cat-page {
-        background: #d0c1c1;
+        background-color: #fafafa;
         margin: 30px 50px 50px 50px;
         padding: 30px;
     }

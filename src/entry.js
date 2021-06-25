@@ -13,7 +13,6 @@ let pages = {
     interview: () => import('./pages/interview/index.paper'),
 
     // 工具
-    mspainter: () => import('./pages/tool/mspainter/index.paper'),
     regexper: () => import('./pages/tool/regexper/index.paper'),
 
     // 游戏

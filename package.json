@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.17.0-alpha.16",
+  "version": "1.17.0-alpha.17",
   "description": "🏠 今天，你学习了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -14,7 +14,12 @@
   "keywords": [
     "homepage",
     "hai2007",
-    "sweethome"
+    "sweethome",
+    "game",
+    "tool",
+    "notebook",
+    "study",
+    "learn"
   ],
   "author": "你好2007",
   "license": "Apache-2.0",
@@ -25,15 +30,16 @@
   "dependencies": {
     "@hai2007/polyfill": "0.1.1",
     "@hai2007/style": "^0.3.0",
-    "@hai2007/tool": "^0.6.6",
-    "clunch": "^1.6.0",
-    "image3d": "^3.0.0",
+    "@hai2007/tool": "^0.7.0",
+    "clunch": "^1.7.0",
+    "image2d": "^1.14.0",
+    "image3d": "^3.1.0",
     "quick-paper": "^0.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
-    "@hai2007/algorithm": "^0.6.2",
+    "@hai2007/algorithm": "^0.6.3",
     "@hai2007/nodejs": "^1.0.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
