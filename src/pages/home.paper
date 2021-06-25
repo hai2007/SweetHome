@@ -21,7 +21,6 @@
             <div class="cat">
                 一只陪伴了我十六年的猫
             </div>
-            <a class='license' href="#/license" target="_blank" title='查看开源协议权限规则'></a>
             <ui-skybox />
             <a class='counter' href="https://info.flagcounter.com/bdd0" target="_blank">
                 <img :src="counterUrl">
@@ -242,15 +241,6 @@
         height: 260px;
         background-size: 100% auto;
         font-size: 0;
-    }
-
-    div.page>div.left>.license {
-        background-image: url('../assets/license.png');
-        height: 80px;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center center;
-        margin-top: 30px;
     }
 
     div.page>div.left>.counter>img {

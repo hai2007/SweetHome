@@ -94,6 +94,7 @@
             &.input-view {
                 background-color: #fafafa;
                 padding: 10px 0;
+                white-space: nowrap;
 
                 &>input,
                 &>span {
@@ -125,12 +126,11 @@
             }
 
             &.show-view {
-                height: calc(100vh - 248px);
+                min-height: calc(100vh - 248px);
                 text-align: center;
                 padding: 10px;
                 padding-top: 0;
                 background-color: #fafafa;
-                overflow: auto;
 
                 &>canvas {
                     background-color: white;

@@ -21,11 +21,6 @@ let pages = {
         content: () => import('../pages/Sponsors.paper')
     },
 
-    // 协议
-    license: {
-        content: () => import('../pages/license.paper')
-    },
-
     // 工具
     tool: {
         content: () => import('../pages/tool/index.paper')
