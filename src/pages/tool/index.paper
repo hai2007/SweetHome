@@ -1,45 +1,52 @@
 <template>
-    <ul>
-        <li @click='reloadPage("#/regexper")' class='regexper'>
-            正则表达式可视化
-        </li>
-    </ul>
+    <header>
+        <h2>
+            有用的工具可以提高效率
+        </h2>
+        <div class="search">
+            <ui-search></ui-search>
+        </div>
+    </header>
+    <div>
+        <ui-dev></ui-dev>
+    </div>
+    <ui-footer></ui-footer>
 </template>
 <script>
     export default {
         mounted() {
-            this.changeActive('menu-1', 'tool');
+            this.setTitle('工具', './src/assets/tool.png');
         }
     };
 </script>
 <style>
     [quickpaper] {
-        padding-top: 20px;
+        background-color: #fafafa;
 
-        ul {
-            li {
+        &>header {
+            background-color: white;
+
+            &>h2 {
                 display: inline-block;
-                width: calc(25% - 20px);
-                margin: 10px;
-                vertical-align: top;
-                text-align: center;
-                cursor: pointer;
-                padding-top: 170px;
+                padding: 10px;
+                padding-top: 58px;
+                font-size: 20px;
+                background-image: url('../../assets/tool-banner.png');
                 background-repeat: no-repeat;
-                background-position: center top;
-                background-color: #69843b;
-                height: 200px;
-                color: #fefefe;
-                border: 2px solid #cfcaca;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                &.regexper {
-                    background-image: url('../../assets/regexper@review.jpg');
-                }
+                background-position: center -17px;
+                color: #a4afa5;
+                font-weight: 200;
             }
+
+            &>.search {
+                float: right;
+                margin-top: 30px;
+                margin-right: 30px;
+            }
+        }
+
+        &>div {
+            min-height: calc(100vh - 188px);
         }
     }
 </style>

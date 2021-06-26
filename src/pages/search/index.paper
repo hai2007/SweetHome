@@ -13,7 +13,7 @@
         </div>
     </header>
     <div>
-
+        <ui-dev></ui-dev>
     </div>
     <ui-footer></ui-footer>
 </template>

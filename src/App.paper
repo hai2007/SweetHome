@@ -14,18 +14,18 @@
                     <span>首页</span>
                 </li>
 
-                <!-- 备注：日常开发的时候快速查看 -->
-                <li @click='openRouter("notebook")' class='menu-1 notebook'>
-                    <span>小文档&理解</span>
-                </li>
-
                 <!-- 备注：给别人讲课时用 -->
                 <li @click='reloadPage("#/learning")' class='menu-1 learning'>
                     <span>小课堂</span>
                 </li>
 
+                <!-- 备注：日常开发的时候快速查看 -->
+                <li @click='openRouter("notebook")' class='menu-1 notebook'>
+                    <span>小文档&理解</span>
+                </li>
+
                 <!-- 备注：一些有用的辅助工具 -->
-                <li @click='openRouter("tool")' class='menu-1 tool'>
+                <li @click='reloadPage("#/tool")' class='menu-1 tool'>
                     <span>工具</span>
                 </li>
 

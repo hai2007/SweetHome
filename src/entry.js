@@ -13,7 +13,7 @@ let pages = {
     interview: () => import('./pages/interview/index.paper'),
 
     // 工具
-    regexper: () => import('./pages/tool/regexper/index.paper'),
+    tool: () => import('./pages/tool/index.paper'),
 
     // 游戏
     game: () => import('./pages/game/index.paper'),
@@ -33,6 +33,7 @@ import './directives/ui-goto-example';
 // 引入公共组件
 import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFooter', uiFooter);
 import uiSearch from './components/ui-search.paper'; QuickPaper.component('uiSearch', uiSearch);
+import uiDev from './components/ui-dev.paper'; QuickPaper.component('uiDev', uiDev);
 
 // 调整并刷新
 QuickPaper.prototype.reloadPage = url => {

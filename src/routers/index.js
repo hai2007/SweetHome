@@ -21,11 +21,6 @@ let pages = {
         content: () => import('../pages/Sponsors.paper')
     },
 
-    // 工具
-    tool: {
-        content: () => import('../pages/tool/index.paper')
-    },
-
     // 文档
     ...notebook,
 
