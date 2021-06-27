@@ -85,17 +85,16 @@
                                 return;
                             }
 
-                            this.blocks.pop();
                             this.blocks.unshift(newBlock);
 
                             // 判断是否吃到食物了
                             if (
-                                newBlock[0] + this.mulpD[0] == this.foodBlock[0] &&
-                                newBlock[1] + this.mulpD[1] == this.foodBlock[1]
+                                newBlock[0] == this.foodBlock[0] &&
+                                newBlock[1] == this.foodBlock[1]
                             ) {
-
-                                this.blocks.unshift(this.foodBlock);
                                 this.foodBlock = this.newFood();
+                            } else {
+                                this.blocks.pop();
                             }
 
                             this.flag = new Date().valueOf();
