@@ -104,139 +104,140 @@
 <style>
     [quickpaper] {
         white-space: nowrap;
-    }
 
-    [quickpaper]>div {
-        display: inline-block;
-        white-space: normal;
-        vertical-align: top;
-        margin: 20px 10px;
-    }
+        &>div {
+            display: inline-block;
+            white-space: normal;
+            vertical-align: top;
+            margin: 20px 10px;
 
-    [quickpaper]>div.menu {
-        width: 160px;
-        background-image: url('../../assets/will-sleep.png');
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        padding-bottom: 130px;
-        background-color: #eaeaea;
-        position: sticky;
-        top: 20px;
-    }
+            &.menu {
+                width: 160px;
+                background-image: url('../../assets/will-sleep.png');
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                padding-bottom: 130px;
+                background-color: #eaeaea;
+                position: sticky;
+                top: 20px;
 
-    [quickpaper]>div.menu>button {
-        display: block;
-        width: 100%;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        padding: 10px;
-        border-bottom: 1px solid #fafafa;
-        cursor: pointer;
-    }
+                &>button {
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 10px;
+                    border-bottom: 1px solid #fafafa;
+                    cursor: pointer;
+                }
 
-    [quickpaper]>div.menu>span {
-        display: block;
-        text-align: center;
-        background-color: #60810b;
-        padding: 5px;
-        color: white;
-    }
+                &>span {
+                    display: block;
+                    text-align: center;
+                    background-color: #60810b;
+                    padding: 5px;
+                    color: white;
+                }
+            }
 
-    [quickpaper]>div.content {
-        width: calc(100% - 210px);
-    }
+            &.content {
+                width: calc(100% - 210px);
 
-    [quickpaper]>div.content>.item {
-        background-color: #eaeaea;
-        margin-bottom: 20px;
-        padding: 10px;
-    }
+                &>.item {
+                    background-color: #eaeaea;
+                    margin-bottom: 20px;
+                    padding: 10px;
 
-    [quickpaper]>div.content>.item>h2 {
-        font-size: 18px;
-        padding: 10px;
-    }
+                    &>h2 {
+                        font-size: 18px;
+                        padding: 10px;
+                    }
 
-    [quickpaper]>div.content>.item>a {
-        display: inline-block;
-        background-color: #fff;
-        display: inline-block;
-        height: 96px;
-        background-repeat: no-repeat;
-        background-size: 60px;
-        background-position: 8px center;
-        padding-left: 76px;
-        border: 10px solid rgb(236, 236, 236);
-        vertical-align: top;
-        position: relative;
-    }
+                    &>a {
+                        display: inline-block;
+                        background-color: #fff;
+                        display: inline-block;
+                        height: 96px;
+                        background-repeat: no-repeat;
+                        background-size: 60px;
+                        background-position: 8px center;
+                        padding-left: 76px;
+                        border: 10px solid rgb(236, 236, 236);
+                        vertical-align: top;
+                        position: relative;
 
-    [quickpaper]>div.content>.item>a>span {
-        display: block;
-        white-space: nowrap;
-    }
+                        &>span {
+                            display: block;
+                            white-space: nowrap;
 
-    [quickpaper]>div.content>.item>a>span:first-child {
-        color: #43515a;
-        font-size: 18px;
-        line-height: 20px;
-        padding-top: 16px;
-    }
+                            &:first-child {
+                                color: #43515a;
+                                font-size: 18px;
+                                line-height: 20px;
+                                padding-top: 16px;
+                            }
 
-    [quickpaper]>div.content>.item>a>span:nth-child(2) {
-        color: #435159;
-        font-weight: 200;
-        font-size: 14px;
-        line-height: 40px;
-    }
+                            &:nth-child(2) {
+                                color: #435159;
+                                font-weight: 200;
+                                font-size: 14px;
+                                line-height: 40px;
+                            }
+                        }
 
-    [quickpaper]>div.content>.item>a>i {
-        display: inline-block;
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        z-index: 1;
-        right: 5px;
-        top: 5px;
-    }
+                        &>i {
+                            display: inline-block;
+                            position: absolute;
+                            width: 30px;
+                            height: 30px;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: 100% auto;
+                            z-index: 1;
+                            right: 5px;
+                            top: 5px;
 
-    [quickpaper]>div.content>.item>a>i.gray {
-        background-image: url('../../assets/star-gray.png');
-    }
+                            &.gray {
+                                background-image: url('../../assets/star-gray.png');
+                            }
 
-    [quickpaper]>div.content>.item>a>i.red {
-        background-image: url('../../assets/star-red.png');
-    }
+                            &.red {
+                                background-image: url('../../assets/star-red.png');
+                            }
+                        }
 
-    [quickpaper]>div.content>.item>a.html {
-        background-image: url('../../assets/html.png');
-    }
+                        &.html {
+                            background-image: url('../../assets/html.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.css {
-        background-image: url('../../assets/css.png');
-    }
+                        &.css {
+                            background-image: url('../../assets/css.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.js {
-        background-image: url('../../assets/js.png');
-    }
+                        &.js {
+                            background-image: url('../../assets/js.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.vue {
-        background-image: url('../../assets/vue.png');
-    }
+                        &.vue {
+                            background-image: url('../../assets/vue.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.webpack {
-        background-image: url('../../assets/webpack.png');
-    }
+                        &.webpack {
+                            background-image: url('../../assets/webpack.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.npm {
-        background-image: url('../../assets/npm.png');
-    }
+                        &.npm {
+                            background-image: url('../../assets/npm.png');
+                        }
 
-    [quickpaper]>div.content>.item>a.nodejs {
-        background-image: url('../../assets/nodejs.png');
+                        &.nodejs {
+                            background-image: url('../../assets/nodejs.png');
+                        }
+
+                    }
+                }
+            }
+        }
     }
 </style>

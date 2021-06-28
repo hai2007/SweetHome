@@ -89,101 +89,110 @@
 </script>
 <style>
     /* 笔记 */
-    .page>.notebook {
-        margin: 0 50px;
-        margin-top: 20px;
-        border-radius: 5px;
-        padding: 10px;
-    }
+    .page {
+        &>.notebook {
+            margin: 0 50px;
+            margin-top: 20px;
+            border-radius: 5px;
+            padding: 10px;
 
-    .page>.notebook>a {
-        display: inline-block;
-        height: 96px;
-        width: 33.33333333%;
-        background-repeat: no-repeat;
-        background-size: 60px;
-        background-position: 8px center;
-        padding-left: 76px;
-        border: 10px solid transparent;
-        vertical-align: top;
-    }
 
-    .page>.notebook>a>span {
-        display: block;
-    }
+            &>a {
+                display: inline-block;
+                height: 96px;
+                width: 33.33333333%;
+                background-repeat: no-repeat;
+                background-size: 60px;
+                background-position: 8px center;
+                padding-left: 76px;
+                border: 10px solid transparent;
+                vertical-align: top;
 
-    .page>.notebook>a>span:first-child {
-        color: #43515a;
-        font-size: 18px;
-        line-height: 20px;
-        padding-top: 16px;
-    }
+                &.css {
+                    background-image: url('../assets/css.png');
+                }
 
-    .page>.notebook>a>span:last-child {
-        color: #435159;
-        font-weight: 200;
-        font-size: 14px;
-        line-height: 40px;
-    }
+                &.js {
+                    background-image: url('../assets/js.png');
+                }
 
-    .page>.notebook>a.css {
-        background-image: url('../assets/css.png');
-    }
+                &.npm {
+                    background-image: url('../assets/npm.png');
+                }
 
-    .page>.notebook>a.js {
-        background-image: url('../assets/js.png');
-    }
+                &.git {
+                    background-image: url('../assets/git.png');
+                }
 
-    .page>.notebook>a.npm {
-        background-image: url('../assets/npm.png');
-    }
+                &>span {
+                    display: block;
 
-    .page>.notebook>a.git {
-        background-image: url('../assets/git.png');
-    }
+                    &:first-child {
+                        color: #43515a;
+                        font-size: 18px;
+                        line-height: 20px;
+                        padding-top: 16px;
+                    }
 
-    .page>.more {
-        text-align: center;
-        background-image: url('../assets/more-line.png');
-        background-repeat: no-repeat;
-        background-position: center top;
-    }
+                    &:last-child {
+                        color: #435159;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 40px;
+                    }
+                }
+            }
 
-    .page>.more>a {
-        color: #6d757a;
-        font-size: 12px;
-        background-image: url('../assets/more.png');
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        width: 94px;
-        height: 30px;
-        line-height: 30px;
-        display: inline-block;
-        position: relative;
-        bottom: 10px;
+        }
+
+        .page {
+
+            &>.more {
+                text-align: center;
+                background-image: url('../assets/more-line.png');
+                background-repeat: no-repeat;
+                background-position: center top;
+
+                &>a {
+                    color: #6d757a;
+                    font-size: 12px;
+                    background-image: url('../assets/more.png');
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    width: 94px;
+                    height: 30px;
+                    line-height: 30px;
+                    display: inline-block;
+                    position: relative;
+                    bottom: 10px;
+                }
+            }
+
+        }
     }
 
     /* 小文章 */
     .blog-view {
         border: 1px solid #dddddd;
-        margin: 30px 50px;
-    }
+        margin: 40px 50px;
 
-    .blog-view>.blog {
-        color: #333;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #dddddd;
-        font-size: 20px;
-        padding: 10px;
-        position: relative;
-    }
+        &>.blog {
+            color: #333;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #dddddd;
+            font-size: 20px;
+            padding: 10px;
+            position: relative;
 
-    .blog-view>.blog>a {
-        float: right;
-        background-color: #f05036;
-        color: white;
-        font-size: 14px;
-        padding: 4px;
+            &>a {
+                float: right;
+                background-color: #f05036;
+                color: white;
+                font-size: 14px;
+                padding: 4px;
+            }
+        }
+
     }
 
     .blog-list {
@@ -197,33 +206,33 @@
         display: block;
         padding: 10px 0;
         color: rgb(0, 0, 0);
-    }
 
-    .blog-list>a:hover {
-        text-decoration: underline;
-    }
+        &:hover {
+            text-decoration: underline;
+        }
 
-    .blog-list>a:not(:last-child) {
-        border-bottom: 1px solid #dddddd;
-    }
+        &:not(:last-child) {
+            border-bottom: 1px solid #dddddd;
+        }
 
-    .blog-list>a>span {
-        display: inline-block;
-        width: 70px;
-        line-height: 26px;
-        font-size: 13px;
-        padding: 0;
-        font-weight: 500;
-        text-align: center;
-    }
+        &>span {
+            display: inline-block;
+            width: 70px;
+            line-height: 26px;
+            font-size: 13px;
+            padding: 0;
+            font-weight: 500;
+            text-align: center;
 
-    .blog-list>a>span:nth-child(1) {
-        color: rgb(214, 205, 205);
-    }
+            &:nth-child(1) {
+                color: rgb(214, 205, 205);
+            }
 
-    .blog-list>a>span:nth-child(2) {
-        background-color: #FCF8E3;
-        color: #8A6D3B;
-        margin: 0 10px;
+            &:nth-child(2) {
+                background-color: #FCF8E3;
+                color: #8A6D3B;
+                margin: 0 10px;
+            }
+        }
     }
 </style>

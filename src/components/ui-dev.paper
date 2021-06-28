@@ -1,55 +1,60 @@
 <template>
-    <h2>
-        《重要声明》
-    </h2>
-    <p>
-        本网站来自一个开源的项目，如果你看见了这段文字，说明此处目前处于设计开发中。
-    </p>
-    <p>
-        我们欢迎任何人参与本项目的开发维护，或者给我们提出宝贵的建议。
-    </p>
-    <a class='link' href="https://github.com/hai2007/SweetHome/issues" target="_blank">提建议</a>
-    <a class='link' href="https://github.com/hai2007/SweetHome" target="_blank">参与开发</a>
-    <a class='author' href="https://github.com/hai2007" target="_blank">作者</a>
+    <div>
+        <h2>
+            《重要声明》
+        </h2>
+        <p>
+            本网站来自一个开源的项目，如果你看见了这段文字，说明此处目前处于设计开发中。
+        </p>
+        <p>
+            我们欢迎任何人参与本项目的开发维护，或者给我们提出宝贵的建议。
+        </p>
+        <a class='link' href="https://github.com/hai2007/SweetHome/issues" target="_blank">提建议</a>
+        <a class='link' href="https://github.com/hai2007/SweetHome" target="_blank">参与开发</a>
+        <a class='author' href="https://github.com/hai2007" target="_blank">作者</a>
+    </div>
 </template>
 <style>
     [quickpaper] {
-        width: 300px;
-        font-size: 12px;
-        line-height: 1.6em;
-        margin: 50px;
-        background-color: white;
-        outline: 1px solid black;
-        padding: 10px;
-        position: relative;
+        padding: 50px;
 
-        &>h2 {
-            text-align: center;
-            font-size: 14px;
+        &>div {
+            width: 300px;
+            font-size: 12px;
+            line-height: 1.6em;
+            background-color: white;
+            outline: 1px solid black;
             padding: 10px;
-        }
+            position: relative;
 
-        &>p {
-            text-indent: 2em;
-        }
-
-        &>a {
-            display: inline-block;
-
-            &.link {
-                margin: 10px;
-                text-decoration: underline;
+            &>h2 {
+                text-align: center;
+                font-size: 14px;
+                padding: 10px;
             }
 
-            &.author {
-                width: 50px;
-                height: 50px;
-                background-image: url('../assets//girl-hai2007.png');
-                position: absolute;
-                background-size: 100% auto;
-                right: 10px;
-                bottom: 10px;
-                font-size: 0;
+            &>p {
+                text-indent: 2em;
+            }
+
+            &>a {
+                display: inline-block;
+
+                &.link {
+                    margin: 10px;
+                    text-decoration: underline;
+                }
+
+                &.author {
+                    width: 50px;
+                    height: 50px;
+                    background-image: url('../assets//girl-hai2007.png');
+                    position: absolute;
+                    background-size: 100% auto;
+                    right: 10px;
+                    bottom: 10px;
+                    font-size: 0;
+                }
             }
         }
     }

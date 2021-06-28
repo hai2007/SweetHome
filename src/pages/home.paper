@@ -142,197 +142,202 @@
         background-image: url('../assets/stand.png');
         background-repeat: no-repeat;
         background-position: 100px bottom;
+
+        /* 主体划分 */
+        &>div {
+            display: inline-block;
+            vertical-align: top;
+
+            &.left {
+                text-align: center;
+                width: 300px;
+                padding-bottom: 120px;
+
+                /* 左边样式 */
+                &>.title {
+                    padding-top: 200px;
+                    background-image: url('../assets/girl-hai2007.png');
+                    background-repeat: no-repeat;
+                    background-position: center 30px;
+                    font-size: 20px;
+                    font-weight: 800;
+
+                    &>span {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 2em;
+                    }
+                }
+
+                &>.belief {
+                    line-height: 2em;
+                    color: gray;
+                }
+
+                &>.fork {
+                    color: rgb(90, 86, 86);
+                    border: 1px solid rgb(202, 199, 199);
+                    padding: 5px 10px;
+                    display: inline-block;
+                    cursor: pointer;
+                    user-select: none;
+                    margin-top: 10px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: rgb(245, 12, 12);
+                        border-color: rgb(236, 49, 49);
+                    }
+                }
+
+                &>.link {
+                    padding-top: 20px;
+
+                    &>a {
+                        background-image: url('../assets/link-icon.png');
+                        padding-top: inherit;
+                        background-repeat: no-repeat;
+                        background-position-y: -8px;
+                        width: 50px;
+                        font-size: 12px;
+                        display: inline-block;
+                        color: rgb(0, 0, 0);
+                        font-weight: 800;
+
+                        &.github {
+                            background-position-x: 6px;
+                        }
+
+                        &.gitlab {
+                            background-position-x: -464px;
+                        }
+
+                        &.gitee {
+                            background-position-x: -358px;
+                        }
+
+                        &.npm {
+                            background-position-x: -124px;
+                        }
+
+                        &.sf {
+                            background-position-x: -242px;
+                        }
+                    }
+                }
+
+                &>.cat {
+                    background-image: url('../assets/cat.jpeg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    height: 260px;
+                    background-size: 100% auto;
+                    font-size: 0;
+                }
+
+                &>.counter>img {
+                    margin-top: 20px;
+                }
+
+            }
+
+            &.right {
+                width: 700px;
+                /* 右边顶部说明 */
+
+                &>.stepbystep {
+                    &>h2 {
+                        line-height: 3em;
+                        background-image: url('../assets/dream.png');
+                        background-position: 350px center;
+                        background-size: auto 80%;
+                        background-repeat: no-repeat;
+                        color: red;
+                    }
+
+                    &>p {
+                        text-indent: 2em;
+                        padding: 5px;
+                        line-height: 1.4em;
+
+                        &.right {
+                            text-align: right;
+                            font-size: 14px;
+                            font-weight: 800;
+                        }
+
+                    }
+                }
+
+                /* 右边底部链接 */
+                &>.footer-link {
+                    border-top: 1px solid rgb(187, 183, 183);
+                    margin-top: 10px;
+                    font-family: monospace;
+                    text-align: center;
+
+                    &>li {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 25%;
+                        padding: 10px;
+                        text-align: left;
+
+                        &>h2 {
+                            font-size: 16px;
+                            padding: 20px 0;
+                        }
+
+                        &>a {
+                            display: block;
+                            color: rgb(70, 73, 73);
+                            font-weight: 200;
+                            margin-bottom: 20px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                        }
+                    }
+
+                }
+
+                /* 其它 */
+                &>h2 {
+                    margin-top: 30px;
+                }
+            }
+        }
     }
 
-    /* 主体划分 */
-    div.page>div {
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    div.page>div.left {
-        text-align: center;
-        width: 300px;
-        padding-bottom: 120px;
-    }
-
-    div.page>div.right {
-        width: 700px;
-    }
-
-    /* 左边样式 */
-    div.page>div.left>.title {
-        padding-top: 200px;
-        background-image: url('../assets/girl-hai2007.png');
-        background-repeat: no-repeat;
-        background-position: center 30px;
-        font-size: 20px;
-        font-weight: 800;
-    }
-
-    div.page>div.left>.title>span {
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 2em;
-    }
-
-    div.page>div.left>.belief {
-        line-height: 2em;
-        color: gray;
-    }
-
-    div.page>div.left>.fork {
-        color: rgb(90, 86, 86);
-        border: 1px solid rgb(202, 199, 199);
-        padding: 5px 10px;
-        display: inline-block;
-        cursor: pointer;
-        user-select: none;
-        margin-top: 10px;
-    }
-
-    div.page>div.left>.fork:hover {
-        text-decoration: underline;
-        color: rgb(245, 12, 12);
-        border-color: rgb(236, 49, 49);
-    }
-
-    div.page>div.left>.link {
-        padding-top: 20px;
-    }
-
-    div.page>div.left>.link>a {
-        background-image: url('../assets/link-icon.png');
-        padding-top: inherit;
-        background-repeat: no-repeat;
-        background-position-y: -8px;
-        width: 50px;
-        font-size: 12px;
-        display: inline-block;
-        color: rgb(0, 0, 0);
-        font-weight: 800;
-    }
-
-    div.page>div.left>.link>a.github {
-        background-position-x: 6px;
-    }
-
-    div.page>div.left>.link>a.gitlab {
-        background-position-x: -464px;
-    }
-
-    div.page>div.left>.link>a.gitee {
-        background-position-x: -358px;
-    }
-
-    div.page>div.left>.link>a.npm {
-        background-position-x: -124px;
-    }
-
-    div.page>div.left>.link>a.sf {
-        background-position-x: -242px;
-    }
-
-    div.page>div.left>.cat {
-        background-image: url('../assets/cat.jpeg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        height: 260px;
-        background-size: 100% auto;
-        font-size: 0;
-    }
-
-    div.page>div.left>.counter>img {
-        margin-top: 20px;
-    }
-
-    /* 右边顶部说明 */
-
-    div.page>div.right>.stepbystep>h2 {
-        line-height: 3em;
-        background-image: url('../assets/dream.png');
-        background-position: 350px center;
-        background-size: auto 80%;
-        background-repeat: no-repeat;
-        color: red;
-    }
-
-    div.page>div.right>.stepbystep>p {
-        text-indent: 2em;
-        padding: 5px;
-        line-height: 1.4em;
-    }
-
-    div.page>div.right>.stepbystep>p.right {
-        text-align: right;
-        font-size: 14px;
-        font-weight: 800;
-    }
-
-    /* 右边底部链接 */
-    div.page>div.right>.footer-link {
-        border-top: 1px solid rgb(187, 183, 183);
-        margin-top: 10px;
-        font-family: monospace;
-        text-align: center;
-    }
-
-    div.page>div.right>.footer-link>li {
-        display: inline-block;
-        vertical-align: top;
-        width: 25%;
-        padding: 10px;
-        text-align: left;
-    }
-
-    div.page>div.right>.footer-link>li>h2 {
-        font-size: 16px;
-        padding: 20px 0;
-    }
-
-    div.page>div.right>.footer-link>li>a {
-        display: block;
-        color: rgb(70, 73, 73);
-        font-weight: 200;
-        margin-bottom: 20px;
-
-    }
-
-    div.page>div.right>.footer-link>li>a:hover {
-        text-decoration: underline;
-    }
-
-    /* 其它 */
-    div.page>div.right>h2 {
-        margin-top: 30px;
-    }
 
     /* 猫 */
     .cat-page {
         background-color: #fafafa;
         margin: 30px 50px 50px 50px;
         padding: 30px;
-    }
 
-    .cat-page>h4 {
-        font-weight: 800;
-        padding-bottom: 10px;
-    }
+        &>h4 {
+            font-weight: 800;
+            padding-bottom: 10px;
+        }
 
-    .cat-page>p {
-        text-indent: 2em;
-        line-height: 1.6em;
-        font-size: 14px;
-        color: rgb(16, 15, 15);
-    }
+        &>p {
+            text-indent: 2em;
+            line-height: 1.6em;
+            font-size: 14px;
+            color: rgb(16, 15, 15);
 
-    .cat-page>p.mark {
-        text-indent: 0;
-        margin: 20px 0;
-    }
+            &.mark {
+                text-indent: 0;
+                margin: 20px 0;
 
-    .cat-page>p.mark>div {
-        text-align: right;
+                &>div {
+                    text-align: right;
+                }
+            }
+        }
     }
 </style>

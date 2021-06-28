@@ -16,16 +16,16 @@
         line-height: 2em;
         padding: 20px 0;
         font-size: 14px;
-    }
 
-    footer a {
-        padding: 0 5px;
-        color: rgb(5, 100, 117);
-        text-decoration: underline;
-    }
+        a {
+            padding: 0 5px;
+            color: rgb(5, 100, 117);
+            text-decoration: underline;
 
-    footer a:hover {
-        color: rgb(3, 61, 71);
-        font-weight: 800;
+            &:hover {
+                color: rgb(3, 61, 71);
+                font-weight: 800;
+            }
+        }
     }
 </style>

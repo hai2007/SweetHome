@@ -101,41 +101,43 @@
 <style>
     [quickpaper] {
         background-color: #f5f5f5;
-    }
 
-    /* 页头 */
-    [quickpaper]>header {
-        font-size: 30px;
-        font-weight: 800;
-        color: #82af07;
-        background-image: url('../../assets/read.png');
-        background-repeat: no-repeat;
-        background-position: 60px center;
-        padding-left: 140px;
-        padding-right: 20px;
-        line-height: 74px;
-        height: 74px;
-        background-color: white;
-    }
+        /* 页头 */
+        &>header {
+            font-size: 30px;
+            font-weight: 800;
+            color: #82af07;
+            background-image: url('../../assets/read.png');
+            background-repeat: no-repeat;
+            background-position: 60px center;
+            padding-left: 140px;
+            padding-right: 20px;
+            line-height: 74px;
+            height: 74px;
+            background-color: white;
 
-    header>span {
-        float: right;
-        line-height: 1em;
-        margin-top: 16px;
-    }
+            &>span {
+                float: right;
+                line-height: 1em;
+                margin-top: 16px;
+            }
+        }
 
-    /* 顶部导航 */
 
-    [quickpaper]>nav {
-        line-height: 34px;
-        background-color: #60810b;
-        color: white;
-        padding-left: 50px;
-    }
 
-    /* 内容 */
-    [quickpaper]>div {
-        min-height: calc(100vh - 205px);
-        padding: 0 50px;
+        /* 顶部导航 */
+
+        &>nav {
+            line-height: 34px;
+            background-color: #60810b;
+            color: white;
+            padding-left: 50px;
+        }
+
+        /* 内容 */
+        &>div {
+            min-height: calc(100vh - 205px);
+            padding: 0 50px;
+        }
     }
 </style>
