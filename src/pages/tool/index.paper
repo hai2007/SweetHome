@@ -7,13 +7,37 @@
             <ui-search></ui-search>
         </div>
     </header>
-    <div>
-        <ui-dev></ui-dev>
-    </div>
+    <ul>
+        <li>
+            <h2>正则表达式可视化</h2>
+            <a class='Regexper-Visualization' q-bind:href='RegexperVisualization.webpage'></a>
+            <div>
+                <a q-bind:href='RegexperVisualization.webpage'>
+                    在线网址
+                </a>
+                <a q-bind:href='RegexperVisualization.codepage'>
+                    源码
+                </a>
+                <a q-bind:href='RegexperVisualization.issue'>
+                    提问题
+                </a>
+            </div>
+        </li>
+    </ul>
     <ui-footer></ui-footer>
 </template>
 <script>
     export default {
+        data() {
+            return {
+                "RegexperVisualization": {
+                    "webpage": "https://hai2007.github.io/Regexper-Visualization/?express=%5Cw%7B1%2C5%7D%5Ba-e0-8%5D%7C4(534)5(35%7B3%7D%7Cd)d(123)%5C1&isString=no",
+                    "codepage": "https://github.com/hai2007/Regexper-Visualization",
+                    "issue": "https://github.com/hai2007/Regexper-Visualization/issues"
+
+                }
+            };
+        },
         mounted() {
             this.setTitle('工具', './src/assets/tool.png');
         }
@@ -22,6 +46,7 @@
 <style>
     [quickpaper] {
         background-color: #fafafa;
+        min-width: 900px;
 
         &>header {
             background-color: white;
@@ -45,8 +70,40 @@
             }
         }
 
-        &>div {
+        &>ul {
             min-height: calc(100vh - 188px);
+
+            &>li {
+                padding: 25px;
+                color: #000000;
+                width: 100%;
+
+                &>h2 {
+                    text-align: center;
+                }
+
+                &>a {
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    display: block;
+
+                    &.Regexper-Visualization {
+                        background-image: url('../../assets/Regexper-Visualization.png');
+                        height: 280px;
+                    }
+                }
+
+                &>div {
+                    text-align: center;
+
+                    &>a {
+                        color: #97932e;
+                        margin: 0 10px;
+                        text-decoration: underline;
+                    }
+                }
+
+            }
         }
     }
 </style>

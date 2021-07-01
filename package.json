@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "description": "🏠 今天，你学习了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
