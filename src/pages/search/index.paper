@@ -32,7 +32,7 @@
                 if (flag == 'input' && event.keyCode != 13) return;
 
                 // 带着数据刷新界面
-                this.reloadPage("#/search?wd=" + this.wd);
+                this.reloadPage("#/search?wd=" + encodeURIComponent(this.wd));
 
             },
             doSearch(wd) {
