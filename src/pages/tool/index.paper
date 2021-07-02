@@ -1,7 +1,7 @@
 <template>
     <header>
         <h2>
-            有用的工具可以提高效率
+            有用的工具可以提高工作效率
         </h2>
         <div class="search">
             <ui-search></ui-search>
@@ -46,7 +46,7 @@
 <style>
     [quickpaper] {
         background-color: #fafafa;
-        min-width: 900px;
+        min-width: 700px;
 
         &>header {
             background-color: white;
@@ -84,12 +84,12 @@
 
                 &>a {
                     background-repeat: no-repeat;
-                    background-position: center bottom;
+                    background-position: center center;
                     display: block;
 
                     &.Regexper-Visualization {
                         background-image: url('../../assets/Regexper-Visualization.png');
-                        height: 280px;
+                        height: 220px;
                     }
                 }
 
