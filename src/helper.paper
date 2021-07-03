@@ -26,11 +26,11 @@
         &>div {
             &.quick-link {
                 position: fixed;
-                left: 0;
+                right: 0;
                 top: 200px;
                 background-color: white;
                 box-shadow: 0 0 6px 0px #d6cdcd;
-                border-radius: 0 10px 10px 0;
+                border-radius: 10px 0 0 10px;
                 padding: 5px;
 
                 &>a {
