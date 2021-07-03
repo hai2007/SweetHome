@@ -4,7 +4,10 @@
 
     <div class="quick-link">
         <a class="homepage" href='#/'>
-            主界面
+            返回首页
+        </a>
+        <a class="code-source" href='https://github.com/hai2007' target="_blank">
+            代码仓库
         </a>
         <a class="contact-us" href='https://github.com/hai2007/SweetHome/issues' target="_blank">
             联系我们
@@ -12,15 +15,6 @@
     </div>
 
 </template>
-<script>
-    export default {
-        data() {
-            return {
-
-            };
-        }
-    };
-</script>
 <style>
     [quickpaper] {
         &>div {
@@ -57,6 +51,10 @@
 
                     &.contact-us {
                         background-image: url('./assets/contact-us.jpg');
+                    }
+
+                    &.code-source {
+                        background-image: url('./assets/code-source.jpg');
                     }
                 }
             }

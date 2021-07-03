@@ -1,4 +1,9 @@
 <template>
+    <div class="top">
+        温馨提示：我们不再支持IE浏览器，如果你对本网站有任何建议或想法，都可以
+        <a href="https://github.com/hai2007/SweetHome/issues" target="_blank">点击此处</a>
+        告诉我们哦~
+    </div>
     <div class='page'>
         <div class="left">
             <div class="title">
@@ -32,13 +37,10 @@
                     What I Believe
                 </h2>
                 <p>
-                    我还惊讶地意识到，在我生命中有很多时刻，每当我遇到一个遥不可及、令人害怕的情境，
-                    并感到惊慌失措时，我都能够应付——因为我回想起了很久以前自己上过的那一课。
+                    我还惊讶地意识到，在我生命中有很多时刻，每当我遇到一个遥不可及、令人害怕的情境，并感到惊慌失措时，我都能够应付——因为我回想起了很久以前自己上过的那一课。
                 </p>
                 <p>
-                    我提醒自己不要看下面遥远的岩石，而是注意相对轻松、容易的第一小步，迈出一小步、再
-                    一小步，就这样体会每一步带来的成就感，直到完成了自己想要完成的，达到了自己的目标，然
-                    后再回头看时，不禁对自己走过的这段漫漫长路感到惊讶和自豪。
+                    我提醒自己不要看下面遥远的岩石，而是注意相对轻松、容易的第一小步，迈出一小步、再一小步，就这样体会每一步带来的成就感，直到完成了自己想要完成的，达到了自己的目标，然后再回头看时，不禁对自己走过的这段漫漫长路感到惊讶和自豪。
                 </p>
                 <p class="right">
                     ———— 摘自 莫顿·亨特《走一步，再走一步》
@@ -138,204 +140,231 @@
     };
 </script>
 <style>
-    div.page {
-        background-image: url('../assets/stand.png');
-        background-repeat: no-repeat;
-        background-position: 100px bottom;
-
-        /* 主体划分 */
+    [quickpaper] {
         &>div {
-            display: inline-block;
-            vertical-align: top;
 
-            &.left {
+            /* 提示 */
+            &.top {
+                background: #b6d472;
+                padding: 10px;
+                color: white;
+                margin: 10px 0;
                 text-align: center;
-                width: 300px;
-                padding-bottom: 120px;
+                outline: 1px dashed #b6d472;
 
-                /* 左边样式 */
-                &>.title {
-                    padding-top: 200px;
-                    background-image: url('../assets/girl-hai2007.png');
-                    background-repeat: no-repeat;
-                    background-position: center 30px;
-                    font-size: 20px;
-                    font-weight: 800;
-
-                    &>span {
-                        display: block;
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 2em;
-                    }
-                }
-
-                &>.belief {
-                    line-height: 2em;
-                    color: gray;
-                }
-
-                &>.fork {
-                    color: rgb(90, 86, 86);
-                    border: 1px solid rgb(202, 199, 199);
-                    padding: 5px 10px;
-                    display: inline-block;
-                    cursor: pointer;
-                    user-select: none;
-                    margin-top: 10px;
+                &>a {
+                    background-color: white;
+                    color: #b6d472;
+                    margin: 0 10px;
+                    padding: 5px;
 
                     &:hover {
                         text-decoration: underline;
-                        color: rgb(245, 12, 12);
-                        border-color: rgb(236, 49, 49);
                     }
                 }
-
-                &>.link {
-                    padding-top: 20px;
-
-                    &>a {
-                        background-image: url('../assets/link-icon.png');
-                        padding-top: inherit;
-                        background-repeat: no-repeat;
-                        background-position-y: -8px;
-                        width: 50px;
-                        font-size: 12px;
-                        display: inline-block;
-                        color: rgb(0, 0, 0);
-                        font-weight: 800;
-
-                        &.github {
-                            background-position-x: 6px;
-                        }
-
-                        &.gitlab {
-                            background-position-x: -464px;
-                        }
-
-                        &.gitee {
-                            background-position-x: -358px;
-                        }
-
-                        &.npm {
-                            background-position-x: -124px;
-                        }
-
-                        &.sf {
-                            background-position-x: -242px;
-                        }
-                    }
-                }
-
-                &>.cat {
-                    background-image: url('../assets/cat.jpeg');
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    height: 260px;
-                    background-size: 100% auto;
-                    font-size: 0;
-                }
-
-                &>.counter>img {
-                    margin-top: 20px;
-                }
-
             }
 
-            &.right {
-                width: 700px;
-                /* 右边顶部说明 */
+            /* 信仰 */
+            .stepbystep {
 
-                &>.stepbystep {
-                    &>h2 {
-                        line-height: 3em;
-                        background-image: url('../assets/dream.png');
-                        background-position: 350px center;
-                        background-size: auto 80%;
-                        background-repeat: no-repeat;
-                        color: red;
-                    }
-
-                    &>p {
-                        text-indent: 2em;
-                        padding: 5px;
-                        line-height: 1.4em;
-
-                        &.right {
-                            text-align: right;
-                            font-size: 14px;
-                            font-weight: 800;
-                        }
-
-                    }
+                &>h2 {
+                    line-height: 3em;
+                    background-image: url('../assets/dream.png');
+                    background-position: right center;
+                    background-size: auto 80%;
+                    background-repeat: no-repeat;
+                    color: red;
                 }
 
-                /* 右边底部链接 */
-                &>.footer-link {
-                    border-top: 1px solid rgb(187, 183, 183);
-                    margin-top: 10px;
-                    font-family: monospace;
-                    text-align: center;
+                &>p {
+                    text-indent: 2em;
+                    padding: 5px;
+                    line-height: 1.4em;
 
-                    &>li {
-                        display: inline-block;
-                        vertical-align: top;
-                        width: 25%;
-                        padding: 10px;
-                        text-align: left;
+                    &.right {
+                        text-align: right;
+                        font-size: 14px;
+                        font-weight: 800;
+                    }
 
-                        &>h2 {
-                            font-size: 16px;
-                            padding: 20px 0;
+                }
+            }
+
+            /* 主要内容 */
+            &.page {
+                background-image: url('../assets/stand.png');
+                background-repeat: no-repeat;
+                background-position: 100px bottom;
+
+                /* 主体划分 */
+                &>div {
+                    display: inline-block;
+                    vertical-align: top;
+
+                    &.left {
+                        text-align: center;
+                        width: 300px;
+                        padding-bottom: 120px;
+
+                        /* 左边样式 */
+                        &>.title {
+                            padding-top: 200px;
+                            background-image: url('../assets/girl-hai2007.png');
+                            background-repeat: no-repeat;
+                            background-position: center 30px;
+                            font-size: 20px;
+                            font-weight: 800;
+
+                            &>span {
+                                display: block;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 2em;
+                            }
                         }
 
-                        &>a {
-                            display: block;
-                            color: rgb(70, 73, 73);
-                            font-weight: 200;
-                            margin-bottom: 20px;
+                        &>.belief {
+                            line-height: 2em;
+                            color: gray;
+                        }
+
+                        &>.fork {
+                            color: rgb(90, 86, 86);
+                            border: 1px solid rgb(202, 199, 199);
+                            padding: 5px 10px;
+                            display: inline-block;
+                            cursor: pointer;
+                            user-select: none;
+                            margin-top: 10px;
 
                             &:hover {
                                 text-decoration: underline;
+                                color: rgb(245, 12, 12);
+                                border-color: rgb(236, 49, 49);
+                            }
+                        }
+
+                        &>.link {
+                            padding-top: 20px;
+
+                            &>a {
+                                background-image: url('../assets/link-icon.png');
+                                padding-top: inherit;
+                                background-repeat: no-repeat;
+                                background-position-y: -8px;
+                                width: 50px;
+                                font-size: 12px;
+                                display: inline-block;
+                                color: rgb(0, 0, 0);
+                                font-weight: 800;
+
+                                &.github {
+                                    background-position-x: 6px;
+                                }
+
+                                &.gitlab {
+                                    background-position-x: -464px;
+                                }
+
+                                &.gitee {
+                                    background-position-x: -358px;
+                                }
+
+                                &.npm {
+                                    background-position-x: -124px;
+                                }
+
+                                &.sf {
+                                    background-position-x: -242px;
+                                }
+                            }
+                        }
+
+                        &>.cat {
+                            background-image: url('../assets/cat.jpeg');
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            height: 260px;
+                            background-size: 100% auto;
+                            font-size: 0;
+                        }
+
+                        &>.counter>img {
+                            margin-top: 20px;
+                        }
+
+                    }
+
+                    &.right {
+                        width: 700px;
+
+                        /* 右边底部链接 */
+                        &>.footer-link {
+                            border-top: 1px solid rgb(187, 183, 183);
+                            margin-top: 10px;
+                            font-family: monospace;
+                            text-align: center;
+
+                            &>li {
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 25%;
+                                padding: 10px;
+                                text-align: left;
+
+                                &>h2 {
+                                    font-size: 16px;
+                                    padding: 20px 0;
+                                }
+
+                                &>a {
+                                    display: block;
+                                    color: rgb(70, 73, 73);
+                                    font-weight: 200;
+                                    margin-bottom: 20px;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+
+                                }
                             }
 
                         }
+
+                        /* 其它 */
+                        &>h2 {
+                            margin-top: 30px;
+                        }
                     }
-
-                }
-
-                /* 其它 */
-                &>h2 {
-                    margin-top: 30px;
                 }
             }
         }
-    }
 
+        /* 猫 */
+        .cat-page {
+            background-color: #fafafa;
+            margin: 30px 50px 50px 50px;
+            padding: 30px;
 
-    /* 猫 */
-    .cat-page {
-        background-color: #fafafa;
-        margin: 30px 50px 50px 50px;
-        padding: 30px;
+            &>h4 {
+                font-weight: 800;
+                padding-bottom: 10px;
+            }
 
-        &>h4 {
-            font-weight: 800;
-            padding-bottom: 10px;
-        }
+            &>p {
+                text-indent: 2em;
+                line-height: 1.6em;
+                font-size: 14px;
+                color: rgb(16, 15, 15);
 
-        &>p {
-            text-indent: 2em;
-            line-height: 1.6em;
-            font-size: 14px;
-            color: rgb(16, 15, 15);
+                &.mark {
+                    text-indent: 0;
+                    margin: 20px 0;
 
-            &.mark {
-                text-indent: 0;
-                margin: 20px 0;
-
-                &>div {
-                    text-align: right;
+                    &>div {
+                        text-align: right;
+                    }
                 }
             }
         }

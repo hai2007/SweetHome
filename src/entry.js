@@ -54,6 +54,7 @@ if (window.addEventListener)
             } else {
                 window.location.reload();
             }
+
         });
     }, false);
 

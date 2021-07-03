@@ -1,7 +1,7 @@
 <template>
     <footer>
         Copyright © 2016-2021
-        <a href="javascript:void(0)" @click='reloadPage("#/notebook")'>hai2007 走一步，再走一步。</a>
+        <a href="javascript:void(0)" @click='reloadPage("#/")'>hai2007 走一步，再走一步。</a>
         All rights reserved.
         <br />
         本网站由“你好2007”设计、开发和维护
