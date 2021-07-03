@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>🏠 今天，你学习了吗？</title>
     <link id='favicon' rel="shortcut icon" href="./src/assets/girl-hai2007.png">
-    <meta name="keywords"
-        content="甜蜜的家 今天，你学习了吗？ sweethome hai2007 你好2007 notebook home sponsors learning editor book">
+    <meta name="keywords" content="甜蜜的家 今天，你学习了吗？ sweethome hai2007 你好2007 notebook home sponsors learning editor book">
     <script>
         window.hai2007_sweethome_counterUrl = "https://s05.flagcounter.com/count2/bdd0/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_3/labels_1/pageviews_1/flags_0/percent_0/";
     </script>
@@ -17,6 +16,12 @@
             width: 100vw;
             height: 100vh;
             overflow: auto;
+        }
+
+        #sub-root {
+            position: fixed;
+            left: 0;
+            top: 0;
         }
 
         div#helpcounterdiv {
@@ -34,8 +39,11 @@
     <!-- 挂载根 -->
     <div id="root"></div>
 
+    <!-- 非主页面根 -->
+    <div id='sub-root'></div>
+
     <!-- 引入打包文件 -->
-    <script src="./dist/sweethome@v1.19.2.js"></script>
+    <script src="./dist/sweethome@v1.19.3.js"></script>
 
     <!-- 辅助统计 -->
     <div id="helpcounterdiv"></div>

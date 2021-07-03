@@ -1,0 +1,65 @@
+<template>
+
+    <!-- 快速跳转界面 -->
+
+    <div class="quick-link">
+        <a class="homepage" href='#/'>
+            主界面
+        </a>
+        <a class="contact-us" href='https://github.com/hai2007/SweetHome/issues' target="_blank">
+            联系我们
+        </a>
+    </div>
+
+</template>
+<script>
+    export default {
+        data() {
+            return {
+
+            };
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        &>div {
+            &.quick-link {
+                position: fixed;
+                left: 0;
+                top: 200px;
+                background-color: white;
+                box-shadow: 0 0 6px 0px #d6cdcd;
+                border-radius: 0 10px 10px 0;
+                padding: 5px;
+
+                &>a {
+                    display: block;
+                    font-size: 12px;
+                    height: 50px;
+                    width: 50px;
+                    background-size: 100% auto;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    padding-top: 50px;
+                    height: 80px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.homepage {
+                        background-image: url('./assets/girl-hai2007.png');
+                    }
+
+                    &.contact-us {
+                        background-image: url('./assets/contact-us.jpg');
+                    }
+                }
+            }
+        }
+    }
+</style>
