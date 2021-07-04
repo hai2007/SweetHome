@@ -1,7 +1,7 @@
 <template>
     <header>
         <h2>
-            有用的工具可以提高工作效率
+            有用的工具可以提高工作效率哦~
         </h2>
         <div class="search">
             <ui-search></ui-search>
@@ -56,10 +56,11 @@
                 padding: 10px;
                 padding-top: 58px;
                 font-size: 20px;
-                background-image: url('../../assets/tool-banner.png');
+                background-image: url('../../assets/tool.png');
                 background-repeat: no-repeat;
-                background-position: center -17px;
-                color: #a4afa5;
+                background-position: center 5px;
+                background-size: auto 50%;
+                color: #4d53bd;
                 font-weight: 200;
             }
 
