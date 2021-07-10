@@ -14,10 +14,22 @@
         </a>
     </div>
 
+    <!-- 特别推荐 clunch -->
+    <a class="clunch" href='https://clunch-contrib.github.io/community/' target="_blank">
+        <h2>clunch / community</h2>
+        <div>
+            开发者社区，汇集一些有用的资源和信息。
+        </div>
+        <span>
+            提示跳转
+        </span>
+    </a>
+
 </template>
 <style>
     [quickpaper] {
         &>div {
+
             &.quick-link {
                 position: fixed;
                 right: 0;
@@ -57,6 +69,58 @@
                         background-image: url('./assets/code-source.jpg');
                     }
                 }
+            }
+        }
+
+        &>.clunch {
+            position: fixed;
+            right: 0;
+            top: 460px;
+            background-color: white;
+            box-shadow: 0 0 6px 0px #d6cdcd;
+            border-radius: 10px 0 0 10px;
+            font-size: 12px;
+            background-size: auto 90%;
+            background-position: 3px center;
+            background-repeat: no-repeat;
+            background-image: url('./assets/clunch.png');
+            height: 60px;
+            width: 60px;
+            padding-left: 60px;
+            transition-property: width;
+            transition-duration: 1s;
+            color: black;
+            white-space: nowrap;
+
+            &>h2 {
+                line-height: 20px;
+                margin-top: 10px;
+            }
+
+            &>div {
+                line-height: 30px;
+            }
+
+            &>h2,
+            &>div {
+                padding-left: 10px;
+            }
+
+            &>span {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                left: 300px;
+                top: 0;
+                font-size: 0;
+                background-image: url('./assets/to-right.png');
+                background-position: center center;
+                background-size: 70% auto;
+                background-repeat: no-repeat;
+            }
+
+            &:hover {
+                width: 360px;
             }
         }
     }
