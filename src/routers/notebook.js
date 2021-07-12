@@ -24,6 +24,9 @@ export default {
     "notebook_css_selector": {
         content: () => import('../pages/notebook/css/selector.paper')
     },
+    "notebook_css_flex": {
+        content: () => import('../pages/notebook/css/flex.paper')
+    },
 
     // javascript
     "notebook_js_prototype": {

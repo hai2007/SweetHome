@@ -1,0 +1,243 @@
+<template class='doc-view'>
+    <h2>
+        Flex弹性布局快速使用
+    </h2>
+    <p>
+        设置容器为弹性盒子布局很简单：
+    </p>
+    <pre q-code='css'>
+{
+    display: flex;
+}
+    </pre>
+    <p>
+        对于元素本身而言，上面的是一个块元素，如果希望是行元素，只需要：
+    </p>
+    <pre q-code='css'>
+{
+    display: inline-flex;
+}
+    </pre>
+    <p class="warn">
+        温馨提示：设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+    </p>
+    <h3>
+        容器的属性
+    </h3>
+    <h4>
+        flex-direction
+    </h4>
+    <p>
+        用于设置条目的排列方向，有下列可选值：
+    </p>
+    <ul>
+        <li>
+            <span class="important">
+                row
+            </span>
+            ：水平从左往右排列，默认值。
+        </li>
+        <li>
+            <span class="important">
+                row-reverse
+            </span>
+            ：水平从右往左排列。
+        </li>
+        <li>
+            <span class="important">
+                column
+            </span>
+            ：垂直从上往下排列。
+        </li>
+        <li>
+            <span class="important">
+                column-reverse
+            </span>
+            ：垂直从下往上排列。
+        </li>
+    </ul>
+    <p class="warn">
+        温馨提示：下拉属性的说明都是以为条目按照从左到右排列为基础的，别的情况需要对应的调整理解。
+    </p>
+    <h4>
+        flex-wrap
+    </h4>
+    <p>
+        设置一行排不下所有内容后的处理方式，有下列可选值：
+    </p>
+    <ul>
+        <li>
+            <span class="important">
+                nowrap
+            </span>
+            ：不换行，默认值。
+        </li>
+        <li>
+            <span class="important">
+                wrap
+            </span>
+            ：换行。
+        </li>
+        <li>
+            <span class="important">
+                wrap-reverse
+            </span>
+            ：换行，可是行的排列是从下往上。
+        </li>
+    </ul>
+    <h4>
+        justify-content
+    </h4>
+    <p>
+        规定条目在容器中的对齐方式，有下列可选值：
+    </p>
+    <ul>
+        <li>
+            <span class="important">
+                flex-start
+            </span>
+            ：左对齐，默认值。
+        </li>
+        <li>
+            <span class="important">
+                flex-end
+            </span>
+            ：右对齐。
+        </li>
+        <li>
+            <span class="important">
+                center
+            </span>
+            ：居中。
+        </li>
+        <li>
+            <span class="important">
+                space-between
+            </span>
+            ：两端对齐，条目之间的间隔都相等。
+        </li>
+        <li>
+            <span class="important">
+                space-around
+            </span>
+            ：每个条目两侧的间隔相等（需要注意的是，条目之间的间隔比条目与边框的间隔大一倍）。
+        </li>
+    </ul>
+    <h4>
+        align-items
+    </h4>
+    <p>
+        每个条目内容的高不一定一样，用以定义条目对齐方式，有下列可选值：
+    </p>
+    <ul>
+        <li>
+            <span class="important">
+                stretch
+            </span>
+            ：无论内容多少，都一样高，占满整个容器的高度，默认值。
+        </li>
+        <li>
+            <span class="important">
+                flex-start
+            </span>
+            ：上对齐。
+        </li>
+        <li>
+            <span class="important">
+                flex-end
+            </span>
+            ：下对齐。
+        </li>
+        <li>
+            <span class="important">
+                center
+            </span>
+            ：居中对齐。
+        </li>
+        <li>
+            <span class="important">
+                baseline
+            </span>
+            ：基线对齐。
+        </li>
+    </ul>
+    <h4>
+        align-content
+    </h4>
+    <p>
+        条目可能不止占一行，此属性用以这些行的排列方式，有下列可选值：
+    </p>
+    <ul>
+        <li>
+            <span class="important">
+                stretch
+            </span>
+            ：平铺开占满，默认值。
+        </li>
+        <li>
+            <span class="important">
+                flex-start
+            </span>
+            ：上对齐。
+        </li>
+        <li>
+            <span class="important">
+                flex-end
+            </span>
+            ：下对齐。
+        </li>
+        <li>
+            <span class="important">
+                center
+            </span>
+            ：垂直居中对齐。
+        </li>
+        <li>
+            <span class="important">
+                space-between
+            </span>
+            ：平铺开（每行之间间距相同）。
+        </li>
+        <li>
+            <span class="important">
+                space-around
+            </span>
+            ：平铺开（每行上下空余空间相同）。
+        </li>
+    </ul>
+    <h3>
+        条目的属性
+    </h3>
+    <h4>
+        order
+    </h4>
+    <p>
+        定义条目排列序号，数值越小，排列越靠前，默认为0。
+    </p>
+    <h4>
+        flex-grow
+    </h4>
+    <p>
+        条目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+    </p>
+    <h4>
+        flex-shrink
+    </h4>
+    <p>
+        条目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+    </p>
+    <h4>
+        flex-basis
+    </h4>
+    <p>
+        设置占据的大小(比如80px)，默认auto。
+    </p>
+    <h4>
+        align-self
+    </h4>
+    <p>
+        此属性用于定义某个条目继承自容器的
+        <span class="warn">align-items</span>
+        属性是继承还是自定义，默认auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+    </p>
+</template>

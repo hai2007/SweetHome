@@ -40,6 +40,9 @@
                 <li @click='reloadPage("#/notebook_css_selector")'>
                     常用的CSS选择器快速查询手册 | CSS
                 </li>
+                <li @click='reloadPage("#/notebook_css_flex")'>
+                    Flex弹性布局快速使用 | CSS
+                </li>
             </ul>
             <h4>
                 JavaScript
