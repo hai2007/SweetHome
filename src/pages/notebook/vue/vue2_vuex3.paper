@@ -1,0 +1,138 @@
+<template class='doc-view'>
+    <h2>
+        Vuex3快速使用和查询
+    </h2>
+    <h3>
+        引入和使用
+    </h3>
+    <p>
+        首先，你需要创建Store对象并暴露出来：
+    </p>
+    <pre q-code>
+// store.js
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+    state:{
+        isLogin:false // 登录状态
+    },
+    getters:{},
+    mutations:{},
+    actions:{}
+});
+
+export default store;
+    </pre>
+    <p>
+        然后，在创建Vue对象的时候进行注册：
+    </p>
+    <pre q-code>
+import store from './store.js';
+
+new Vue({
+    el: '#app',
+    store: store,
+    ......
+});
+    </pre>
+    <p>
+        到这里，就可以直接在项目中进行使用了。
+    </p>
+    <p>
+        比如上面的登录状态，可以直接在页面中进行获取或修改：
+    </p>
+    <pre q-code>
+......
+    methods: {
+        doit(){
+            // 调用这个方法，每次把登录状态取反
+            this.$store.state.isLogin=!this.$store.state.isLogin;
+        }
+    }
+......
+    </pre>
+    <h3>
+        获取和修改
+    </h3>
+    <p>
+        虽然上面的内容已经足够使用了，不过，对于数据的修改和获取，有更良好的实践方案。
+    </p>
+    <h4>
+        Getters
+    </h4>
+    <p>
+        拿上面的登录举例子，可能我们在使用的时候进行一点点修改：
+    </p>
+    <pre q-code>
+......
+    getters: {
+        isLogin: state => {
+            // 登录的是返回 YES，否则返回 NO
+            return state.isLogin ? "YES" : "NO"
+        }
+    }
+......
+    </pre>
+    <p>
+        比如在页面中使用，只需要：
+    </p>
+    <pre q-code='html'>
+<div v-bind:isLogin='$store.getters.isLogin'></div>
+    </pre>
+    <p>
+        可以发现，只是把<span class="warn">state</span>改成了<span class="warn">getters</span>。
+    </p>
+    <h4>
+        Mutations
+    </h4>
+    <p>
+        同样的，如果我们现在需要修改登录状态：
+    </p>
+    <pre q-code>
+......
+    mutations: {
+        changeLoginState: (state, isLogin) => {
+            // 设置前需要先转成boolean值
+            state.isLogin = isLogin == 'YES' ? true : false;
+        }
+    }
+......
+    </pre>
+    <p>
+        然后使用的时候：
+    </p>
+    <pre q-code>
+this.$store.commit('changeLoginState', "YES");
+    </pre>
+    <h4>
+        Actions
+    </h4>
+    <p>
+        因为
+        <span class="warn">Mutations</span>
+        中必须是同步函数，如果需要异步操作：
+    </p>
+    <p class="warn">
+        特别说明：Mutations不可以异步的原因是为了保证devtool工具可以正确的追踪数据。
+    </p>
+    <pre q-code>
+......
+    actions: {
+        changeLoginState: (context, isLogin) => {
+            setTimeout(()=>{
+                context.commit("changeLoginState", isLogin);
+            }, 1000);
+        }
+    }
+......
+    </pre>
+    <p>
+        使用的时候也很简单：
+    </p>
+    <pre q-code>
+this.$store.dispatch('changeLoginState', 'YES');
+    </pre>
+</template>

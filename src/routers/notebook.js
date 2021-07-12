@@ -45,6 +45,9 @@ export default {
     "notebook_vue2_slot": {
         content: () => import('../pages/notebook/vue/vue2_slot.paper')
     },
+    "notebook_vue2_vuex3": {
+        content: () => import('../pages/notebook/vue/vue2_vuex3.paper')
+    },
 
     // webpack
     "notebook_webpack4_loader-plug": {

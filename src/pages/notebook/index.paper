@@ -79,6 +79,9 @@
                 <li @click='reloadPage("#/notebook_vue2_slot")'>
                     v-slot插槽使用和一些细节整理 | Vue2
                 </li>
+                <li @click='reloadPage("#/notebook_vue2_vuex3")'>
+                    Vuex3快速使用和查询 | Vue2
+                </li>
             </ul>
             <h4>
                 网络相关
