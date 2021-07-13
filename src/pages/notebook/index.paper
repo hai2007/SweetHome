@@ -71,6 +71,9 @@
                 <li @click='reloadPage("#/notebook_webpack4_loader-plug")'>
                     关于webpack的loader和plug一些理解 | Webpack4
                 </li>
+                <li @click='reloadPage("#/notebook_webpack-chain")'>
+                    webpack-chain常用方法快速查询 | Webpack
+                </li>
             </ul>
             <h4>
                 框架或库
@@ -84,6 +87,9 @@
                 </li>
                 <li @click='reloadPage("#/notebook_vue2_vuex3")'>
                     Vuex3快速使用和查询 | Vue2
+                </li>
+                <li @click='reloadPage("#/notebook_vue2_vue-config")'>
+                    vue.config.js快速查询 | Vue2
                 </li>
             </ul>
             <h4>

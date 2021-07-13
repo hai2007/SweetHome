@@ -51,10 +51,16 @@ export default {
     "notebook_vue2_vuex3": {
         content: () => import('../pages/notebook/vue/vue2_vuex3.paper')
     },
+    "notebook_vue2_vue-config": {
+        content: () => import('../pages/notebook/vue/vue2_vue-config.paper')
+    },
 
     // webpack
     "notebook_webpack4_loader-plug": {
         content: () => import('../pages/notebook/webpack/webpack4_loader-plug.paper')
+    },
+    "notebook_webpack-chain": {
+        content: () => import('../pages/notebook/webpack/webpack-chain.paper')
     },
 
     // 工具
