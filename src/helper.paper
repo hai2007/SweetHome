@@ -3,6 +3,7 @@
     <!-- 快速跳转界面 -->
 
     <div class="quick-link">
+        <span class="angry"></span>
         <a class="homepage" href='#/'>
             首页
         </a>
@@ -38,6 +39,18 @@
                 box-shadow: 0 0 6px 0px #d6cdcd;
                 border-radius: 10px 0 0 10px;
                 padding: 5px;
+
+                &>.angry {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    background-image: url('./assets/angry.png');
+                    background-size: 100% auto;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    top: -56px;
+                    right: 0;
+                }
 
                 &>a {
                     display: block;
