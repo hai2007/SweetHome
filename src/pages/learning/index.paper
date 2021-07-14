@@ -137,7 +137,7 @@
         /* 内容 */
         &>div {
             min-height: calc(100vh - 205px);
-            padding: 0 50px;
+            padding: 0 60px 0 70px;
         }
     }
 </style>

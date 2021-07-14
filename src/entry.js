@@ -1,4 +1,12 @@
 import QuickPaper from 'quick-paper';
+import pkg from '../package.json';
+
+console.log(
+    `%c ${pkg.name} %c ${pkg.version} %c ${pkg.description}`,
+    'background:#bce05d; padding: 2px; border-radius: 5px 0 0 5px; color: #fff;',
+    `background:#bea371; padding: 2px; border-radius: 0 5px 5px 0;  color: #fff;`,
+    'background:transparent'
+);
 
 // 兼容文件
 import '@hai2007/polyfill/Promise.js';

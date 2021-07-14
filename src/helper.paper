@@ -1,8 +1,24 @@
 <template>
 
+    <!-- 快捷按钮 -->
+    <div class="quick-link left">
+        <a class="learning" href='#/learning'>
+            小课堂
+        </a>
+        <a class="notebook-list" href='#/notebook-list'>
+            快速手册
+        </a>
+        <a class="tool" href='#/tool'>
+            工具
+        </a>
+        <a class="game" href='#/game'>
+            游戏
+        </a>
+    </div>
+
     <!-- 快速跳转界面 -->
 
-    <div class="quick-link">
+    <div class="quick-link right">
         <span class="angry"></span>
         <a class="homepage" href='#/'>
             首页
@@ -16,6 +32,7 @@
     </div>
 
     <!-- 特别推荐 clunch -->
+
     <a class="clunch" href='https://clunch-contrib.github.io/community/' target="_blank">
         <h2>clunch / community</h2>
         <div>
@@ -33,23 +50,36 @@
 
             &.quick-link {
                 position: fixed;
-                right: 0;
+
                 top: 200px;
                 background-color: white;
                 box-shadow: 0 0 6px 0px #d6cdcd;
-                border-radius: 10px 0 0 10px;
                 padding: 5px;
 
-                &>.angry {
+                &.left {
+                    border-radius: 0 10px 10px 0;
+                    left: 0;
+                }
+
+                &.right {
+                    border-radius: 10px 0 0 10px;
+                    right: 0;
+                }
+
+                &>span {
                     position: absolute;
                     width: 60px;
                     height: 60px;
-                    background-image: url('./assets/angry.png');
+
                     background-size: 100% auto;
                     background-repeat: no-repeat;
                     background-position: center center;
                     top: -56px;
                     right: 0;
+
+                    &.angry {
+                        background-image: url('./assets/angry.png');
+                    }
                 }
 
                 &>a {
@@ -80,6 +110,22 @@
 
                     &.code-source {
                         background-image: url('./assets/code-source.jpg');
+                    }
+
+                    &.learning {
+                        background-image: url('./assets/read.png');
+                    }
+
+                    &.notebook-list {
+                        background-image: url('./assets/notebook.png');
+                    }
+
+                    &.tool {
+                        background-image: url('./assets/tool.png');
+                    }
+
+                    &.game {
+                        background-image: url('./assets/game.png');
                     }
                 }
             }
