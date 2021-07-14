@@ -59,9 +59,6 @@ export default {
     "notebook_webpack4_loader-plug": {
         content: () => import('../pages/notebook/webpack/webpack4_loader-plug.paper')
     },
-    "notebook_webpack-chain": {
-        content: () => import('../pages/notebook/webpack/webpack-chain.paper')
-    },
 
     // 工具
     "notebook_npm_terminal": {

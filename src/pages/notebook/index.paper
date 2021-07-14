@@ -71,9 +71,6 @@
                 <li @click='reloadPage("#/notebook_webpack4_loader-plug")'>
                     关于webpack的loader和plug一些理解 | Webpack4
                 </li>
-                <li @click='reloadPage("#/notebook_webpack-chain")'>
-                    webpack-chain常用方法快速查询 | Webpack
-                </li>
             </ul>
             <h4>
                 框架或库

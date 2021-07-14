@@ -47,7 +47,7 @@
         chainWebpack
     </h3>
     <p>
-        只可以是一个函数，形参是一个<a href='#/notebook_webpack-chain' target="_blank" class="link">webpack-chain</a>实例对象：
+        只可以是函数，形参是一个<span class='warn'>webpack-chain</span>实例对象：
     </p>
     <pre q-code>
 {

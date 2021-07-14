@@ -39,12 +39,12 @@
                     可扩展Web版本代码编辑器
                 </a>
                 <a href="https://github.com/hai2007/image2D" target="_blank">
-                    <span>image2D</span>
+                    <span>Image2D</span>
                     <span>2</span>
                     用ECMAScript绘制二维图片
                 </a>
                 <a href="https://github.com/hai2007/image3D" target="_blank">
-                    <span>image3D</span>
+                    <span>Image3D</span>
                     <span>3</span>
                     使用webGL绘制三维图片
                 </a>
@@ -64,7 +64,7 @@
                     手机端Web调试工具
                 </a>
                 <a href="https://github.com/hai2007/clunch" target="_blank">
-                    <span>clunch</span>
+                    <span>Clunch</span>
                     <span>7</span>
                     渐进的前端交互式图形框架
                 </a>

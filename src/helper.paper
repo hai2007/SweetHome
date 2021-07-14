@@ -2,11 +2,12 @@
 
     <!-- 快捷按钮 -->
     <div class="quick-link left">
-        <a class="learning" href='#/learning'>
-            小课堂
-        </a>
+        <span class="stone"></span>
         <a class="notebook-list" href='#/notebook-list'>
             快速手册
+        </a>
+        <a class="learning" href='#/learning'>
+            小课堂
         </a>
         <a class="tool" href='#/tool'>
             工具
@@ -43,7 +44,77 @@
         </span>
     </a>
 
+    <!-- 开源项目文档快速入口 -->
+
+    <div class="opensource">
+        <span class="icon"></span>
+        <div class='content'>
+            <nav>
+                <span @click='changeOpensourceFlag("opensource")' :active="opensource_flag=='opensource'?'yes':'no'">
+                    开源项目
+                </span>
+                <span @click='changeOpensourceFlag("quickdev")' :active="opensource_flag=='quickdev'?'yes':'no'">
+                    快速开发
+                </span>
+            </nav>
+            <div :active="opensource_flag=='opensource'?'yes':'no'">
+                <a href="https://hai2007.gitee.io/image2d" target="_blank">
+                    <span>Image2D</span>
+                    <div>
+                        用ECMAScript绘制二维图片
+                    </div>
+                </a>
+                <a href="https://hai2007.gitee.io/image3d" target="_blank">
+                    <span>Image3D</span>
+                    <div>
+                        使用webGL绘制三维图片
+                    </div>
+                </a>
+                <a href="https://hai2007.gitee.io/quick-paper" target="_blank">
+                    <span>Quick Paper</span>
+                    <div>
+                        用于快速构建文档的前端框架
+                    </div>
+                </a>
+                <a href="https://hai2007.gitee.io/clunch" target="_blank">
+                    <span>Clunch</span>
+                    <div>
+                        渐进的前端交互式图形框架
+                    </div>
+                </a>
+            </div>
+            <div :active="opensource_flag=='quickdev'?'yes':'no'">
+                <a href="https://agile-contrib.github.io/vue2-components/" target="_blank">
+                    <span>Vue2 Components</span>
+                    <div>
+                        vue2组件库
+                    </div>
+                </a>
+                <a href="https://agile-contrib.github.io/uniapp-components/" target="_blank">
+                    <span>Uni-App Components</span>
+                    <div>
+                        uni-app组件库
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                opensource_flag: "opensource"
+            };
+        },
+        methods: {
+            changeOpensourceFlag(flag) {
+                this.opensource_flag = flag;
+            }
+        }
+    };
+</script>
 <style>
     [quickpaper] {
         &>div {
@@ -79,6 +150,12 @@
 
                     &.angry {
                         background-image: url('./assets/angry.png');
+                    }
+
+                    &.stone {
+                        background-image: url('./assets/stone.png');
+                        top: -60px;
+                        left: -2px;
                     }
                 }
 
@@ -180,6 +257,113 @@
 
             &:hover {
                 width: 360px;
+            }
+        }
+
+        &>.opensource {
+            &>.icon {
+                position: fixed;
+                height: 60px;
+                width: 100px;
+                background-image: url('./assets/file.png');
+                background-position: center center;
+                background-size: auto 70%;
+                background-repeat: no-repeat;
+                left: -20px;
+                top: 530px;
+                transition-property: background-size;
+                cursor: pointer;
+            }
+
+            &>.content {
+                display: none;
+                position: fixed;
+                left: 70px;
+                top: 160px;
+                min-width: 300px;
+                height: 500px;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: rgb(0 0 0 / 38%) 4px 0px 13px;
+                padding: 10px;
+                overflow: auto;
+                background-image: url('./assets/beer.png');
+                background-position: right bottom;
+                background-size: auto 100px;
+                background-repeat: no-repeat;
+
+                &>nav {
+                    text-align: center;
+                    padding: 10px 0;
+
+                    &>span {
+                        &[active='yes'] {
+                            color: red;
+                            border-bottom: 1px solid red;
+                        }
+
+                        padding:0 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                &>div {
+                    &[active='no'] {
+                        display: none;
+                    }
+
+                    &>a {
+                        font-size: 12px;
+                        line-height: 20px;
+                        margin: 10px 0;
+                        display: block;
+                        color: black;
+                        border-left: 3px solid red;
+                        padding-left: 10px;
+
+                        &:hover {
+                            &>div {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        &>span {
+                            padding: 2px 5px;
+                            color: black;
+                            margin-right: 10px;
+                            font-weight: 800;
+                            font-size: 14px;
+                        }
+
+                        &>div {
+                            line-height: 2em;
+                        }
+                    }
+                }
+            }
+
+            &:before {
+                display: none;
+                background-color: white;
+                box-shadow: rgb(0 0 0 / 38%) 0 1px 13px;
+                content: " ";
+                width: 40px;
+                height: 40px;
+                transform: rotate(45deg);
+                left: 63px;
+                top: 540px;
+                position: absolute;
+            }
+
+            &:hover {
+                &>.icon {
+                    background-size: auto 80%;
+                }
+
+                &:before,
+                &>.content {
+                    display: block;
+                }
             }
         }
     }
