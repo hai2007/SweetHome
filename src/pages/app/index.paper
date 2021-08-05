@@ -1,0 +1,122 @@
+<template>
+    <nav>
+        <ul>
+            <li @click='changeType("all")' :active='type=="all"?"yes":"no"'>
+                全部应用
+            </li>
+            <li @click='changeType("tool")' :active='type=="tool"?"yes":"no"'>
+                工具类
+            </li>
+            <li @click='changeType("inline")' :active='type=="inline"?"yes":"no"'>
+                在线应用
+            </li>
+        </ul>
+        <span>
+            <ui-search></ui-search>
+        </span>
+    </nav>
+    <ul>
+        <li @click='loadPage("#/excel")' class='excel' :active='(type=="all" || type=="inline")?"yes":"no"'>
+            <h2>Local Excel</h2>
+            <p>
+                本地存储的Excel编辑器
+            </p>
+        </li>
+        <li @click='loadPage("https://www.npmjs.com/package/debug-phone")' class='debug-phone'
+            :active='(type=="all" || type=="tool")?"yes":"no"'>
+            <h2>Debug Phone</h2>
+            <p>
+                手机端前端代码调试工具
+            </p>
+        </li>
+    </ul>
+</template>
+<script>
+    export default {
+        data() {
+            return {
+                type: "all"
+            };
+        },
+        methods: {
+            changeType(type) {
+                this.type = type;
+            }
+        }
+    };
+</script>
+<style>
+    [quickpaper] {
+        width: 900px;
+        margin: 70px auto;
+
+        &>nav {
+            position: relative;
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+
+            &>ul {
+                display: inline-block;
+
+                &>li {
+                    display: inline-block;
+                    line-height: 70px;
+                    margin-left: 20px;
+                    cursor: pointer;
+
+                    &[active='yes'] {
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            &>span {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+
+        &>ul {
+            padding: 10px 50px;
+
+            &>li {
+                display: none;
+                width: 200px;
+                min-height: 50px;
+                background-size: 40px auto;
+                padding-left: 50px;
+                background-repeat: no-repeat;
+                background-position: 5px 5px;
+                padding-top: 5px;
+                margin: 10px 0;
+                cursor: pointer;
+                vertical-align: top;
+
+                &.excel {
+                    background-image: url('../../assets/excel.png');
+                }
+
+                &.debug-phone {
+                    background-image: url('../../assets/debug-phone.png');
+                }
+
+                &[active='yes'] {
+                    display: inline-block;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &>h2 {
+                    font-size: 14px;
+                }
+
+                &>p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+</style>

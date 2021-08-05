@@ -121,6 +121,7 @@
         mounted() {
 
             this.setTitle('在线代码编辑器', './src/assets/keep-study.png');
+            this.setHelpView('none');
 
             // 判断是否有通过Storage传递的
 

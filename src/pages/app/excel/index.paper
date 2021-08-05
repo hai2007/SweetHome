@@ -1,0 +1,24 @@
+<template>
+    <div id="excel"></div>
+</template>
+<script>
+    import OpenWebExcel from 'open-web-excel';
+    export default {
+        mounted() {
+
+            this.setTitle('Local Excel', './src/assets/excel.png');
+            this.setHelpView('none');
+
+            // 生成界面
+            new OpenWebExcel({
+                el: document.getElementById('excel')
+            });
+        }
+    };
+</script>
+<style>
+    #excel {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>

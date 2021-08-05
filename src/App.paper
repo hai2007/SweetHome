@@ -34,6 +34,11 @@
                     <span>游戏</span>
                 </li>
 
+                <!-- 备注：一些在线的Web应用 -->
+                <li @click='reloadPage("#/app-store")' class='menu-1 app'>
+                    <span>应用市场</span>
+                </li>
+
             </ul>
         </header>
         <div>

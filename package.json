@@ -1,6 +1,6 @@
 {
   "name": "sweethome",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "description": "🏠 今天，你学习了吗？",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -34,6 +34,7 @@
     "clunch": "^1.7.0",
     "image2d": "^1.14.0",
     "image3d": "^3.1.0",
+    "open-web-excel": "^0.2.1",
     "quick-paper": "^0.5.1"
   },
   "devDependencies": {

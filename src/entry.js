@@ -25,7 +25,11 @@ let pages = {
 
     // 游戏
     game: () => import('./pages/game/index.paper'),
-    "snake-eating": () => import('./pages/game/snake-eating/index.paper')
+    "snake-eating": () => import('./pages/game/snake-eating/index.paper'),
+
+    // 应用
+    "app-store": () => import('./pages/app/index.paper'),
+    excel: () => import('./pages/app/excel/index.paper')
 
 };
 
@@ -43,12 +47,20 @@ import uiFooter from './components/ui-footer.paper'; QuickPaper.component('uiFoo
 import uiSearch from './components/ui-search.paper'; QuickPaper.component('uiSearch', uiSearch);
 import uiDev from './components/ui-dev.paper'; QuickPaper.component('uiDev', uiDev);
 
-// 调整并刷新
+// 跳转并刷新
 QuickPaper.prototype.reloadPage = url => {
     window.location.href = url;
     setTimeout(() => {
         window.location.reload();
     });
+};
+
+// 打开新页面
+QuickPaper.prototype.loadPage = url => {
+    let aDom = document.createElement('a');
+    aDom.setAttribute('href', url);
+    aDom.setAttribute('target', '_blank');
+    aDom.click();
 };
 
 // 监听浏览器点击了回退按钮
@@ -77,6 +89,11 @@ QuickPaper.prototype.setTitle = (title, logo) => {
     // 设置logo
     if (logo)
         document.getElementById('favicon').setAttribute('href', logo);
+};
+
+// 设置是否隐藏全部辅助
+QuickPaper.prototype.setHelpView = flag => {
+    document.getElementById("sub-root").style.display = flag;
 };
 
 // 请求页面
