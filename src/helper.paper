@@ -46,7 +46,7 @@
 
     <!-- 开源项目文档快速入口 -->
 
-    <div class="opensource">
+    <div class="opensource more-view">
         <span class="icon"></span>
         <div class='content'>
             <nav>
@@ -58,6 +58,12 @@
                 </span>
             </nav>
             <div :active="opensource_flag=='opensource'?'yes':'no'">
+                <a href="https://nefbl.github.io/api" target="_blank">
+                    <span>Nefbl</span>
+                    <div>
+                        新一代前端框架，帮助你快速构建自定义框架的JavaScript库
+                    </div>
+                </a>
                 <a href="https://hai2007.gitee.io/image2d" target="_blank">
                     <span>Image2D</span>
                     <div>
@@ -98,6 +104,12 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <!-- 二维码访问 -->
+    <div class="ercode more-view">
+        <span class="icon"></span>
+        <div class='content'></div>
     </div>
 
 </template>
@@ -260,16 +272,14 @@
             }
         }
 
-        &>.opensource {
+        &>.more-view {
+
             &>.icon {
                 position: fixed;
                 height: 60px;
                 width: 100px;
-                background-image: url('./assets/file.png');
-                background-position: center center;
                 background-size: auto 70%;
                 background-repeat: no-repeat;
-                left: -20px;
                 top: 490px;
                 transition-property: background-size;
                 cursor: pointer;
@@ -278,68 +288,13 @@
             &>.content {
                 display: none;
                 position: fixed;
-                left: 70px;
-                top: 160px;
-                min-width: 300px;
-                height: 400px;
+                width: 300px;
                 border-radius: 10px;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.38) 0px 0px 13px;
                 padding: 15px;
                 overflow: auto;
-                background-image: url('./assets/beer.png');
-                background-position: right bottom;
-                background-size: auto 100px;
                 background-repeat: no-repeat;
-
-                &>nav {
-                    text-align: center;
-                    padding: 10px 0;
-
-                    &>span {
-                        &[active='yes'] {
-                            color: red;
-                            border-bottom: 1px solid red;
-                        }
-
-                        padding:0 20px;
-                        cursor: pointer;
-                    }
-                }
-
-                &>div {
-                    &[active='no'] {
-                        display: none;
-                    }
-
-                    &>a {
-                        font-size: 12px;
-                        line-height: 20px;
-                        margin: 10px 0;
-                        display: block;
-                        color: black;
-                        border-left: 3px solid red;
-                        padding-left: 10px;
-
-                        &:hover {
-                            &>div {
-                                text-decoration: underline;
-                            }
-                        }
-
-                        &>span {
-                            padding: 2px 5px;
-                            color: black;
-                            margin-right: 10px;
-                            font-weight: 800;
-                            font-size: 14px;
-                        }
-
-                        &>div {
-                            line-height: 2em;
-                        }
-                    }
-                }
             }
 
             &:before,
@@ -350,7 +305,6 @@
                 width: 20px;
                 height: 20px;
                 transform: rotate(45deg);
-                left: 60px;
                 top: 510px;
                 position: absolute;
             }
@@ -370,6 +324,105 @@
                     display: block;
                 }
             }
+
+
+            &.ercode {
+                &>.icon {
+                    background-position: 55px center;
+                    right: 0;
+                    background-image: url('./assets/wx-xcx.png');
+                }
+
+                &>.content {
+                    right: 70px;
+                    height: 300px;
+                    top: 260px;
+                    background-image: url('./assets/wx-ercode.jpg');
+                    background-size: 90% auto;
+                    background-position: center center;
+                }
+
+
+                &:before,
+                &:after {
+                    left: calc(100vw - 80px);
+                }
+            }
+
+
+            &.opensource {
+                &>.icon {
+                    left: -20px;
+                    background-image: url('./assets/file.png');
+                    background-position: center center;
+                }
+
+                &>.content {
+                    left: 70px;
+                    top: 160px;
+                    background-image: url('./assets/beer.png');
+                    background-position: right bottom;
+                    background-size: auto 100px;
+                    height: 400px;
+
+                    &>nav {
+                        text-align: center;
+                        padding: 10px 0;
+
+                        &>span {
+                            &[active='yes'] {
+                                color: red;
+                                border-bottom: 1px solid red;
+                            }
+
+                            padding:0 20px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &>div {
+                        &[active='no'] {
+                            display: none;
+                        }
+
+                        &>a {
+                            font-size: 12px;
+                            line-height: 20px;
+                            margin: 10px 0;
+                            display: block;
+                            color: black;
+                            border-left: 3px solid red;
+                            padding-left: 10px;
+
+                            &:hover {
+                                &>div {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &>span {
+                                padding: 2px 5px;
+                                color: black;
+                                margin-right: 10px;
+                                font-weight: 800;
+                                font-size: 14px;
+                            }
+
+                            &>div {
+                                line-height: 2em;
+                            }
+                        }
+                    }
+                }
+
+                &:before,
+                &:after {
+                    left: 60px;
+                }
+
+            }
         }
+
+
     }
 </style>
