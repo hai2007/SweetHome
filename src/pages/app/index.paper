@@ -7,7 +7,10 @@
             <li @click='changeType("tool")' :active='type=="tool"?"yes":"no"'>
                 工具类
             </li>
-            <li @click='changeType("inline")' :active='type=="inline"?"yes":"no"'>
+            <li @click='changeType("game")' :active='type=="game"?"yes":"no"'>
+                游戏
+            </li>
+            <li @click='changeType("app")' :active='type=="app"?"yes":"no"'>
                 在线应用
             </li>
         </ul>
@@ -16,10 +19,17 @@
         </span>
     </nav>
     <ul>
-        <li @click='loadPage("#/excel")' class='excel' :active='(type=="all" || type=="inline")?"yes":"no"'>
+        <li @click='loadPage("#/excel")' class='excel' :active='(type=="all" || type=="app")?"yes":"no"'>
             <h2>Local Excel</h2>
             <p>
                 本地存储的Excel编辑器
+            </p>
+        </li>
+        <li @click='loadPage("https://hai2007.github.io/Regexper-Visualization")' class='regexper-visualization'
+            :active='(type=="all" || type=="tool")?"yes":"no"'>
+            <h2>Regexper Visualization</h2>
+            <p>
+                正则表达式可视化工具
             </p>
         </li>
         <li @click='loadPage("https://www.npmjs.com/package/debug-phone")' class='debug-phone'
@@ -27,6 +37,19 @@
             <h2>Debug Phone</h2>
             <p>
                 手机端前端代码调试工具
+            </p>
+        </li>
+        <li @click='loadPage("#/snake-eating")' class='snake-eating' :active='(type=="all" || type=="game")?"yes":"no"'>
+            <h2>Snake Eating</h2>
+            <p>
+                经典的贪吃蛇游戏
+            </p>
+        </li>
+        <li @click='loadPage("https://hai2007.github.io/video-player/")' class='video-player'
+            :active='(type=="all" || type=="app")?"yes":"no"'>
+            <h2>Video Player</h2>
+            <p>
+                在线视频播放器
             </p>
         </li>
     </ul>
@@ -66,6 +89,20 @@
 
                     &[active='yes'] {
                         font-weight: 800;
+                        color: red;
+                        position: relative;
+
+                        &::after {
+                            content: " ";
+                            display: inline-block;
+                            width: 100%;
+                            height: 2px;
+                            position: absolute;
+                            background-color: red;
+                            left: 0;
+                            top: 69px;
+
+                        }
                     }
                 }
             }
@@ -101,6 +138,18 @@
                     background-image: url('../../assets/debug-phone.png');
                 }
 
+                &.video-player {
+                    background-image: url('../../assets/video.png');
+                }
+
+                &.snake-eating {
+                    background-image: url('../../assets/snake-eating.jpg');
+                }
+
+                &.regexper-visualization {
+                    background-image: url('../../assets/regexper-visualization_logo.png');
+                }
+
                 &[active='yes'] {
                     display: inline-block;
                 }
@@ -111,6 +160,7 @@
 
                 &>h2 {
                     font-size: 14px;
+                    white-space: nowrap;
                 }
 
                 &>p {

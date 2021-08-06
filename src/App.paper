@@ -216,6 +216,22 @@
                         padding: 0 10px;
                         font-weight: 800;
                         position: relative;
+
+                        &.app {
+                            &::after {
+                                content: "全部";
+                                display: inline-block;
+                                position: absolute;
+                                font-size: 12px;
+                                width: 30px;
+                                line-height: 1.5em;
+                                text-align: center;
+                                background-color: red;
+                                color: white;
+                                right: -5px;
+                                top: 5px;
+                            }
+                        }
                     }
                 }
             }
