@@ -39,6 +39,13 @@
                 手机端前端代码调试工具
             </p>
         </li>
+        <li @click='loadPage("https://hai2007.github.io/audio-player/")' class='audio-player'
+            :active='(type=="all" || type=="app")?"yes":"no"'>
+            <h2>Audio Player</h2>
+            <p>
+                在线音频播放器
+            </p>
+        </li>
         <li @click='loadPage("#/snake-eating")' class='snake-eating' :active='(type=="all" || type=="game")?"yes":"no"'>
             <h2>Snake Eating</h2>
             <p>
@@ -140,6 +147,10 @@
 
                 &.video-player {
                     background-image: url('../../assets/video.png');
+                }
+
+                &.audio-player {
+                    background-image: url('../../assets/audio.png');
                 }
 
                 &.snake-eating {
