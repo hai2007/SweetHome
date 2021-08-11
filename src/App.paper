@@ -80,6 +80,10 @@
             },
             changeView(flag) {
                 this.flag = flag;
+                this.setHelpView({
+                    "top-hidden-view": "none",
+                    "page-view": "block"
+                }[flag]);
             }
         },
         mounted() {

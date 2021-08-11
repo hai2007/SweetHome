@@ -34,10 +34,22 @@
 
     <!-- 特别推荐 clunch -->
 
-    <a class="clunch" href='https://clunch-contrib.github.io/community/' target="_blank">
+    <a class="clunch move-view" href='https://clunch-contrib.github.io/community/' target="_blank">
         <h2>clunch / community</h2>
         <div>
             开发者社区，汇集一些有用的资源和信息。
+        </div>
+        <span>
+            提示跳转
+        </span>
+    </a>
+
+    <!-- 知识百科 knowpedia -->
+
+    <a class="knowpedia move-view" href='https://knowpedia.github.io/entry/' target="_blank">
+        <h2>knowpedia</h2>
+        <div>
+            知识百科全书，各种专业知识的免费共享平台。
         </div>
         <span>
             提示跳转
@@ -220,10 +232,9 @@
             }
         }
 
-        &>.clunch {
+        &>.move-view {
             position: fixed;
             right: 0;
-            top: 420px;
             background-color: white;
             box-shadow: 0 0 6px 0px #d6cdcd;
             border-radius: 10px 0 0 10px;
@@ -231,7 +242,6 @@
             background-size: auto 90%;
             background-position: 3px center;
             background-repeat: no-repeat;
-            background-image: url('./assets/clunch.png');
             height: 60px;
             width: 60px;
             padding-left: 60px;
@@ -239,6 +249,14 @@
             transition-duration: 1s;
             color: black;
             white-space: nowrap;
+            &.clunch{
+                top: 420px;
+                background-image: url('./assets/clunch.png');
+            }
+            &.knowpedia{
+                top: 490px;
+                background-image: url('./assets/knowpedia.png');
+            }
 
             &>h2 {
                 line-height: 20px;
@@ -258,7 +276,7 @@
                 position: absolute;
                 width: 60px;
                 height: 60px;
-                left: 300px;
+                left: 330px;
                 top: 0;
                 font-size: 0;
                 background-image: url('./assets/to-right.png');
@@ -268,7 +286,7 @@
             }
 
             &:hover {
-                width: 360px;
+                width: 380px;
             }
         }
 
@@ -280,7 +298,6 @@
                 width: 100px;
                 background-size: auto 70%;
                 background-repeat: no-repeat;
-                top: 490px;
                 transition-property: background-size;
                 cursor: pointer;
             }
@@ -305,7 +322,6 @@
                 width: 20px;
                 height: 20px;
                 transform: rotate(45deg);
-                top: 510px;
                 position: absolute;
             }
 
@@ -330,13 +346,14 @@
                 &>.icon {
                     background-position: 55px center;
                     right: 0;
+                    top: 550px;
                     background-image: url('./assets/wx-xcx.png');
                 }
 
                 &>.content {
                     right: 70px;
                     height: 300px;
-                    top: 260px;
+                    top: 320px;
                     background-image: url('./assets/wx-ercode.jpg');
                     background-size: 90% auto;
                     background-position: center center;
@@ -345,6 +362,7 @@
 
                 &:before,
                 &:after {
+                    top: 560px;
                     left: calc(100vw - 80px);
                 }
             }
@@ -352,6 +370,7 @@
 
             &.opensource {
                 &>.icon {
+                    top: 490px;
                     left: -20px;
                     background-image: url('./assets/file.png');
                     background-position: center center;
@@ -417,6 +436,7 @@
 
                 &:before,
                 &:after {
+                    top: 510px;
                     left: 60px;
                 }
 
