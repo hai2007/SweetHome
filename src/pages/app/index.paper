@@ -42,9 +42,9 @@
                     手机端前端代码调试工具
                 </p>
             </li>
-            <li @click='loadPage("https://github.com/clunch-contrib/Clunch-Browser-Extensions")' class='clunch'
+            <li @click='loadPage("https://github.com/clunch-contrib/Clunch-Browser-Extensions/releases")' class='clunch'
                 :active='(type=="all" || type=="plug")?"yes":"no"'>
-                <h2>Clunch Browser Extension</h2>
+                <h2>Clunch Browser Extensions</h2>
                 <p>
                     clunch在浏览器中的扩展插件
                 </p>
@@ -56,7 +56,7 @@
                     经典的贪吃蛇游戏
                 </p>
             </li>
-            <li @click='loadPage("https://github.com/clunch-contrib/clunch-language-vscode")' class='clunch'
+            <li @click='loadPage("https://github.com/clunch-contrib/clunch-language-vscode/releases")' class='clunch'
                 :active='(type=="all" || type=="plug")?"yes":"no"'>
                 <h2>Clunch Language VSCode</h2>
                 <p>
@@ -84,7 +84,7 @@
                     不同node包下载量可视化对比
                 </p>
             </li>
-            <li @click='loadPage("https://github.com/hai2007/Open-Code-Editor")' class='open-code-editor'
+            <li @click='loadPage("https://github.com/hai2007/Open-Code-Editor/releases")' class='open-code-editor'
                 :active='(type=="all" || type=="pc")?"yes":"no"'>
                 <h2>Open Code Editor</h2>
                 <p>
@@ -105,7 +105,13 @@
                     在线音频播放器
                 </p>
             </li>
-            <li @click='loadPage("https://github.com/hai2007/Notepad")' class='notepad'
+            <li @click='loadPage("#/editor")' class='editor' :active='(type=="all" || type=="web")?"yes":"no"'>
+                <h2>Online Web Editor</h2>
+                <p>
+                    在线代码编辑器
+                </p>
+            </li>
+            <li @click='loadPage("https://github.com/hai2007/Notepad/releases")' class='notepad'
                 :active='(type=="all" || type=="mobile")?"yes":"no"'>
                 <h2>Notepad</h2>
                 <p>
@@ -236,6 +242,10 @@
 
                     &.notepad {
                         background-image: url('../../assets/notepad.png');
+                    }
+
+                    &.editor {
+                        background-image: url('../../assets/keep-study.png');
                     }
 
                     &[active='yes'] {
