@@ -70,28 +70,10 @@
                 </span>
             </nav>
             <div :active="opensource_flag=='opensource'?'yes':'no'">
-                <a href="https://nefbl.github.io/api" target="_blank">
-                    <span>Nefbl</span>
-                    <div>
-                        新一代前端框架，帮助你快速构建自定义框架的JavaScript库
-                    </div>
-                </a>
                 <a href="https://hai2007.gitee.io/image2d" target="_blank">
                     <span>Image2D</span>
                     <div>
                         用ECMAScript绘制二维图片
-                    </div>
-                </a>
-                <a href="https://hai2007.gitee.io/image3d" target="_blank">
-                    <span>Image3D</span>
-                    <div>
-                        使用webGL绘制三维图片
-                    </div>
-                </a>
-                <a href="https://hai2007.gitee.io/quick-paper" target="_blank">
-                    <span>Quick Paper</span>
-                    <div>
-                        用于快速构建文档的前端框架
                     </div>
                 </a>
                 <a href="https://hai2007.gitee.io/clunch" target="_blank">
@@ -102,18 +84,7 @@
                 </a>
             </div>
             <div :active="opensource_flag=='quickdev'?'yes':'no'">
-                <a href="https://agile-contrib.github.io/vue2-components/" target="_blank">
-                    <span>Vue2 Components</span>
-                    <div>
-                        vue2组件库
-                    </div>
-                </a>
-                <a href="https://agile-contrib.github.io/uniapp-components/" target="_blank">
-                    <span>Uni-App Components</span>
-                    <div>
-                        uni-app组件库
-                    </div>
-                </a>
+
             </div>
         </div>
     </div>
@@ -249,11 +220,13 @@
             transition-duration: 1s;
             color: black;
             white-space: nowrap;
-            &.clunch{
+
+            &.clunch {
                 top: 420px;
                 background-image: url('./assets/clunch.png');
             }
-            &.knowpedia{
+
+            &.knowpedia {
                 top: 490px;
                 background-image: url('./assets/knowpedia.png');
             }
@@ -340,35 +313,6 @@
                     display: block;
                 }
             }
-
-
-            &.ercode {
-                &>.icon {
-                    background-position: 55px center;
-                    right: 0;
-                    top: 550px;
-                    background-image: url('./assets/wx-xcx.png');
-                }
-
-                &>.content {
-                    right: 70px;
-                    top: 395px;
-                    width:200px;
-                    height: 200px;
-                    background-image: url('./assets/wx-ercode.jpg');
-                    background-size: 90% auto;
-                    background-position: center center;
-                    border-radius: 50% 50% 10px 50%;
-                }
-
-
-                &:before,
-                &:after {
-                    top: 560px;
-                    left: calc(100vw - 80px);
-                }
-            }
-
 
             &.opensource {
                 &>.icon {
