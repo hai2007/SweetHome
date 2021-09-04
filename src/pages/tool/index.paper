@@ -23,6 +23,21 @@
                 </a>
             </div>
         </li>
+        <li>
+            <h2>草稿纸</h2>
+            <a class='draft' q-bind:href='draft.webpage'></a>
+            <div>
+                <a q-bind:href='draft.webpage'>
+                    在线网址
+                </a>
+                <a q-bind:href='draft.codepage'>
+                    源码
+                </a>
+                <a q-bind:href='draft.issue'>
+                    提问题
+                </a>
+            </div>
+        </li>
     </ul>
     <ui-footer></ui-footer>
 </template>
@@ -34,6 +49,12 @@
                     "webpage": "https://hai2007.github.io/Regexper-Visualization/?express=%5Cw%7B1%2C5%7D%5Ba-e0-8%5D%7C4(534)5(35%7B3%7D%7Cd)d(123)%5C1&isString=no",
                     "codepage": "https://github.com/hai2007/Regexper-Visualization",
                     "issue": "https://github.com/hai2007/Regexper-Visualization/issues"
+
+                },
+                "draft": {
+                    "webpage": "https://hai2007.github.io/draft",
+                    "codepage": "https://github.com/hai2007/draft",
+                    "issue": "https://github.com/hai2007/draft/issues"
 
                 }
             };
@@ -78,6 +99,7 @@
                 padding: 25px;
                 color: #000000;
                 width: 100%;
+                margin: 50px 0;
 
                 &>h2 {
                     text-align: center;
@@ -91,6 +113,11 @@
                     &.Regexper-Visualization {
                         background-image: url('../../assets/Regexper-Visualization.png');
                         height: 220px;
+                    }
+
+                    &.draft {
+                        background-image: url('../../assets/draft.png');
+                        height: 255px;
                     }
                 }
 

@@ -118,6 +118,13 @@
                     备忘录
                 </p>
             </li>
+            <li @click='loadPage("https://hai2007.github.io/draft")' class='draft'
+                :active='(type=="all" || type=="tool")?"yes":"no"'>
+                <h2>草稿纸</h2>
+                <p>
+                    一个方便打草稿的工具
+                </p>
+            </li>
         </ul>
     </div>
     <ui-footer></ui-footer>
@@ -246,6 +253,10 @@
 
                     &.editor {
                         background-image: url('../../assets/keep-study.png');
+                    }
+
+                    &.draft {
+                        background-image: url('../../assets/draft_logo.png');
                     }
 
                     &[active='yes'] {
