@@ -89,12 +89,6 @@
         </div>
     </div>
 
-    <!-- 二维码访问 -->
-    <div class="ercode more-view">
-        <span class="icon"></span>
-        <div class='content'></div>
-    </div>
-
 </template>
 <script>
     export default {
