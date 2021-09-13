@@ -66,7 +66,7 @@
                     开源项目
                 </span>
                 <span @click='changeOpensourceFlag("quickdev")' :active="opensource_flag=='quickdev'?'yes':'no'">
-                    快速开发
+                    练习项目
                 </span>
             </nav>
             <div :active="opensource_flag=='opensource'?'yes':'no'">
@@ -84,7 +84,12 @@
                 </a>
             </div>
             <div :active="opensource_flag=='quickdev'?'yes':'no'">
-
+                <a href="https://agile-contrib.github.io/vue2-practice" target="_blank">
+                    <span>Vue2 Practice </span>
+                    <div>
+                        基于Vue2开发的练习项目
+                    </div>
+                </a>
             </div>
         </div>
     </div>
