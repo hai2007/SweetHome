@@ -89,7 +89,7 @@
 
                     &.btn {
                         line-height: 40px;
-                        background-color: rgb(185 155 110);
+                        background-color: #b99b6e;
                         color: white;
                         padding: 0 30px;
                         cursor: pointer;

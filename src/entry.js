@@ -65,7 +65,7 @@ QuickPaper.prototype.loadPage = url => {
 
 // 监听浏览器点击了回退按钮
 if (window.addEventListener)
-    window.addEventListener("popstate", function (e) {
+    window.addEventListener("hashchange", () => {
         setTimeout(() => {
 
             // 主动跳转的时候可以控制是否需要刷新

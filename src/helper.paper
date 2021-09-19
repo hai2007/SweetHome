@@ -3,16 +3,16 @@
     <!-- 快捷按钮 -->
     <div class="quick-link left">
         <span class="stone"></span>
-        <a class="notebook-list" href='#/notebook-list'>
+        <a class="notebook-list" href='javascript:void(0)' @click='reloadPage("#/notebook-list")'>
             快速手册
         </a>
-        <a class="learning" href='#/learning'>
+        <a class="learning" href='javascript:void(0)' @click='reloadPage("#/learning")'>
             小课堂
         </a>
-        <a class="tool" href='#/tool'>
+        <a class="tool" href='javascript:void(0)' @click='reloadPage("#/tool")'>
             工具
         </a>
-        <a class="game" href='#/game'>
+        <a class="game" href='javascript:void(0)' @click='reloadPage("#/game")'>
             游戏
         </a>
     </div>
@@ -21,7 +21,7 @@
 
     <div class="quick-link right">
         <span class="angry"></span>
-        <a class="homepage" href='#/'>
+        <a class="homepage" href='javascript:void(0)' @click='reloadPage("#/")'>
             首页
         </a>
         <a class="code-source" href='https://github.com/hai2007' target="_blank">

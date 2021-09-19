@@ -33,6 +33,6 @@
         background-position: center right;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-color: rgb(243 240 240);
+        background-color: #f3f0f0;
     }
 </style>
